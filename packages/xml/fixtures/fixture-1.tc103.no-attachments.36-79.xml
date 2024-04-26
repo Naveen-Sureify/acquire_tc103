@@ -1,0 +1,44 @@
+<Life>
+  <QualPlanType tc="1">Non-Qualified</QualPlanType>
+  <InitialPremAmt>2341344</InitialPremAmt>
+  <Coverage id="Coverage_1">
+    <ProductCode>IUL001</ProductCode>
+    <ProductVersionCode>SC21</ProductVersionCode>
+    <LifeCovStatus tc="1">Active (inforce)</LifeCovStatus>
+    <TobaccoPremiumBasis tc="1">Non Smoker</TobaccoPremiumBasis>
+    <IndicatorCode tc="1">Base</IndicatorCode>
+    <LivesType tc="1">Single life</LivesType>
+    <DeathBenefitOptType tc="1">Level (DB = Face)</DeathBenefitOptType>
+    <CurrentAmt>123456</CurrentAmt>
+    <CovOption id="CovOption_1">
+      <ProductCode>LTC211</ProductCode>
+      <LifeCovOptTypeCode tc="1009900009">Long-Term Care Acceleration of Death Benefit Rider</LifeCovOptTypeCode>
+      <OLifEExtension VendorCode="05" ExtensionCode="CovOption 2.8.90">
+        <CovOptionExtension>
+          <Duration>24</Duration>
+        </CovOptionExtension>
+      </OLifEExtension>
+    </CovOption>
+    <CovOption id="CovOption_2">
+      <ProductCode>EOB213</ProductCode>
+      <LifeCovOptTypeCode tc="1009900008">Extension of Benefits for Long-Term Care with Indexed Coverage Rider</LifeCovOptTypeCode>
+      <OLifEExtension VendorCode="05" ExtensionCode="CovOption 2.8.90">
+        <CovOptionExtension>
+          <Duration>24</Duration>
+        </CovOptionExtension>
+      </OLifEExtension>
+    </CovOption>
+    <LifeParticipant id="LifeParticipant_1" PartyID="Party_PINS">
+      <LifeParticipantRoleCode tc="1">Primary Insured</LifeParticipantRoleCode>
+      <OLifEExtension VendorCode="05" ExtensionCode="LifeParticipant 2.8.90">
+        <LifeParticipantExtension>
+          <ProposedTobaccoPremiumBasis tc="1">Non Smoker</ProposedTobaccoPremiumBasis>
+        </LifeParticipantExtension>
+      </OLifEExtension>
+    </LifeParticipant>
+  </Coverage>
+  <LifeUSA>
+    <DefLifeInsMethod tc="5">DEFRA cash value accumulation test</DefLifeInsMethod>
+    <Internal1035 tc="0">False</Internal1035>
+  </LifeUSA>
+</Life>

@@ -1,0 +1,67 @@
+<Life>
+  <QualPlanType tc="<%= await lookups.lookup(types.OLI_LU.QUALPLANTYPE, { value: ras.extract('BH_QualPlanType') }).tc %>">
+    <%= ras.extract('BH_QualPlanType') %>
+  </QualPlanType>
+  <InitialPremAmt><%= ras.extract('BH_Initial_Premium').replaceAll(",",'') %></InitialPremAmt>
+  <Coverage id="Coverage_1">
+    <ProductCode>
+      <%= ras.extract('BH_ProductCode1') %>
+    </ProductCode>
+    <ProductVersionCode><%= ras.extract('BH_ProductVersionCode') %></ProductVersionCode>
+    <LifeCovStatus tc="<%= await lookups.lookup(types.OLI_LU.LIFECOVSTATUS, { value: ras.extract('BH_LifeCovStatus') }).tc %>">
+      <%= ras.extract('BH_LifeCovStatus') %>
+    </LifeCovStatus>
+    <TobaccoPremiumBasis tc="<%= await lookups.lookup(types.OLI_LU.TOBACCOPREMIMUMBASIS, { value: acord.BH_SmokerStatus }).tc %>">
+      <%= acord.BH_SmokerStatus %>
+    </TobaccoPremiumBasis>
+    <IndicatorCode tc="<%= await lookups.lookup(types.OLI_LU.INDICATORCODE, { value: ras.extract('BH_IndicatorCode') }).tc %>">
+      <%= ras.extract('BH_IndicatorCode') %>
+    </IndicatorCode>
+    <LivesType tc="<%= await lookups.lookup(types.OLI_LU.LIVESTYPE, { value: ras.extract('BH_LivesType') }).tc %>">
+      <%= ras.extract('BH_LivesType') %>
+    </LivesType>
+    <DeathBenefitOptType tc="<%= await lookups.lookup(types.OLI_LU.DEATHBENEFITOPTTYPE, { value: ras.extract('BH_DeathBenefitOptType') }).tc %>">
+      <%= ras.extract('BH_DeathBenefitOptType') %>
+    </DeathBenefitOptType>
+    <CurrentAmt>
+      <%= ras.extract('BH_RequestedFaceAmount').replaceAll(",",'') %>
+    </CurrentAmt>
+    <% for (const [index,CovOption] of acord.Holdings.Policy.Life.Coverage.CovOptions.entries()) { %>
+    <CovOption id="CovOption_<%= index+1 %>">
+      <ProductCode>
+        <%= CovOption.ProductCode %>
+      </ProductCode>
+      <LifeCovOptTypeCode tc="<%= await lookups.lookup(types.OLI_LU.LIFECOVOPTTYPECODE, { value: CovOption.LifeCovOptTypeCode }).tc %>">
+        <%= CovOption.LifeCovOptTypeCode %>
+      </LifeCovOptTypeCode>
+      <OLifEExtension VendorCode="05" ExtensionCode="CovOption 2.8.90">
+        <CovOptionExtension>
+          <Duration>
+            <%= ras.extract('BH_LTCCoveragePeriod')?.split(" ",1) %>
+          </Duration>
+        </CovOptionExtension>
+      </OLifEExtension>
+    </CovOption>
+    <% } %>
+    <LifeParticipant id="LifeParticipant_1" PartyID="Party_PINS">
+      <LifeParticipantRoleCode tc="<%= await lookups.lookup(types.OLI_LU.LIFEPARTICIPANTROLECODE, { value: ras.extract('BH_LifeParticipantRoleCode') }).tc %>">
+        <%= ras.extract('BH_LifeParticipantRoleCode') %>
+      </LifeParticipantRoleCode>
+      <OLifEExtension VendorCode="05" ExtensionCode="LifeParticipant 2.8.90">
+        <LifeParticipantExtension>
+          <ProposedTobaccoPremiumBasis tc="<%= await lookups.lookup(types.OLI_LU.TOBACCOPREMIMUMBASIS, { value: acord.BH_SmokerStatus }).tc %>">
+            <%= acord.BH_SmokerStatus %>
+          </ProposedTobaccoPremiumBasis>
+        </LifeParticipantExtension>
+      </OLifEExtension>
+    </LifeParticipant>
+  </Coverage>
+  <LifeUSA>
+    <DefLifeInsMethod tc="<%= await lookups.lookup(types.OLI_LU.DEFLIFEINSMETHOD, { value: ras.extract('BH_DefLifeInsMethod') }).tc %>">
+      <%= ras.extract('BH_DefLifeInsMethod') %>
+    </DefLifeInsMethod>
+    <Internal1035 tc="<%= await lookups.lookup(types.OLI_LU.INTERNAL1035, { value: ras.extract('BH_Internal1035')?.toLowerCase() }).tc %>">
+      <%= ras.extract('BH_Internal1035') %>
+    </Internal1035>
+  </LifeUSA>
+</Life>

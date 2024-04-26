@@ -1,0 +1,82 @@
+[
+  {
+    "question_id": "3f7a92c6-2001-4a09-9ded-26e82e879111",
+    "response": "sfsd",
+    "answer": "sfsd",
+    "question_text": "Other Question"
+  },
+  {
+    "question_id": "a94db540-07a1-4139-a17a-d3053fafca1a",
+    "response": "dfsf",
+    "answer": "dfsf",
+    "question_text": "Child Question"
+  },
+  {
+    "question_id": "dd764149-ce29-49b4-a4db-51d891b271d9",
+    "response": "",
+    "answer": "",
+    "question_text": "Second Group"
+  },
+  {
+    "question_id": "01ca3338-ecf6-4da8-9bac-f0403045c396",
+    "human_readable_id": "Gender",
+    "response": {
+      "label": "Male",
+      "id": "90ecccca-3a7e-4dd5-9065-beeffda97df6"
+    },
+    "answer": "Male",
+    "question_text": "Gender"
+  },
+  {
+    "question_id": "88c7b845-acc4-4364-9c2d-7332743fbde4",
+    "response": "fdgd",
+    "answer": "fdgd",
+    "question_text": "Q2"
+  },
+  {
+    "question_id": "6ee399fa-bd09-4b07-b5a3-ee4641a63093",
+    "response": "dffdg",
+    "answer": "dffdg",
+    "question_text": "Dummy Question"
+  },
+  {
+    "question_id": "db9aa5c8-b195-4647-9eac-b62a65f83395",
+    "response": "",
+    "answer": "",
+    "question_text": "First Group"
+  },
+  {
+    "question_id": "306434d1-a268-4d56-a92b-4d19751fc78f",
+    "response": "",
+    "answer": "",
+    "question_text": null
+  },
+  {
+    "question_id": "ProductsQuestion",
+    "response": {
+      "id": "2",
+      "label": "Annuity App - SPIA/DIA",
+      "product_details": {
+        "name": "Annuity App - SPIA/DIA",
+        "description": null,
+        "button_text": "Select this Product",
+        "button_selected_text": "Product selected",
+        "image": "https://acqcdn.s3.amazonaws.com/images/Annuity.svg"
+      }
+    },
+    "answer": "Annuity App - SPIA/DIA",
+    "question_text": "Please select a product from below list."
+  },
+  {
+    "question_id": "ProductsGroup",
+    "response": "",
+    "answer": "",
+    "question_text": "Available Products"
+  },
+  {
+    "question_id": "ProductsBreadcrumb",
+    "response": "",
+    "answer": "",
+    "question_text": "Product Selection"
+  }
+]

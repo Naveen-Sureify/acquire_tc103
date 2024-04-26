@@ -1,0 +1,14 @@
+[
+  ["value", "key", "tc"],
+  ["Annuity", "OLI_LINEBUS_ANNUITY", "2"],
+  ["Critical Illness", "OLI_LINEBUS_CRITICALILL", "7"],
+  ["Disability", "OLI_LINEBUS_DI", "3"],
+  ["Health", "OLI_LINEBUS_HEALTH", "4"],
+  ["Life", "OLI_LINEBUS_LIFE", "1"],
+  ["Long Term Care", "OLI_LINEBUS_LTC", "5"],
+  ["Medicare Supplement", "OLI_LINEBUSS_MEDICARESUPP", "9"],
+  ["Other", "OLI_OTHER", "2147483647"],
+  ["Property and Casualty", "OLI_LINEBUS_PC", "8"],
+  ["Superannuation", "OLI_LINEBUS_SUPER", "6"],
+  ["Unknown", "OLI_UNKNOWN", "0"]
+]

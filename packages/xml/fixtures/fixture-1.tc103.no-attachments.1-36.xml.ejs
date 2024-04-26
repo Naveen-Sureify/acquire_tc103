@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<request>
+  <input>
+  <txLife>
+    <TXLife xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="2.20.00" xsi:noNamespaceSchemaLocation="nbA2.8.90.xsd">
+      <UserAuthRequest>
+        <UserLoginName><%= ras.extract('UserLoginName')%></UserLoginName>
+        <UserPswd>
+          <CryptType><%= ras.extract('CryptType')%></CryptType>
+          <Pswd><%= ras.extract('Pswd')%></Pswd>
+        </UserPswd>
+      </UserAuthRequest>
+      <TXLifeRequest PrimaryObjectID="Holding_1">
+        <TransRefGUID><%= ras.extract('TransRefGUID')%></TransRefGUID>
+        <TransType tc="<%= lookups.lookup('TRANSTYPE', { value: ras.extract('TransType') }).tc%>"><%= ras.extract('TransType')%></TransType>
+        <TransExeDate><%= utils.dayjs(ras.extract('TransExeDateTime')).format('YYYY-MM-DD')%></TransExeDate>
+        <TransExeTime><%= utils.dayjs(ras.extract('TransExeDateTime')).format('HH:mm:ss')%></TransExeTime>
+        <TransMode tc="<%= lookups.lookup('TRANSMODE', { value: ras.extract('TransMode') }).tc%>"><%= ras.extract('TransMode') %></TransMode>
+        <OLifE Version="2.8.90">
+          <SourceInfo>
+            <CreationDate><%= utils.dayjs(ras.extract('SourceCreationDate')).format('YYYY-MM-DD') %></CreationDate>
+            <SourceInfoName><%= ras.extract('SourceInfoName')%></SourceInfoName>
+          </SourceInfo>
+          <Holding id="Holding_1">
+            <HoldingTypeCode tc="<%= lookups.lookup('HOLDINGTYPE', { value: ras.extract('HoldingTypeCode') }).tc%>"><%= ras.extract('HoldingTypeCode') %></HoldingTypeCode>
+            <Policy>
+              <PolNumber><%= ras.extract('PolNumber') %></PolNumber>
+              <LineOfBusiness tc="<%= lookups.lookup('LINEOFBUSINESS', { value: ras.extract('LineOfBusiness') }).tc%>"><%= ras.extract('LineOfBusiness') %></LineOfBusiness>
+              <ProductType tc="<%= lookups.lookup('PRODUCTTYPE', { value: ras.extract('ProductType') }).tc%>"><%= ras.extract('ProductType') %></ProductType>
+              <ProductCode><%= ras.extract('ProductCode') %></ProductCode>
+              <CarrierCode><%= ras.extract('CarrierCode') %></CarrierCode>
+              <ReplacementType tc="<%= lookups.lookup('REPLACETYPE', { value: ras.extract('BH_Replacement') }).tc%>"><%= ras.extract('BH_Replacement') %></ReplacementType>
+              <PaymentMode tc="<%= lookups.lookup('PAYMENTMODE', { value: ras.extract('BH_PremiumPayment') }).tc%>"><%= ras.extract('BH_PremiumPayment')%></PaymentMode>
+              <PaymentAmt><%=ras.extract('BH_Initial_Premium').replace(/,/g,'')%></PaymentAmt>
+              <PaymentMethod tc="<%= lookups.lookup('PAYMENTMETHOD', { value: ras.extract('BH_PremiumPaymentMade')[0].label }).tc %>"><%= ras.extract('BH_PremiumPaymentMade')[0].label %></PaymentMethod>     

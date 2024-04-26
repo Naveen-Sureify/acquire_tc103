@@ -1,0 +1,80 @@
+<Party id="Party_BEN<%= i %>">
+  <PartyTypeCode tc="<%= await lookups.lookup(types.OLI_LU.PARTYTYPECODE,{ value : party.PartyTypeCode }).tc %>">
+    <%= party.PartyTypeCode _%>
+  </PartyTypeCode>
+  <FullName>
+    <%= party.Person?.FirstName _%>
+  </FullName>
+  <GovtID>
+    <%= party.GovtID?.replaceAll("-","") _%>
+  </GovtID>
+  <GovtIDTC tc="<%= await lookups.lookup(types.OLI_LU.GOVTIDTC,{ value : party.GovtIDTC }).tc %>">
+    <%= party.GovtIDTC %>
+  </GovtIDTC>
+  <Organization>
+    <OrgForm tc="<%= await lookups.lookup(types.OLI_LU.ORGFORM,{ value : party.Organization?.OrgForm }).tc %>">
+      <%= party.Organization?.OrgForm _%>
+    </OrgForm>
+    <DBA>
+      <%= party.Person?.FirstName _%>
+    </DBA>
+  </Organization>
+  <Address id="Address_BEN<%= i %>">
+    <AddressTypeCode tc="1">Home</AddressTypeCode>
+    <Line1>
+      <%= party.Address?.Line1 _%>
+    </Line1>
+    <City>
+      <%= party.Address?.City _%>
+    </City>
+    <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.ADDRESSSTATETC,{ value : party.Address?.AddressStateTC }).tc %>">
+      <%= party.Address?.AddressStateTC _%>
+    </AddressStateTC>
+    <Zip>
+      <%= party.Address?.Zip _%>
+    </Zip>
+    <OLifEExtension ExtensionCode="Address 2.8.90" VendorCode="05">
+      <AddressExtension>
+        <ZipCodeTC tc="1">United State Postal Code</ZipCodeTC>
+      </AddressExtension>
+    </OLifEExtension>
+  </Address>
+  <Phone id="Phone1_BEN<%= i %>">
+    <PhoneTypeCode tc="1">Home</PhoneTypeCode>
+    <AreaCode>
+      <%= party.Phone?.substr(1,3) _%>
+    </AreaCode>
+    <DialNumber>
+      <%= party.Phone?.substr(5,)?.replace(/\s|-/g,"") _%>
+    </DialNumber>
+  </Phone>
+</Party>
+<% for (const [index,relations] of party.Relations.entries()) { %>
+<Relation id="Relation_BEN<%= index+1 %>" OriginatingObjectID="<%= relations.OriginatingObjectID _%>" RelatedObjectID="<%= relations.RelatedObjectID _%>">
+  <OriginatingObjectType tc="<%= await lookups.lookup(types.OLI_LU.ORIGINATINGOBJECTTYPE,{ value : relations.OriginatingObjectType }).tc %>">
+    <%= relations.OriginatingObjectType _%>
+  </OriginatingObjectType>
+  <RelatedObjectType tc="<%= await lookups.lookup(types.OLI_LU.RELATEDOBJECTTYPE,{ value : relations.RelatedObjectType }).tc %>">
+    <%= relations.RelatedObjectType _%>
+  </RelatedObjectType>
+  <RelationRoleCode tc="<%= await lookups.lookup(types.OLI_LU.RELATIONROLECODE,{ value : relations.RelationRoleCode }).tc %>">
+    <%= relations.RelationRoleCode _%>
+  </RelationRoleCode>
+  <RelationDescription tc="<%= await lookups.lookup(types.OLI_LU.RELATIONDESCRIPTION,{ value : relations.RelationDescription }).tc %>">
+    <%= relations.RelationDescription %>
+  </RelationDescription>
+  <InterestPercent>
+    <%= relations.InterestPercent %>
+  </InterestPercent>
+  <BeneficiaryDesignation tc="<%= await lookups.lookup(types.OLI_LU.BENEFICIARYDESIGNATION,{ value : relations.BeneficiaryDesignation }).tc %>">
+    <%= relations.BeneficiaryDesignation %>
+  </BeneficiaryDesignation>
+  <OLifEExtension ExtensionCode="Relation <%= relations.ExtensionCode _%>" VendorCode="<%= relations.VendorCode _%>">
+    <RelationExtension>
+      <BeneficiaryDistributionOption tc="2">
+        <%= relations.BeneficiaryDistributionOption _%>
+      </BeneficiaryDistributionOption>
+    </RelationExtension>
+  </OLifEExtension>
+</Relation>
+<% } %>

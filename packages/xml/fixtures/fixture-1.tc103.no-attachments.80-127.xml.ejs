@@ -1,0 +1,118 @@
+<ApplicationInfo>
+  <% if(ras.extract('BH_ExistingInsurance')==="NO") { %>
+    <ApplicationType tc="1">New Application</ApplicationType>
+    <% } %>
+    <ApplicationJurisdiction tc="<%= lookups.lookup(types.OLI_LU.APPLICATIONJURISDICTION, { value: ras.extract('BH_OwnerResidenceState') }).tc%>"><%=ras.extract('BH_OwnerResidenceState')%></ApplicationJurisdiction>
+    <FormalAppInd tc="<%= lookups.lookup(types.OLI_LU.FORMALAPPIND, { value: ras.extract('FormalAppInd') }).tc %>"><%= ras.extract('FormalAppInd') %></FormalAppInd>
+    <SignedDate><%= ras.extract('SignedDate') %></SignedDate>
+    <SubmissionDate><%= utils.dayjs(ras.extract('SubmissionDateTime')).format('YYYY-MM-DD') %></SubmissionDate>
+    <SubmissionTime><%= utils.dayjs(ras.extract('SubmissionDateTime')).format('HH:mm:ss') %></SubmissionTime>
+    <% if(ras.extract('BH_PaperApplication').length===0) { %>
+    <SubmissionType tc="2">Electronic</SubmissionType>
+    <% } else { %>
+      <SubmissionType tc="14">Handwritten</SubmissionType>
+    <% } %>
+    <AppProposedInsuredSignatureOK tc="<%= ras.extract('ElectronicSignatureConsentAgent')[0].id==='WetSignature'? '0': '1' %>"><%= ras.extract('ElectronicSignatureConsentAgent')[0].id==='WetSignature'? 'FALSE': 'TRUE' %></AppProposedInsuredSignatureOK>
+    <AppOwnerSignatureOK tc="<%= ras.extract('ElectronicSignatureConsentAgent')[0].id==='WetSignature'? '0': '1' %>"><%= ras.extract('ElectronicSignatureConsentAgent')[0].id==='WetSignature'? 'FALSE': 'TRUE' %></AppOwnerSignatureOK>
+    <AppWritingAgentSignatureOK tc="<%= ras.extract('ElectronicSignatureConsentAgent')[0].id==='WetSignature'? '0': '1' %>"><%= ras.extract('ElectronicSignatureConsentAgent')[0].id==='WetSignature'? 'FALSE': 'TRUE' %></AppWritingAgentSignatureOK>
+    <% if(ras.extract('BH_ExistingInsurance')==="NO") { %>
+      <ReplacementInd tc="0"> False </ReplacementInd>
+    <% } else { %>
+      <ReplacementInd tc="1"> True </ReplacementInd>
+    <% } %>
+    <SignatureInfo id="SignatureInfo_1">
+      <SignatureRoleCode tc="<%=ras.extract('SignatureRoleCode')%>"><%= lookups.lookup(types.OLI_LU.SIGNATUREROLECODE, { tc: ras.extract('SignatureRoleCode')}).value %></SignatureRoleCode>
+      <SignatureDate><%= ras.extract('SignedDate') %></SignatureDate>
+      <SignatureCity><%=ras.extract('BH_City')%></SignatureCity>
+      <SignatureState tc="<%= lookups.lookup(types.OLI_LU.APPLICATIONJURISDICTION, { value: ras.extract('BH_OwnerResidenceState')}).tc %>"><%=ras.extract('BH_OwnerResidenceState')%></SignatureState>
+    </SignatureInfo>
+    <OLifEExtension ExtensionCode="ApplicationInfo 2.8.90" VendorCode="05">
+      <ApplicationInfoExtension>
+        <ProducerOtherInsDisclosureInd tc="0">FALSE</ProducerOtherInsDisclosureInd>
+        <AppCompUSInd tc="1">True</AppCompUSInd>
+        <CoveredByMedicaidInd tc="0"><%= ras.extract('BH_ReplaceLongTerm') %></CoveredByMedicaidInd>
+        <InitPremWireInd tc="1">True</InitPremWireInd>
+        <% if(ras.extract('BH_TaxReturn')==="No") { %>
+          <IRSNoticeInd tc="0">FALSE</IRSNoticeInd>
+        <% } else { %>
+          <IRSNoticeInd tc="1">TRUE</IRSNoticeInd>
+        <% } %>
+        <% if(ras.extract('BH_LongTermPolicies')==="No") { %>
+          <LTCInforceInd tc="0">FALSE</LTCInforceInd>
+        <% } else { %>
+          <LTCInforceInd tc="1">TRUE</LTCInforceInd>
+        <% } %>
+        <% if(ras.extract('BH_LongTermPoliciesInForce')==="No") { %>
+          <LTCInforce12MonthsInd tc="0">FALSE</LTCInforce12MonthsInd>
+        <% } else { %>
+          <LTCInforce12MonthsInd tc="1">TRUE</LTCInforce12MonthsInd>
+        <% } %>
+        <% if(ras.extract('BH_ReplaceLongTerm')==="No") { %>
+          <LTCReplaceInd tc="0">FALSE</LTCReplaceInd>
+        <% } else { %>
+          <LTCReplaceInd tc="1">TRUE</LTCReplaceInd>
+        <% } %>
+        <NIGOInd tc="0">FALSE</NIGOInd>
+        <% if(ras.extract('BH_Incentive')==="No") { %>
+          <OffPaymtForPolicyInd tc="0">FALSE</OffPaymtForPolicyInd>
+        <% } else { %>
+          <OffPaymtForPolicyInd tc="1">TRUE</OffPaymtForPolicyInd>
+        <% } %>
+        <% if(ras.extract('BH_Incentive')==="No") { %>
+          <OwnOffPaymtForPolicyInd tc="0">FALSE</OwnOffPaymtForPolicyInd>
+        <% } else { %>
+          <OwnOffPaymtForPolicyInd tc="1">TRUE</OwnOffPaymtForPolicyInd>
+        <% } %>
+        <% if(ras.extract('BH_ExistingInsurance')==="NO") { %>
+          <OwnPendingInsInd tc="0">False</OwnPendingInsInd>
+        <% } else { %>
+          <OwnPendingInsInd tc="1">True</OwnPendingInsInd>
+        <% } %>
+        <% if(ras.extract('BH_PersonInsured')==="NO") { %>
+          <OwnSameAsInsuredInd tc="0">FALSE</OwnSameAsInsuredInd>
+        <% } else { %>
+          <OwnSameAsInsuredInd tc="1">TRUE</OwnSameAsInsuredInd>
+        <% } %>
+        <% if(ras.extract('BH_Sold')==="No") { %>
+          <OwnSoldTransLifePolicyInd tc="0">FALSE</OwnSoldTransLifePolicyInd>
+        <% } else { %>
+          <OwnSoldTransLifePolicyInd tc="1">TRUE</OwnSoldTransLifePolicyInd>
+        <% } %>
+        <% if(ras.extract('BH_Transfer')==="No") { %>
+          <OwnSolicitedToSellInd tc="0">FALSE</OwnSolicitedToSellInd>
+        <% } else { %>
+          <OwnSolicitedToSellInd tc="1">TRUE</OwnSolicitedToSellInd>
+        <% } %>
+        <% if(ras.extract('BH_SalesMaterial')==="No") { %>
+          <ProducerAppropSaleMatInd tc="0">FALSE</ProducerAppropSaleMatInd>
+        <% } else { %>
+          <ProducerAppropSaleMatInd tc="1">TRUE</ProducerAppropSaleMatInd>
+        <% } %>
+        <% if(ras.extract('BH_InsuredSolicitation')==="No") { %>
+          <ProducerSeeAllPersonsInd tc="0">FALSE</ProducerSeeAllPersonsInd>
+        <% } else { %>
+          <ProducerSeeAllPersonsInd tc="1">TRUE</ProducerSeeAllPersonsInd>
+        <% } %>
+        <ProducerTIAReceipt tc="1">Yes</ProducerTIAReceipt>
+        <% if(ras.extract('BH_SmokerStatus')==="No") { %>
+          <SmokingInd tc="0">FALSE</SmokingInd>
+        <% } else { %>
+          <SmokingInd tc="1">TRUE</SmokingInd>
+        <% } %>
+        <% if(ras.extract('BH_Sold')==="No") { %>
+          <SoldTransLifePolicyInd tc="0">FALSE</SoldTransLifePolicyInd>
+        <% } else { %>
+          <SoldTransLifePolicyInd tc="1">TRUE</SoldTransLifePolicyInd>
+        <% } %>
+        <% if(ras.extract('BH_Transfer')==="No") { %>
+          <SolicitedToSellInd tc="0">FALSE</SolicitedToSellInd>
+        <% } else { %>
+          <SolicitedToSellInd tc="1">TRUE</SolicitedToSellInd>
+        <% } %>
+        <ChooseNotToCompleteInd tc="0">False</ChooseNotToCompleteInd>
+        <FinRepAdvisementInd tc="1">True</FinRepAdvisementInd>
+        <DistChan tc="10"><%= ras.extract('BH_FirmName') %></DistChan>
+        <UnderwritingDecisionMRAS tc="<%= lookups.lookup(types.OLI_LU.UNDERWRITINGDECISIONMRAS, { value: ras.extract('UnderwritingDecisionMRAS') }).tc %>"><%= ras.extract('UnderwritingDecisionMRAS') %></UnderwritingDecisionMRAS>
+      </ApplicationInfoExtension>
+    </OLifEExtension>
+</ApplicationInfo>

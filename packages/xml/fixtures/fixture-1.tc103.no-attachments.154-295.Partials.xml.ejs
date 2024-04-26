@@ -1,0 +1,13 @@
+<% let beneficiary_count=0,agent_count=0 _%>
+<% for (const [index,party] of acord.Parties.entries()) { %>
+  <% if(party.Relations[0].RelationRoleCode.includes("Beneficiary")) { _%>
+  <% beneficiary_count+=1 _%>
+  <%- await include('Parties_Beneficiary', { party,i:beneficiary_count }) %>
+  <% } else if (party.Relations[0].RelationRoleCode.includes("Agent")) { _%>
+  <% agent_count+=1 _%>
+  <%- await include('Parties_Agent', { party,i:agent_count }) %>
+  <% } else { _%>
+  <%- await include('Parties_PINS', { party,i:index }) %>
+  <% } %>
+<% } %>
+

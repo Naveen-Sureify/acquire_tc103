@@ -1,0 +1,944 @@
+value,key,tc,definition
+1035 Exchange Form,OLI_REQCODE_1035EXCFORM,134,	
+1035 Funds Amount Form,OLI_REQCODE_1035AMTFORM,706,The form specifying a dollar amount that will be remitted on the exchanged policy.	
+2 App Packets Required,OLI_REQCODE_TWOAPPPACK,801,When two policies have been ordered (and thus two application packets are required) but only one exam will be performed.	
+2 Urine Specimens Voided on Different Days,OLI_REQCODE_URINEX2,53,	
+2 View Chest X-Ray, PA & Lateral,OLI_REQCODE_XRAYL,94,This is a 2 view X-ray including a posterior-anterior (PA) view and a lateral (side) view. PA means that the patient faces toward the film and away from the X-ray source.	
+Absolute Assignment,OLI_REQCODE_ABSASSIGN,156,Assignment by a policy owner of all control of and rights in the policy to a third party. An Absolute Assignment form is often required by ceding carriers for insurance policies.	
+Accelerated Death Benefit Disclosure,OLI_REQCODE_ADTHBENEDISC,170,	
+Accident Report,OLI_REQCODE_ACCIDENT_RPT,654,In the case the claim is a result of an accident, details of the accident are needed.	
+Acknowledgement letter,OLI_REQCODE_ACKNOWLEDGED,927,A brief letter stating that the request for benefits under a policy has been received.	
+Add'l Medical Info Needed from Attending Physician,OLI_REQCODE_ADDLMEDICALINFO,839,Additional Medical Information needs to be provided via Attending Physician. This may also be referred to as an Attending Physician Statement (APS) Recheck.	
+Additional Chest X-Ray,OLI_REQCODE_CHESTXRAYRECHECK,815,This is a recheck of the Chest X-Ray. Recheck involves taking another set of X-rays rather than re-examining the original set. This is a 2 view X-ray including a posterior-anterior (PA) view and a lateral (side) view. PA means that the patient faces toward the film and away from the X-ray source.	
+Additional ECG,OLI_REQCODE_ECGRECHECK,814,This is a recheck of the ECG. Recheck involves performing another test rather than re-examining the results of the original test.	
+Additional Form,OLI_REQCODE_ADDLFORM,902,	
+Additional Information,OLI_REQCODE_ADDLINFO,167,Additional information is needed.	
+Additional Information from personal physician,OLI_REQCODE_INFOPERSPHY,905,	
+Additional Regulatory Jurisdiction Form,OLI_REQCODE_ADDLREGFORM,517,See Requirement Details for jurisdiction form. In USA, the jurisdiction is the state.	
+Additional Underwriting Review,OLI_REQCODE_ADDLUWREVIEW,938,Referred for review by senior underwriting staff.	
+Adoption Agreement,OLI_REQCODE_ADPTAGR,536,Adoption Agreement is a copy of the court document that indicates the legal adoption of the specified children.	
+Agent's Covering Letter,OLI_REQCODE_AGTCOVERLETTER,837,Letter from the agent providing client and/or application information related to insurability.This is normally associated with large dollar cases.	
+Agent Address,OLI_REQCODE_AGTADDR,900,	
+Agent Statement,OLI_REQCODE_AGTSTMT,152,	
+Amendment,OLI_REQCODE_AMENDMENT,126,A change or addition to a legal document which, when properly endorsed, has the same legal power as the original document.	
+Analyze Additional Blood Sample,OLI_REQCODE_BLOODRECHECKANA,502,	
+Analyze Additional Urine Specimen,OLI_REQCODE_URINERECHECKANA,503,May also be referred to as Home Office Specimen (HOS) recheck for specimen analysis.	
+Analyze Blood Sample,OLI_REQCODE_BLOODANA,498,	
+Analyze Blood Sample- Mark for CBC,OLI_REQCODE_BLOODCBCANA,501,	
+Analyze Dried Blood Spot,OLI_REQCODE_DRIEDBLOODSPOTANA,504,	
+Analyze Glucose Tolerance Test,OLI_REQCODE_GTTANA,507,	
+Analyze Hair Sample,OLI_REQCODE_HAIRANA,506,	
+Analyze Oral Fluid (Saliva),OLI_REQCODE_ORALFLUIDANA,505,	
+Analyze Urine HIV,OLI_REQCODE_URINEHIVANA,500,	
+Analyze Urine Specimen,OLI_REQCODE_URINEANA,499,May also be referred to as Home Office Specimen (HOS) analysis.	
+Anti Money-Laundering Training Certification,OLI_REQCODE_AMLCERT,701,Producer required training for Anti Money-Laundering. This is a new requirement due to a United States Treasury Department ruling requiring Anti Money-Laundering Training Certification effective May 2006.	
+Application Clarification,OLI_REQCODE_APPCLAR,157,Clarify information provided on the application.	
+Application Delivery Service,OLI_REQCODE_APPDELSVC,633,Service to deliver Application (physical or imaging) to Carrier (or their designee). See RequirementDetails for any explicit instructions.	
+Application Packet Fulfillment Service,OLI_REQCODE_APPFULSVC,600,Prepare application packet which may include printing of required forms (Part I and any additional required forms), assembly and shipping/delivery to Applicant. See RequirementDetails for any explicit instructions. This is NOT a Teleinterview, but production of necessary forms and delivery to applicant.	
+Application Packet Pickup Service,OLI_REQCODE_APPPICKUPSVC,635,Service to pickup/retrieve application packet with witnessing of signatures and delivery to Carrier (physical or imaging). See RequirementDetails for any explicit instructions.	
+Application Quality Control Service,OLI_REQCODE_APPQCSVC,634,Service to perform quality control for Carrier. See RequirementDetails for any explicit instructions.	
+Application Signed Date,OLI_REQCODE_APPSIGNEDDATE,862,	
+Application Supplement (other),OLI_REQCODE_APPSUPOTH,315,	
+Application Supplement - LTC Rider,OLI_REQCODE_LTCRIDERSUPP,941,This is the application supplement form specific to adding a Long Term Care (LTC) rider on a life insurance policy.	
+Appointment - Renewal Fee,OLI_REQCODE_APPTRENFEE,534,Renewal fee needed as a requirement to complete the appointing process.	
+Approval from Reinsurance company,OLI_REQCODE_REINSAPPROVAL,151,	
+APS # 2 Order,OLI_REQCODE_APSORDERGA2,181,	
+APS # 3 Order,OLI_REQCODE_APSORDERGA3,182,	
+APS # 4 Order,OLI_REQCODE_APSORDERGA4,183,	
+APS # 5 Order,OLI_REQCODE_APSORDERGA5,184,	
+Articles of Incorporation,OLI_REQCODE_INCORPORATION,662,These are the documents that were filed when the corporation was incorporated.	
+Assignment of Commission Forms,OLI_REQCODE_ASSGNCOMM,527,	
+Attending Physician Statement (APS) Reimbursement,OLI_REQCODE_APSREIMBURSEMT,190,	
+Authorization - Credit Check,OLI_REQCODE_AUTHCREDCRD,142,This is the requirement code to request the authorization to perform a credit check. The credit check itself may be requested separately using type code 334, Financial/Credit Check.Despite its mnemonic, this requirement code should not be used to request a Credit Card Authorization.	
+Authorization - Electronic Access,OLI_REQCODE_ELECTRONICACCAUTH,945,	
+Authorization - Electronic Funds Transfer,OLI_REQCODE_AUTHEFT,140,	
+Authorization - Other,OLI_REQCODE_AUTHOTHER,143,	
+Authorization - Payroll Deduction,OLI_REQCODE_AUTHPAYROLL,141,	
+Authorization - Telephone Requests,OLI_REQCODE_AUTHTELEREQ,946,	
+Authorization to Exercise Ownership Rights,OLI_REQCODE_AUTHOWNERRIGHTS,947,	
+Authorization to Share Information,OLI_REQCODE_AUTHSHARE,859,	
+Auto Rebalancing,OLI_REQCODE_AUTOREBAL,642,Use this form to automatically rebalance the funds or amounts in your Variable Investment Options.	
+Backdating Acknowledgement,OLI_REQCODE_BACKDATINGACK,1003,Client acknowledgement of carrier backdating policy, whether or not it was requested.	
+Backdating Request Form,OLI_REQCODE_BACKDATINGREQFORM,948,This is the client requesting the backdate to happen.	
+Background Check Authorization Form,OLI_REQCODE_BCKGRNDAUTH,514,	
+Background Check Results,OLI_REQCODE_BCKGRNDRESULT,515,	
+Bank Draft Authorization Card (Bank information),OLI_REQCODE_BANKDRFTAUTH,220,	
+Bankruptcy Details,OLI_REQCODE_BANKRUPTCYDETAILS,949,	
+Beneficial Owner Certification Form,OLI_REQCODE_BENEFICIALOWNER,1021,A form to obtain, verify, and record information for each individual owning 25% or more of the equity interests of a legal entity and who has management responsibility for the legal entity.	
+Beneficiary - Change of,OLI_REQCODE_BENEFCHANGE,221,	
+Beneficiary Clarification,OLI_REQCODE_BENEFCLARIF,222,	
+Beneficiary Form for Early Death Benefit,OLI_REQCODE_BENEFITEARLYDEATH,693,This form is required at issue when the Early Death Benefit is elected for certain products with Joint last to die coverage.	
+Beneficiary Form - UTMA,OLI_REQCODE_BENEFORMUTMA,950,UTMA is the Uniform Transfers to Minors Act.	
+Beneficiary Information,OLI_REQCODE_BENEFICIARYINFO,1026,A Beneficiary Information form is used to collect detailed information about each beneficiary on a contract.	
+Billing Control Number,OLI_REQCODE_BILLCTRLNUM,314,	
+Blood A/G Ratio,OLI_REQCODE_BLOODAGRATIO,542,A/G Ratio (Albumin/Globulin Ratio)	
+Blood AFP,OLI_REQCODE_BLOODAFP,572,Blood AFP (Alpha Fetoprotein)	
+Blood Albumin,OLI_REQCODE_BLOODALBUMIN,621,Blood Albumin	
+Blood Alcohol,OLI_REQCODE_BLOODALCHOHOL,592,Blood Alcohol	
+Blood Alkaline Phosphatase,OLI_REQCODE_BLOODALKPHOS,627,Blood Alkaline Phosphatase	
+Blood Amphetamine,OLI_REQCODE_BLOODAMPHETAMINE,594,Blood Amphetamine	
+Blood Analysis - Amylase,OLI_REQCODE_BLOODAMYLASE,823,Test measures the amount of Amylase in the blood. Useful For The Evaluation Of Pancreatic Function; To Diagnose And Manage Pancreatitis.	
+Blood Analysis - CBC w/ Hemoglobin & Hematocrit,OLI_REQCODE_BLOODCBCH,32,	
+Blood Analysis - CBC with Differential,OLI_REQCODE_BLOODCBCDF,33,	
+Blood Analysis - CK,OLI_REQCODE_BLOODCK,824,Test measures the blood level of Creatine Kinase found in certain muscles and the brain. Used in the diagnostic work up of myocardial and skeletal muscular injury.	
+Blood Analysis - Fasting Blood Sugar,OLI_REQCODE_BLOODFBS,36,	
+Blood Analysis - Fingerstick Microtainer,OLI_REQCODE_BLOODFNGR,37,	
+Blood Analysis - for Cholesterol,OLI_REQCODE_BLOODCHOL,34,	
+Blood Analysis - for Creatinine,OLI_REQCODE_BLOODCREA,35,	
+Blood Analysis - for GGTP,OLI_REQCODE_BLOODGGTP,38,Blood Gamma-Glutamyl Transpeptidase (GGTP) test.	
+Blood Analysis - for Hematocrit,OLI_REQCODE_BLOODHCT,39,	
+Blood Analysis - for Hemoglobin Count,OLI_REQCODE_BLOODHCB,40,	
+Blood Analysis - for Hepatitis Screens,OLI_REQCODE_BLOODHPSC,41,	
+Blood Analysis - for Serum Creatinine,OLI_REQCODE_BLOODSCREA,42,	
+Blood Analysis - for SGOT,OLI_REQCODE_BLOODSGOT,43,	
+Blood Analysis - for SGPT,OLI_REQCODE_BLOODSGPT,44,	
+Blood Analysis - SMA 12 Blood Profile,OLI_REQCODE_BLOODSMA12,45,	
+Blood Analysis - SMA 24 Blood Profile,OLI_REQCODE_BLOODSMA24,46,	
+Blood Analysis - Thyroid Profile Test,OLI_REQCODE_BLOODTHYR,48,	
+Blood Analysis - Triglycerides,OLI_REQCODE_BLOODTRIG,47,	
+Blood Analysis - Vitamin B12,OLI_REQCODE_BLOODVITAMINB12,825,Test measures the amount of Vitamin B12 in the blood. Used Primarily To Detect B12 Deficiency and as an aid in the diagnosis of Pernicious anemia; also used in the investigation of folic acid deficiency.	
+Blood Anti-HVC,OLI_REQCODE_BLOODANTIHVC,567,Blood Anti-HVC (Hepatitis C)	
+Blood Apolipoprotein A1,OLI_REQCODE_BLOODAPOLIPOPROTEINA1,709,test for the amount of Apolipoprotein A1 in a blood specimen	
+Blood Apolipoprotein B,OLI_REQCODE_BLOODAPOLIPOPROTEINB,710,test for the amount of Apolipoprotein B in a blood specimen	
+Blood Apolipoprotein Ratio A1/B,OLI_REQCODE_RATIOA1TOB,711,test for the ratio of Apolipoprotein A1 to B in a blood specimen	
+Blood Barbiturates,OLI_REQCODE_BLOODBARBS,611,Blood Barbiturates	
+Blood Basophils %,OLI_REQCODE_BLOODBASOPHILSPCT,565,Blood Basophils Percentage	
+Blood Basophils ABS,OLI_REQCODE_BLOODBASOPHILSAB,538,Blood Basophils Absolute Count (ABS)	
+Blood BCGT,OLI_REQCODE_BLOODBCGT,571,Blood BCGT (Beta Chorionicgonadotroph)	
+Blood Benzodiazepines,OLI_REQCODE_BLOODBENSODIAEPINES,582,Blood Benzodiazepines	
+Blood Beta-2 Microglobulin,OLI_REQCODE_BLOODB2MICGLOBULIN,557,Blood Beta-2 Microglobulin	
+Blood BUN,OLI_REQCODE_BLOODBUN,544,Blood BUN (Blood Urea Nitrogen)	
+Blood Calcium,OLI_REQCODE_BLOODCALCIUM,540,Blood Calcium	
+Blood Cardiac Relative Risk,OLI_REQCODE_BLOODCRR,766,Calculation used to indicate risk of Coronary Artery Disease using a blood specimen.	
+Blood CBC Bands,OLI_REQCODE_BLOODCBCBANDSPCT,566,Blood CBC Bands	
+Blood CDT,OLI_REQCODE_BLOODCDTONLY,546,Blood CDT (Carbohydrate-Deficient Transferrin) not included as part of a Blood Profile A test for excessive alcohol consumption. Drinking 50 - 8- gm (4- 5 drinks) per day for several weeks may elevate the CDT in serum. CDT may also rise in biliary cirrhosis among other causes.	
+Blood CDT,OLI_REQCODE_BLOODCDTDEP,741,A test for the amount of Carbohydrate Deficient Transferrin in a blood specimen Carbohydrate Deficient Transferrin (CDT) is a test for excessive alcohol consumption. Drinking 50 - 8- gm (4- 5 drinks) per day for several weeks may elevate the CDT in serum. CDT may also rise in biliary cirrhosis among other causes.	
+Blood CDT - Quantitative,OLI_REQCODE_BLOODCDTQ,789,a test for the amount of Carbohydrate Deficient Transferrin (CDT) in a blood specimen	
+Blood CEA,OLI_REQCODE_BLOODCEA,586,Blood CEA (Carcinoembryonic Antigens)	
+Blood Cholesterol/HDL Cholesterol,OLI_REQCODE_BLOODCHOLHDL,715,test for the ratio of total Cholesterol to HDL-Cholesterol in a blood specimen	
+Blood Cocaine Metabolites,OLI_REQCODE_BLOODCOCAINE,550,Blood Cocaine Metabolites	
+Blood Cotinine,OLI_REQCODE_BLOODCOTININE,549,Test measures the amount of cotinine in the blood. Cotinine is associated with exposure to tobacco smoke and nicotine.	
+Blood cPSA,OLI_REQCODE_BLOODCPSA,618,Blood cPSA (Prostate Specific Antigen, Complexed)	
+Blood CRP,OLI_REQCODE_BLOODCRP,765,A test for levels of Blood C Reactive Protein in a blood specimen.	
+Blood Differential - Atypical Lymph,OLI_REQCODE_BLOODDIFFATYPICALLYMPH,717,This test identifies abnormal lymphocytes in a blood specimen.	
+Blood Differential - Blast,OLI_REQCODE_BLOODDIFFBLAST,718,This test measures the number of Blasts in a blood specimen.	
+Blood Differential - Metamyelocyte,OLI_REQCODE_BLOODDIFFMETACYTE,719,This test measures the number of Metamyelocytes in a blood specimen.	
+Blood Differential - Monocyte,OLI_REQCODE_BLOODDIFFMONOCYTE,720,This test measures the number of Monocytes in a blood specimen.	
+Blood Differential - Myelocyte,OLI_REQCODE_BLOODDIFFMELOCYTE,721,This test measures how many Melocytes are in a blood specimen.	
+Blood Differential - Promyelocyte,OLI_REQCODE_BLOODDIFFPROMYELOCYTE,722,This test measures the number of Promyelocytes in a blood specimen.	
+Blood Direct Bilirubin,OLI_REQCODE_BLOODDIRECTBILIRUBIN,612,Blood Direct Bilirubin	
+Blood Draw,OLI_REQCODE_BLOODDRAW,356,The client indicates what they want the paramed to obtain (blood, urine, saliva, etc). For a particular client, the agreement might be that they obtain a blood spot vs. a blood draw (vein). This is usually determined by other factors such as age, face amt. and possibly if certain conditions exist. For instance, if the person is 30 years old, doesn't smoke and has no pre-existing conditions, only a urine sample might be ordered, versus a urine and blood. Then the customer defines the lab requirements for each specimen being collected by the paramed. Basically, a requirements matrix is created showing what can be collected by the paramed and what lab tests will be performed on each specimen. For example, if theywant a blood draw, then they might indicate the following lab tests be performed: Blood (for Hepatitis Screen), Blood (for serum Creatinine), etc.	
+Blood Eosinophils %,OLI_REQCODE_BLOODEOSINOPHILSPCT,640,Blood Eosinophils Percentage	
+Blood Eosinophils ABS,OLI_REQCODE_BLOODEOSINOPHILSAB,551,Blood Eosinophils Absolute Count (ABS)	
+Blood Ferritin,OLI_REQCODE_BLOODFERRITIN,545,Blood Ferritin	
+Blood Free PSA,OLI_REQCODE_BLOODFREEPSA,570,Blood Free PSA (Prostate Specific Antigens)	
+Blood Free PSA Ratio,OLI_REQCODE_BLOODFREEPSARATIO,569,Blood Free PSA (Prostate Specific Antigens) Ratio	
+Blood Free T3,OLI_REQCODE_BLOODFREET3,748,A test for levels of Free T-3 in a blood specimen.	
+Blood Free Thyroxine Index,OLI_REQCODE_BLOODFREETHYROXINEIDX,750,A test to determine the Free Thyroxine Index in a blood specimen.	
+Blood Fructosamine,OLI_REQCODE_BLOODFRUCTOSAMINE,558,Blood Fructosamine	
+Blood FT4 - Free Thyroxine,OLI_REQCODE_BLOODFT4,744,A test for Free Thyroxine in a blood specimen.	
+Blood GGT,OLI_REQCODE_BLOODGGT,636,Blood Gamma Glutamyltransferase (GGT) test.	
+Blood Globulin - (Total Protein minus Albumin),OLI_REQCODE_BLOODGLOBULINTPMA,714,test for the amount of Globulin in a blood specimen	
+Blood Glucose,OLI_REQCODE_BLOODGLUCOSE,713,test for the amount of Glucose in a blood specimen	
+Blood Glucose - 1/2 Hour,OLI_REQCODE_BLOODGLUCOSEHALFHOUR,553,Blood Glucose - 1/2 Hour Fast	
+Blood Glucose - 2 Hour,OLI_REQCODE_BLOODGLUCOSE2HOUR,552,Blood Glucose - 2 Hour Fast	
+Blood Glycated Protein,OLI_REQCODE_BLOODGLYCATEDPROTEIN,589,Blood Glycated Protein	
+Blood GTT - 1.0 hour draw,OLI_REQCODE_BLOODGTT1HRDRAW,723,A GTT where blood is drawn at 1.0 hour intervals	
+Blood GTT - 1.5 hour draw,OLI_REQCODE_BLOODGTT15HRDRAW,724,A GTT where blood is drawn at 1.5 hour intervals	
+Blood GTT - 2.5 hour draw,OLI_REQCODE_BLOODGTT2P5HRDRAW,725,A GTT where blood is drawn at 2.5 hour intervals	
+Blood GTT - 3.0 hour draw,OLI_REQCODE_BLOODGTT3HRDRAW,726,A GTT where blood is drawn at 1.0 hour intervals	
+Blood HAA,OLI_REQCODE_BLOODHAA,740,A test for the amount of Hemoglobin Associated Acetaldehyde in a blood specimen.	
+Blood HBeAb,OLI_REQCODE_BLOODHBEAB,638,Blood Hepatitis B E-Antibody	
+Blood HBeAg,OLI_REQCODE_BLOODHBEAG,539,Blood Hepatitis B E-Antigen	
+Blood HBsAg,OLI_REQCODE_BLOODHBSAG,568,Blood Hepatitis B Surface Antigen	
+Blood HDL,OLI_REQCODE_BLOODHDL,543,Blood HDL (High Density Lipoprotein)	
+Blood Hepatitis 5-1-1p/c100p Band,OLI_REQCODE_BLOODHEP511PC100PBAND,756,a test to detect Hepatitis 5-1-1p/c100p in a blood specimen.	
+Blood Hepatitis A,OLI_REQCODE_BLOODHEPA,754,a test for Hepatitis A in a blood specimen	
+Blood Hepatitis A IgM,OLI_REQCODE_BLOODHEPAIGM,755,A test for Hepatitis A Immunoglobulin M (IgM) antibodies in a blood specimen.	
+Blood Hepatitis B Core Antibody,OLI_REQCODE_BLOODHEPBCOREANTIBODY,752,a test for the Hepatitis B Core Antibody in a blood specimen	
+Blood Hepatitis B Surface Antibody,OLI_REQCODE_BLOODHEPBSURFANTIBODY,751,A test for the Hepatitis B Surface Antibody in a blood specimen.	
+Blood Hepatitis c22p Band,OLI_REQCODE_BLOODHEPC22PBAND,761,A test for the presence of Hepatitis c22p in a blood specimen.	
+Blood Hepatitis c33c Band,OLI_REQCODE_BLOODHEPC33CBAND,757,a test to detect Hepatitis c33c in a blood specimen.	
+Blood Hepatitis Core IgM,OLI_REQCODE_BLOODHEPCOREIGM,753,a test for the Hepatitis Core IgM in a blood specimen	
+Blood Hepatitis hSOD Band,OLI_REQCODE_BLOODHEPHSODBAND,763,A test for the presence of Hepatitis human Superoxide Dismutase (hSOD) in a blood specimen.	
+Blood Hepatitis NS5 Band,OLI_REQCODE_BLOODNS5PBAND,762,A test for the presence of Hepatitis NS5 in a blood specimen.	
+Blood Homocysteine,OLI_REQCODE_BLOODHOMOCYSTEINE,590,Blood Homocysteine	
+Blood Indirect Bilirubin,OLI_REQCODE_BLOODINDIRECTBILIRUBIN,624,Blood Indirect Bilirubin	
+Blood Iron,OLI_REQCODE_BLOODIRON,541,Blood Iron	
+Blood LDH,OLI_REQCODE_BLOODLDH,620,Blood LDH (Lactate Dehydrogenase)	
+Blood LDL/HDL Ratio,OLI_REQCODE_BLOODLHLHDLRATIO,548,Blood LDL/HDL Ratio	
+Blood LDL Cholesterol,OLI_REQCODE_BLOODLDLCHOL,716,test for the amount of Low Density Lipoprotein (LDL) Cholesterol in a blood specimen	
+Blood Lymphocytes %,OLI_REQCODE_BLOODLYMPHOCYTESPCT,554,Blood Lymphocytes Percentage	
+Blood Lymphocytes ABS,OLI_REQCODE_BLOODLYMPHOCYTESAB,555,Blood Lymphocytes Absolute Count (ABS)	
+Blood Marijuana,OLI_REQCODE_BLOODMARIJUANA,597,Blood Marijuana Metabolites	
+Blood MCH,OLI_REQCODE_BLOODMCH,625,Blood MCH (Mean Corpuscular Hemoglobin)	
+Blood MCHC,OLI_REQCODE_BLOODMCHC,588,Blood MCHC (Mean Corpuscular Hemoglobin Concentration)	
+Blood Methadone,OLI_REQCODE_BLOODMETHADONE,581,Blood Methadone	
+Blood Methaqualone,OLI_REQCODE_BLOODMETHAQUALONE,580,Blood Methaqualone	
+Blood Monocytes ABS,OLI_REQCODE_BLOODMONOCYTESABS,616,Blood Monocytes Absolute Count (ABS)	
+Blood MVC,OLI_REQCODE_BLOODMVC,575,Blood MVC (Mean Corpuscular Volume)	
+Blood Neutrophils %,OLI_REQCODE_BLOODNEUTROPHILSPCT,613,Blood Neutrophils Percentage	
+Blood Opiates,OLI_REQCODE_BLOODOPIATES,596,Blood Opiates	
+Blood PCP,OLI_REQCODE_BLOODPCP,595,Blood Phencyclidine	
+Blood Phosphorus,OLI_REQCODE_BLOODPHOSHORUS,573,Blood Phosphorus	
+Blood Platelets,OLI_REQCODE_BLOODPLATELETS,560,Blood Platelets	
+Blood Pressure Reading,OLI_REQCODE_BLOODPRESS,12,Request for an initial blood pressure reading.	
+Blood Pressure Reading 2,OLI_REQCODE_BPREADING2,826,Blood pressure reading second time point	
+Blood Pressure Reading 3,OLI_REQCODE_BPREADING3,827,Blood pressure reading third time point	
+Blood ProBNP,OLI_REQCODE_BLOODPROBNP,712,A test for ProBNP in a blood specimen.	
+Blood Profile (for HIV),OLI_REQCODE_BLOODHIV,3,Request to analyze blood for HIV	
+Blood Profile (Glycohemoglobin) - for testing diabetes,OLI_REQCODE_BLOODDIAB,4,Request to analyze blood for Glycohemoglobin. Also called HbA1c.	
+Blood Profile & Urine Specimen,OLI_REQCODE_BLOODURINE,1,Collect and analyze blood and urine specimens	
+Blood Profile recheck,OLI_REQCODE_BLOODRECHECK,329,	
+Blood Profile with CDT,OLI_REQCODE_BLOODCDT,322,Blood Profile with CDT (Carbohydrate-Deficient Transferrin)	
+Blood Profile with Drug Screen,OLI_REQCODE_BLOODDRUG,323,	
+Blood profile with Hepatitis B Screen,OLI_REQCODE_BLOODHEPBSCRN,321,	
+Blood Profile with PSA screen,OLI_REQCODE_BLOODPSA,324,	
+Blood Propoxyphene,OLI_REQCODE_BLOODPROPOXYPHENE,593,Blood Propoxyphene Metabolites	
+Blood PSA,OLI_REQCODE_BLOODEQPSA,739,A test for the Prostate Specific Antigen in a blood specimen where equal molar concentrations of free PSA and PSA-ACT are measured equivalently	
+Blood RBC,OLI_REQCODE_BLOODRBC,614,Blood RBC (Red Blood Count)	
+Blood Segmented Neutrophils,OLI_REQCODE_BLOODSEGNEUT,559,Blood Segmented Neutrophils	
+Blood Serum Fibronogen,OLI_REQCODE_BLOODSERUMFIBRINOGEN,609,Blood Serum Fibronogen	
+Blood Serum Hemolysis,OLI_REQCODE_BLOODSERUMHEMOLYSIS,608,Blood Serum Hemolysis	
+Blood Serum HIV IFA,OLI_REQCODE_BLOODSERUMHIVIFA,742,an IFA test for the presence of antibodies to HIV-1 in a blood specimen	
+Blood Serum HIV Interpretation,OLI_REQCODE_BLOODSERUMHIVINT,731,A test for HIV in a blood specimen.	
+Blood Serum Index,OLI_REQCODE_BLOODSERUMINDEX,637,Blood Serum Index	
+Blood Serum Lipemia,OLI_REQCODE_BLOODSERUMLIPEMIA,610,Blood Serum Lipemia	
+Blood T-3 Total,OLI_REQCODE_BLOODT3TOTAL,745,A test for T3 in a blood specimen.	
+Blood T-3 Uptake,OLI_REQCODE_BLOODT3UPTAKE,747,A test for levels of T-3 Uptake in a blood specimen.	
+Blood T4 - Thyroxine,OLI_REQCODE_BLOODT4,749,A test for levels of Thyroxine in a blood specimen.	
+Blood T-Cell: %T-4,OLI_REQCODE_BLOODTCELLPERCENTT4,732,A test that detects the percent of T-4 cells in a blood specimen	
+Blood T-Cell: %T-8,OLI_REQCODE_BLOODTCELLPERCENTT8,733,A test that detects the percent of T-8 cells in a blood specimen	
+Blood T-Cell: Absolute Lymph T4,OLI_REQCODE_BLOODTCELLABSLYMPHT4,735,A test that detects the number of T-4 cells in a blood specimen	
+Blood T-Cell: Absolute Lymph T8,OLI_REQCODE_BLOODTCELLABSLYMPHT8,736,A test that detects the number of T-8 cells in a blood specimen	
+Blood T-Cell: I-3 Positive Suppressors (T8),OLI_REQCODE_BLOODTCELLI3POSSUPPT8,738,A test to detect positive suppressors of HIV in a blood specimen	
+Blood T-Cell: T-4/T-8 Ratio,OLI_REQCODE_BLOODTCELLT4T8RATIO,737,A test that detects the ratio of T-4 to T-8 cells in a blood specimen	
+Blood T-Cell: Total WBC,OLI_REQCODE_BLOODTCELLTOTALWBC,734,A test that provides the total t-cells in a blood specimen	
+Blood Total Bilirubin,OLI_REQCODE_BLOODTOTALBILIRUBIN,626,Blood Total Bilirubin	
+Blood Total Protein,OLI_REQCODE_BLOODPROTEIN,622,Blood Total Protein	
+Blood TSH - Thyroid Stimulating Hormone,OLI_REQCODE_BLOODTSH,746,A test for Thyroid Stimulating Hormone in a blood specimen.	
+Blood Uric Acid,OLI_REQCODE_BLOODURICACID,628,Perform a Uric Acid test on a blood sample.	
+Blood Very Low Density Lipid (VLDL),OLI_REQCODE_BLOODVREYLOWDENSLIPID,743,a test for VLDL in a blood specimen.	
+Blood WBC,OLI_REQCODE_BLOODWBC,556,Blood White Blood Count	
+Body Temperature,OLI_REQCODE_TEMPERATURE,828,Temperature reading	
+Business Clarification,OLI_REQCODE_BUSINESSCLARIF,345,	
+Business Submission Form,OLI_REQCODE_BUSSUBFORM,223,	
+Buy-Sell Agreement,OLI_REQCODE_BUYSELLAGR,224,	
+Carrier Form,OLI_REQCODE_CARRFORM,531,Specific carrier form should be described in RequirementDetails.	
+Carrier-specific supplemental info form,OLI_REQCODE_SPPIF,510,Supplemental Producer's Personal Information Form (SPPIF)	
+Carrier-specific Tax Withholding Form,OLI_REQCODE_TAXELECTIONFORM,708,This is a carrier specific form that is used to elect withholding options and to communicate information regarding backup withholding. It has no link to a specific IRS form, although it must be approved for use by the IRS.	
+Case Level Requirements Determination,OLI_REQCODE_CASEREQDET,632,In an outsource Case Management agreement, this is the diagnosis of the necessary underwriting requirements at a case level.	
+Cash With Application Form,OLI_REQCODE_CWA,225,	
+Catheterization Report,OLI_REQCODE_CATHRPT,86,Typically this information would be provided within the Attending Physician Statement (APS) report. This would only be used when an underwriter wants to request a service provider for a specific Cath Report.	
+Certificate of mailing,OLI_REQCODE_CERTOFMAILING,952,	
+Certified Copy of Trust Agreement,OLI_REQCODE_TRUSTAGREEMENT,131,	
+Change of Name Form,OLI_REQCODE_CHGOFNAME,901,	
+Child Rider Supplement,OLI_REQCODE_CHILDRIDERSUPP,818,A supplement form used to document additional information about the insured covered on a child rider.	
+Claimant Interview,OLI_REQCODE_CLAIMANTINTERVIEW,659,The interview with the claimant for the purposes of evaluating the claim.	
+Claim Form,OLI_REQCODE_CLMFORM,650,Provides details regarding a claim.	
+Client identity verification, 2 out of 3 method,OLI_REQCODE_DUALID,1013,Verification of client identity by doing any two of the following (the "two out of three method"):* Referring to information from a reliable source containing the name and address of the person being identified and verifying that the name and address are those of the person.* Referring to information from a reliable source that contains the name and date of birth of the person being identified and verifying that the name and date of birth are those of the person.* Referring to information that contains the name of the person being identified and confirming that the individual has a deposit account or credit card or other loan account with a Canadian financial entity and verifying that information.In utilizing this "two out of three" method of identity verification, the Regulations require that the information that is referred to must be from different sources and that the person whose identity is being verified cannot be utilized as a source.	
+COD Form,OLI_REQCODE_CODFORM,953,Collect premium on Delivery. COD is Cash On Delivery.	
+Cognitive Evaluation,OLI_REQCODE_LTCCOGEVAL,631,Assessment of cognitive ability using tools such as Delayed Word Recall and Clock Draw.	
+Collateral Assignment Form,OLI_REQCODE_COLLASSFORM,228,	
+Collateral Assignment Release Form,OLI_REQCODE_COLLATERALRLSEFORM,954,	
+Collect Additional Blood Sample,OLI_REQCODE_ADDBLOOD,49,	
+Collect Additional Urine Specimen,OLI_REQCODE_URINERECHECK,50,May also be referred to as Home Office Specimen (HOS) recheck for specimen collection.	
+Collect Blood Sample,OLI_REQCODE_BLOOD,2,	
+Collect Blood Sample- Mark for CBC,OLI_REQCODE_BLOODCBC,31,	
+Collect Dried Blood Spot,OLI_REQCODE_DRIEDBLOODSPOT,24,	
+Collect Glucose Tolerance Test,OLI_REQCODE_GTT,91,	
+Collect Hair Sample,OLI_REQCODE_COLLHAIR,629,	
+Collect Oral Fluid (Saliva),OLI_REQCODE_ORALFLUID,17,	
+Collect Urine HIV,OLI_REQCODE_URINEHIV,327,	
+Collect Urine Specimen,OLI_REQCODE_URINE,5,Paramedical service provider collects a urine sample from a proposed insured. Specimen is later sent to a lab for testing. May also be referred to as Home Office Specimen (HOS) collection.	
+Company Disclosure,OLI_REQCODE_COMPANYDISCLSURE,955,	
+Comparison Statement,OLI_REQCODE_COMPSTMT,158,	
+Compensation Agreement,OLI_REQCODE_COMPAGREEMENT,835,Special compensation agreement associated with a specific insurance product.	
+Compensation Disclosure,OLI_REQCODE_COMPENSATIONDISC,956,	
+Complete electronic interview,OLI_REQCODE_ELECINTERVIEW,1022,Client is required to complete a digital form of a questionnaire.	
+Complete Questionnaire,OLI_REQCODE_QUESTIONNAIRE,497,	
+Conduct Tele-Interview,OLI_REQCODE_TELEINTERVIEW,137,	
+Consent to accept delivery by an electronic method,OLI_REQCODE_EDELIVERYCONSENT,1016,Consent to accept delivery by an electronic method such as an email attachment, portal download, or other electronic means.	
+Consent to do Business Electronically,OLI_REQCODE_CONSENTBUSELECT,957,	
+Consumer Acknowledgement Form,OLI_REQCODE_CONSUMACKFORM,958,	
+Consumer Disclosure Guide,OLI_REQCODE_CONSDISC,895,	
+Contact Group Administrator,OLI_REQCODE_GRPADMIN,931,The policy owner must contact their Group / Plan Administrator. For example, some group pension administrators require the client to contact their plan administrator to initiate a proposed change to the policy (e.g. replacement, surrender, roll-over).	
+Continuing Education Certification,OLI_REQCODE_EDCERT,529,	
+Copy of E&O Declaration Page,OLI_REQCODE_EODEC,516,E&O: Errors & Omissions Insurance	
+Copy of regulatory jurisdiction license - Non-Resident,OLI_REQCODE_COPYRJLICNONRES,512,	
+Copy of regulatory jurisdiction license - Resident,OLI_REQCODE_COPYRJLICRES,511,	
+Corporate Disclaimer,OLI_REQCODE_CORPDISCLMR,230,	
+Corporate Financial Statement,OLI_REQCODE_CORPFINSTATE,231,	
+Corporate Resolution,OLI_REQCODE_CORPRESOLUTN,232,A corporate resolution is a legal document defining which individuals are authorized to act on behalf of a corporation. For example, for replacement of funds, the Corporate Resolution is used by the ceding carrier to verify that the person who signed the replacement documents on behalf of the Issuing Carrier is an authorized officer of that organization.	
+Corporation Search,OLI_REQCODE_CORPSEARCH,806,Perform a search to verify the existence of a corporation.	
+Cost Basis,OLI_REQCODE_COSTBASIS,159,Cost basis, also known as "tax basis", is the original monetary amount paid for shares of a security. When you sell or exchange shares of mutual funds or other securities, you may have a capital gain or loss that must be reported to the taxation authority (Internal Revenue Service (IRS) in the U.S.).The original value of an asset for tax purposes (usually the purchase price), adjusted for stock splits, dividends and return of capital distributions. This value is used to determine the capital gain, which is equal to the difference between the asset's cost basis and the current market value or sales price.	
+Credit/Debit Card Authorization,OLI_REQCODE_CREDCARDAUTH,702,This is the authorization needed to allow for premium and other payments to be charged to a credit or debit card. In order to accept credit/debit card payments, it is necessary for the card holder to provide authorization for the card to be charged.	
+Credit Card Declined or Invalid,OLI_REQCODE_CCDECLINE,959,Credit card was declined or rejected by issuer, producer action is required.	
+Criminal Records Report,OLI_REQCODE_REPORTCRIMINALRECORDS,330,This is a report of criminal records provided by a third party service provider.	
+Criminal Records Report Max coverage,OLI_REQCODE_REPORTMAXCRIMINALRECORDS,331,	
+Customer Information Supplement,OLI_REQCODE_CUSTSUPP,1024,The customer information supplement is used to collect additional information such as income, liquidity needs, investment objectives and experience, and other suitability-related details used to assess product suitability.	
+Daily Care Notes,OLI_REQCODE_DAILYCARENOTES,667,A copy of the daily care notes taken on a patient to record the patients' treatment and progress	
+Data Verification,OLI_REQCODE_DVR,564,Analyzes applications to determine if the information an individual has given matches the public-access information about that person.	
+Date of Birth,OLI_REQCODE_DATEOFBIRTH,233,	
+DBS - A1c,OLI_REQCODE_DBSA1C,784,a test for the level of A1c Hemoglobin in a dried blood spot specimen	
+DBS Cholesterol,OLI_REQCODE_DBSCHOLESTEROL,584,Dried Blood Spot (DBS) Cholesterol	
+DBS - Cholesterol/HDL Ratio,OLI_REQCODE_DBSCHOLHDLRATIO,782,A test for the level of ratio of cholesterol to HDL in a dried blood spot specimen.	
+DBS Cocaine,OLI_REQCODE_DBSCOCAINE,617,A test for the amount of cocaine in a dried blood spot specimen	
+DBS - Cocaine,OLI_REQCODE_DBSCOCAINEDEP,802,A test for the amount of cocaine in a dried blood spot specimen	
+DBS Cotinine,OLI_REQCODE_DBSCOTININE,619,Test measures the amount of cotinine in the dried blood spot (DBS). Cotinine is associated with exposure to tobacco smoke and nicotine.	
+DBS GGT,OLI_REQCODE_DBSGGT,583,Dried Blood Spot (DBS) Gamma Glutamyltransferase (GGT) test.	
+DBS - Glucose,OLI_REQCODE_DBSGLUCOSE,783,A test for the amount of Glucose in a dried blood spot specimen.	
+DBS - HDL Cholesterol,OLI_REQCODE_DBSHDLCHOL,780,a test for the level of High Density Lipoprotein (HDL) in a dried blood spot specimen	
+DBS HIV Screen,OLI_REQCODE_DBSHIV,615,DBS HIV Screen	
+DBS - Triglycerides,OLI_REQCODE_DBSTRIGLYC,781,a test for the level of Triglycerides in a dried blood spot specimen	
+Declaration Release Form for non-res applicants,OLI_REQCODE_NONRESFORM,811,Form used for situations where the owner and/or life insured on a new application are not residents of the country for which they are applying.	
+Definition of Life Insurance Selection,OLI_REQ_DEFNLIFEINS,705,Definition of Life Insurance Selection Form required	
+Details related to other pending applications,OLI_REQCODE_OTHERPENDINGAPPDETL,841,Obtain details related to other pending applications. This is different from "Review of cases combined for administration" because there is no requirement that these applications be processed together.	
+Details to questions,OLI_REQCODE_DETAILS,234,	
+Diagnose,OLI_REQCODE_DIAGNOSE,535,Determine Requirement Services Needed.	
+Digital signature,OLI_REQCODE_DIGSIG,519,See Requirement Details for what Signature is required	
+Direct Deposit Authorization,OLI_REQCODE_DDAUTH,532,	
+Disbursement,OLI_REQCODE_DISBURSEMENT,960,	
+Disease Management,OLI_REQCODE_DM,917,A process by which a Health Insurance Company identifies conditions in an insured person which might lead to substantial claims in the future. The company attempts to forestall these claims by working with the insured person to manage their condition proactively.	
+Divorce Decree,OLI_REQCODE_DIVORCEDECREE,961,	
+Doctor's Name and Address,OLI_REQCODE_DOCTORADDRS,235,Applies for attending physicians as well as other doctors involved in the process	
+Doctor's Phone Number,OLI_REQCODE_DOCTORPHONE,236,Applies for attending physicians as well as other doctors involved in the process	
+Doctor's Plan of Treatment,OLI_REQCODE_DRPLANTRT,666,The signed doctor's plan of treatment for a patient.	
+Dollar Cost Averaging Form,OLI_REQCODE_DCAFORM,707,Dollar Cost Averaging Form Required	
+Domestic Partner Affidavit,OLI_REQCODE_DOMESTICAFFIDAVIT,962,	
+Drivers License Number,OLI_REQCODE_DRIVERSLICNUMB,237,	
+Drug Urine Test,OLI_REQCODE_DRUGURINE,319,Analyze urine for illegal substances.	
+E & O Insurance,OLI_REQCODE_EANDOINSUR,238,	
+Echocardiogram - Repeat,OLI_REQCODE_ECHO2,88,	
+EKG / ECG - Stress or Treadmill - with Thallium,OLI_REQCODE_EKGTHALLIUM,679,Perform Stress EKG with injection of a small amount of thallium (a radioactive substance). This is immediately followed by a scan of the heart to visualize areas of the heart that do not receive sufficient blood supply.	
+Electronically display/present document,OLI_REQCODE_DISPLAYSIG,819,Electronically present document for viewing to party indicated in AppliesToPartyID. No signature requirement is implied with this code. Use Requirement Code 810 to display and collect signature.	
+Electronically Sign Documents,OLI_REQCODE_ESIGNDOCS,810,Signature is required on the document. Present and collect signature.	
+Electronic Health Record,OLI_REQCODE_EHR,943,Electronic Health Record (EHR), also known as an Electronic Medical Record (EMR), is a systematized collection of patient and population health information stored in a digital format. It may contain a broad collection of information such as demographic, medical history, medication and allergies, immunization status, laboratory test results, radiology images, vital signs, personal statistics like age and weight, and billing information. It is designed to represent patient health information over time.	
+Electronic Inspection Report,OLI_REQCODE_ELECINSPECTIONRPT,1027,Electronic Inspection report is a background report used by an Underwriting department to gain access to publicly available information about an applicant, such as criminal record, real property owned, bankruptcies, etc. Information provided in this report is often found on social media and other internet sources.	
+Electronic Package Delivery,OLI_REQCODE_ELECPKGDEL,1015,This code is used to track the overall status of a package of electronic delivery requirements such as electronic signatures. Delivery of the package is considered complete when all components have been completed.	
+Employee Benefit Review,OLI_REQCODE_EMPBENREV,877,	
+Employer's Statement,OLI_REQCODE_EMPLOYERSTMENT,658,A statement from the Employer regarding the insured's period of disability.	
+Employment Information,OLI_REQCODE_EMPLOYER,964,Provide information regarding party's employer and status	
+Enrollment Cards,OLI_REQCODE_ENROLLCARDS,239,	
+E-Paramedical Exam,OLI_REQCODE_EPARAMEDICAL,944,Paramed done on an electronic support device such as a tablet for capturing and transmitting results.	
+Evidence of Age,OLI_REQCODE_EVIDOFAGE,240,	
+Evidence of Insurability,OLI_REQCODE_EVIDOFINSUR,241,	
+Examiner's Name and Address,OLI_REQCODE_EXAMINERNAMEADD,906,	
+Exchange Delivery Receipt,OLI_REQCODE_EXCHGDELRECPT,242,	
+Exclusion,OLI_REQCODE_EXCLUSION,879,If the requirement is to clearly communicate an exclusion, use this code. Use amendment when the policy is being amended but it is unclear whether or not it is an exclusion.	
+Expensecomp Supplement,OLI_REQCODE_EXPSUPP,878,	
+Experience Letter to another company (used in cases of 'churning', etc. as a notification).,OLI_REQCODE_EXPLTR,149,	
+Extended Care Facility Statement,OLI_REQCODE_EXTFACSTMENT,661,The statement from an extended care facility attesting to the dates of confinement.	
+FAA Records Report,OLI_REQCODE_REPORTFAA,335,	
+Face Amount Requested,OLI_REQCODE_FACEAMOUNT,243,	
+Face to Face Assessment for Long Term Care,OLI_REQCODE_FACETOFACEASSESM,495,Includes Medical History but not a cognitive evaluation. Includes activities of daily living.To include a CE request LTC Cognitive Exam	
+Face to Face Cognitive Assessment,OLI_REQCODE_FACETOFACE,795,Face to face assessment of cognitive ability using tools such as Delayed Word Recall and Clock Draw.Usually performed on a senior citizen and sometimes referred to as a Senior Exam.	
+Face to Face Cognitive Assessment Recheck,OLI_REQCODE_FACETOFACERECHECK,913,This is a recheck of the Face to Face Cognitive Assessment. This involves another assessment rather than reviewing the original assessment.	
+Face to Face Frailty Assessment,OLI_REQCODE_FRAILTY,912,Face to face assessment used to assess a person's frailty. It consists of a series of questions relating to ADLs (Activities of Daily Living), IADLs (Instrumental Activities of Daily Living), and/or AADLs (Advanced Activities of Daily Living). Usually performed on a senior citizen.	
+Face to Face Frailty Assessment Recheck,OLI_REQCODE_FRAILTYRECHECK,915,Face to Face Frailty Assessment Recheck. This involves another assessment rather than reviewing the original assessment.	
+Face to Face Inspection plus Credit & Financial Report (billed hourly) - 10 year history,OLI_REQCODE_INSPECTION,350,Applicant is interviewed via telephone to collect information regarding the applicant's health, employment, finances, duties and habits. Also includes a credit report and an in-depth financial breakdown. Applicant is billed hourly.	
+Face to Face Mobility Assessment,OLI_REQCODE_MOBILITY,911,Assessment of a person's mobility using tools such as the The "get-up and go test". This test typically requires patients to stand up from a chair, walk a short distance, turn around, return, and sit down again. It is usually performed on a senior citizen.	
+Face to Face Mobility Assessment Recheck,OLI_REQCODE_MOBILITYRECHECK,914,Face to Face Mobility Assessment Recheck. This involves another assessment rather than reviewing the original assessment.	
+Farmer's Supplement,OLI_REQCODE_FARMER,880,	
+FATCA&CRS Decl of Tax Res / generic,OLI_REQCODE_FATCACRSGEN,1012,FATCA & CRS Declaration of Tax Residency; Generic request for either individual or entity	
+FATCA US Person Exclusion Reason,OLI_REQCODE_FATCAREASON,926,Reason entity is not a specified U.S. person based on FATCA requirements.Asked if US Indicia, as defined by FATCA, is discovered during review.	
+Fees to be paid,OLI_REQCODE_FEES,898,	
+Financial / Credit Check,OLI_REQCODE_CREDITCHECK,334,This is the requirement code to request the actual credit report. The authorization needed to perform the credit check may be requested separately using type code 142, Authorization - Credit Check.	
+Financial Report - Audited Business (accountant statements),OLI_REQCODE_FINRPTAUDBUS,145,	
+Financial Report - Personal,OLI_REQCODE_FINRPTPERS,144,	
+Financial Report - Unaudited Business (profit and loss statements),OLI_REQCODE_FINRPTUNAUDBUS,146,	
+Fingerprint card,OLI_REQCODE_FINGERCARD,525,	
+FINRA Registration Required,OLI_REQCODE_NASDREGIST,261,	
+FINRA U4 (Reg Prods Only) App for Sec Reg,OLI_REQCODE_SECREG,520,FINRA U4 (Registered Products Only) Application for Securities Registration	
+FINRA U4 Sts Rpt (from CRD rpt) Sts curr Sec Reg,OLI_REQCODE_SECREGSTAT,521,FINRA U4 Status Report (from CRD report) Status of current Securities Registrations	
+FINRA U5 (Reg Prods Only) Term of prior Sec Reg,OLI_REQCODE_SECREGTERM,522,FINRA U5 (Registered Products Only) Termination of prior Securities Registration	
+Forced Expiratory Volume Test,OLI_REQCODE_FEV,89,	
+Forced Expiry Volume Test - Repeat,OLI_REQCODE_FEV2,90,	
+Foreign Death Affidavit,OLI_REQCODE_FOREIGNDTH,652,A official Report of the Death prepared by the foreign consul. A document which is prepared when a person dies outside of their Country. This is an official report that is prepared by the foreign consul and is sent to the official state department for permanent filing.	
+Formal Papers,OLI_REQCODE_FORMLPAPERS,244,	
+Form Clarification,OLI_REQCODE_FORMCLAR,903,	
+Fund Liquidation,OLI_REQCODE_FUNDLIQUIDATION,929,Owner must liquidate the funds. Some custodians required funds to be liquidated and available prior to the Transfer of Assets (TOA) paperwork being received and funds being transferred.	
+Gas chromatography-mass spectrometry (GC/MS),OLI_REQCODE_GCMS,808,Gas chromatography-mass spectrometry (GC/MS) is a method that combines the features of gas-liquid chromatography and mass spectrometry to identify different substances within a test sample such as drug detection. The GC-MS has been widely heralded as a "gold standard for forensic substance identification because it is used to perform a specific test.	
+Generate 1099-R form,OLI_REQCODE_1099R,928,Generate a Form 1099-R to show distribution from retirement accounts.	
+Global intermediary identification number (GIIN),OLI_REQCODE_FATCAGIIN,925,Global intermediary identification number assigned for FATCA reporting purposes.	
+Glomerular Filtration Rate (GFR),OLI_REQCODE_GFR,813,Used to test kidney function; the GFR is a calculated estimate of the actual glomerular filtration rate and is based on serum creatinine concentration, which requires a blood sample. The calculation uses a formula that may include age, gender, height, weight, and sometimes race. Also known as eGFR (estimated GFR) or cGFR (calculated GFR).	
+Government Allotment Form,OLI_REQCODE_GOVALLTFORM,160,	
+Government Issued Certificate of good standing,OLI_REQCODE_GOVTCERT,665,This is a government issued document that certifies that the organization is valid and functioning properly.	
+Government Registration Papers,OLI_REQCODE_GOVREG,697,Request for copies of the Company Registration papers filed with the government.	
+Group Census,OLI_REQCODE_GROUPCENSUS,245,	
+Guarantor Agreement,OLI_REQCODE_GUARANTOR,867,	
+HCV PCR (polymerase chain reaction),OLI_REQCODE_HEPCPCR,809,The basic PCR viral detection tests are used to confirm the actual presence of HCV. This is especially useful in the case of people who have an inconclusive (unclear) HCV antibody test, or with people who have signs they may have previously cleared their hep C (i.e. their liver function tests are consistently normal and they experience no symptoms of hep C illness).	
+Height,OLI_REQCODE_HEIGHT,96,	
+Hepatitis RIBA-3 Interpretation,OLI_REQCODE_HEPR3INT,764,A test for the presence of Hepatitis RIBA-3 in a blood specimen.	
+High School Diploma,OLI_REQCODE_HSDIPLOMA,526,	
+HIPAA Authorization,OLI_REQCODE_HIPAAAUTH,822,A form required by the USA Health Insurance Portability and Accountability Act in which an individual provides his/her signed permission to allow a covered entity to use or disclose the individual's protected health information (PHI) that is described in the authorization for the purpose(s) and to the recipient(s) stated in the authorization.	
+HIV Consent,OLI_REQCODE_CONSENTAIDS,6,	
+Identify Applicable Product Page,OLI_REQCODE_IDPRODPAGE,850,	
+Identify Attending Physician,OLI_REQCODE_IDATTPHYS,851,Identify the name of the attending physician	
+Identify Underwriter,OLI_REQCODE_IDUNDERWRIT,849,Assign an underwriter to this case	
+Identity Verification Form,OLI_REQCODE_IDENTITYVERIFY,683,Form to verify an owner's identity.	
+Illustration / Carrier Quote as quoted,OLI_REQCODE_ILLUSQUOTE,940,Provide illustration or quote as run; no signature required.	
+Illustration - as issued,OLI_REQCODE_ISSUEDILL,965,	
+Illustration - Basic,OLI_REQCODE_BASICILL,966,The basic illustration for this product. For products regulated by NAIC this will consist of a narrative summary, a numeric summary, and a tabular detail.	
+Illustration Certificate signed (waiving illustration),OLI_REQCODE_ILLUSTCERT,246,	
+Illustration Disclosure,OLI_REQCODE_ILLDISC,968,	
+Illustration - Inforce Illustration,OLI_REQCODE_ILLUSTINFRC,247,	
+Illustration - reissued,OLI_REQCODE_REISSUEDILL,967,	
+Illustration - Revised,OLI_REQCODE_ILLUSTREVISED,248,	
+Immigration Documents,OLI_REQCODE_IMMDOC,1018,	
+Important Notice about Information Practices,OLI_REQCODE_INFOPRACTICES,647,This notice tells about the information practices that are employed in evaluating the application for insurance.	
+Income Verification,OLI_REQCODE_INCVERIF,860,Proof of income	
+Independent Legal Opinion (Borrower),OLI_REQCODE_INDLEGLOP,868,	
+Indeterminate Premium Form,OLI_REQCODE_INDETERMINATEPREM,641,State and Product specific form requiring the Applicant's signature for applications for a specific Term policy written in Texas and Montana. The form that states that the applicant understands the premium provisions of the Indeterminate Premium contract that was applied for. The form sets forth the premium payment pattern, that non-guaranteed elements are subject to change, that the carrier reserves the right to charge the maximum premium and the carrier will not exercise its right to change premium more often than once per year.	
+Indexed Product Acknowledgement Form,OLI_REQCODE_INDEXACK,812,Indexed products afford clients the opportunity to link policy cash value growth to the performance of one or more specific external financial indices.A client purchasing an indexed product must acknowledge understanding that the product being applied for is indexed. Certain states require an additional form for the acknowledgement.	
+Info Request - affiliates outside issuing country,OLI_REQCODE_AFFLFOREIGN,892,Request for information about affiliates outside of issuing country	
+Informal Quote,OLI_REQCODE_INFRMLQUOTE,249,	
+Information from confidential source,OLI_REQCODE_CONFSOURCE,875,	
+Initial Nursing Home Assessment,OLI_REQCODE_INNHASSESS,672,A copy of the initial Nursing Home assessment of a patient.	
+Initial Underwriting Review,OLI_REQCODE_INITIALUWREVIEW,847,This requirement indicates that the application has been received and there is a need to have it reviewed by an underwriter. Routine requirements are needed and potentially additional requirements may be required.	
+Inspection Report - Business Beneficiary,OLI_REQCODE_INSPRPTBUSBENE,138,	
+Insurance Company Contract,OLI_REQCODE_CONTRACT,229,	
+Insurance History Supplement,OLI_REQCODE_INSURHISTORY,250,	
+Insurance Supplement,OLI_REQCODE_INSSUPP,121,	
+Insured/Owner Address,OLI_REQCODE_INSADDR,863,	
+Insured/Owner Email Address,OLI_REQCODE_INSEMAIL,1002,	
+Insured/Owner Telephone Number,OLI_REQCODE_INSTELE,864,	
+Interpret ECG,OLI_REQCODE_INTERPECG,821,Request for service to interpret or analyze an ECG (Electro Cardio Gram).	
+Interview coworkers,OLI_REQCODE_INTERVIEWWORKCENTERINSPECTION,196,	
+Interview neighbors,OLI_REQCODE_INTERVIEWSTREETINSPECTION,197,	
+Investment Account Application & Profile,OLI_REQCODE_INVESTPROFILE,969,	
+IRA Disclosure Form,OLI_REQCODE_IRADISCLFORM,251,	
+IRS Request for Individual Tax Return Transcript,OLI_REQCODE_TAXRETURNREQFORM,907,Internal Revenue Service - Request for Individual Tax Return Transcript. IRS form used to request from the US Internal Revenue Service a copy of an individual's tax return.	
+Itemized Hospital Bill,OLI_REQCODE_ITHOSPBILL,671,A line itemized bill from a hospital for a patient for all charges incurred during an admission and discharge period.	
+Itemized Nursing Home Bill,OLI_REQCODE_ITNHBILL,673,A line itemized bill from a Nursing Home for a patient for all charges incurred during an admission and discharge period.	
+Juvenile Form,OLI_REQCODE_JUVNFORM,313,	
+Lab Report,OLI_REQCODE_LABRPT,933,Provide lab testing results in a report format.	
+Lab Slip Document,OLI_REQCODE_LABSLIPDOC,833,This is an administrative requirement for the actual lab slip document that accompanies a lab kit.	
+Lab slip missing,OLI_REQCODE_LABSLIP,252,This requirement related to paramedical services is used to document that a lab kit was received by an underwriting vendor without its lab slip.	
+Language Declaration,OLI_REQCODE_LANGUAGEDECL,1006,Language Declaration so that the client can declare their preferred language.	
+Letter Of Authority,OLI_REQCODE_LTRAUTH,899,	
+Letter of Consent,OLI_REQCODE_LTRCONSENT,888,	
+Letter to Doctor (used for explanation of findings during application process).,OLI_REQCODE_LTRTODR,150,Letter from Insurance Company Underwriter to the Applicant's Doctor explaining the reason for an adverse UW decision.	
+License of Agency,OLI_REQCODE_LICAGENCY,669,A copy of the license of an agency that is providing services, care and/or treatment to a patient.	
+License of Facility,OLI_REQCODE_LICFACILITY,668,A copy of the license of a facility to which the patient is confined.	
+License of Provider of Care,OLI_REQCODE_LICPROVIDER,670,A copy of the license of an individual person that is providing services, care and /or treatment to a patient.	
+Licensing - Agent Multiple Contracting,OLI_REQCODE_LICAGTMULTCON,253,	
+Licensing - Agent Requirement Form (ARF comment),OLI_REQCODE_ARF,623,This is used when the Carrier sees licensing issues with an Agent and needs certain actions to be completed for the agent to be properly appointed.	
+Licensing - Agents Current State License (State License Form),OLI_REQCODE_LICAGTSTATE,254,	
+Licensing - Agents Personal Data Form,OLI_REQCODE_LICAGTPERSDATA,255,	
+Licensing - License Renewal,OLI_REQCODE_LICRENEWAL,836,License has expired and a copy of the renewed license is needed.	
+Licensing - Licensing Fee,OLI_REQCODE_LICENSEFEE,256,	
+Licensing - Producer Info & Agreement,OLI_REQCODE_LICENSEINFO,257,	
+Licensing - State Appointment,OLI_REQCODE_LICENSEAPPT,258,	
+LLC Operating Agreement,OLI_REQCODE_LLC,663,This is the document that outlines the agreement under which the LLC (Limited Liability Corporation) is functioning.	
+Loan Carry-Forward Information,OLI_REQCODE_LOANCFINFO,676,During the processing of the replacement of a policy where an outstanding loan balance exists, the replacing carrier may agree to establish the new policy with a carry-forward of the existing loan. In this case, a requirement for the issue of the new policy is to obtain the accurate loan balance figures from the surrendering carrier.	
+Location application was signed,OLI_REQCODE_SIGNLOC,861,	
+Lost Policy Form,OLI_REQCODE_LOSTPOLFORM,123,Lost Policy Affidavit signed by the contract owner stating that they affirm that the policy or contract has been destroyed or lost and that no other person has any right, title or interest in the contract, nor has it been assigned, pledged or encumbered unless the replacement is a life insurance policy with a loan to carry forward.	
+LTC Older Age Supplement,OLI_REQCODE_LTCOLDERAGESUPP,797,Face to Face Assessment for a Long Term Care policy. Used to assess a person's cognitive ability specifically for an LTC policy.	
+LTC Personal Worksheet,OLI_REQCODE_LTCWKSHEET,942,Long Term Care (LTC) Insurance Personal Information Worksheet	
+Marketing Center Reply,OLI_REQCODE_MKTCTRREP,884,	
+Maryland Acknowledgement Form,OLI_REQCODE_MARYLANDFORM,530,	
+MEC Election Form,OLI_REQCODE_MECELECTIONFORM,970,MEC is Modified Endowment Contract.	
+Medallion Signature Guarantee,OLI_REQCODE_MSG,682,A Medallion imprint or stamp indicates that the financial institution is a member of a Medallion signature guarantee program and is an acceptable signature guarantor. By participating in the program, financial institutions can guarantee customer signatures with the assurance that their guarantees will be immediately accepted for processing by transfer agents. Furthermore, the guarantor of the seal assumes any financial responsibility associated with the endorsement. Medallion Signature Guarantees must cover the amount of the requested transaction.If a Medallion Signature Guarantee is required, the stamp will be placed on a 3-1/2' wide by 2" high white space that is located on the TOA and or LOA Forms near the Authorized Account Owner's Signature. The color of the seal (stamp) is GREEN.	
+Medical Details Release Form,OLI_REQCODE_AUTHMEDRELEASE,649,Provides authorization for the release of medical details	
+Medical Exam by Cardiologist,OLI_REQCODE_MEDEXAMCD,72,	
+Medical Exam by Internist,OLI_REQCODE_MEDEXAMINT,74,	
+Medical Exam By Pediatrician (Juvenile Medical),OLI_REQCODE_MEDEXAMPED,75,	
+Medical Examination by Senior Doctor,OLI_REQCODE_MEDEXAMSENDR,9,Historically there was a requirement that a more 'senior' or experienced doctor would provide the exam.	
+Medical Exam with Cardiovascular section,OLI_REQCODE_MEDEXAMCV,73,	
+Medical records,OLI_REQCODE_MEDRECORDS,876,	
+Medical section of application,OLI_REQCODE_MEDSECT,894,	
+Medical Test - Other,OLI_REQCODE_MEDTEST,18,	
+MIB Authorization,OLI_REQCODE_MIBAUTH,23,	
+MIB Inquiry,OLI_REQCODE_MIBCHECK,21,This requirement includes any need for submitting an inquiry against any MIB database service.	
+MIB Prenotice,OLI_REQCODE_MIBPRENOTE,340,	
+MIB Request for Details,OLI_REQCODE_MIBDET,22,	
+MIB Update,OLI_REQCODE_MIBUPDATE,648,This requirement includes any need to submit reports for any MIB database service.This includes corrections as well as original reports	
+Mini Mental State Exam Form,OLI_REQCODE_MMNTALSTEX,695,A form that is completed by a trained clinician in evaluating a patient and providing such information as orientation, immediate recall, attention, delayed verbal recall, naming, stage command, reading, writing and sentence language.	
+Modified Data Verification report,OLI_REQCODE_MODDVR,817,An abbreviated version of the data verification that analyzes applications to determine if the information an individual has given matches the public-access information about that person.	
+Motor Vehicle Authorization Form,OLI_REQCODE_MOTORVEHICLEAUTH,840,Authorization from the policy owner/insured to enable the carrier to request a Motor Vehicle Report from the appropriate transportation authority within the province issuing the current driver's license.	
+Motor Vehicle Report - General Agent ordered,OLI_REQCODE_MVRGA,259,	
+Motor Vehicle Report Recheck,OLI_REQCODE_MVRRECHECK,853,This is a recheck of the Motor Vehicle report. Recheck involves requesting another report rather than re-examining the original report.	
+NAIC Disclosure,OLI_REQCODE_NAICDISCL,260,	
+New Front Page to medical examination,OLI_REQCODE_FRONTPG,891,	
+Non English Speaking Form,OLI_REQCODE_NONENGSPEAKINGFORM,136,	
+Non-Medical - Details of Answers,OLI_REQCODE_NONMEDDETAIL,262,	
+Non-Medical - Part I,OLI_REQCODE_NONMEDPART1,264,	
+Non-Medical - Part II,OLI_REQCODE_NONMEDPART2,265,	
+Non-Medical - Signature Required,OLI_REQCODE_SIGNNONMED,266,	
+Non-Medical - Unanswered Question,OLI_REQCODE_NONMEDUNANSQ,263,	
+Notarized Signature,OLI_REQCODE_NOTARSIG,674,A Notary Public is a public servant appointed by state government to witness the signing of important documents and administer oaths. Documents are notarized to deter fraud and to ensure they are properly executed. An impartial witness (the Notary) identifies signers to screen out impostors and to make sure they have entered into agreements knowingly and willingly. A notarized signature is not a Signature Guarantee. Refer to Signature Guarantee or Medallion Signature Guarantee.	
+Notice Regarding MECs Required,OLI_REQCODE_MODENDOWNOTICE,704,Notice Regarding Modified Endowment Contracts Required	
+Notice to Consult Tax Advisor,OLI_REQCODE_NOTETAXADVISOR,971,	
+Notify agent of activity,OLI_REQCODE_AGTCOMM,854,Notify agent of activity pertinent to this case	
+Obtain Attending Physician Statement (APS),OLI_REQCODE_ATTPHYSTATEMENT,11,	
+Obtain Company Producer Identifier,OLI_REQCODE_PRODUCERID,848,Confirm the company producer identifier to be used for this producer for this case	
+Obtain Information on File,OLI_REQCODE_PFILE,804,Request information already on file. This could be from an existing policy or if they were previously underwritten.	
+Obtain Medical Evidence from other company,OLI_REQCODE_MEDEV,803,This is when they are requesting medical evidence from another company.	
+Obtain Motor Vehicle Report,OLI_REQCODE_MOTORVEHICLERPT,147,	
+Obtain Payor Details,OLI_REQCODE_PAYORDETAILS,976,Identify who the payor is and include details such as name and contact information.	
+Obtain Referral,OLI_REQCODE_REFERRAL,852,Obtain details pertaining to a referral. The type of referral may be specified in RequirementDetails when applicable.	
+Obtain Required Signature,OLI_REQCODE_REQSIG,130,	
+Obtain Social Insurance Number,OLI_REQCODE_SIN,805,Social insurance number is missing. For certain types of policies the SIN is required. It is very common for them to request it, so they created a requirement code for it.	
+Obtain the opinion of the reinsurer,OLI_REQCODE_REINSUROPINION,681,Obtain the opinion of the reinsurer about an insured	
+Oral Fluid Antibody Screen Interpretation,OLI_REQCODE_ORALASI,785,a test for HIV-1 antibodies in an oral fluid specimen	
+Oral Fluid Antibody Screen Interpretation (U.S.),OLI_REQCODE_ORALASIUS,787,a test for HIV-1 antibodies in an oral fluid specimen	
+Oral Fluid Confirmation,OLI_REQCODE_ORALCONFIRM,786,A test to determine if an oral fluid specimen consists of human oral fluid.	
+Oral Fluid Hepatitis B Surface Interpretation,OLI_REQCODE_ORALHEPBSURFI,788,A test for the Hepatitis B Surface Antibody in an oral fluid specimen.	
+Oral HGA,OLI_REQCODE_ORALHGA,790,A test for oral hypoglycemic agents (HGA) in urine.	
+Order Medical Requirements,OLI_REQCODE_ORDERMEDS,934,Order medical requirements, per the carrier age/amount table requirements.	
+Original Application,OLI_REQCODE_ORIGINALAPP,972,	
+Original Policy,OLI_REQCODE_ORIGPOL,124,The original contract/policy or copies of the original policy.	
+OSJ Compliance Approval,OLI_REQCODE_COMPLIANCEAPPROVAL,678,Suitability review and approval of the order by OSJ (Office of Supervisory Jurisdiction).	
+Other,OLI_OTHER,2147483647,	
+Other Administrative Requirement,OLI_REQCODE_OTHADMIN,168,	
+Other Company's Address,OLI_REQCODE_CORRADDROTHERCOMP,973,	
+Other Company's Lab Results,OLI_REQCODE_OTHERCOMPLABRSLTS,974,Obtain lab results collected by a different insurer	
+Other Company's Papers,OLI_REQCODE_OTHERPAPERS,268,	
+Other Delivery Requirement,OLI_REQCODE_OTHDEL,169,	
+Outsourced Underwriting,OLI_REQCODE_OUTSOURCEDUNDERWRITING,508,	
+Outstanding Licensing Fee Money (non resident),OLI_REQCODE_LICENSEFEENR,523,	
+Outstanding Loan Balance,OLI_REQCODE_LOANBAL,820,During the processing of the replacement of a policy where an outstanding loan balance exists, it is required that the loan balance be paid before the contract is surrendered.	
+Overhead Expense Statement,OLI_REQCODE_OVERHEADEXPSTATE,975,	
+Owner - Change of Ownership,OLI_REQCODE_OWNERCHANGE,269,	
+Owner Clarification,OLI_REQCODE_OWNERCLARIF,344,	
+Owner Must Cancel Policy,OLI_REQCODE_OWNERCANCELPOL,930,Owner must cancel their policy directly with the ceding carrier. This requirement is often for policies that have no surrender value but need to be cancelled in order for the owner/applicant to use premiums to fund a new policy.	
+Partnership Agreement,OLI_REQCODE_PARTNERSHIP,664,This is the document that outlines the agreement under which the partnership is functioning.	
+Passport,OLI_REQCODE_PASSPORT,270,	
+Pathology Report,OLI_REQCODE_PATHRPT,20,Request for a Pathology Report typically associated with an Attending Physician Statement (APS). The preferred method for ordering this is to order the APS w/Comment requesting a Pathology Report.	
+Payment Source,OLI_REQCODE_PAYSOURCE,807,Obtain necessary details regarding the payment source for the contract.	
+Pension Plan Agreement,OLI_REQCODE_PENSNPLANAGR,271,	
+Perform 1 View X-Ray (Frontal),OLI_REQCODE_1VIEWXRAY,16,This is a single view X-ray, specifically a frontal view (as opposed to a lateral or side view)	
+Perform 2 View X-Ray (Frontal & Lateral) OR Hair Analysis,OLI_REQCODE_2VIEWXRAY,92,Prior to version 2.9, this code represented Hair Analysis. In versions 2.9 and later, it was changed to the current definition.	
+Perform Blood Pressure Readings - Different Days,OLI_REQCODE_BPRECHK,97,This is a blood pressure reading performed over separate/unique days or appointments. Use type code 71 ,OLI_REQCODE_BPRECHECK, for,recheck at a single visit/appointment. Number of actual readings should be specified in RequirementDetails and also specify the interval of time between readings (e.g. days). Note - This can be used as either an initial reading -or- as a request for a subsequent recheck performed over multiple days.	
+Perform Blood Pressure Recheck - Single Visit,OLI_REQCODE_BPRECHECK,71,Request to recollect blood pressure information, performed at a single appointment/session. Use type code 97 ,OLI_REQCODE_BPRECHK, for,recheck over multiple visits/appointments. Number of actual readings should be specified in RequirementDetails.	
+Perform Carrier Suitability Review,OLI_REQCODE_CARRSUITREVIEW,1023,Carrier to perform a suitability review to ensure that the product meets the customer's financial wellness needs.	
+Perform CAT Scan,OLI_REQCODE_CATSCAN,85,	
+Perform Echocardiogram,OLI_REQCODE_ECHOCARDIOGRAM,87,	
+Perform Echocardiogram - Regular Stress,OLI_REQCODE_ECHOSTRESS,796,An Echocardiogram performed under stress - typically while on a treadmill	
+Perform EKG / ECG (Electrocardiograph)- Resting,OLI_REQCODE_EKGREST,13,	
+Perform EKG / ECG -Stress or Treadmill,OLI_REQCODE_EKGTREADMILL,14,	
+Perform Examination By Medical Doctor (MD),OLI_REQCODE_MEDEXAMMD,7,	
+Perform Examination By Paramed,OLI_REQCODE_MEDEXAMPARA,10,	
+Perform Examination By Specialist,OLI_REQCODE_MEDEXAMSPEC,8,	
+Perform Heart Chart Exam,OLI_REQCODE_HEARTCHART,342,	
+Perform Persantine Stress test,OLI_REQCODE_PERSANTINE,680,A persantine stress test is similar to the graded exercise stress test except that a medication called persantine is used to elevate the heart rate instead of exercise. Note that nuclear imaging, such as that requested in requirement code,OLI_REQCODE_EKGTHALLIUM, will,be performed with this test.	
+Perform Physical Measurements,OLI_REQCODE_PHYMEASUREMENTS,496,	
+Perform Pulmonary Function Test (TVC),OLI_REQCODE_PULMONARY,15,Perform a Timed Vital Capacity Test (TVC) Pulmonary Function Test	
+Perform Short Form Exam By Paramed,OLI_REQCODE_MEDEXAMSHORTFORM,26,Short Form Exam includes height, weight, and blood pressure. Also known as Abbreviated Paramed.	
+Personal History Interview,OLI_REQCODE_PERSNLHISTRY,272,	
+Pharmaceutical Profile Consent Form,OLI_REQCODE_PPCONSENT,318,	
+Pharmaceutical Profile Request,OLI_REQCODE_PPR,348,Request for a Pharmaceutical Profile Report, specifically a report that includes individual prescription drug histories.	
+Physical Measurements Re-check,OLI_REQCODE_PHYMEASURERECHECK,798,Examiner visits the applicant a second time to re-obtain physical measurements	
+Physician Medical Facility Information,OLI_REQCODE_MEDFACINFO,977,	
+Placement of initial business,OLI_REQCODE_PLACEMENTINITBUS,936,This applies to appointment processes. A carrier appointment cannot be completed until there is an initial sale to coincide with it.	
+Place of Birth,OLI_REQCODE_BIRTHPLC,904,	
+Plan of Insurance,OLI_REQCODE_PLANOFINSUR,273,	
+Pledge of Professionalism,OLI_REQCODE_PROFPLEDGE,533,AKA "Code of Conduct"	
+Police Report,OLI_REQCODE_POLICERPT,653,A report completed by a police officer who is in charge of an accident or crime scene.	
+Policy Change Form,OLI_REQCODE_PLCYCHGFORM,282,	
+Policy Change Supplement,OLI_REQCODE_POLCHGSUPP,816,A supplement form used to document certain types of policy changes. Examples of this type of policy change would include rating reductions or reclassifications, face amount changes, etc. A policy change supplement may also be used in conjunction with a policy conversion.	
+Policy Custody Agreement / Receipt,OLI_REQCODE_POLICYCUSTAGREE,978,	
+Policy Declaration,OLI_REQCODE_POLDECL,887,	
+Policy Delivery Extension,OLI_REQCODE_DELIVERYEXTENSION,343,	
+Policy Delivery Instructions,OLI_REQCODE_DELINST,885,	
+Policy Delivery Receipt,OLI_REQCODE_POLDELRECEIPT,132,	
+Policy Issue Date Change (Endorsement),OLI_REQCODE_POLICYISSUEDATE,337,This form is part of the "Policy Pages" sent to the policy owner. This will be a requirement of only those policies that need to receive this endorsement.	
+Policy Re-issue Request,OLI_REQCODE_POLICYREISSUE,845,Conduct internal processing for Policy Re-issue Request	
+Policy Returned Not Taken,OLI_REQCODE_PLCYNTO,283,	
+Policy Summary,OLI_REQCODE_POLSUM,699,A policy summary describes the basic features of a contract. This can include the conditions, coverage limitations, premiums, cost of the contract such as the premium amounts, and information on the benefit, including the amount to be paid upon death.	
+Politically Exposed Person Form,OLI_REQCODE_PEFPFORM,842,Disclosure of information for related persons and relationships of the owner(s) to politically exposed individuals.	
+Postal Zipcode Required,OLI_REQCODE_POSTALZIP,865,	
+Power of Attorney,OLI_REQCODE_POWATTY,675,Power of Attorney (POA) allows a party, typically the contract owner, to give legal permission to someone else to act on his or her behalf.	
+Preliminary Statement of Policy Cost,OLI_REQCODE_PRELIMCOSTSTATEMENT,643,State regulatory requirement. Must be completed for all Term/PGL, policies presented to clients in MA at the time of application.	
+Premium Allocation Form,OLI_REQCODE_PREMALLOCFORM,844,Allocation of payments/deposits across investment product coverages.	
+Premium Deposit Agreement (PDA) Form,OLI_REQCODE_PDAFORM,1014,A form that is used to establish consent for and use of a Premium Deposit Account in order to pay policy premiums. May also be known as Premium Deposit Fund (PDF).	
+Premium Discrepancy,OLI_REQCODE_PREMDISC,889,	
+Premium Due Carrier,OLI_REQCODE_PREMDUE,125,	
+Premium Refund,OLI_REQCODE_PREMREFUND,161,	
+Premium - Verify Mode,OLI_REQCODE_PREMVERFYMODE,284,	
+Prepare Inspection Report,OLI_REQCODE_INSPECTNRPT,139,	
+Producer Appointment Data Sheet,OLI_REQCODE_PRODUCERFORM,509,	
+Product Feature Comparison Form,OLI_REQCODE_PRODFEATURECOMP,1025,A Product Feature Comparison form is used to collect summary information about the policies being replaced and the proposed policy, for suitability analysis purposes.	
+Provide Best Time to Call,OLI_REQCODE_BESTTIMECALL,873,	
+Provide Death Certificate,OLI_REQCODE_DEATHCERT,834,Provide a certificate signed by a doctor, giving pertinent identifying of the deceased person.	
+Public Records Report,OLI_REQCODE_REPORTPUBLICRECORDS,332,	
+Public Records Report Max Coverage,OLI_REQCODE_REPORTPUBLICRECORDSMAX,333,	
+Pulmonary Function Test,OLI_REQCODE_PFT,93,	
+PVT CSC Used in an inquiry to request all,OLI_REQCODE_ALL,999,	
+PVT ING,OLI_REQCODE_ING362,362,	
+PVT ING,OLI_REQCODE_ING363,363,	
+PVT ING,OLI_REQCODE_ING364,364,	
+PVT ING,OLI_REQCODE_ING365,365,	
+PVT ING,OLI_REQCODE_ING366,366,	
+PVT ING,OLI_REQCODE_ING367,367,	
+PVT ING,OLI_REQCODE_ING368,368,	
+PVT ING,OLI_REQCODE_ING369,369,	
+PVT ING,OLI_REQCODE_ING370,370,	
+PVT ING,OLI_REQCODE_ING371,371,	
+PVT ING,OLI_REQCODE_ING372,372,	
+PVT ING,OLI_REQCODE_ING373,373,	
+PVT ING,OLI_REQCODE_ING374,374,	
+PVT ING,OLI_REQCODE_ING375,375,	
+PVT ING,OLI_REQCODE_ING376,376,	
+PVT ING,OLI_REQCODE_ING377,377,	
+PVT ING,OLI_REQCODE_ING378,378,	
+PVT ING,OLI_REQCODE_ING379,379,	
+PVT ING,OLI_REQCODE_ING380,380,	
+PVT ING,OLI_REQCODE_ING381,381,	
+PVT ING,OLI_REQCODE_ING382,382,	
+PVT ING,OLI_REQCODE_ING383,383,	
+PVT ING,OLI_REQCODE_ING384,384,	
+PVT ING,OLI_REQCODE_ING385,385,	
+PVT ING,OLI_REQCODE_ING386,386,	
+PVT ING,OLI_REQCODE_ING387,387,	
+PVT ING,OLI_REQCODE_ING388,388,	
+PVT ING,OLI_REQCODE_ING389,389,	
+PVT ING,OLI_REQCODE_ING390,390,	
+PVT ING,OLI_REQCODE_ING391,391,	
+PVT ING,OLI_REQCODE_ING392,392,	
+PVT ING,OLI_REQCODE_ING393,393,	
+PVT ING,OLI_REQCODE_ING394,394,	
+PVT ING,OLI_REQCODE_ING395,395,	
+PVT ING,OLI_REQCODE_ING396,396,	
+PVT ING,OLI_REQCODE_ING397,397,	
+PVT ING,OLI_REQCODE_ING398,398,	
+PVT ING,OLI_REQCODE_ING399,399,	
+PVT ING,OLI_REQCODE_ING400,400,	
+PVT ING,OLI_REQCODE_ING401,401,	
+PVT ING,OLI_REQCODE_ING402,402,	
+PVT ING,OLI_REQCODE_ING403,403,	
+PVT ING,OLI_REQCODE_ING404,404,	
+PVT ING,OLI_REQCODE_ING405,405,	
+PVT ING,OLI_REQCODE_ING406,406,	
+PVT ING,OLI_REQCODE_ING407,407,	
+PVT ING,OLI_REQCODE_ING408,408,	
+PVT ING,OLI_REQCODE_ING409,409,	
+PVT ING,OLI_REQCODE_ING410,410,	
+PVT ING,OLI_REQCODE_ING411,411,	
+PVT ING,OLI_REQCODE_ING412,412,	
+PVT ING,OLI_REQCODE_ING413,413,	
+PVT ING,OLI_REQCODE_ING414,414,	
+PVT ING,OLI_REQCODE_ING415,415,	
+PVT ING,OLI_REQCODE_ING416,416,	
+PVT ING,OLI_REQCODE_ING417,417,	
+PVT ING,OLI_REQCODE_ING418,418,	
+PVT ING,OLI_REQCODE_ING419,419,	
+PVT ING,OLI_REQCODE_ING420,420,	
+PVT ING,OLI_REQCODE_ING421,421,	
+PVT ING,OLI_REQCODE_ING422,422,	
+PVT ING,OLI_REQCODE_ING423,423,	
+PVT ING,OLI_REQCODE_ING424,424,	
+PVT ING,OLI_REQCODE_ING425,425,	
+PVT ING,OLI_REQCODE_ING426,426,	
+PVT ING,OLI_REQCODE_ING427,427,	
+PVT ING,OLI_REQCODE_ING428,428,	
+PVT ING,OLI_REQCODE_ING429,429,	
+PVT ING,OLI_REQCODE_ING430,430,	
+PVT ING,OLI_REQCODE_ING431,431,	
+PVT ING,OLI_REQCODE_ING432,432,	
+PVT ING,OLI_REQCODE_ING433,433,	
+PVT ING,OLI_REQCODE_ING434,434,	
+PVT ING,OLI_REQCODE_ING435,435,	
+PVT ING,OLI_REQCODE_ING436,436,	
+PVT ING,OLI_REQCODE_ING437,437,	
+PVT ING,OLI_REQCODE_ING438,438,	
+PVT ING,OLI_REQCODE_ING439,439,	
+PVT ING,OLI_REQCODE_ING440,440,	
+PVT ING,OLI_REQCODE_ING441,441,	
+PVT ING,OLI_REQCODE_ING442,442,	
+PVT ING,OLI_REQCODE_ING443,443,	
+PVT ING,OLI_REQCODE_ING444,444,	
+PVT ING,OLI_REQCODE_ING445,445,	
+PVT ING,OLI_REQCODE_ING446,446,	
+PVT ING,OLI_REQCODE_ING447,447,	
+PVT ING,OLI_REQCODE_ING448,448,	
+PVT ING,OLI_REQCODE_ING449,449,	
+PVT ING,OLI_REQCODE_ING450,450,	
+PVT ING,OLI_REQCODE_ING451,451,	
+PVT ING,OLI_REQCODE_ING452,452,	
+PVT ING,OLI_REQCODE_ING453,453,	
+PVT ING,OLI_REQCODE_ING454,454,	
+PVT ING,OLI_REQCODE_ING455,455,	
+PVT ING,OLI_REQCODE_ING456,456,	
+PVT ING,OLI_REQCODE_ING457,457,	
+PVT ING,OLI_REQCODE_ING458,458,	
+PVT ING,OLI_REQCODE_ING459,459,	
+PVT ING,OLI_REQCODE_ING460,460,	
+PVT ING,OLI_REQCODE_ING461,461,	
+PVT ING,OLI_REQCODE_ING462,462,	
+PVT ING,OLI_REQCODE_ING463,463,	
+PVT ING,OLI_REQCODE_ING464,464,	
+PVT ING,OLI_REQCODE_ING465,465,	
+PVT ING,OLI_REQCODE_ING466,466,	
+PVT ING,OLI_REQCODE_ING467,467,	
+PVT ING,OLI_REQCODE_ING468,468,	
+PVT ING,OLI_REQCODE_ING469,469,	
+PVT ING,OLI_REQCODE_ING470,470,	
+PVT ING,OLI_REQCODE_ING471,471,	
+PVT ING,OLI_REQCODE_ING472,472,	
+PVT ING,OLI_REQCODE_ING473,473,	
+PVT ING,OLI_REQCODE_ING474,474,	
+PVT ING,OLI_REQCODE_ING475,475,	
+PVT ING,OLI_REQCODE_ING476,476,	
+PVT ING,OLI_REQCODE_ING477,477,	
+PVT ING,OLI_REQCODE_ING478,478,	
+PVT ING,OLI_REQCODE_ING479,479,	
+PVT ING,OLI_REQCODE_ING480,480,	
+PVT ING,OLI_REQCODE_ING481,481,	
+PVT ING,OLI_REQCODE_ING482,482,	
+PVT ING,OLI_REQCODE_ING483,483,	
+PVT ING,OLI_REQCODE_ING484,484,	
+PVT ING,OLI_REQCODE_ING485,485,	
+PVT ING,OLI_REQCODE_ING486,486,	
+PVT ING,OLI_REQCODE_ING487,487,	
+PVT ING,OLI_REQCODE_ING488,488,	
+PVT ING,OLI_REQCODE_ING489,489,	
+PVT ING,OLI_REQCODE_ING490,490,	
+PVT ING,OLI_REQCODE_ING491,491,	
+PVT ING,OLI_REQCODE_ING492,492,	
+PVT ING,OLI_REQCODE_ING493,493,	
+PVT ING,OLI_REQCODE_ING494,494,	
+PVT Met Initial information,OLI_REQCODE_INITINFO,171,	
+Questionnaire - Alcohol Usage,OLI_REQCODE_QALCOHOLUSE,114,	
+Questionnaire - Asthma,OLI_REQCODE_QASTHMA,107,	
+Questionnaire - Aviation,OLI_REQCODE_QAVIATION,102,	
+Questionnaire - Avocation,OLI_REQCODE_QAVOCATION,103,	
+Questionnaire - Avocation/Hobby/Aviation,OLI_REQCODE_QAVOCATIONAVIATION,692,A questionnaire covering avocations, hobbies and aviation activities.	
+Questionnaire - Back or Neck Disorder,OLI_REQCODE_QBACKNECK,108,	
+Questionnaire - Ballooning,OLI_REQCODE_BALLOONING,909,	
+Questionnaire - Blood or Lymph Gland Disorder,OLI_REQCODE_QBLOODLYMPH,361,Requirement to fill out more details on a Blood or Lymph Gland Disorder questionnaire.	
+Questionnaire - Blood Pressure,OLI_REQCODE_BLOODPRESSQ,856,	
+Questionnaire - Bone or Joint Disorder,OLI_REQCODE_QBONEJOINT,360,Requirement to fill out more details on a Bone or Joint Disorder questionnaire.	
+Questionnaire - Business Insurance,OLI_REQCODE_QBUSINESSINS,209,	
+Questionnaire - Cancer History,OLI_REQCODE_CANCERHISTORY,951,	
+Questionnaire - Chest Pain,OLI_REQCODE_QCHESTPAIN,109,	
+Questionnaire - Colitis,OLI_REQCODE_QCOLITIS,203,	
+Questionnaire - Confidential Personal History,OLI_REQCODE_QCONFPERSHIST,119,	
+Questionnaire - Convulsion,OLI_REQCODE_QCONVULSION,204,	
+Questionnaire - Coronary Artery Disease,OLI_REQCODE_QCORNART,153,	
+Questionnaire - COVID,OLI_REQCODE_QCOVID,1028,	
+Questionnaire - Criminal History,OLI_REQCODE_CRIMHISTORY,916,This is a client completed questionnaire related to criminal history.	
+Questionnaire - Critical Illness,OLI_REQCODE_CRITILL,871,	
+Questionnaire - CRS Decl of Tax Res of Ind,OLI_REQCODE_CRSIND,1010,CRS Only Declaration of Tax Residency of Individual. In Canada, CRA Form RC520 can be used.	
+Questionnaire - CRS Decl of Tax Res of Org,OLI_REQCODE_CRSENT,1011,CRS Only Declaration of Tax Residency of Entity. In Canada, CRA Form RC521 can be used.	
+Questionnaire - Diabetic,OLI_REQCODE_QDIABETES,111,	
+Questionnaire - Diagnostic Tests,OLI_REQCODE_QDIAGNOSTIC,922,Questionnaire used for querying proposed insured on diagnostic tests he/she may have received.	
+Questionnaire - Digestive,OLI_REQCODE_QDIGESTIVE,686,A questionnaire covering digestive medical conditions.	
+Questionnaire - Diving,OLI_REQCODE_QDVING,104,	
+Questionnaire - Driving History,OLI_REQCODE_DRIVINGHIST,855,	
+Questionnaire - Drug Usage,OLI_REQCODE_QDRUGUSE,115,	
+Questionnaire - Ears/Eyes/Nose Information,OLI_REQCODE_EENINFO,963,	
+Questionnaire - Epilepsy,OLI_REQCODE_QEPILEPSY,110,	
+Questionnaire - Fainting or Loss Of Consciousness,OLI_REQCODE_QFAINTING,687,A questionnaire covering fainting or loss of consciousness incidents.	
+Questionnaire - Family History,OLI_REQCODE_QFAMILYHISTORY,689,A questionnaire for family members' medical history.	
+Questionnaire - FATCA&CRS Decl of Tax Res of Ind,OLI_REQCODE_FATCACRSIND,1008,Combined (FATCA & CRS) Declaration of Tax Residency of Individual. In Canada, CRA Form RC518 can be used.	
+Questionnaire - FATCA&CRS Decl of Tax Res of Org,OLI_REQCODE_FATCACRSENT,1009,Questionnaire - Combined (FATCA & CRS) Declaration of Tax Residency of Entity.In Canada, CRA Form RC519 can be used.	
+Questionnaire - FATCA Entity Classification Decl.,OLI_REQCODE_FATCAENTITY,924,Questionnaire - Declaration of (FATCA) Classification for an Entity. This Questionnaire is used to capture an entity classification type to certify their USA tax status.	
+Questionnaire - FATCA Self-Certification,OLI_REQCODE_FATCASELF,923,Questionnaire used for applicants to certify their USA tax status	
+Questionnaire - Financial Supplement,OLI_REQCODE_QFINSUPP,117,	
+Questionnaire - Fishing,OLI_REQCODE_QUESFISH,883,	
+Questionnaire - Foreign National,OLI_REQCODE_FOREIGNNATLQUEST,984,	
+Questionnaire - Foreign Residence/Travel,OLI_REQCODE_QFOREIGN,688,A questionnaire for travel outside the country or if living outside the country.	
+Questionnaire- Foreign Travel,OLI_REQCODE_QFOREIGNTRAV,210,	
+Questionnaire - Gastric Disease,OLI_REQCODE_QGASTRIC,205,	
+Questionnaire - Gynecologic Disorders,OLI_REQCODE_GYNECOL,937,	
+Questionnaire - Hang Gliding,OLI_REQCODE_QUESHANGGLID,881,	
+Questionnaire - Hazardous Activities,OLI_REQCODE_QHAZARDACT,101,	
+Questionnaire - Heart Murmur/Valve Disease,OLI_REQCODE_HEARTMURMURQUEST,979,	
+Questionnaire - Hepatitis,OLI_REQCODE_HEPATITISQUEST,980,	
+Questionnaire - HIV,OLI_REQCODE_QHIV,113,	
+Questionnaire - Indigestion / Ulcer,OLI_REQCODE_QULCER,112,	
+Questionnaire - Key Person Supplement,OLI_REQCODE_KEYPERSSUP,874,	
+Questionnaire - Liver Disorder,OLI_REQCODE_LIVERDISQ,869,	
+Questionnaire - Mature Age Focus,OLI_REQCODE_QMATUREAGE,698,This questionnaire is requested to find out how older people spend their time. Also known as Daily Activities Questionnaire.	
+Questionnaire - Medical,OLI_REQCODE_QMED,106,	
+Questionnaire - Military,OLI_REQCODE_QMILITARY,118,	
+Questionnaire - Motor Boat Racing,OLI_REQCODE_MOTORBOATRACE,910,	
+Questionnaire - Motor Sports,OLI_REQCODE_QMOTORSPORTS,200,	
+Questionnaire - Mountain Climbing,OLI_REQCODE_QMOUNTAINCLIMBING,690,A questionnaire covering mountain climbing activities.	
+Questionnaire - Nervous Disease,OLI_REQCODE_QNERVOUS,206,	
+Questionnaire - Neurological,OLI_REQCODE_NEURQUES,870,	
+Questionnaire - Occupational Duties,OLI_REQCODE_QOCCUPDUTIES,201,	
+Questionnaire - Other,OLI_REQCODE_QOTHER,120,	
+Questionnaire - Politically Exposed Person,OLI_REQCODE_QPEFP,843,Initial questions used to determine if a Politically Exposed Person Form is required.	
+Questionnaire - Preferred Risk,OLI_REQCODE_QPREFERREDRISK,691,A lifestyle & medical questionnaire requested when a preferred risk class has been applied for.	
+Questionnaire- Psychiatric,OLI_REQCODE_QPSYCHIATRIC,207,	
+Questionnaire - Resident Alien,OLI_REQCODE_QRESDNTALIEN,211,	
+Questionnaire - Respiratory Disorders,OLI_REQCODE_QRESP,920,Questionnaire used for querying proposed insured on issues related to respiratory disorders.	
+Questionnaire - Risk Classification,OLI_REQCODE_QUESRISKCLASS,886,	
+Questionnaire - Seasonal,OLI_REQCODE_QUESSEASONAL,882,	
+Questionnaire - Seizure,OLI_REQCODE_QSEIZURE,208,	
+Questionnaire - Sky Diving,OLI_REQCODE_QSKYDIVING,202,	
+Questionnaire - Sleep Apnea,OLI_REQCODE_QSLPAPNEA,921,Questionnaire used for querying proposed insured on issues relating to the condition of sleep apnea.	
+Questionnaire - Sports,OLI_REQCODE_SPORTSQUEST,981,	
+Questionnaire - Stroke / TIA,OLI_REQCODE_STROKEQUEST,982,TIA is Transient Ischemic Attack	
+Questionnaire - Suicide And Incontestability,OLI_REQCODE_SUICIDEL,872,	
+Questionnaire - Tobacco Usage,OLI_REQCODE_QTOBACCOUSE,116,	
+Questionnaire - Truck Drivers,OLI_REQCODE_QTRUCKDVR,105,	
+Questionnaire - Universal Life,OLI_REQCODE_UNIVLIFE,154,	
+Questionnaire - Urinary or Kidney Disorder,OLI_REQCODE_QURINARY,359,Requirement to fill out more details on a urinary system/kidney disorder questionnaire.	
+Questionnaire - Vehicle Racing,OLI_REQCODE_RACINGQUEST,983,	
+Questionnaire - Violation,OLI_REQCODE_QVIOLATION,358,Requirement to fill out more details on a violation questionnaire. Used especially for DUI, DWI, driver's license suspension or revocation or moving violations.	
+Rate Reduction,OLI_REQCODE_RATEREDUCTN,285,	
+Refer to Home Office,OLI_REQCODE_REFERTOHO,286,	
+Reinsurance - Automatic,OLI_REQCODE_REINSURCMP1,288,	
+Reinsurance - Facultative,OLI_REQCODE_REINSURFACUL,287,	
+Release of Assignee's Interest Form,OLI_REQCODE_RELASSIGNEE,685,Consent of the assignee to reduce/terminate a policy or a form releasing interest in the assigned policy.	
+Release of Bankruptcy Form,OLI_REQCODE_RELBANKRUPTCY,684,Consent of the bankruptcy trustee to reduce/terminate a policy or a discharge to release the policy from bankruptcy.	
+Release of Liability Form,OLI_REQCODE_RELLIABFORM,294,	
+Replaced Policy Funds,OLI_REQCODE_REPLFUNDS,655,Requirement for funds from the policy being replacedThis would originally be passed on message 126 or 127 by the Receiving Carrier on the"Applied For" Holding. The Delivering Carrier would pass the requirement back on the associated Inforce/Active Holding on the 126/127 response or the 1128 with the appropriate status.	
+Replacement Consent Form,OLI_REQCODE_REPCONSENT,694,Authorization by the client to disclose the information on the Replacement form to the Insurance Co.	
+Replacement Disclosure Statement,OLI_REQCODE_REPLACEDISC,985,	
+Replacement Form,OLI_REQCODE_REPFORM,127,This form is used to accomplish full or partial exchange of policies / contracts pursuant to Internal Revenue Code (IRC) Section 1035. This form can also be used for Transfers of Funds and Rollovers. Examples include: The ACORD 951 - 1035 Exchange / Rollover / Transfer Form, State Replacement Forms, or the Issuing Carrier's proprietary Replacement / 1035 Exchange / Rollover or Transfer of Assets Form.	
+Replacement form clarification,OLI_REQCODE_REPLFORMCLAR,893,	
+Replacement Letter (LOA),OLI_REQCODE_REPLETTER,128,Replacement Letter or Letter of Acceptance (LOA)A LOA is a document that states that a policy holder requests to release funds, from their existing insurance policy or mutual fund, to a carrier who will be issuing a new policy / fund on behalf of the policy holder. Assignment by a policy owner of all control of and rights in the policy to a third party.	
+Reply to a 1035 Exchange Offer,OLI_REQCODE_REPLY1035OFFER,986,	
+Reply To an Offer on a Modified Application,OLI_REQ_REPLYMODIFIEDOFFER,703,Reply required on a policy offer that was modified and differs from the original submitted application.	
+Reply to memo,OLI_REQCODE_REPMEMO,155,agent response required to insurance company memo	
+Reply To Phone Call,OLI_REQCODE_REPLYTOPHONECALL,987,	
+Reply to Tentative Offer,OLI_REQCODE_REPLYOFFER,267,	
+Report from Motor Vehicle records Max Coverage,OLI_REQCODE_REPORTMOTORVEHICLEMAX,336,	
+Request for 'Consent for General Blood Testing' Form,OLI_REQCODE_CONSENTBLOOD,25,Normally would use a specific consent form: HIV Consent Form, State Specific Consent Form, Carrier Specific Consent Form, Lab Consent Form	
+Return Alternate Policy,OLI_REQCODE_RETALTPOL,162,	
+Return Conditional Receipt,OLI_REQCODE_RETCONDREC,163,	
+Returned Check,OLI_REQCODE_RETCHK,164,Check refused by bank, producer action is required.	
+Review by Carrier's Medical Director or CMO,OLI_REQCODE_MEDRVW,598,This is sometimes a step in the Carrier workflow, where the underwriter refers a case to the Carrier's internal Medical Director or Chief Medical Officer (CMO) for review and next steps. The Medical Director or CMO then provides feedback to the underwriter on what tests if any need to be ordered.This is used internally by the Carrier to help track case progress and location. Could be viewed as an "internal" and "administrative" requirement.	
+Review of cases combined for administration,OLI_REQCODE_ADDLCASES,838,Review of additional cases that have been identified for combined administrative processing to make a determination regarding those cases. For example, this may be used between the policy issue and the underwriting teams and the agent, to keep insureds/participants and/or applications together.	
+Risk Adjustment,OLI_REQCODE_RA,918,A process by which a Health Insurance Company which has insured an above average number of individuals with HCC (Hierarchical Condition Category) conditions may be compensated by Health Insurance Companies that have insured less than the average number of individuals expected with these HCC codes.	
+Rollover Amount Due,OLI_REQCODE_ROLLOVERDUE,295,	
+Sales Material Checklist,OLI_REQCODE_SALESMATERIAL,644,State regulatory requirement. For states that have replacement regulations requiring any sales material used during a sales presentation must be submitted to the Home Office	
+Saliva Cocaine Metabolites,OLI_REQCODE_SALIVACOCAINE,585,Saliva Cocaine Metabolites	
+Saliva Hepatitis C Ab,OLI_REQCODE_SALIVAHEPC,591,Saliva Hepatitis C Antibodies	
+Saliva Nicotine,OLI_REQCODE_SALIVANICOTINE,547,Test measures the amount of nicotine in saliva. Nicotine is associated with exposure to tobacco smoke and cotinine.	
+Saliva test with HIV,OLI_REQCODE_SALIVAHIV,328,	
+Scheduled Date for Appointment,OLI_REQCODE_APPTDT,897,Date visit is scheduled	
+S Corp - 1120S,OLI_REQCODE_SCORP1120S,988,	
+Secondary Addressee Information,OLI_REQCODE_2NDRYADDRESSEE,1017,A Secondary Addressee is an additional contact for communications regarding a policy such as copies of notices and letters regarding potential lapses in coverage.	
+Second Medical Examination,OLI_REQCODE_MEDEXAM2,70,	
+Serum Appearance,OLI_REQCODE_BLOODSERUMAPPEAR,791,A test for the presence of lipemia and hemolysis in a blood serum specimen.	
+Shared Medicals,OLI_REQCODE_SHAREDMEDICALS,939,Original medical reports shared with other organizations. For example, the original request for medical examination that is shared within a 6 month time period rather than requesting a second medical examination. Additional information such as the the specific examiner or examination date may be specified using RequirementDetails.	
+Short Portable Mental Status Questionnaire,OLI_REQCODE_SPMSQ,696,A short portable mental status questionnaire for the assessment of organic brain deficit in elderly patients. This is commonly known as SPMSQ.	
+Side Account Transfer Needed,OLI_REQCODE_SIDEACCTTRANS,890,	
+Signature Guarantee,OLI_REQCODE_SIGGUAR,677,The authentication of a signature in the form of a stamp, seal, or written confirmation by a bank or member of a domestic stock exchange (or other acceptable guarantor). A notary public cannot provide a signature guarantee. A signature guarantee is a common requirement when transferring or redeeming shares or changing the ownership of an account. The color of the seal (stamp) is BLACK.	
+Signature On Agent's Report,OLI_REQCODE_SIGAGTREP,316,	
+Signed Application - (applicants signature),OLI_REQCODE_SIGNEDAPP,165,	
+Signed Endorsement,OLI_REQCODE_SIGNEDENDORSE,989,	
+Signed Illustration,OLI_REQCODE_SIGNILLUS,133,	
+Single Case Agreement,OLI_REQCODE_SINGLCASEAGR,296,	
+Source Of Funds Supplement,OLI_REQCODE_SOURCEOFFUNDSFORM,1007,A questionnaire used to assess whether the transaction meets the standard for fiduciary responsibility and is in the client's best interest.	
+Special Class Letter,OLI_REQCODE_SPECLCLSLTR,297,	
+Special Handling,OLI_REQCODE_SPECIALHANDLING,990,To notify the agent that special handling is needed, often for confidentiality or privacy reasons. Use RequirementDetails to include the specifics.	
+Special Requirement,OLI_REQCODE_SPECIALREQ,300,	
+Specific Carrier Contract,OLI_REQCODE_CARRIERCONTRACT,513,	
+Split Dollar Agreement,OLI_REQCODE_SPLITDOLLAGR,301,	
+State Disclosure,OLI_REQCODE_STATEDISC,148,	
+Statement / Documentation of Good Health,OLI_REQCODE_STMTGOODHEALTH,19,	
+Statement from Client,OLI_REQCODE_CLIENTSTMT,227,	
+Substitution of Insured,OLI_REQCODE_SUBINSURED,991,	
+Suitability Information,OLI_REQCODE_SUITABILITYINFO,992,	
+Suitability Interview,OLI_REQCODE_SUITABILITYINTER,993,	
+Superannuation - application for membership,OLI_REQCODE_SUPERAPP,135,	
+Supplementary Application,OLI_REQCODE_SUPPAPP,866,	
+Support Document to Follow,OLI_REQCODE_SUPPORTDOCTOFOLLOW,832,Support document will be sent to the recipient following the submission of this transaction.	
+Surr Chg Acknowledgement Form,OLI_REQCODE_SURRACK,700,The ceding carrier's surrender charge acknowledgement form, which requires the policy owner's signature, outlines surrender charges the policy owner will incur when they transfer / cancel certain types of investments or insurance policies.	
+Surrender Comparison Index Certification,OLI_REQCODE_SURRCOMPINDEX,645,A surrender form specific to the state of PA.	
+Surrendered Policy Form,OLI_REQCODE_SURRPOL,651,A form which includes the owner and insured information, tax withholding election, and signatures. This information is needed by the carrier in order to surrender a policy.	
+Surrender Form,OLI_REQCODE_SURRENDFORM,302,The generic name "Surrender Form" refers to an existing (ceding) carrier's proprietary form/paperwork, required by the existing carrier, to be filled out by the policy holder in order to complete a: 1035 exchange, replacement, transfer, withdrawal or surrender of funds. Confirmation, conservation, disbursement or company forms that are tied to fund withdrawals are also referred to as a Surrender Form.The proprietary form name used by a ceding carrier, if different from "Surrender Form", may be stated in the requirement notes.	
+Swab Test Oral Fluid Specimen,OLI_REQCODE_SWABTEST,320,This requirement is needed for paramedical service providers. Paramedical service provider collects an oral fluid sample from a proposed insured. Specimen is later sent to a lab for testing.	
+Tax Disclosure,OLI_REQCODE_TAXDISCLOSURE,994,	
+Tax Form,OLI_REQCODE_MISCTAXFORMS,995,Miscellaneous tax form	
+Tax Identification Number Request (TIN),OLI_REQCODE_TINREQUEST,129,A TIN is an identification number used in the administration of tax laws. In the U.S, the TIN is issued either by the Social Security Administration (SSA) or by the Internal Revenue Service (IRS).	
+Tax Return - Copy,OLI_REQCODE_TAXRETURN,303,	
+Tax Return - Schedule A,OLI_REQCODE_SCHEDULEA,304,	
+Tele-Inspection report - 1 year history,OLI_REQCODE_TELE1,351,This is one of several different types of inspection reports offered to assist in underwriting a proposed insurance applicant. Applicant is interviewed via telephone to collect information regarding the applicant's health, employment, finances, duties and habits.	
+Tele-Inspection report plus Credit & Financial Report (billed hourly) - 10 year history,OLI_REQCODE_TELE10CREDITFIN,354,This is one of several different types of inspection reports offered to assist in underwriting a proposed insurance applicant.Applicant is interviewed in person to collect information regarding the applicant's health, employment, finances, duties and habits. Also includes a credit report and an in-depth financial breakdown. Applicant is billed hourly.	
+Tele-Inspection report plus Credit & Financial report - 5 year history,OLI_REQCODE_TELE5CREDITFIN,353,This is one of several different types of inspection reports offered to assist in underwriting a proposed insurance applicant.Applicant is interviewed via telephone to collect information regarding the applicant's health, employment, finances, duties and habits. Also includes a credit report and an in-depth financial breakdown.	
+Tele-Inspection report plus Credit report - 3 year history,OLI_REQCODE_TELE3CREDIT,352,This is one of several different types of inspection reports offered to assist in underwriting a proposed insurance applicant.Applicant is interviewed via telephone to collect information regarding the applicant's health, employment, finances, duties and habits. Also includes a credit report.	
+Temporary Insurance Agreement,OLI_REQCODE_TEMPINSAGMT,122,	
+Tenants in Common Ownership Form,OLI_REQCODE_TENINCOMMOWNERFORM,896,	
+Third Party Financial Information,OLI_REQCODE_FININFO3RDPARTY,846,Obtain financial information on a Party who is associated to a policy but is not an owner, insured, or beneficiary identified on the policy. This financial information is gathered for compliance purposes and may be used to assess any association with Proceeds of Crime (i.e. Money Laundering, Illegal Enterprise, etc.) and Terrorist Financing.	
+Third Party Sources of Financial Information,OLI_REQCODE_FININFOSOURCE,908,Obtain financial information on the "applies to Party", typically an owner or primary insured, from third party source(s). This information is required to support the amount of insurance requested. This documentation may include personal or business financial statements such as W-2s or tax returns, employment contracts, loan or trust agreements, buy-sell agreements, etc. - all of which are considered third party sources of information. This information may be provided by the proposed insured, his or her advisors, attorneys, or accountants.	
+Third Urine Specimen,OLI_REQCODE_URINE3,51,	
+Tobacco Use,OLI_REQCODE_TU,919,One of the factors that Health Companies will be able to use in setting the premiums for Health Insurance plans under the Patient Protection and Affordable Care Act of 2010 (PPACA).	
+Total Cholesterol,OLI_REQCODE_TOTALCHOL,932,Blood Analysis - Total Cholesterol	
+Total insurance with all carriers,OLI_REQCODE_TOTINSPLACE,996,Includes total to be placed and currently inforce	
+Transaction Analysis ( overall analysis of each requirement).,OLI_REQCODE_TRANANAL,355,Requirement to request analysis/review/evaluation of Requirement Results	
+Transfer of Assets,OLI_REQCODE_TRANSFERASSETS,997,	
+Translation Certificate,OLI_REQCODE_TRANSCERT,1019,Document validating that the translation was done by a certified source	
+Trust Agreement Tax ID #,OLI_REQCODE_TRUSTTAXID,310,	
+Trust Certification,OLI_REQCODE_TRUSTCERT,311,	
+Trust - Date Of,OLI_REQCODE_TRUSTDATE,309,	
+Trustee Clarification,OLI_REQCODE_TRUSTEECLARIF,346,	
+Trustee Form,OLI_REQCODE_TRUSTFORM,312,	
+Underwriters Worksheet,OLI_REQCODE_UNWRITWORKSHEET,341,	
+Unisex Acceptance Waiver,OLI_REQCODE_UNISEXACCEPTWVR,998,	
+Unknown,OLI_UNKNOWN,0,	
+Urinalysis,OLI_REQCODE_URINALYSIS,357,	
+Urine Adulterant,OLI_REQCODE_URINEADULTERANT,829,Identify Adulterants in human urine. Adulterants are used to alter a specimen as a means of passing a drug test.	
+Urine Amphetamine,OLI_REQCODE_URINEAMPH,773,A test for Amphetamine in a urine specimen.	
+Urine BAB,OLI_REQCODE_URINEBAB,768,a test for Beta Adrenergic Blockers (BAB) in a urine specimen	
+Urine Benzodiazepine,OLI_REQCODE_URINEBENZODIAZEPINE,758,A test for Benzodiazepine in a urine specimen.	
+Urine Blood Content,OLI_REQCODE_URINEBLOOD,606,Urine Blood Content	
+Urine Cocaine Metabolite,OLI_REQCODE_URINECOCAINE,769,a test for cocaine in a urine specimen.	
+Urine Codeine,OLI_REQCODE_URINECODEINE,774,A test for Codeine in a urine specimen.	
+Urine Cotinine,OLI_REQCODE_URINENICOTINE,561,Test measures the amount of cotinine in the urine. Cotinine is associated with exposure to tobacco smoke and nicotine.	
+Urine Creatinine,OLI_REQCODE_URINECREATININE,607,Urine Creatinine	
+Urine DIU,OLI_REQCODE_URINEDIU,767,a test for diuretics in a urine specimen	
+Urine Fasting Glucose,OLI_REQCODE_URINEFASTINGGLUCOSE,604,Urine Fasting Glucose	
+Urine Glucose,OLI_REQCODE_URINEGLUCOSE,601,Urine Glucose	
+Urine Glucose - 1/2 Hour,OLI_REQCODE_URINEGLUCOSEHALFHOUR,603,Urine Glucose - 1/2 Hour	
+Urine Glucose - 2 Hour,OLI_REQCODE_URINEGLUCOSE2HOUR,602,Urine Glucose - 2 Hour	
+Urine Granular Casts,OLI_REQCODE_URINEGRANCASTS,574,Urine Granular Casts	
+Urine GTT - 1.0 hour draw,OLI_REQCODE_URINEGTT1HRDRAW,727,A GTT where urine is voided at 1.0 hour intervals	
+Urine GTT - 1.5 hour draw,OLI_REQCODE_URINEGTT1P5HRDRAW,728,A GTT where urine is voided at 1.5 hour intervals	
+Urine GTT - 2.5 hour draw,OLI_REQCODE_URINEGTT2P5HRDRAW,729,A GTT where urine is voided at 2.5 hour intervals	
+Urine GTT - 3.0 hour draw,OLI_REQCODE_URINEGTT3HRDRAW,730,A GTT where urine is voided at 3 hour intervals	
+Urine HCG,OLI_REQCODE_URINEHCG,771,A test to detect HCG in a urine specimen. Used to determine pregnancy.	
+Urine Hyaline Casts,OLI_REQCODE_URINEHYALINECASTS,562,Urine Hyaline Casts	
+Urine Leukocyte Esterase,OLI_REQCODE_URINELEUKEST,563,Urine Leukocyte Esterase	
+Urine Marijuana,OLI_REQCODE_URINEMARIJUANA,770,A test for Marijuana (THC) in a urine specimen.	
+Urine MC Ratio,OLI_REQCODE_URINEMCRATIO,605,Urine Microglobulin/Creatinine Ratio	
+Urine Meperidine Screen,OLI_REQCODE_URINEMEPSCREEN,792,A test for Meperidine in a urine specimen.	
+Urine Methadone Qualitative,OLI_REQCODE_URINEMETHQUALCLS,760,A test for the presence of Methadone in a urine specimen. Methadone is a synthetic opioid. Present in analgesics and cough depressants. It is also commonly used for detoxification and maintenance of heroin addiction. Long term side effects include excessive sweating, lymphocytosis, insomnia and increased prolactin, albumin and globulins.	
+Urine Methadone Screen,OLI_REQCODE_URINEMETHSCREEN,793,A test for Methadone in a urine specimen.	
+Urine Methamphetamine,OLI_REQCODE_URINEMETH,779,A test for Methamphetamine in a urine specimen.	
+Urine Methaqualone,OLI_REQCODE_URINEMQL,776,A test for Methaqualone in a urine specimen.	
+Urine Microalbumin,OLI_REQCODE_URINEMCA,772,A test to determine the amount of Microalbumin in a urine specimen.	
+Urine Morphine,OLI_REQCODE_URINEMORPH,775,A test for Morphine in a urine specimen.	
+Urine Oxycodone Screen,OLI_REQCODE_URINEOXYSCREEN,794,A test for Oxycodone in a urine specimen.	
+Urine PC Ratio,OLI_REQCODE_URINEPCRATIO,599,Urine Protein/Creatinine Ratio	
+Urine PH,OLI_REQCODE_URINEPH,578,Urine PH	
+Urine Phencyclidine,OLI_REQCODE_URINEPCC,777,A test for Phencyclidine (PCP) in a urine specimen.	
+Urine Propoxyphene,OLI_REQCODE_URINEPPP,778,A test for Propoxyphene in a urine specimen.	
+Urine Random Opiates,OLI_REQCODE_URINEOPIATES,830,Test for drug (Opiates) abuse. Use this code when the test is for a variety of opiates rather than a specific opiate such as codeine or morphine.	
+Urine RBC,OLI_REQCODE_URINERBC,576,Urine Red Blood Count	
+Urine Specific Gravity,OLI_REQCODE_URINESPECGRAV,579,Urine Specific Gravity	
+Urine Specimen (for Prostate Specific Antigen),OLI_REQCODE_URINEPSA,52,	
+Urine Total Protein,OLI_REQCODE_URINETOTALPROTEIN,587,Urine Total Protein	
+Urine Toxicology - Barbiturate,OLI_REQCODE_URINEBARBITURATE,759,A test for Barbiturate in a urine specimen.	
+Urine WBC,OLI_REQCODE_URINEWBC,577,Urine White Blood Count	
+Urine with Full Drug Screen,OLI_REQCODE_URINEDRUG,326,	
+Urine with Microalbumin,OLI_REQCODE_URINEMICROALBUMIN,325,	
+Verification Form of Govt Tax ID for businesses,OLI_REQCODE_GOVIDVERIFY,528,Verification Form of Government Tax ID for businesses	
+Verify Commission Option,OLI_REQCODE_VERIFYCOMMOPTION,1000,	
+Verify Payment Information - Ongoing Payments,OLI_REQCODE_ONGOINGPAYMTINFO,1005,Verify payment information for ongoing premiums, which may include the method of payment, the mode or frequency of the payment, account information, and/or the payment amount.	
+Verify Payment Information - Premium Balance Due,OLI_REQCODE_PREMDUEPAYMTINFO,1004,Verify payment information for the premium balance due, which may include the method of payment, the mode or frequency of the payment, account information, and/or the payment amount.	
+Visa Information,OLI_REQCODE_VISAINFO,1001,Includes visa number, type of visa, etc.	
+Vitals: BP Readings / Pulse Only,OLI_REQCODE_VITALSBPPULSE,799,Blood pressure and pulse only	
+Vitals: BP Readings / Pulse Only 2,OLI_REQCODE_VITALSBPPULSE2,831,Pulse Reading second time point	
+Vitals: Height and Weight Only,OLI_REQCODE_VITALSHTWT,800,Height and weight only	
+Vitals / Physical Measurements,OLI_REQCODE_VITALS,349,Vitals / Physical Measurements - Height & Weight, Blood Pressure and Pulse. Specify in the RequirementDetails where to record (Carrier form or Lab Ticket).	
+Voice Recording,OLI_REQCODE_VOICEREC,1020,Used for the transmission of voice recording, often recorded during a tele-interview or similar.	
+Void Check - (need voided check from client).,OLI_REQCODE_VOIDCHK,166,	
+W-2 Copy,OLI_REQCODE_TAXW2FORM,305,	
+W-4P Withholding Form,OLI_REQCODE_TAXW4FORM,306,	
+W-8,OLI_REQCODE_W8,646,Certificate of Foreign Status of Beneficial Owner for United States Tax Withholding	
+W-9 IRS Form,OLI_REQCODE_TAXW9FORM,307,Request for Taxpayer Identification Number and Certification.	
+WD Tax Form - Permanent Insurance,OLI_REQCODE_TAXWDFORM,308,	
+Weight,OLI_REQCODE_WEIGHT,95,	
+Wet signature,OLI_REQCODE_WETSIG,518,See Requirement Details for what Signature is required	
+Witness Declaration Form,OLI_REQCODE_WITNESSDEC,858,	
+Witness Signature on application,OLI_REQCODE_WITNESSSIGN,857,	
+Work History,OLI_REQCODE_WORKHIST,524,	
+Work Permit Document,OLI_REQCODE_WORKPERMIT,935,Document to identify authorization to work in a particular jurisdiction.	

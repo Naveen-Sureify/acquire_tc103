@@ -1,0 +1,61 @@
+{
+  "name": "acquire-applications-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/acquire-applications-api/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/acquire-applications-api",
+        "main": "packages/acquire-applications-api/src/main.ts",
+        "tsConfig": "packages/acquire-applications-api/tsconfig.app.json",
+        "assets": ["packages/acquire-applications-api/src/assets"],
+        "target": "node",
+        "compiler": "tsc"
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "packages/acquire-applications-api/src/environments/environment.ts",
+              "with": "packages/acquire-applications-api/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:node",
+      "options": {
+        "buildTarget": "acquire-applications-api:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/acquire-applications-api/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/packages/acquire-applications-api"],
+      "options": {
+        "jestConfig": "packages/acquire-applications-api/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "start": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "node packages/acquire-applications-api/main.js"
+      }
+    }
+  },
+  "tags": []
+}

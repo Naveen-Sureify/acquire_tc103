@@ -1,0 +1,13 @@
+<Simple>
+  <Name>Tyrion Lannister</Name>
+  <Name>Cersei Lannister</Name>
+  <Relation type="name" index="1">
+    <First>Tyrion</First>
+  </Relation>
+  <Relation type="name" index="2">
+    <First>Cersei</First>
+  </Relation>
+  <Relation type="lannister">
+    <NumLannisters>2</NumLannisters>
+  </Relation>
+</Simple>

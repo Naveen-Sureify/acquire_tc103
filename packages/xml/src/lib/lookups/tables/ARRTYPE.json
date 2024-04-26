@@ -1,0 +1,90 @@
+[
+  ["value", "key", "tc", "definition"],
+  ["Account Value Adjustment", "OLI_ARRTYPE_ACCTVALUEADJ", "36", ""],
+  ["Allocation Instructions", "OLI_ARRTYPE_ADMIN", "55", ""],
+  ["Asset Allocation Model", "OLI_ARRTYPE_AA", "21", ""],
+  ["Asset Rebalancing", "OLI_ARRTYPE_AR", "3", ""],
+  ["Automatic Payroll Deduction", "OLI_ARRTYPE_PAYROLLDEDUCT", "54", ""],
+  ["Auto Payment/Bank Drafting Program", "OLI_ARRTYPE_AUTOPAY", "22", ""],
+  ["Capital Gains Transfer", "OLI_ARRTYPE_CAPGAINTRANS", "6", ""],
+  ["Capitalized Loan Interest", "OLI_ARRTYPE_CAPITALIZEDLOANINT", "51", ""],
+  ["Charge Deduction", "OLI_ARRTYPE_CHARGEDEDUCTION", "52", ""],
+  ["Conversion Surrender", "OLI_ARRTYPE_CONVRSURR", "32", ""],
+  ["Cover Increase", "OLI_LU_ARRTYPE_COVERINC", "57", ""],
+  ["Discounted Premium Withdrawal", "OLI_ARRTYPE_DPFWITHDRAW", "27", ""],
+  ["Dividends on Deposit Withdrawal", "OLI_ARRTYPE_DIVDEPWITHDRAW", "30", ""],
+  ["Dividend Transfer", "OLI_ARRTYPE_DIVTRANS", "5", ""],
+  ["Dollar Cost Averaging", "OLI_ARRTYPE_COSTAVG", "2", ""],
+  ["Free Look Surrender", "OLI_ARRTYPE_FREELOOK", "33", ""],
+  ["Full Surrender", "OLI_ARRTYPE_FULLSURR", "31", ""],
+  ["Indexed", "OLI_ARRTYPE_INDEXED", "16", ""],
+  ["Initial Payment", "OLI_ARRTYPE_OSA", "19", ""],
+  [
+    "Interest Only Specified Dollar Amount Withdrawal (Gross)",
+    "OLI_ARRTYPE_INTGROSSWITH",
+    "11",
+    ""
+  ],
+  [
+    "Interest Only Surrender-Free Amount Withdrawal",
+    "OLI_ARRTYPE_INTSURRFREEWITH",
+    "12",
+    ""
+  ],
+  ["Interest Only Withdrawal (Net)", "OLI_ARRTYPE_INTNETWITH", "10", ""],
+  ["Interest Sweep", "OLI_ARRTYPE_INTSWEEP", "4", ""],
+  ["Loans", "OLI_ARRTYPE_LOANS", "50", ""],
+  ["Lump Sum Contribution", "OLI_ARRTYPE_LUMPSUM", "35", ""],
+  [
+    "Maximum allowable under the plan design",
+    "OLI_ARRTYPE_MAXALLOWED",
+    "17",
+    ""
+  ],
+  ["One Time Withdrawal", "OLI_ARRTYPE_ONETIMEWITHDRAWAL", "58", ""],
+  ["One Year Term Partial Surrender", "OLI_ARRTYPE_OYTPARTSURR", "29", ""],
+  ["Other", "OLI_OTHER", "2147483647", ""],
+  [
+    "Paid - Up Additions Partial Surrender",
+    "OLI_ARRTYPE_PUAPARTSURR",
+    "28",
+    ""
+  ],
+  ["Percentage of Value Withdrawal", "OLI_ARRTYPE_PCTVALWITH", "14", ""],
+  ["Performance Lock", "OLI_ARRTYPE_PERFLOCK", "60", ""],
+  ["Premium Depositors Fund Withdrawal", "OLI_ARRTYPE_PDFWITHDRAW", "26", ""],
+  ["Premium Increase", "OLI_LU_ARRTYPE_PREMINC", "56", ""],
+  ["Recurring Plan Contribution", "OLI_ARRTYPE_RECURRINGCONTRIB", "34", ""],
+  [
+    "Required Minimum Distribution Withdrawal",
+    "OLI_ARRTYPE_REQMINWITH",
+    "13",
+    ""
+  ],
+  ["Review Payout Percentage", "OLI_ARRTYPE_PAYOUTPERC", "18", ""],
+  ["Secure Principal", "OLI_ARRTYPE_SECUREPRIN", "20", ""],
+  ["Special Dollar Cost Averaging", "OLI_ARRTYPE_SDCA", "24", ""],
+  ["Specified Amount Deposit", "OLI_ARRTYPE_SPECAMTDEP", "25", ""],
+  [
+    "Specified Amount Withdrawal (Gross)",
+    "OLI_ARRTYPE_SPECAMTGROSSWITH",
+    "8",
+    ""
+  ],
+  ["Specified Amount Withdrawal (Net)", "OLI_ARRTYPE_SPECAMTNETWITH", "7", ""],
+  ["Standing Allocation", "OLI_ARRTYPE_STANDINGALLOC", "37", ""],
+  ["Strategy", "OLI_ARRTYPE_STRATEGY", "59", ""],
+  ["Subsequent Payment", "OLI_ARRTYPE_SUBSQNTPREMS", "39", ""],
+  ["Substantially Equal Payment", "OLI_ARRTYPE_SUBSTEQUAL", "41", ""],
+  ["Surrender-Free Amount Withdrawal", "OLI_ARRTYPE_SURRFREEWITH", "9", ""],
+  ["Systematic Withdrawal", "OLI_ARRTYPE_SYSTEMATICWTHDRWL", "38", ""],
+  [
+    "The Automatic Investment Program code indicates that arrangement is an automatic investment program.",
+    "OLI_ARRTYPE_AIP",
+    "23",
+    ""
+  ],
+  ["Threshold Transfer", "OLI_ARRTYPE_THRESHTRANSFER", "15", ""],
+  ["Transfer", "OLI_ARRTYPE_TRANSFER", "1", ""],
+  ["Unknown", "OLI_UNKNOWN", "0", ""]
+]

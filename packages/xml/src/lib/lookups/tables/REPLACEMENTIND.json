@@ -1,0 +1,5 @@
+[
+  ["value", "key", "tc"],
+  ["False", "OLI_BOOL_FALSE", "0"],
+  ["True", "OLI_BOOL_TRUE", "1"]
+]

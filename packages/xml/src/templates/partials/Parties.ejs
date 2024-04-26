@@ -1,0 +1,221 @@
+<% if(party?.PartyType === "Insured") { %>  
+  <Party id=<%= "Insured" %>>
+<% } else if(party?.PartyType === "Beneficiary" || party?.PartyType === "Contingent") { %>
+  <Party id=<%= `Party_Beneficiary_${partiesLength.Beneficiary+partiesLength.Contingent}` %>>
+<% } else if(party?.PartyType === "Physician") { %>
+  <Party id=<%= `Party_Physician_${partiesLength.Physician}` %>>
+<% } %>
+
+  <PartyTypeCode tc="1">
+    Person
+  </PartyTypeCode>
+  <GovtID>
+    <%= party?.GovtID?.replaceAll("-","") _%>
+  </GovtID>
+  <GovtIDTC tc="1">
+    SSN
+  </GovtIDTC>
+  <EstNetWorth>
+    <%= party?.EstNetWorth?.replaceAll(",","") _%>
+  </EstNetWorth>
+  <FullName>
+    <%= party?.FullName _%>
+  </FullName>
+
+  <Person>
+    <FirstName>
+      <%= party?.FirstName _%>
+    </FirstName>
+    <MiddleName>
+      <%= party?.MiddleName _%>
+    </MiddleName>
+    <LastName>
+      <%= party?.LastName _%>
+    </LastName>
+    <Suffix>
+      <%= party?.Suffix _%>
+    </Suffix>
+    <PriorLastName>
+      <%= party?.PriorLastName _%>
+    </PriorLastName>
+    <MarStat tc="<%= await lookups.lookup(types.OLI_LU.MARSTAT,{ value : party?.MarStat }).tc %>">
+      <%= party?.MarStat _%>
+    </MarStat>
+    <Gender tc="<%= await lookups.lookup(types.OLI_LU.GENDER,{ value : party?.Gender }).tc %>">
+      <%= party?.Gender _%>
+    </Gender>
+    <% if(party?.BirthDate) {%>
+    <BirthDate>
+      <%= utils.dayjs(party?.BirthDate).format('YYYY-MM-DD') _%>
+    </BirthDate>
+    <Age>
+      <%= transforms.dobToAge(party?.BirthDate) _%>
+    </Age>
+    <%}%>
+    <% if(party?.PartyType === "Beneficiary" || party?.PartyType === "Contingent") {%>
+      <BeneficiaryType>
+        <%= party?.Type %>
+      </BeneficiaryType>
+      <ShareAllocation>
+        <%= party?.Share %>
+      </ShareAllocation>
+      <Relation>
+        <%= party?.Relation %>
+      </Relation>
+    <% } %>
+    <% if(party?.Height2) {%>
+    <Height2>
+      <MeasureUnits tc="2">US System Standard</MeasureUnits>
+      <MeasureValue>
+        <%= party?.Height2 _%>
+      </MeasureValue>
+    </Height2>
+    <%}%>
+    <% if(party?.Weight2) {%>
+    <Weight2>
+      <MeasureUnits tc="2">US System Standard</MeasureUnits>
+      <MeasureValue>
+        <%= party?.Weight2 _%>
+      </MeasureValue>
+    </Weight2>
+    <%}%>
+    <Citizenship tc="<%= await lookups.lookup(types.OLI_LU.CITIZENSHIP,{ value : party?.Citizenship }).tc %>">
+      <%= party?.Citizenship _%>
+    </Citizenship>
+    <EstSalary>
+      <%= party?.EstSalary?.replaceAll(",","") _%>
+    </EstSalary>
+    <HouseholdIncome>
+      <%= party?.HouseholdSalary?.replaceAll(",","") _%>
+    </HouseholdIncome>
+    <DriversLicenseNum>
+      <%= party?.DriversLicenseNum _%>
+    </DriversLicenseNum>
+    <% if(party?.NoDriversLicenseInd?.toUpperCase() === "YES") { %>
+    <NoDriversLicenseInd tc="0">False</NoDriversLicenseInd>
+    <% } else if(party?.NoDriversLicenseInd?.toUpperCase() === "NO") { %>
+    <NoDriversLicenseInd tc="1">TRUE</NoDriversLicenseInd>
+    <% } %>
+    <DriversLicenseState tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATE,{ value : party?.DriversLicenseState }).tc %>">
+      <%= party?.DriversLicenseState _%>
+    </DriversLicenseState>
+    <BirthCountry tc="<%= await lookups.lookup(types.OLI_LU.CITIZENSHIP,{ value : party?.BirthCountry }).tc %>">
+      <%= party?.BirthCountry _%>
+    </BirthCountry>
+    <BirthJurisdictionTC tc="<%= await lookups.lookup(types.OLI_LU.BIRTHJURISDICTIONTC,{ value : party?.BirthJurisdictionTC }).tc %>">
+      <%= party?.BirthJurisdictionTC _%>
+    </BirthJurisdictionTC>
+  </Person>
+
+  <% if(party?.FacilityName) {%>
+  <Physician>
+    <PhysicianInfo>
+      <OLifEExtension>
+        <FacilityName>
+          <%= party?.FacilityName _%>
+        </FacilityName>
+        <MedicalCondition>
+          <%= party?.MedicalCondition _%>
+        </MedicalCondition>
+        <LastVisitDate>
+          <%= party?.LastVisitDate _%>
+        </LastVisitDate>
+        <Medication>
+          <%= party?.Medication _%>
+        </Medication>
+      </OLifEExtension>
+    </PhysicianInfo>
+  </Physician>
+  <%}%>
+  <Address>
+    <%if(party?.PartyID === "PartyOwner_1" || party?.PartyID === "InsuredParty_1") { %>
+    <AddressTypeCode tc="1">Residence</AddressTypeCode>
+    <% } else if(party?.PartyID?.includes("Party_Physician")) { %>
+    <AddressTypeCode tc="2">Business</AddressTypeCode>
+    <% } %>
+    <Line1>
+      <%= party?.Line1 _%>
+    </Line1>
+    <Line2>
+      <%= party?.Line2 _%>
+    </Line2>
+    <City>
+      <%= party?.City _%>
+    </City>
+    <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.ADDRESSSTATETC, { value : party?.AddressStateTC }).tc %>">
+      <%= party?.AddressStateTC _%>
+    </AddressStateTC>
+    <Zip>
+      <%= party?.Zip _%>
+    </Zip>
+    <AddressCountryTC tc="<%= await lookups.lookup(types.OLI_LU.ADDRESSCOUNTRYTC, { value : party?.AddressCountryTC }).tc %>">
+      <%= party?.AddressCountryTC _%>
+    </AddressCountryTC>
+  </Address>
+
+  <% if(party?.Phone) {%>
+  <Phone>
+    <%if(party?.PartyID === "Party_Agent_1") { %>
+    <PhoneTypeCode tc="2">Business</PhoneTypeCode>
+    <% } else { %>
+    <PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+    <% } %>
+    <AreaCode>
+      <%= typeof party?.Phone === 'string' ? party?.Phone?.substr(1,3) : '' _%>
+    </AreaCode>
+    <DialNumber>
+      <%= typeof party?.Phone === 'string' ? party?.Phone?.substr(5,)?.replace(/\s|-/g,"") : '' _%>
+    </DialNumber>
+    <TimeZone>
+      <%= party?.TimeZone _%>
+    </TimeZone>
+  </Phone>
+  <% } %>
+  <%if(party?.AddrLine) { %>
+  <EMailAddress>
+    <%if(party?.PartyID !== "Party_Agent_1" ) { %>
+    <EMailType tc="5">OLI_EMAIL_PRIMARY</EMailType>
+    <% } %>
+    <AddrLine>
+      <%= party?.AddrLine _%>
+    </AddrLine>
+  </EMailAddress>
+  <% } %>
+  <% if(party?.PartyType === "Insured") { %>
+  <ApplicationLanguage>
+    <% if(party?.Language) { %>
+      <InterviewLanguage>
+        <%= party?.Language _%>
+      </InterviewLanguage>
+      <Interpreter>
+        <%= party?.Interpreter _%>
+      </Interpreter>
+    <% } else { %>
+      <InterviewLanguage>
+        English
+      </InterviewLanguage>
+      <% } %>
+  </ApplicationLanguage>
+  <Risk>
+    <% if(ras.extract('SmokerStatus')?.toUpperCase() === 'NO') { %>
+    <TobaccoInd tc="0">FALSE</TobaccoInd>
+    <% } else if(ras.extract('SmokerStatus')?.toUpperCase() === "YES") { %>
+    <TobaccoInd tc="1">TRUE</TobaccoInd>
+    <% } %>
+  </Risk>
+
+  <% if (party?.EmploymentStatusTC?.toUpperCase() === "YES") { %>
+  <Employment>
+    <BusinessOwner>
+      <%= party?.BusinessOwner _%>
+    </BusinessOwner>
+    <Occupation tc="6">
+      <%= party?.Occupation _%>
+    </Occupation>
+    <EmployerName>
+      <%= party?.EmployerName _%>
+    </EmployerName>
+  </Employment>
+  <% } %>
+  <% } %>
+</Party>

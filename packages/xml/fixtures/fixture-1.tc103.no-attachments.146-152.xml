@@ -1,0 +1,7 @@
+<Arrangement id="Arrangement_1">
+  <ArrType tc="37" />
+  <ArrDestination id="ArrDestination_3000" SubAcctID="SubAccount_3000">
+    <TransferAmtType tc="3">Percentage</TransferAmtType>
+    <TransferPct>100</TransferPct>
+  </ArrDestination>
+</Arrangement>

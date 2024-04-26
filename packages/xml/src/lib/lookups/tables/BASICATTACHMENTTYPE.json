@@ -1,0 +1,23 @@
+[
+  ["value", "key", "tc", "definition"],
+  [
+    "File",
+    "OLI_LU_BASICATTMNTTY_FILE",
+    "3",
+    "This attachment has a file attached"
+  ],
+  [
+    "Image",
+    "OLI_LU_BASICATTMNTTY_IMAGE",
+    "2",
+    "This attachment contains only an image"
+  ],
+  ["Other", "OLI_OTHER", "2147483647", "Other"],
+  [
+    "Text Only",
+    "OLI_LU_BASICATTMNTTY_TEXT",
+    "1",
+    "This attachment is text only. Used for comments, notes, etc."
+  ],
+  ["Unknown", "OLI_UNKNOWN", "0", "Unknown"]
+]

@@ -1,0 +1,6 @@
+<Address>
+  <AddressTypeCode tc="<%= await sheets.lookupGoogleSheet('1PitZzHFGWYxjEGk4oBPC9cymhZCkaZCXQYsWR-bkNTY', 'AddressTypeCode', 'tc', { value: ras.extract('AddressTypeCode') }) %>">
+    <%= ras.extract('AddressTypeCode') %>
+  </AddressTypeCode>
+  <AddressCountryTC tc="<%= ras.extract('AddressCountryTypeCode') %>"><%= ras.extract('AddressCountryTC') %></AddressCountryTC>
+</Address>

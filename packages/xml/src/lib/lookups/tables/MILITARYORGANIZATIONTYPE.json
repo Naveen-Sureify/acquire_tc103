@@ -1,0 +1,11 @@
+[
+  ["value", "key", "tc"],
+  ["Air Force", "OLI_MILORG_AIRFORCE", "4"],
+  ["Army", "OLI_MILORG_ARMY", "1"],
+  ["Coast Guard", "OLI_MILORG_COASTGUARD", "5"],
+  ["Marines", "OLI_MILORG_MARINES", "3"],
+  ["National Guard", "OLI_MILORG_NATGUARD", "6"],
+  ["Navy", "OLI_MILORG_NAVY", "2"],
+  ["Other", "OLI_OTHER", "2147483647"],
+  ["Unknown", "OLI_UNKNOWN", "0"]
+]

@@ -1,0 +1,24 @@
+FROM node:18-alpine
+
+ENV PYTHONUNBUFFERED=1
+
+COPY . /app
+
+WORKDIR /app
+
+RUN apk -v --update add \
+	git \
+	unzip \
+	bash \
+	build-base \
+	pkgconfig \
+	perl \
+	curl && rm -rf /var/cache/apk/*
+
+RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
+RUN apk add --update --no-cache py3-pip py3-setuptools
+RUN apk add --no-cache aws-cli
+
+RUN npm install -g nx
+RUN yarn install
+RUN nx run-many --target=build --all

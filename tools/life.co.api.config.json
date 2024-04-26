@@ -1,0 +1,37 @@
+{
+    "local": {
+        "PORT": 8181,
+        "AUTHORIZATION": "Basic YWRtaW46NyVkUkdyZVQ=",
+        "ORG_ID": "b533336qiza7qj4hwjzvd2",
+        "ORG_ACCESS_TOKEN": "THRSE8C7F6RMXTBE3AR7VC6JV9DZZU2",
+        "API_BASE_URL": "http://127.0.0.1:3333/"
+    },
+    "docker": {
+        "PORT": 8080,
+        "AUTHORIZATION": "Basic YWRtaW46NyVkUkdyZVQ=",
+        "ORG_ID": "b533336qiza7qj4hwjzvd2",
+        "ORG_ACCESS_TOKEN": "THRSE8C7F6RMXTBE3AR7VC6JV9DZZU2",
+        "API_BASE_URL": "http://docker.host.internal:4767/v1/"
+    },
+    "development": {
+        "PORT": 8080,
+        "AUTHORIZATION": "Basic YWRtaW46NyVkUkdyZVQ=",
+        "ORG_ID": "RGVtb0xpZmVDb0Vudmlyb25tZW50T3JnSUQ",
+        "ORG_ACCESS_TOKEN": "RGVtb0xpZmVDb0Vudmlyb25tZW50T3JnVG9rZW4",
+        "API_BASE_URL": "https://cosmos-acquire.sureifylifeco.com/v1"
+    },
+    "stg": {
+        "PORT": 8080,
+        "AUTHORIZATION": "Basic YWRtaW46NyVkUkdyZVQ=",
+        "ORG_ID": "RGVtb0xpZmVDb0Vudmlyb25tZW50T3JnSUQ",
+        "ORG_ACCESS_TOKEN": "RGVtb0xpZmVDb0Vudmlyb25tZW50T3JnVG9rZW4",
+        "API_BASE_URL": "https://atlas-acquire.sureifylifeco.com/v1"
+    },
+    "uat": {
+        "PORT": 8080,
+        "AUTHORIZATION": "Basic YWRtaW46NyVkUkdyZVQ=",
+        "ORG_ID": "RGVtb0xpZmVDb0Vudmlyb25tZW50T3JnSUQ",
+        "ORG_ACCESS_TOKEN": "RGVtb0xpZmVDb0Vudmlyb25tZW50T3JnVG9rZW4",
+        "API_BASE_URL": "https://demo-uat.sureifylifeco.com/v1"
+    }
+}

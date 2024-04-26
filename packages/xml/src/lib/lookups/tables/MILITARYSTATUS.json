@@ -1,0 +1,12 @@
+[
+  ["value", "key", "tc"],
+  ["Active Duty", "OLI_MILSTAT_ACTDUTY", "1"],
+  ["Active Reserve", "OLI_MILSTAT_ACTRES", "4"],
+  ["Inactive", "OLI_MILSTAT_INACT", "2"],
+  ["Inactive Reserve", "OLI_MILSTAT_INACTRES", "5"],
+  ["No Active Duty", "OLI_MILSTAT_NONE", "7"],
+  ["Other", "OLI_OTHER", "2147483647"],
+  ["R.O.T.C. (Reserve Officers' Training Corps)", "OLI_MILSTAT_ROTC", "6"],
+  ["Retired", "OLI_MILSTAT_RETIRED", "3"],
+  ["Unknown", "OLI_UNKNOWN", "0"]
+]

@@ -1,0 +1,24 @@
+<OLifEExtension ExtensionCode="Policy 2.8.90" VendorCode="05">
+  <PolicyExtension>
+    <StatutoryCompanyCode>
+      <%= ras.extract('BH_StatutoryCompanyCode') %>
+    </StatutoryCompanyCode>
+    <QuotedPremiumBasisAmt>
+      <%= ras.extract('BH_Initial_Premium')?.replaceAll(",","") %>
+    </QuotedPremiumBasisAmt>
+    <NLGPeriod tc="<%= await lookups.lookup(types.OLI_LU.NLGPERIOD, { value: ras.extract('BH_NLGPeriod') }).tc %>">
+      <%= ras.extract('BH_NLGPeriod') %>
+    </NLGPeriod>
+    <% if(ras.extract('BH_PremiumPaymentMade')==="ACH") { %>
+    <OneTimeInitialDraftInd tc="1">TRUE</OneTimeInitialDraftInd>
+    <% } else { %>
+    <OneTimeInitialDraftInd tc="0">FALSE</OneTimeInitialDraftInd>
+    <% } %>
+    <PlannedFirstYrLump>
+      <%= ras.extract('BH_Initial_Premium')?.replaceAll(",","") %>
+    </PlannedFirstYrLump>
+    <PlannedYearlyPrem>
+      <%= ras.extract('BH_Initial_Premium')?.replaceAll(",","") %>
+    </PlannedYearlyPrem>
+  </PolicyExtension>
+</OLifEExtension>

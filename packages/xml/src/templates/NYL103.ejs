@@ -1,0 +1,254 @@
+<?xml version="1.0"?>
+<TXLife xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ACORD.org/Standards/Life/2" Version="2.35.00" xsi:schemaLocation="http://ACORD.org/Standards/Life/2 TXLife2.35.00.xsd">
+  <UserAuthRequest>
+    <UserLoginName>
+      Sureify
+    </UserLoginName>
+    <UserPswd>
+      <CryptType>
+        None
+      </CryptType>
+      <Pswd>
+        Sureify
+      </Pswd>
+    </UserPswd>
+    <VendorApp>
+      <VendorName VendorCode="220">
+        Sureify
+      </VendorName>
+      <AppName>
+        Lifetime
+      </AppName>
+    </VendorApp>
+  </UserAuthRequest>
+  <TXLifeRequest PrimaryObjectID="Application_Holding_1">
+    <TransRefGUID>
+      <%= utils.generate.uuid.create()%>
+    </TransRefGUID>
+    <TransType tc="103">
+      New Business Submission
+    </TransType>
+    <TransExeDate>
+      <%= cx.utils.dayjs().format('YYYY-MM-DD')%>
+    </TransExeDate>
+    <TransExeTime>
+      <%= cx.utils.dayjs().format('HH:mm:ss')%>
+    </TransExeTime>
+    <OLifE Version="2.31.00">
+      <SourceInfo>
+        <CreationDate>
+          <%= cx.utils.dayjs().format('YYYY-MM-DD')%>
+        </CreationDate>
+        <CreationTime>
+          <%= cx.utils.dayjs().format('HH:mm:ss')%>
+        </CreationTime>
+        <SourceInfoName>
+          Sureify
+        </SourceInfoName>
+      </SourceInfo>
+      <Holding id="Application_Holding">
+        <HoldingTypeCode tc="2">
+          Policy
+        </HoldingTypeCode>
+        <Policy>
+          <PolNumber>
+            <%= party_id %>
+          </PolNumber>
+          <LineOfBusiness tc="1">
+            Life
+          </LineOfBusiness>
+          <ProductType tc="2">
+            <%= productName %>
+          </ProductType>
+          <CarrierCode>
+            NYL
+          </CarrierCode>
+          <Jurisdiction tc="<%=await lookups.lookup(types.OLI_LU.ADDRESSSTATETC, { value: ras.extract('19c9918b-353e-4c1f-961c-c783efb4bc63') }).tc%>">
+            <%= ras.extract('19c9918b-353e-4c1f-961c-c783efb4bc63') %>
+          </Jurisdiction>
+          <Life>
+            <Coverage id="Base_Coverage">
+              <% if(product_id == 1) {%>
+              <FaceAmt>
+                <%= acord?.WholeLife?.FaceAmount%>
+              </FaceAmt>
+              <% } %>
+              <% if(product_id == 2) {%>
+                <FaceAmt>
+                  <%= acord?.TermLife?.FaceAmount%>
+                </FaceAmt>
+                <% } %>
+                <% if(product_id == 1) {%>
+                  <ModalPremAmt><%= acord?.WholeLife?.PremiumAmount%></ModalPremAmt>
+                <% } %>
+                <% if(product_id == 2) {%>
+                  <ModalPremAmt><%= acord?.TermLife?.PremiumAmount%></ModalPremAmt>
+                <% } %>
+                <% if(product_id == 1) {%>
+                  <RiskClass><%= acord?.WholeLife?.RiskClass%></RiskClass>
+                <% } %>
+                <% if(product_id == 1) {%>
+                  <DividendOption><%= acord?.WholeLife?.DividendOptions%></DividendOption>
+                <% } %>
+                <% if(product_id == 2) {%>
+                  <DividendOption><%= acord?.TermLife?.DividendOption%></DividendOption>
+                <% } %>
+                <% if(product_id == 3) {%>
+                  <PlanDesign><%= acord?.Disability?.PlanDesign%></PlanDesign>
+                <% } %>
+                <% if(product_id == 3) {%>
+                  <MonthlyBenefitAmt><%= acord?.Disability?.MonthlyBenefit%></MonthlyBenefitAmt>
+                <% } %>
+                <% if(product_id == 3) {%>
+                  <PremiumStruct><%= acord?.Disability?.PremiumStructure%></PremiumStruct>
+                <% } %>
+                <% if(product_id == 3) {%>
+                  <EliminationPeriod><%= acord?.Disability?.EliminationPeriod%></EliminationPeriod>
+                <% } %>
+                <% if(product_id == 3) {%>
+                  <BenefitPeriod><%= acord?.Disability?.BenefitPeriod%></BenefitPeriod>
+                <% } %>
+            </Coverage>
+            <% if(product_id == 1 && ras.extract('4c731714-d7a1-4fa3-bc42-bd07bf90f4b0').length > 0) { %>
+            <Coverage id="WOP">
+              <ProductCode><%= productName %></ProductCode>
+              <LifeCovTypeCode tc="WOP">Waiver of Premium</LifeCovTypeCode>
+            </Coverage>
+            <% } %>
+            <% if(product_id == 1 && ras.extract('631379ca-8565-4b63-a010-853a1afab6c6').length > 0) { %>
+            <Coverage id="ADB">
+              <ProductCode><%= productName %></ProductCode>
+              <LifeCovOptTypeCode tc="ADB">Accidental Death Benefit</LifeCovOptTypeCode>
+            </Coverage>
+            <% } %>
+            <% if(product_id == 1 && ras.extract('743c036a-3a33-4da3-9d5a-ae143cbaa04c').length > 0) { %>
+              <Coverage id="CC">
+                <ProductCode><%= productName %></ProductCode>
+                <LifeCovOptTypeCode tc="ADB">Chronic Care</LifeCovOptTypeCode>
+              </Coverage>
+            <% } %>
+            <% if(product_id == 2 && ras.extract('23c6bded-4d56-4db1-96d9-a44d10cc9514').length > 0) { %>
+              <Coverage id="ADB">
+                <ProductCode><%= productName %></ProductCode>
+                <LifeCovOptTypeCode tc="ADB">Accidental Death Benefit</LifeCovOptTypeCode>
+                <DeathBenefitAmt><%= ras.extract('467610e5-6357-45f8-9b55-efde12b377db') %></DeathBenefitAmt>
+              </Coverage>
+            <% } %>
+            <% if(product_id == 2 && ras.extract('7fe66e1d-50e2-4ba5-b834-335bf67cc5e1').length > 0) { %>
+              <Coverage id="PPO">
+                <ProductCode><%= productName %></ProductCode>
+                <LifeCovOptTypeCode tc="PPO">Policy Purchase Option</LifeCovOptTypeCode>
+                <PurchaseAmt><%= ras.extract('b7457758-4c5a-45ae-8222-240fc51206e5') %></PurchaseAmt>
+              </Coverage>
+            <% } %>
+            <% if(product_id == 2 && ras.extract('69191927-188c-4e58-a3c2-bbefc81795f8').length > 0) { %>
+              <Coverage id="LBR">
+                <ProductCode><%= productName %></ProductCode>
+                <LifeCovOptTypeCode tc="LBR">Living Benefits Rider</LifeCovOptTypeCode>
+              </Coverage>
+            <% } %>
+          </Life>
+        </Policy>
+        <Arrangement>
+          <PaymentMethod tc="<%= await lookups.lookup(types.OLI_LU.PAYMENTMETHOD, { value : ras.extract('03c2be3d-cf5d-45e3-a417-824d2937a954') }).tc %>">
+            <%= await lookups.lookup(types.OLI_LU.PAYMENTMETHOD, { value : ras.extract('03c2be3d-cf5d-45e3-a417-824d2937a954') }).key %>
+          </PaymentMethod>
+        </Arrangement>
+      </Holding>
+
+
+
+      <% if(acord?.Parties?.length>0) { %>
+        <% let partiesLength = { Insured : 0 ,Beneficiary : 0 , Contingent : 0, ChildRider : 0, Owner : 0, Agent : 0, Physician : 0} %>
+        <% for(const [index,party] of acord.Parties?.entries()) { %>
+        <% partiesLength[`${party?.PartyType}`] +=1 %>
+        <%- await include('Parties',{party,i:index,partiesLength}) %>
+        <% } %>
+        <% } %>
+
+      <FormInstance id="FormInstance_InsuredParty_1">
+        <FormResponse>
+          <QuestionNumber>HadArrhythmia</QuestionNumber>
+          <% if(ras.extract('Arrhythmia')) {%>
+            <ResponseData >Yes</ResponseData>
+          <% } else{ %>
+            <ResponseData >No</ResponseData>
+          <% } %>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>HadDiabetes</QuestionNumber>
+          <% if(ras.extract('Diabetes')) {%>
+            <ResponseData >Yes</ResponseData>
+          <% } else{ %>
+            <ResponseData >No</ResponseData>
+          <% } %>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>HadThyroid</QuestionNumber>
+          <% if(ras.extract('Thyroid')) {%>
+            <ResponseData >Yes</ResponseData>
+          <% } else{ %>
+            <ResponseData >No</ResponseData>
+          <% } %>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>HadAsthma</QuestionNumber>
+          <% if(ras.extract('Asthma')) {%>
+            <ResponseData >Yes</ResponseData>
+          <% } else{ %>
+            <ResponseData >No</ResponseData>
+          <% } %>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>HadEmphysema</QuestionNumber>
+          <% if(ras.extract('Emphysema')) {%>
+            <ResponseData >Yes</ResponseData>
+          <% } else{ %>
+            <ResponseData >No</ResponseData>
+          <% } %>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>HadParalysis</QuestionNumber>
+          <% if(ras.extract('Paralysis')) {%>
+            <ResponseData >Yes</ResponseData>
+          <% } else{ %>
+            <ResponseData >No</ResponseData>
+          <% } %>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>HadLiverDisorder</QuestionNumber>
+          <% if(ras.extract('LiverDisorder')) {%>
+            <ResponseData >Yes</ResponseData>
+          <% } else{ %>
+            <ResponseData >No</ResponseData>
+          <% } %>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>HadPolycythemia</QuestionNumber>
+          <% if(ras.extract('Polycythemia')) {%>
+            <ResponseData >Yes</ResponseData>
+          <% } else{ %>
+            <ResponseData >No</ResponseData>
+          <% } %>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>HadAnemia</QuestionNumber>
+          <% if(ras.extract('Anemia')) {%>
+            <ResponseData >Yes</ResponseData>
+          <% } else{ %>
+            <ResponseData >No</ResponseData>
+          <% } %>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>HadUlcers</QuestionNumber>
+          <% if(ras.extract('Ulcers')) {%>
+            <ResponseData >Yes</ResponseData>
+          <% } else{ %>
+            <ResponseData >No</ResponseData>
+          <% } %>
+        </FormResponse>
+      </FormInstance>
+    </OLifE>
+  </TXLifeRequest>
+</TXLife>
+

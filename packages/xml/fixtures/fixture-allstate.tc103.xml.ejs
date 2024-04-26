@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TXLife xmlns="http://ACORD.org/Standards/Life/2" xmlns:xsi="http://www.w3.org/2001/XMLSchemainstance" Version="2.20.02" xsi:schemaLocation="http://ACORD.org/Standards/Life/2TXLife2.20.02.xsd">
+  <UserAuthRequest>
+    <UserLoginName>Sureify</UserLoginName>
+    <UserPswd>
+      <CryptType>NONE</CryptType>
+    </UserPswd>
+    <VendorApp>
+      <VendorName VendorCode="564">Sureify</VendorName>
+      <AppName>Lifetime</AppName>
+    </VendorApp>
+  </UserAuthRequest>
+  <TXLifeRequest PrimaryObjectID="Application_Holding">
+    <TransRefGUID>ec4d4fe9-67d3-4917-9d46-a0e16fbee41b</TransRefGUID>
+    <TransType tc="103">New Business Submission</TransType>
+    <TransExeDate><%= utils.dayjs('2023-08-30').format('YYYY-MM-DD') %></TransExeDate>
+    <TransExeTime><%= utils.dayjs('2023-08-30 05:28:05').format('HH:mm:ss') %></TransExeTime>
+    <OLifE>
+      <SourceInfo>
+        <CreationDate><%= utils.dayjs('2023-08-30').format('YYYY-MM-DD') %></CreationDate>
+        <CreationTime><%= utils.dayjs('2023-08-30 05:28:05').format('HH:mm:ss') %></CreationTime>
+        <SourceInfoName>Sureify</SourceInfoName>
+        <SourceInfoDescription>Lifetime</SourceInfoDescription>
+        <OLifEExtension VendorCode="564">
+          <FullOrEasyApp>FULLAPP</FullOrEasyApp>
+        </OLifEExtension>
+      </SourceInfo>
+      <Holding id="Application_Holding">
+        <HoldingTypeCode tc="2">Policy</HoldingTypeCode>
+        <Policy>
+          <CarrierCode>DGLIC</CarrierCode>
+          <PolNumber><%= model?.policyNumber %></PolNumber>
+          <LineOfBusiness tc="1">Life</LineOfBusiness>
+          <ProductType tc="2">Term Life</ProductType>
+
+          <% if(model?.quoteData?.product_id === 1) { %>
+          <PlanName>ALLSTATE_DG_TL</PlanName>
+          <ProductCode>ALLSTATE_DG_TL</ProductCode>
+          <% } else if(model?.quoteData?.product_id === 2) { %>
+          <PlanName>ALLSTATE_DG_SI</PlanName>
+          <ProductCode>ALLSTATE_DG_SI</ProductCode>
+          <% } else if(model?.quoteData?.product_id === 3) { %>
+          <PlanName>ALLSTATE_DG_SIP</PlanName>
+          <ProductCode>ALLSTATE_DG_SIP</ProductCode>
+          <% } %>
+
+          <Jurisdiction tc="<%=await lookups.lookup(types.OLI_LU.BIRTHJURISDICTIONTC, { definition : ras.extract('State') }).tc %>">
+            <%= ras.extract('State') %>
+          </Jurisdiction>
+          <EffDate><%= utils.dayjs('2023-08-30').format('YYYY-MM-DD') %></EffDate>
+          <PaymentMode tc="<%=await lookups.lookup(types.OLI_LU.PAYMENTMODE, { value: ras.extract('PaymentFrequency') }).tc%>">
+            <%= ras.extract('PaymentFrequency') %>
+          </PaymentMode>
+          <% if(ras.extract('BankOrCreditCard')?.toUpperCase() === "BANK ACCOUNT") { %>
+          <PaymentMethod tc="7">EFT</PaymentMethod>
+          <% } else { %>
+          <PaymentMethod tc="9">Credit Card</PaymentMethod>
+          <% } %>
+          <ApplicationInfo>
+            <CWAAmt>0</CWAAmt>
+            <UnderwritingType>for</UnderwritingType>
+            <SignatureState tc="<%=await lookups.lookup(types.OLI_LU.BIRTHJURISDICTIONTC, { definition : ras.extract('SignedAtState') }).tc %>">
+              <%= ras.extract('SignedAtState') %>
+            </SignatureState>
+            <% if(ras.extract('ChangesExistingPolicy')?.toUpperCase() === "NO") { %>
+            <ReplacementInd> False </ReplacementInd>
+            <% } else if(ras.extract('ChangesExistingPolicy')?.toUpperCase() === "YES") { %>
+            <ReplacementInd> True </ReplacementInd>
+            <% } %>
+          </ApplicationInfo>
+          <Life>
+            <FaceAmt>
+              <%= model?.quoteData?.face_amount %>
+            </FaceAmt>
+            <Coverage id="Base_Coverage">
+              <IndicatorCode tc="1">Base</IndicatorCode>
+              <EquivalentAge><%= transforms.dobToAge(ras.extract('DateofBirth')) %></EquivalentAge>
+              <ModalPremAmt><%= model?.quoteData?.premium_amount %></ModalPremAmt>
+              <DurationDesign>
+                <%= ras.extract('Plan')?.split(" ")[0] %>
+              </DurationDesign>
+              <UnderwritingReviewKey><%= model?.quoteData?.json_data?.final_decision %></UnderwritingReviewKey>
+              <EffDate>
+                <%= utils.dayjs('2023-08-30').format('YYYY-MM-DD') %>
+              </EffDate>
+
+              <% let primaryInsuredCount=0, allBeneficiaryCount=0 %>
+              <% for(const [index,party] of acord.Parties?.entries()) { %>
+              <% if(party.PartyType === "Insured") { %>
+              <% primaryInsuredCount +=1 %>
+              <LifeParticipant PartyID=<%= `InsuredParty_${primaryInsuredCount}` %> id="PrimaryInsured_Life_Participant">
+                <LifeParticipantRoleCode tc="1">Primary Insured</LifeParticipantRoleCode>
+                <TobaccoPremiumBasis tc="2">Smoker</TobaccoPremiumBasis>
+                <UnderwritingClass tc="<%= model?.quoteData?.application_json_data?.rate_class %>">
+                  <%= await lookups.lookup(types.OLI_LU.RATECLASS, { key : model?.quoteData?.application_json_data?.rate_class }).value %>
+                </UnderwritingClass>
+              </LifeParticipant>
+              <% } else if(party.PartyType === "Beneficiary") { %>
+              <% allBeneficiaryCount +=1 %>
+              <LifeParticipant PartyID=<%= `Party_Beneficiary_${allBeneficiaryCount}` %>>
+                <LifeParticipantRoleCode tc="7">Primary Beneficiary</LifeParticipantRoleCode>
+              </LifeParticipant>
+              <% } else if(party.PartyType === "Contingent") { %>
+              <% allBeneficiaryCount +=1 %>
+              <LifeParticipant PartyID=<%= `Party_Beneficiary_${allBeneficiaryCount}` %>>
+                <LifeParticipantRoleCode tc="36">Contingent Beneficiary</LifeParticipantRoleCode>
+              </LifeParticipant>
+              <% } %>
+              <% } %>
+
+            </Coverage>
+
+            <% if(ras.extract('PremiumWaiver')) { %>
+            <Coverage id="WOP">
+              <ProductCode>WOP</ProductCode>
+              <LifeCovTypeCode tc="WOP">Waiver of Premium</LifeCovTypeCode>
+              <BenefitCoverage>Base Coverage</BenefitCoverage>
+            </Coverage>
+            <% } %>
+
+            <% if(ras.extract('ChildRider')) { %>
+            <Coverage id="CTLIR">
+              <ProductCode>CTR</ProductCode>
+              <LifeCovOptTypeCode tc="CTR">Children's Term Rider</LifeCovOptTypeCode>
+              <OptionNumberOfUnits>1</OptionNumberOfUnits>
+              <RiderInsured>Child</RiderInsured>
+            </Coverage>
+            <% } %>
+
+          </Life>
+
+          <ApplicationInfo>
+            <SignatureInfo>
+              <SignatureRoleCode tc="1">Primary Insured</SignatureRoleCode>
+              <SignatureDate><%= utils.dayjs('2023-08-30').format('YYYY-MM-DD') %></SignatureDate>
+              <SignatureState tc="<%=await lookups.lookup(types.OLI_LU.BIRTHJURISDICTIONTC, { definition : ras.extract('SignedAtState') }).tc %>">
+                <%= ras.extract('SignedAtState') %>
+              </SignatureState>
+              <SignatureText>eSigned by <%= ras.extract('FirstName')+' '+ras.extract('LastName') %> </SignatureText>
+            </SignatureInfo>
+          </ApplicationInfo>
+          <OLifEExtension VendorCode="564">
+            <UWCaseNumber><%= model?.quoteData?.external_uuid %></UWCaseNumber>
+          </OLifEExtension>
+          <CustomerClass tc="SinglePolClass">Single Policy Class</CustomerClass>
+        </Policy>
+
+        <Banking>
+          <% if(ras.extract('BankOrCreditCard')?.toUpperCase() === 'BANK ACCOUNT') { %>
+          <BankAcctType tc="<%=await lookups.lookup(types.OLI_LU.BANKACCTYPE, { value: ras.extract('BankAccountType') }).tc %>">
+            <%= ras.extract('BankAccountType') %>
+          </BankAcctType>
+          <CreditCardExpDate>/</CreditCardExpDate>
+          <AccountNumber>
+            <%= ras.extract('BankAccountNumber').slice(-4) %>
+          </AccountNumber>
+          <AcctHolderName>
+            <%= ras.extract('AccountHolderName') %>
+          </AcctHolderName>
+          <BankName><%= model?.quoteData?.json_data?.bankName %></BankName>
+          <AccountToken><%= model?.quoteData?.json_data?.paymentToken %></AccountToken>
+          <% } else { %>
+          <CreditCardType tc="3"><%= model?.quoteData?.json_data?.creditPayment?.cardBrandCdDesc %></CreditCardType>
+          <CreditCardExpDate><%= model?.quoteData?.json_data?.creditPayment?.CreditCardExpDate?.substr(0,2)+"/"+model?.quoteData?.json_data?.creditPayment?.CreditCardExpDate?.substr(2) %></CreditCardExpDate>
+          <AccountNumber><%= model?.quoteData?.json_data?.creditPayment?.cardNumber %></AccountNumber>
+          <AcctHolderName><%= model?.quoteData?.json_data?.creditPayment?.acctHolderName %></AcctHolderName>
+          <AccountToken><%= model?.quoteData?.json_data?.creditPayment?.token %></AccountToken>
+          <% } %>
+        </Banking>
+      </Holding>
+
+      <% if(acord.Parties?.length>0) { %>
+      <% let partiesLength = { Insured : 0 ,Beneficiary : 0 , Contingent : 0, ChildRider : 0, Owner : 0, Agent : 0, Physician : 0} %>
+      <% for(const [index,party] of acord.Parties?.entries()) { %>
+
+      <% partiesLength[`${party?.PartyType}`] +=1 %>
+      <% if(party?.AddressStatus && acord?.Parties[0]?.MailAddressStatus?.toUpperCase() === "NO") { %>
+      <%- await include('Party_AllState',{party:{...party,Line1:acord?.Parties[0]?.Line1,City:acord?.Parties[0]?.City,AddressStateTC:acord?.Parties[0]?.AddressStateTC,Zip:acord?.Parties[0]?.Zip},i:index,partiesLength}) %>
+      <% } else if(party?.AddressStatus && acord?.Parties[0]?.MailAddressStatus?.toUpperCase() === "YES") { %>
+      <%- await include('Party_AllState',{party:{...party,Line1:acord?.Parties[0]?.MailingAddress,City:acord?.Parties[0]?.MailingCity,AddressStateTC:acord?.Parties[0]?.MailingState,Zip:acord?.Parties[0]?.MailingZipCode},i:index,partiesLength}) %>
+      <% } else { %>
+      <%- await include('Party_AllState',{party,i:index,partiesLength}) %>
+      <% } %>
+
+      <% } %>
+      <% } %>
+
+      <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="Party_PrimaryInsured" id="Relation_InsuredParty">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="32">Insured</RelationRoleCode>
+      </Relation>
+      <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="Party_PrimaryInsured" id="Relation_Owner">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="8">Owner</RelationRoleCode>
+      </Relation>
+      <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="Party_PrimaryInsured" id="Relation_Payor">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="31">Payor</RelationRoleCode>
+      </Relation>
+
+      <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="Party_Beneficiary_1" id="Relation_Beneficiary_1">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="34">Primary Beneficiary</RelationRoleCode>
+        <InterestPercent>50</InterestPercent>
+        <BeneficiaryCoverageType>Base Coverage</BeneficiaryCoverageType>
+      </Relation>
+      <Relation OriginatingObjectID="Party_PrimaryInsured" RelatedObjectID="Party_Beneficiary_1" id="Relation_PItoBeneficiary_1">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationDescription tc="7">Brother</RelationDescription>
+      </Relation>
+
+      <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="Party_ChildInsured_1" id="Relation_ChildInsured_1">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="2">Child</RelationRoleCode>
+        <RelationDescription tc="900">Child</RelationDescription>
+      </Relation>
+
+      <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="Party_Beneficiary_2" id="Relation_Beneficiary_2">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="34">Primary Beneficiary</RelationRoleCode>
+        <InterestPercent>50</InterestPercent>
+        <BeneficiaryCoverageType>Base Coverage</BeneficiaryCoverageType>
+      </Relation>
+      <Relation OriginatingObjectID="Party_PrimaryInsured" RelatedObjectID="Party_Beneficiary_2" id="Relation_PItoBeneficiary_2">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationDescription tc="6">Daughter</RelationDescription>
+      </Relation>
+
+      <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="Party_Beneficiary_3" id="Relation_Beneficiary_3">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="36">Contingent Beneficiary</RelationRoleCode>
+        <InterestPercent>100</InterestPercent>
+        <BeneficiaryCoverageType>Base Coverage</BeneficiaryCoverageType>
+      </Relation>
+      <Relation OriginatingObjectID="Party_PrimaryInsured" RelatedObjectID="Party_Beneficiary_3" id="Relation_PItoBeneficiary_3">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationDescription tc="7">Brother</RelationDescription>
+      </Relation>
+
+
+      <FormInstance id="1">
+        <FormName>APPLICATION FOR INDIVIDUAL LIFE INSURANCE(Part 1 and Part 2)</FormName>
+        <ProviderFormNumber>ICC21DGAPP10</ProviderFormNumber>
+        <Attachment>
+          <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+          <Description>SIGNAPPDOCSC</Description>
+          <MimeTypeTC tc="17">Image/PDF</MimeTypeTC>
+        </Attachment>
+      </FormInstance>
+      <FormInstance id="2">
+        <FormName>Consent to Use Electronic Signatures</FormName>
+        <ProviderFormNumber>FIC743DG</ProviderFormNumber>
+        <Attachment>
+          <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+          <Description>ESIGNCONSENT</Description>
+          <MimeTypeTC tc="17">Image/PDF</MimeTypeTC>
+        </Attachment>
+      </FormInstance>
+      <FormInstance id="4">
+        <FormName>HIPAA Compliant Authorization</FormName>
+        <ProviderFormNumber>FIC755HPADG</ProviderFormNumber>
+        <Attachment>
+          <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+          <Description>HIPPACOMPAUTH</Description>
+          <MimeTypeTC tc="17">Image/PDF</MimeTypeTC>
+        </Attachment>
+      </FormInstance>
+      <FormInstance id="6">
+        <FormName>Illinois Religious Freedom Protection and Civil Union Act Notice</FormName>
+        <ProviderFormNumber>FIC456DGIL</ProviderFormNumber>
+        <Attachment>
+          <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+          <Description>CIVILUNIONNOTICE</Description>
+          <MimeTypeTC tc="17">Image/PDF</MimeTypeTC>
+        </Attachment>
+      </FormInstance>
+      <FormInstance id="8">
+        <FormName>TIA</FormName>
+        <ProviderFormNumber>ICC21DGTIA10</ProviderFormNumber>
+        <Attachment>
+          <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+          <Description>TIA</Description>
+          <MimeTypeTC tc="17">Image/PDF</MimeTypeTC>
+        </Attachment>
+      </FormInstance>
+      <FormInstance id="50">
+        <FormName>Application Packet</FormName>
+        <ProviderFormNumber>APPPKT</ProviderFormNumber>
+        <Attachment>
+          <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+          <Description>APPPKT</Description>
+          <MimeTypeTC tc="17">Image/PDF</MimeTypeTC>
+        </Attachment>
+      </FormInstance>
+    </OLifE>
+  </TXLifeRequest>
+</TXLife>

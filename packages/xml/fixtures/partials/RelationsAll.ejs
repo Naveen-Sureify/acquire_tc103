@@ -1,0 +1,41 @@
+<% if(acord.Relations?.length>0) { %>
+    <% for (const [index,relation] of acord.Relations.entries()) { %>
+    <Relation id="<%= relation?.id _%>" OriginatingObjectID="<%= relation?.OriginatingObjectID _%>" RelatedObjectID="<%= relation?.RelatedObjectID _%>">
+      <OriginatingObjectType tc="<%= await lookups.lookup(types.OLI_LU.ORIGINATINGOBJECTTYPE, { value : relation?.OriginatingObjectType }).tc %>">
+        <%= relation?.OriginatingObjectType _%>
+      </OriginatingObjectType>
+      <RelatedObjectType tc="<%= await lookups.lookup(types.OLI_LU.RELATEDOBJECTTYPE, { value : relation?.RelatedObjectType }).tc %>">
+        <%= relation?.RelatedObjectType _%>
+      </RelatedObjectType>
+      <RelationRoleCode tc="<%= await lookups.lookup(types.OLI_LU.RELATIONROLECODE, { value : relation?.RelationRoleCode }).tc %>">
+        <%= relation?.RelationRoleCode _%>
+      </RelationRoleCode>
+      <RelationDescription>
+        <%= relation?.RelationDescription _%>
+      </RelationDescription>
+      <InterestPercent>
+        <%= relation?.InterestPercent _%>
+      </InterestPercent>
+      <BeneficiaryDesignation tc="<%= await lookups.lookup(types.OLI_LU.BENEFICIARYDESIGNATION,{ value : relation?.BeneficiaryDesignation }).tc %>">
+        <%= relation?.BeneficiaryDesignation %>
+      </BeneficiaryDesignation>
+      <% if(relation?.OLifEExtension) { %>
+      <OLifEExtension ExtensionCode="Policy <%= relation.ExtensionCode _%>" VendorCode="<%= relation.VendorCode _%>">
+        <RelationProducerExtension>
+          <SituationCode>
+            <%= relation?.OLifEExtension?.RelationProducerExtension?.SituationCode _%>
+          </SituationCode>
+          <CommissionOptCode tc="1009900001">
+            <%= relation?.OLifEExtension?.RelationProducerExtension?.CommissionOptCode _%>
+          </CommissionOptCode>
+        </RelationProducerExtension>
+        <RelationExtension>
+          <BeneficiaryDistributionOption tc="2">
+            <%= relation?.BeneficiaryDistributionOption _%>
+          </BeneficiaryDistributionOption>
+        </RelationExtension>
+      </OLifEExtension>
+      <% } %>
+    </Relation>
+    <% } %>
+    <% } %>

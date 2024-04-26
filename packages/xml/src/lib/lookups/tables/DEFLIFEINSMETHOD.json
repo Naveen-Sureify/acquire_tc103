@@ -1,0 +1,10 @@
+[
+  ["value", "key", "tc", "definition"],
+  ["Cash Value Test", "OLI_INSTEST_CVTEST", "2", ""],
+  ["DEFRA cash value accumulation test", "OLI_INSTEST_DEFRACVTEST", "5", ""],
+  ["DEFRA guideline premium test", "OLI_INSTEST_DEFRAGPTEST", "4", ""],
+  ["Guideline Premium Test", "OLI_INSTEST_GPTEST", "1", ""],
+  ["Other", "OLI_OTHER", "2147483647", ""],
+  ["TEFRA guideline premium test", "OLI_INSTEST_TEFRAGPEST", "3", ""],
+  ["Unknown", "OLI_UNKNOWN", "0", ""]
+]

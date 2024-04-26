@@ -1,0 +1,66 @@
+<Party id="Party_<%=party.PartyTypeCode?.id _%><%= i _%>">
+  <PartyTypeCode tc="<%= await lookups.lookup(types.OLI_LU.PARTYTYPECODE, { value : party.PartyTypeCode?._response }).tc %>">
+    <%= party.PartyTypeCode?._response _%>
+  </PartyTypeCode>
+  <Person>
+    <FirstName>
+      <%= party.Person?.FirstName _%>
+    </FirstName>
+    <LastName>
+      <%= party.Person?.LastName _%>
+    </LastName>
+  </Person>
+  <Address>
+    <Line1>
+      <%= party.Address?.Line1 _%>
+    </Line1>
+    <City>
+      <%= party.Address?.City _%>
+    </City>
+    <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.ADDRESSSTATETC, { value : party.Address.AddressStateTC }).tc %>">
+      <%= party.Address?.AddressStateTC _%>
+    </AddressStateTC>
+    <Zip>
+      <%= party.Address?.Zip _%>
+    </Zip>
+  </Address>
+  <Producer>
+    <CarrierAppointment>
+      <CompanyProducerID>
+        <%= party.Producer?.CarrierAppointment?.CompanyProducerID _%>
+      </CompanyProducerID>
+    </CarrierAppointment>
+  </Producer>
+  <EMailAddress id="EMailAddress1_<%= party.PartyTypeCode?.id _%>">
+    <EMailType tc="1">Business</EMailType>
+    <AddrLine>
+      <%= party.EMailAddress?.AddrLine _%>
+    </AddrLine>
+  </EMailAddress>
+</Party>
+<% for (const [index,relations] of party.Relations.entries()) { %>
+<Relation id="Relation_<%= relations.id _%>_<%= index+1 _%>" OriginatingObjectID="<%= relations.OriginatingObjectID _%>" RelatedObjectID="<%= relations.RelatedObjectID _%>">
+  <OriginatingObjectType tc="<%= await lookups.lookup(types.OLI_LU.ORIGINATINGOBJECTTYPE, { value : relations.OriginatingObjectType }).tc %>">
+    <%= relations.OriginatingObjectType _%>
+  </OriginatingObjectType>
+  <RelatedObjectType tc="<%= await lookups.lookup(types.OLI_LU.RELATEDOBJECTTYPE, { value : relations.RelatedObjectType }).tc %>">
+    <%= relations.RelatedObjectType _%>
+  </RelatedObjectType>
+  <RelationRoleCode tc="<%= await lookups.lookup(types.OLI_LU.RELATIONROLECODE, { value : relations.RelationRoleCode }).tc %>">
+    <%= relations.RelationRoleCode _%>
+  </RelationRoleCode>
+  <InterestPercent>
+    <%= relations.InterestPercent _%>
+  </InterestPercent>
+  <OLifEExtension ExtensionCode="Policy <%= relations.ExtensionCode _%>" VendorCode="<%= relations.VendorCode _%>">
+    <RelationProducerExtension>
+      <SituationCode>
+        <%= relations.OLifEExtension?.RelationProducerExtension?.SituationCode _%>
+      </SituationCode>
+      <CommissionOptCode tc="1009900001">
+        <%= relations.OLifEExtension?.RelationProducerExtension?.CommissionOptCode _%>
+      </CommissionOptCode>
+    </RelationProducerExtension>
+  </OLifEExtension>
+</Relation>
+<% } %>

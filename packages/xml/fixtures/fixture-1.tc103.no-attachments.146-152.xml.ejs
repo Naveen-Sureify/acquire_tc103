@@ -1,0 +1,11 @@
+<Arrangement id="Arrangement_1">
+  <ArrType tc="<%= await lookups.lookup(types.OLI_LU.ARRTYPE, { value : ras.extract('BH_ArrType') }).tc %>" />
+  <ArrDestination id="ArrDestination_<%= ras.extract('BH_ProductCode4') %>" SubAcctID="SubAccount_<%= ras.extract('BH_ProductCode4') %>">
+    <TransferAmtType tc="<%= await lookups.lookup(types.OLI_LU.TRANSFERAMTTYPE, { value : ras.extract('BH_TransferAmtType') }).tc %>">
+      <%= ras.extract('BH_TransferAmtType') %>
+    </TransferAmtType>
+    <TransferPct>
+      <%= ras.extract('BH_PercentageSplit') %>
+    </TransferPct>
+  </ArrDestination>
+</Arrangement>

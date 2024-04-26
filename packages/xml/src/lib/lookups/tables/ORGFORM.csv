@@ -1,0 +1,32 @@
+value,key,tc
+"C" Corporation,OLI_ORG_CTP,13
+"S" Corporation,OLI_ORG_STP,6
+Association,OLI_ORG_ASSOC,10
+Charitable Organization,OLI_ORG_CHARIT,11
+Closed Corporation,OLI_ORG_CLOSECORP,19
+Corporation (general),OLI_ORG_CORPORATION,23
+Credit Union,OLI_ORG_CREDITUNION,27
+Estate,OLI_ORG_ESTATE,24
+Franchise,OLI_ORG_FRANCHISE,15
+Government Agency,OLI_ORG_GOVERN,9
+Internal,OLI_ORG_INTERNAL,22
+Limited Liability Company (LLC),OLI_ORG_LTDLIAB,14
+Limited Liability Limited Partnership (LLLP),OLI_ORG_LTDLIABLTDPARTNER,30
+Limited Liability Partnership (LLP),OLI_ORG_LTDLIABPARTNER,29
+Limited Partnership (LP),OLI_ORG_LTDPART,3
+Mutual Company,OLI_ORG_MUTCO,18
+Nonprofit Organization,OLI_ORG_NONPROF,12
+Other,OLI_OTHER,2147483647
+Partnership,OLI_ORG_PARTNER,2
+Personal Services Corp.,OLI_ORG_PERSERV,8
+Plan,OLI_LU_ORGPLAN,17
+Plan Administrator,OLI_LU_ORGPLANADM,25
+Private Corporation,OLI_ORG_PRVCORP,4
+Professional Corporation,OLI_ORG_PROCORP,7
+Pty. Ltd.,OLI_ORG_PTYLTD,20
+Public Corporation,OLI_ORG_PUBCORP,5
+Religious Organization,OLI_ORG_RELIGIOUSORG,26
+Sole Proprietorship,OLI_ORG_SOLEP,1
+Superannuation Fund,OLI_ORG_SUPERANN,21
+Trust,OLI_ORG_TRUST,16
+Unknown,OLI_UNKNOWN,0

@@ -1,0 +1,18 @@
+<Simple>
+  <% for (const { name } of acord.list) { %>
+  <Name><%= name %></Name>
+  <% } %>
+
+  <% for (const { name } of acord.list) { %>
+  <Relation type="name" index="<%= acord.list.findIndex(item => item.name === name) + 1 %>">
+    <First><%= name.split(' ')[0] %></First>
+  </Relation>
+  <% } %>
+
+  <% if (acord.list.filter(({ name }) => name.indexOf('Lannister') !== -1 )) { %>
+  <Relation type="lannister">
+    <NumLannisters><%= acord.list.filter(({ name }) => name.indexOf('Lannister') !== -1 ).length %></NumLannisters>
+  </Relation>
+  <% } %>
+
+</Simple>

@@ -1,0 +1,191 @@
+<% if(party?.PartyType === "Insured") { %>
+  <Party id=<%= "Party_PrimaryInsured" %>>
+<% } else if(party?.PartyType === "Beneficiary" || party?.PartyType === "Contingent") { %>
+  <Party id=<%= `Party_Beneficiary_${partiesLength.Beneficiary+partiesLength.Contingent}` %>>
+<% } else if(party?.PartyType === "ChildRider") { %>
+    <Party id=<%= `Party_ChildInsured_${partiesLength.ChildRider}` %>>
+<% } %>
+    <PartyTypeCode tc="1">Person</PartyTypeCode>
+    <% if(party?.PartyType === "Insured") { %>
+    <PartyKey>050613691500300</PartyKey>
+    <OLifEExtension VendorCode="564">
+      <ExistingCustomer>False</ExistingCustomer>
+      <AllstateRateClassEligibleInd tc="0">False</AllstateRateClassEligibleInd>
+    </OLifEExtension>
+    <% } %>
+
+    <% if(party?.PartyType === "Beneficiary" || party?.PartyType === "Contingent") { %>
+    <FullName>
+      <%= transforms.concat(' ',party?.FirstName,party?.MiddleName,party?.LastName) _%>
+    </FullName>
+    <% } %>
+
+    <GovtID>
+      <%= party?.GovtID?.replaceAll("-","") _%>
+    </GovtID>
+
+    <% if (party?.PartyType !== "ChildRider") { %>
+    <GovtIDTC tc="1">Social Security Number US</GovtIDTC>
+    <% } %>
+
+    <% if(party?.PartyType === "ChildRider") { %>
+    <TobaccoPremiumBasis tc="1">Non Smoker</TobaccoPremiumBasis>
+    <% } %>
+
+    <Person>
+      <FirstName>
+        <%= party?.FirstName _%>
+      </FirstName>
+      <MiddleName>
+        <%= party?.MiddleName _%>
+      </MiddleName>
+      <LastName>
+        <%= party?.LastName _%>
+      </LastName>
+      <Gender tc="<%= await lookups.lookup(types.OLI_LU.GENDER,{ value : party?.Gender }).tc %>">
+        <%= party?.Gender _%>
+      </Gender>
+      <% if(party?.BirthDate) {%>
+      <BirthDate>
+        <%= utils.dayjs(party?.BirthDate).format('YYYY-MM-DD') _%>
+      </BirthDate>
+      <%}%>
+
+      <% if(party?.PartyType === "Insured") { %>
+      <BirthJurisdictionTC tc="<%= await lookups.lookup(types.OLI_LU.BIRTHJURISDICTIONTC,{ value : 'Illinois' }).tc %>">
+        <%= party?.BirthJurisdictionTC _%>
+      </BirthJurisdictionTC>
+      <% } %>
+
+      <% if(party?.BirthDate && (party?.PartyType === "Insured" || party?.PartyType === "ChildRider")) {%>
+      <Age>
+        <%= transforms.dobToAge(party?.BirthDate) _%>
+      </Age>
+      <%}%>
+
+      <% if(party?.PartyType === "Insured") { %>
+      <% if(party?.Citizenship?.toUpperCase() === "YES" || model?.productName === 'Simple and Affordable') { %>
+      <Citizenship tc="1">
+        U.S.A
+      </Citizenship>
+      <% } else { %>
+      <Citizenship>
+        Other
+      </Citizenship>
+      <% } %>
+
+      <% if(party?.BirthJurisdictionTC?.toUpperCase() !== "NOT BORN IN US") { %>
+      <BirthCountry tc="1">
+        USA
+      </BirthCountry>
+      <% } else { %>
+      <BirthCountry tc="<%=await lookups.lookup(types.OLI_LU.ADDRESSCOUNTRYTC, { value: party?.BirthCountry }).tc %>">
+        <%= party?.BirthCountry %>
+      </BirthCountry>
+      <% } %>
+      <% } %>
+
+      <% if(party?.HeightFeet && party?.HeightInches) {%>
+      <Height2>
+        <MeasureUnits tc="3">US Measure</MeasureUnits>
+        <MeasureValue>
+          <%= transforms.heightToInches(party?.HeightFeet,party?.HeightInches) _%>
+        </MeasureValue>
+      </Height2>
+      <%}%>
+
+      <% if(party?.Weight2) {%>
+      <Weight2>
+        <MeasureUnits tc="3">US Measure</MeasureUnits>
+        <MeasureValue>
+          <%= party?.Weight2 _%>
+        </MeasureValue>
+      </Weight2>
+      <%}%>
+
+      <MarStat tc="<%= await lookups.lookup(types.OLI_LU.MARSTAT,{ value : party?.MarStat }).tc %>">
+      <%= party?.MarStat _%>
+      </MarStat>
+
+      <% if(party?.PartyType === "Beneficiary" || party?.PartyType === "Contingent") { %>
+      <EffDate><%= utils.dayjs('2023-08-30').format('YYYY-MM-DD') %></EffDate>
+      <% } %>
+    </Person>
+
+    <% if(party?.PartyType !== "ChildRider") { %>
+    <% if(party?.PartyType === "Insured") { %>
+    <Address id="HO">
+      <AddressTypeCode tc="1">Permanent Home</AddressTypeCode>
+      <% } else if(party?.PartyType !== "ChildInsured") { %>
+      <Address>
+        <AddressTypeCode tc="1">Residence</AddressTypeCode>
+        <% } %>
+        <Line1>
+          <%= party?.Line1 _%>
+        </Line1>
+        <Line2>
+          <%= party?.Line2 _%>
+        </Line2>
+        <City>
+          <%= party?.City _%>
+        </City>
+        <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.ADDRESSSTATETC, { definition : party?.AddressStateTC }).tc %>">
+          <%= party?.AddressStateTC _%>
+        </AddressStateTC>
+        <Zip>
+          <%= party?.Zip _%>
+        </Zip>
+        <AddressCountryTC tc="1">USA</AddressCountryTC>
+
+        <% if(party?.PartyType === "Contingent") { %>
+        <PrefAddr tc="1">True</PrefAddr>
+        <% } %>
+
+      </Address>
+      <% } %>
+
+      <% if(party?.MailAddressStatus?.toUpperCase()==='YES') { %>
+      <Address id="MA">
+        <AddressTypeCode tc="17">Mailing</AddressTypeCode>
+        <Line1>
+          <%= party?.MailingAddress _%>
+        </Line1>
+        <City>
+          <%= party?.MailingCity _%>
+        </City>
+        <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.ADDRESSSTATETC, { definition : party?.MailingState }).tc %>">
+          <%= party?.MailingState _%>
+        </AddressStateTC>
+        <Zip>
+          <%= party?.MailingZipCode _%>
+        </Zip>
+        <AddressCountryTC tc="1">USA</AddressCountryTC>
+
+        <PrefAddr tc="1">True</PrefAddr>
+
+      </Address>
+      <% } %>
+
+      <% if(party?.Phone) {%>
+      <Phone>
+        <PhoneTypeCode tc="12">Mobile Phone</PhoneTypeCode>
+        <DialNumber>
+          <%=  party?.Phone _%>
+        </DialNumber>
+
+        <% if(party?.PartyType === "Contingent") { %>
+        <Sequence>1</Sequence>
+        <% } %>
+
+      </Phone>
+      <% } %>
+
+      <%if(party?.AddrLine) { %>
+      <EMailAddress>
+        <AddrLine>
+          <%= party?.AddrLine _%>
+        </AddrLine>
+      </EMailAddress>
+      <% } %>
+
+  </Party>

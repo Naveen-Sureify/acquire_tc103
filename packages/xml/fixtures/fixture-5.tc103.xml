@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TXLife xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ACORD.org/Standards/Life/2" Version="2.35.00" xsi:schemaLocation="http://ACORD.org/Standards/Life/2 TXLife2.35.00.xsd">
+  <UserAuthRequest>
+    <UserLoginName>resonant sample</UserLoginName>
+    <UserPswd>
+      <CryptType>NONE</CryptType>
+      <Pswd>zhCH3Mzka</Pswd>
+    </UserPswd>
+    <VendorApp>
+      <VendorName VendorCode="220">Sureify</VendorName>
+      <AppName>Acquire</AppName>
+    </VendorApp>
+  </UserAuthRequest>
+  <TXLifeRequest PrimaryObjectID="Application_Holding_1">
+    <TransRefGUID>ca540c4e-ae95-4d8d-a195-e0074623487e</TransRefGUID>
+    <TransType tc="103">New Business Submission</TransType>
+    <TransExeDate>2023-04-17</TransExeDate>
+    <TransExeTime>01:45:48</TransExeTime>
+    <TransMode tc="2">Original</TransMode>
+    <OLifE Version="2.31.00">
+      <SourceInfo>
+        <CreationDate>2023-04-17</CreationDate>
+        <CreationTime>01:45:48</CreationTime>
+        <SourceInfoName>Sureify</SourceInfoName>
+      </SourceInfo>
+      <Holding id="Application_Holding_1">
+        <HoldingTypeCode tc="2">Policy</HoldingTypeCode>
+        <HoldingStatus tc="3">Proposed</HoldingStatus>
+        <Policy>
+          <LineOfBusiness tc="1">Life</LineOfBusiness>
+          <CarrierCode>NMAA</CarrierCode>
+          <PolicyStatus tc="8">Pending Issue (application accepted to process)</PolicyStatus>
+          <IssueNation tc="1">United States of America</IssueNation>
+          <Jurisdiction tc="2">Alaska</Jurisdiction>
+          <Life>
+            <LifeUSA>
+              <MECInd tc="0">OLI_BOOL_FALSE</MECInd>
+            </LifeUSA>
+            <Coverage id="Base_Coverage">
+              <IndicatorCode tc="1">Base</IndicatorCode>
+              <LifeParticipant PartyID="InsuredParty_1" id="PrimaryInsured_Life_Participant">
+                <ParticipantName>Subha PI Sree PI</ParticipantName>
+                <LifeParticipantRoleCode tc="1">Primary Insured</LifeParticipantRoleCode>
+                <TobaccoPremiumBasis tc="1">Non-Smoker (Non-Nicotine)</TobaccoPremiumBasis>
+                <PermTableRating >None</PermTableRating>
+              </LifeParticipant>
+            </Coverage>
+          </Life>
+          <ApplicationInfo>
+            <ApplicationType tc="1">New Application</ApplicationType>
+            <DistributionChannel tc="7">Direct Marketing (DTC)</DistributionChannel>
+            <SubmissionType tc="12">Internet</SubmissionType>
+            <BackDateType tc="2">No Backdating</BackDateType>
+            <SignatureInfo SignaturePartyID="InsuredParty_1" id="PI_Signature">
+              <SignatureCity>Newyork</SignatureCity>
+              <SignatureState >AA</SignatureState>
+            </SignatureInfo>
+            <OLifEExtension VendorCode="220">
+              <StartedInDTC>No</StartedInDTC>
+            </OLifEExtension>
+          </ApplicationInfo>
+        </Policy>
+        <Arrangement>
+          <ArrMode tc="2">OLI_PAYMODE_BIANNUAL</ArrMode>
+          <ArrType tc="39">OLI_ARRTYPE_SUBSQNTPREMS</ArrType>
+          <ModalAmt>87.99</ModalAmt>
+          <PaymentMethod tc="2">OLI_PAYMETH_REGBILL</PaymentMethod>
+        </Arrangement>
+      </Holding>
+      <Party id="Party_Carrier">
+        <PartyTypeCode tc="2">Organization</PartyTypeCode>
+        <FullName>Navymutual Life Insurance Company</FullName>
+      </Party>
+      <Party id="InsuredParty_1">
+        <PartyTypeCode tc="1">Person</PartyTypeCode>
+        <GovtID>222222222</GovtID>
+        <GovtIDTC tc="1">SSN</GovtIDTC>
+        <Person>
+          <FirstName>Subha PI</FirstName>
+          <LastName>Sree PI</LastName>
+          <Gender tc="1">Male</Gender>
+          <BirthDate>1999-11-11</BirthDate>
+          <Age>23</Age>
+          <Height2>
+            <MeasureUnits tc="2">US System Standard</MeasureUnits>
+            <MeasureValue>52</MeasureValue>
+          </Height2>
+          <Weight2>
+            <MeasureUnits tc="2">US System Standard</MeasureUnits>
+            <MeasureValue>100</MeasureValue>
+          </Weight2>
+          <DriversLicenseNum>AFD5676</DriversLicenseNum>
+          <NoDriversLicenseInd tc="0">False</NoDriversLicenseInd>
+          <DriversLicenseState tc="61">AE</DriversLicenseState>
+          <BirthCountry tc="1">United States of America</BirthCountry>
+          <BirthJurisdictionTC tc="2">ALASKA</BirthJurisdictionTC>
+        </Person>
+        <Address>
+          <AddressTypeCode tc="1">Residence</AddressTypeCode>
+          <Line1>fghjk</Line1>
+          <City>BALTIMORE</City>
+          <AddressStateTC tc="25">MARYLAND</AddressStateTC>
+          <Zip>21211</Zip>
+          <AddressCountryTC tc="1">United States of America</AddressCountryTC>
+        </Address>
+        <Phone>
+          <PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+          <AreaCode>999</AreaCode>
+          <DialNumber>9999992</DialNumber>
+        </Phone>
+        <EMailAddress>
+          <EMailType tc="5">OLI_EMAIL_PRIMARY</EMailType>
+          <AddrLine>reethika.gadamsetty@sureify.com</AddrLine>
+        </EMailAddress>
+        <OLifEExtension VendorCode="220">
+          <CurrentMemberInd tc="1">YES</CurrentMemberInd>
+          <MembershipStatus>ASM</MembershipStatus>
+        </OLifEExtension>
+        <Risk>
+          <ExistingInsuranceInd tc="0">OLI_BOOL_FALSE</ExistingInsuranceInd>
+        </Risk>
+        <Employment>
+          <EmploymentStatusTC tc="1">Active</EmploymentStatusTC>
+        </Employment>
+      </Party>
+      <Party id="PartyOwner_1">
+        <PartyTypeCode tc="1">Person</PartyTypeCode>
+        <GovtID>111111111</GovtID>
+        <GovtIDTC tc="1">SSN</GovtIDTC>
+        <Person>
+          <FirstName>Subha Quote</FirstName>
+          <LastName>Sree Quote</LastName>
+          <Gender tc="2">Female</Gender>
+          <BirthDate>1987-11-11</BirthDate>
+          <Age>35</Age>
+          <BirthCountry tc="1">United States of America</BirthCountry>
+          <BirthJurisdictionTC tc="1">ALABAMA</BirthJurisdictionTC>
+        </Person>
+        <Address>
+          <AddressTypeCode tc="1">Residence</AddressTypeCode>
+          <Line1>fghjk</Line1>
+          <City>BALTIMORE</City>
+          <AddressStateTC tc="25">MARYLAND</AddressStateTC>
+          <Zip>21211</Zip>
+          <AddressCountryTC tc="1">United States of America</AddressCountryTC>
+        </Address>
+        <Phone>
+          <PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+          <AreaCode>999</AreaCode>
+          <DialNumber>9999992</DialNumber>
+        </Phone>
+        <OLifEExtension VendorCode="220">
+          <CurrentMemberInd tc="0">NO</CurrentMemberInd>
+          <MembershipStatus>MBR</MembershipStatus>
+          <VIPInd tc="1">YES</VIPInd>
+          <EmployeeInd tc="1">YES</EmployeeInd>
+        </OLifEExtension>
+        <Risk>
+          <MilitaryExp>
+            <MilitaryOrganizationType tc="2">OLI_MILORG_NAVY</MilitaryOrganizationType>
+            <MilitaryStatus tc="4">OLI_MILSTAT_ACTRES</MilitaryStatus>
+            <OLifEExtension VendorCode="220">
+              <MilitarySvcRecordInd tc="1">Yes</MilitarySvcRecordInd>
+              <MilitaryRank>RADM</MilitaryRank>
+            </OLifEExtension>
+          </MilitaryExp>
+        </Risk>
+        <EMailAddress>
+          <EMailType tc="5">OLI_EMAIL_PRIMARY</EMailType>
+          <AddrLine>reethika.gadamsetty@sureify.com</AddrLine>
+        </EMailAddress>
+      </Party>
+      <Party id="Party_Beneficiary_1">
+        <PartyTypeCode tc="1">Individual</PartyTypeCode>
+        <GovtID>324324353</GovtID>
+        <GovtIDTC tc="1">SSN</GovtIDTC>
+        <Person>
+          <FirstName>Soman</FirstName>
+          <LastName>Pranav</LastName>
+          <BirthDate>1967-12-12</BirthDate>
+        </Person>
+      </Party>
+      <Party id="Party_Agent_1">
+        <PartyTypeCode tc="1">Person</PartyTypeCode>
+        <Phone>
+          <PhoneTypeCode tc="2">Business</PhoneTypeCode>
+        </Phone>
+        <EMailAddress>
+          <PrefEMailAddr tc="1">True</PrefEMailAddr>
+        </EMailAddress>
+      </Party>
+      <Relation OriginatingObjectID="Application_Holding_1" RelatedObjectID="Party_Agent_1" id="Holding_Agent_Relation">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="11">Agent</RelationRoleCode>
+      </Relation>
+      <FormInstance id="FormInstance_InsuredParty_1">
+        <FormResponse>
+          <QuestionNumber>AnnualIncome</QuestionNumber>
+          <ResponseData >I</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>RiskOccupations</QuestionNumber>
+          <ResponseData >A</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>Occ_Const_StructuralIron_Checked</QuestionNumber>
+          <ResponseData >Yes</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>RatedDeclinedInd</QuestionNumber>
+          <ResponseData >Yes</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>RatedDeclinedDesc</QuestionNumber>
+          <ResponseData >Five star</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>RatedDeclinedCarrier</QuestionNumber>
+          <ResponseData >Monalisa</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>RatedDeclinedDate</QuestionNumber>
+          <ResponseData >2023-01</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>Phys_LastCheckUp</QuestionNumber>
+          <ResponseData >D</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>AIDSInd</QuestionNumber>
+          <ResponseData >No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>IncompleteTreatmentInd</QuestionNumber>
+          <ResponseData >No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>SubstanceAbuseInd</QuestionNumber>
+          <ResponseData >Yes</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>DrivingViolationsInd</QuestionNumber>
+          <ResponseData >Yes</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>CriminalInd</QuestionNumber>
+          <ResponseData >Yes</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>NicotineInd</QuestionNumber>
+          <ResponseData >Yes</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>AviationInd</QuestionNumber>
+          <ResponseData >No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>AvocationInd</QuestionNumber>
+          <ResponseData >No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>SubstanceAbuseTopic</QuestionNumber>
+          <ResponseData >B</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>CurrentDrugslInd</QuestionNumber>
+          <ResponseData >No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>DrugsLastUse</QuestionNumber>
+          <ResponseData >B</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>DrugsRelapseInd</QuestionNumber>
+          <ResponseData >Yes</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>DrivingViolationType</QuestionNumber>
+          <ResponseData >C</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>NumRecklessDrivingViolations</QuestionNumber>
+          <ResponseData >A</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>ParolePrisonInd</QuestionNumber>
+          <ResponseData >No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>CriminalConvictionType</QuestionNumber>
+          <ResponseData >B</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>NumMisCharges</QuestionNumber>
+          <ResponseData >A</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>NicotineLastUse</QuestionNumber>
+          <ResponseData >B</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>WeightChangeInd</QuestionNumber>
+          <ResponseData >No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>MedicationInd</QuestionNumber>
+          <ResponseData >No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>HospitalizationInd</QuestionNumber>
+          <ResponseData >No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>FamilyHistoryRiskInd</QuestionNumber>
+          <ResponseData >No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>HypertensionInd</QuestionNumber>
+          <ResponseData >Yes</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>CirculatoryInd</QuestionNumber>
+          <ResponseData >No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>StrokeInd</QuestionNumber>
+          <ResponseData >No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>CancerInd</QuestionNumber>
+          <ResponseData >Yes</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>DiabetesInd</QuestionNumber>
+          <ResponseData >No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>AnemiaOrBloodDisorderInd</QuestionNumber>
+          <ResponseData >No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>RespiratoryInd</QuestionNumber>
+          <ResponseData >No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>NeurologicalInd</QuestionNumber>
+          <ResponseData >No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>DementiaInd</QuestionNumber>
+          <ResponseData >No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>MentalDisorderInd</QuestionNumber>
+          <ResponseData >No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>UrinaryInd</QuestionNumber>
+          <ResponseData >No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>DigestiveInd</QuestionNumber>
+          <ResponseData >Yes</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>LiverDisorderInd</QuestionNumber>
+          <ResponseData >No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>Hypertension_2MedsPlusInd</QuestionNumber>
+          <ResponseData >Yes</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>Hypertension_HospitalizedInd</QuestionNumber>
+          <ResponseData >Yes</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>Hypertension_HospitalizationDesc</QuestionNumber>
+          <ResponseData >2 days</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>Cancer_Skin_Checked</QuestionNumber>
+          <ResponseData >Yes</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>SkinCancer_Melanoma_Checked</QuestionNumber>
+          <ResponseData >Yes</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>Cancer_Desc</QuestionNumber>
+          <ResponseData >dfgbf fh fg df</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>Digestive_Diverticulitis_Checked</QuestionNumber>
+          <ResponseData >Yes</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>Digestive_PendingProceduresInd</QuestionNumber>
+          <ResponseData >Yes</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>Digestive_Desc</QuestionNumber>
+          <ResponseData >asdfghj</ResponseData>
+        </FormResponse>
+      </FormInstance>
+      <Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="FormInstance_InsuredParty_1" id="Relation_Form_FormInstance_InsuredParty_1_InsuredParty_1">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="389">Form Instance</RelatedObjectType>
+        <RelationRoleCode tc="107">Form For</RelationRoleCode>
+      </Relation>
+      <Relation OriginatingObjectID="Application_Holding_1" RelatedObjectID="Party_Beneficiary_1" id="Relation_Beneficiary_1">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="34">Primary Beneficiary</RelationRoleCode>
+        <InterestPercent>100</InterestPercent>
+      </Relation>
+      <Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="Party_Beneficiary_1" id="Relation_InsuredBeneficiary_1">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="93">Grandchild</RelationRoleCode>
+        <RelationDescription>Grandchild</RelationDescription>
+      </Relation>
+      <Party id="Party_Physician_1">
+        <PartyTypeCode tc="1">Person</PartyTypeCode>
+        <Person>
+          <FirstName>vaanio</FirstName>
+          <LastName>sree</LastName>
+        </Person>
+        <Physician>
+          <PhysicianSpeciality tc="53">OLI_PHYSPEC_GP</PhysicianSpeciality>
+          <PhysicianInfo>
+            <OLifEExtension>
+              <FacilityName>sureify lan</FacilityName>
+            </OLifEExtension>
+          </PhysicianInfo>
+        </Physician>
+        <Address>
+          <AddressTypeCode tc="2">Business</AddressTypeCode>
+          <Line1>safdghj</Line1>
+          <City>sdfhgjk</City>
+          <AddressStateTC tc="1">ALABAMA</AddressStateTC>
+          <Zip>21212</Zip>
+        </Address>
+        <Phone>
+          <PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+          <AreaCode>987</AreaCode>
+          <DialNumber>6578909</DialNumber>
+        </Phone>
+      </Party>
+      <Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="Party_Physician_1" id="Relation_PHY_1">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="58">OLI_REL_PRIMPHYSICIAN</RelationRoleCode>
+      </Relation>
+      <Party id="Party_Physician_2">
+        <PartyTypeCode tc="1">Person</PartyTypeCode>
+        <Person>
+          <FirstName>vaanio</FirstName>
+          <LastName>sree</LastName>
+        </Person>
+        <Physician>
+          <PhysicianSpeciality tc="3">OLI_PHYSPEC_ADM</PhysicianSpeciality>
+          <PhysicianInfo>
+            <OLifEExtension>
+              <FacilityName>sureify lan</FacilityName>
+            </OLifEExtension>
+          </PhysicianInfo>
+        </Physician>
+        <Address>
+          <AddressTypeCode tc="2">Business</AddressTypeCode>
+          <Line1>safdghj</Line1>
+          <City>sdfhgjk</City>
+          <AddressStateTC tc="1">ALABAMA</AddressStateTC>
+          <Zip>21212</Zip>
+        </Address>
+        <Phone>
+          <PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+          <AreaCode>987</AreaCode>
+          <DialNumber>6578909</DialNumber>
+        </Phone>
+      </Party>
+      <Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="Party_Physician_2" id="Relation_PHY_2">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="41">OLI_REL_PHYSICIAN</RelationRoleCode>
+      </Relation>
+      <Party id="Party_Physician_3">
+        <PartyTypeCode tc="1">Person</PartyTypeCode>
+        <Person>
+          <FirstName>vaanio</FirstName>
+          <LastName>sree</LastName>
+        </Person>
+        <Physician>
+          <PhysicianSpeciality tc="32">OLI_PHYSPEC_D</PhysicianSpeciality>
+          <PhysicianInfo>
+            <OLifEExtension>
+              <FacilityName>sureify lan</FacilityName>
+            </OLifEExtension>
+          </PhysicianInfo>
+        </Physician>
+        <Address>
+          <AddressTypeCode tc="2">Business</AddressTypeCode>
+          <Line1>safdghj</Line1>
+          <City>sdfhgjk</City>
+          <AddressStateTC tc="1">ALABAMA</AddressStateTC>
+          <Zip>21212</Zip>
+        </Address>
+        <Phone>
+          <PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+          <AreaCode>987</AreaCode>
+          <DialNumber>6578909</DialNumber>
+        </Phone>
+      </Party>
+      <Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="Party_Physician_3" id="Relation_PHY_3">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="41">OLI_REL_PHYSICIAN</RelationRoleCode>
+      </Relation>
+      <Party id="Party_Physician_4">
+        <PartyTypeCode tc="1">Person</PartyTypeCode>
+        <Person>
+          <FirstName>vaanio</FirstName>
+          <LastName>sree</LastName>
+        </Person>
+        <Physician>
+          <PhysicianSpeciality tc="51">OLI_PHYSPEC_GE</PhysicianSpeciality>
+          <PhysicianInfo>
+            <OLifEExtension>
+              <FacilityName>sureify lan</FacilityName>
+            </OLifEExtension>
+          </PhysicianInfo>
+        </Physician>
+        <Address>
+          <AddressTypeCode tc="2">Business</AddressTypeCode>
+          <Line1>safdghj</Line1>
+          <City>sdfhgjk</City>
+          <AddressStateTC tc="1">ALABAMA</AddressStateTC>
+          <Zip>21212</Zip>
+        </Address>
+        <Phone>
+          <PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+          <AreaCode>987</AreaCode>
+          <DialNumber>6578909</DialNumber>
+        </Phone>
+      </Party>
+      <Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="Party_Physician_4" id="Relation_PHY_4">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="41">OLI_REL_PHYSICIAN</RelationRoleCode>
+      </Relation>
+      <Relation OriginatingObjectID="Application_Holding_1" RelatedObjectID="PartyOwner_1" id="Relation_MemberParty">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="75">Member</RelationRoleCode>
+      </Relation>
+      <Relation OriginatingObjectID="Application_Holding_1" RelatedObjectID="InsuredParty_1" id="Relation_InsuredParty">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="32">Primary Insured</RelationRoleCode>
+      </Relation>
+      <Relation OriginatingObjectID="Application_Holding_1" RelatedObjectID="PartyOwner_1" id="Relation_PartyOwner">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="8">Owner</RelationRoleCode>
+      </Relation>
+      <Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="PartyOwner_1" id="Relation_PartyOwnerInsured_1">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="1">OLI_REL_SPOUSE</RelationRoleCode>
+      </Relation>
+      <Relation OriginatingObjectID="PartyOwner_1" RelatedObjectID="InsuredParty_1" id="Relation_Insured_Member_1">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="1">OLI_REL_SPOUSE</RelationRoleCode>
+      </Relation>
+    </OLifE>
+  </TXLifeRequest>
+</TXLife>

@@ -1,0 +1,1499 @@
+[
+  {
+    "question_id": "ApplicationCTADisclosure",
+    "response": "</sup>Data as of June 30, 2021. From FORTUNE © 2021 Fortune Media IP Limited. FORTUNE and FORTUNE 500 are registered trademarks of Fortune Media IP Limited and are used under license. FORTUNE and Fortune Media IP Limited are not affiliated with, and do not endorse the products or services of, Brighthouse Financial. Ranked by 2020 admitted assets. Best’s Review®: Top 200 U.S. Life/Health Insurers. A.M. Best, 2021.</p> </div>",
+    "answer": "</sup>Data as of June 30, 2021. From FORTUNE © 2021 Fortune Media IP Limited. FORTUNE and FORTUNE 500 are registered trademarks of Fortune Media IP Limited and are used under license. FORTUNE and Fortune Media IP Limited are not affiliated with, and do not endorse the products or services of, Brighthouse Financial. Ranked by 2020 admitted assets. Best’s Review®: Top 200 U.S. Life/Health Insurers. A.M. Best, 2021.</p> </div>",
+    "question_text": " "
+  },
+  {
+    "question_id": "ApplicationThankYou",
+    "response": "",
+    "answer": "",
+    "question_text": "You will have an initial response from Underwriting within 24-48 hours of receipt of the completed application. Contact our client consultant team if you have questions at 877-295-2114. They are available Monday-Thursday 8 a.m.-6 p.m. and Friday 8 a.m.-5 p.m."
+  },
+  {
+    "question_id": "ApplicationFinalReferParent",
+    "answer": "",
+    "question_text": "Thanks for giving Brighthouse Life Insurance Company the opportunity to help you serve your client's life insurance needs."
+  },
+  {
+    "question_id": "ApplicationFinalDecisionRefer",
+    "answer": "",
+    "question_text": "Your Client's Application Has Been Submitted"
+  },
+  {
+    "question_id": "BH_SignedStateSignature",
+    "response": {
+      "id": "StateAL",
+      "label": "Alabama"
+    },
+    "answer": "Alabama",
+    "question_text": "Signed at State"
+  },
+  {
+    "question_id": "BH_SignedCitySignature",
+    "response": "sdf",
+    "answer": "sdf",
+    "question_text": "Signed at City"
+  },
+  {
+    "question_id": "ElectronicSignatureConsentAgent",
+    "response": [
+      {
+        "id": "ElectronicSignature",
+        "label": "I have read this application for life insurance, including any supplements, and to the best of my knowledge and belief, all statements are true and complete.",
+        "onlyOption": true
+      }
+    ],
+    "answer": [
+      {
+        "id": "ElectronicSignature",
+        "label": "I have read this application for life insurance, including any supplements, and to the best of my knowledge and belief, all statements are true and complete.",
+        "onlyOption": true
+      }
+    ],
+    "question_text": ""
+  },
+  {
+    "question_id": "Signature.DocumentAgent",
+    "response": "v1/documents/?document_type=pdf&fetch=signature_doc&uid=b3edb12e-3fa2-4f75-a132-d6259ef9d6da",
+    "question_text": ""
+  },
+  {
+    "question_id": "SignatureGroupAgent",
+    "response": "",
+    "answer": "",
+    "question_text": ""
+  },
+  {
+    "question_id": "SignatureAgent",
+    "response": "",
+    "answer": "",
+    "question_text": "Statements and Signatures"
+  },
+  {
+    "question_id": "CustomerCTADisclosure",
+    "response": "</sup>Data as of June 30, 2021. From FORTUNE © 2021 Fortune Media IP Limited. FORTUNE and FORTUNE 500 are registered trademarks of Fortune Media IP Limited and are used under license. FORTUNE and Fortune Media IP Limited are not affiliated with, and do not endorse the products or services of, Brighthouse Financial. Ranked by 2020 admitted assets. Best’s Review®: Top 200 U.S. Life/Health Insurers. A.M. Best, 2021.</p> </div>",
+    "answer": "</sup>Data as of June 30, 2021. From FORTUNE © 2021 Fortune Media IP Limited. FORTUNE and FORTUNE 500 are registered trademarks of Fortune Media IP Limited and are used under license. FORTUNE and Fortune Media IP Limited are not affiliated with, and do not endorse the products or services of, Brighthouse Financial. Ranked by 2020 admitted assets. Best’s Review®: Top 200 U.S. Life/Health Insurers. A.M. Best, 2021.</p> </div>",
+    "question_text": " "
+  },
+  {
+    "question_id": "CustomerCTA",
+    "response": "logo</img>Brighthouse Financial®</sup> is on a mission to help people achieve financial security.1</sup></h3>Trusted by over 2 million customers and with over 2.5 million annuity contracts and life insurance policies in force, we’re proud to be a FORTUNE®</sup> 500 company and one of the largest providers of annuities and life insurance in the U.S.</p> Learn More</span> </a> </div> </div>",
+    "answer": "logo</img>Brighthouse Financial®</sup> is on a mission to help people achieve financial security.1</sup></h3>Trusted by over 2 million customers and with over 2.5 million annuity contracts and life insurance policies in force, we’re proud to be a FORTUNE®</sup> 500 company and one of the largest providers of annuities and life insurance in the U.S.</p> Learn More</span> </a> </div> </div>",
+    "question_text": ""
+  },
+  {
+    "question_id": "DocumentsDownloadApplication",
+    "response": "Download Application Packet</a></div>",
+    "answer": "Download Application Packet</a></div>",
+    "question_text": ""
+  },
+  {
+    "question_id": "DocumentsDownloadButton",
+    "response": "Download Leave Behind Forms</a></div>",
+    "answer": "Download Leave Behind Forms</a></div>",
+    "question_text": ""
+  },
+  {
+    "question_id": "CustomerThankYou",
+    "response": "",
+    "answer": "",
+    "question_text": "We are reviewing your application and will be in touch pending this review.Click a button below to download additional documents related to your policy."
+  },
+  {
+    "question_id": "CustomerFinalReferParent",
+    "answer": "",
+    "question_text": "Thank you for your interest in Smart Care."
+  },
+  {
+    "question_id": "CustomerFinalDecisionRefer",
+    "answer": "",
+    "question_text": "Application is Complete"
+  },
+  {
+    "question_id": "ElectronicSignatureConsent",
+    "response": [
+      {
+        "id": "ElectronicSignature",
+        "label": "I have read this application for life insurance, including any supplements, and to the best of my knowledge and belief, all statements are true and complete."
+      }
+    ],
+    "answer": [
+      {
+        "id": "ElectronicSignature",
+        "label": "I have read this application for life insurance, including any supplements, and to the best of my knowledge and belief, all statements are true and complete."
+      }
+    ],
+    "question_text": ""
+  },
+  {
+    "question_id": "Signature.Document",
+    "response": "v1/documents/?document_type=pdf&fetch=signature_doc&uid=4fb6b610-14db-45cf-ab90-12308ce75dcd",
+    "question_text": ""
+  },
+  {
+    "question_id": "SignatureGroup",
+    "response": "",
+    "answer": "",
+    "question_text": ""
+  },
+  {
+    "question_id": "Signature",
+    "response": "",
+    "answer": "",
+    "question_text": "Statements and Signatures"
+  },
+  {
+    "question_id": "BH_Authorization_Another_Sign",
+    "response": [
+      {
+        "id": "BH_Authorization_Another_Sign_Text",
+        "label": "I have reviewed the above-mentioned forms and agree to electronically sign them.I have read the forms and retained them for future reference</li>I understand and agree to the authorizations they provide to Brighthouse Financial Life Insurance Company</li>I agree to affix my electronic signature to the forms and understand it has the same effect as signing the forms by hand</li></ul></div>"
+      }
+    ],
+    "answer": [
+      {
+        "id": "BH_Authorization_Another_Sign_Text",
+        "label": "I have reviewed the above-mentioned forms and agree to electronically sign them.I have read the forms and retained them for future reference</li>I understand and agree to the authorizations they provide to Brighthouse Financial Life Insurance Company</li>I agree to affix my electronic signature to the forms and understand it has the same effect as signing the forms by hand</li></ul></div>"
+      }
+    ],
+    "question_text": ""
+  },
+  {
+    "question_id": "BH_Electronic_Review_Label",
+    "response": "",
+    "answer": "",
+    "question_text": "In order to consider your application for insurance, your review and acceptance of this statement is required.</div>"
+  },
+  {
+    "question_id": "BH_Electronic_Signature_group",
+    "response": "",
+    "answer": "",
+    "question_text": ""
+  },
+  {
+    "question_id": "BH_Electronic_Signature",
+    "response": "",
+    "answer": "",
+    "question_text": "Electronic Signature"
+  },
+  {
+    "question_id": "BH_Authorization_Sign",
+    "response": [
+      {
+        "id": "BH_Authorization_Sign_Text",
+        "label": "I authorize any physician, hospital, pharmacy, pharmacy benefit manager, health insurance plan, insurer, any consumer reporting agency, the MIB Group, Inc (MIB) or any other entity that possesses any diagnosis, treatment, prescription or other medical information, personal information and data about me, to furnish such information to the Company, or its reinsurers, for the purpose of evaluating my eligibility for insurance.I authorize the Company, or its reinsurers, to make a report of my personal health information to MIB. This authorization overrides any restrictions that I may have in place with any entity regarding the release of my information. Health information obtained will not be re-disclosed without my authorization unless permitted by law, in which case it may not be protected under federal privacy rules.This authorization shall be valid for two years from this date and may be revoked by sending written notice to the Company.</p>"
+      }
+    ],
+    "answer": [
+      {
+        "id": "BH_Authorization_Sign_Text",
+        "label": "I authorize any physician, hospital, pharmacy, pharmacy benefit manager, health insurance plan, insurer, any consumer reporting agency, the MIB Group, Inc (MIB) or any other entity that possesses any diagnosis, treatment, prescription or other medical information, personal information and data about me, to furnish such information to the Company, or its reinsurers, for the purpose of evaluating my eligibility for insurance.I authorize the Company, or its reinsurers, to make a report of my personal health information to MIB. This authorization overrides any restrictions that I may have in place with any entity regarding the release of my information. Health information obtained will not be re-disclosed without my authorization unless permitted by law, in which case it may not be protected under federal privacy rules.This authorization shall be valid for two years from this date and may be revoked by sending written notice to the Company.</p>"
+      }
+    ],
+    "question_text": ""
+  },
+  {
+    "question_id": "BH_Authorization_Text",
+    "response": "",
+    "answer": "",
+    "question_text": "Authorization</u></b>"
+  },
+  {
+    "question_id": "BH_Signed_State",
+    "response": {
+      "id": "StateAL",
+      "label": "Alabama"
+    },
+    "answer": "Alabama",
+    "question_text": "Signed at State"
+  },
+  {
+    "question_id": "BH_Signed_City",
+    "response": "sdf",
+    "answer": "sdf",
+    "question_text": "Signed at City"
+  },
+  {
+    "question_id": "BH_City_State_Text",
+    "response": "",
+    "answer": "",
+    "question_text": "In order to proceed, please fill \"Signed at City\" and \"Signed at State\" below."
+  },
+  {
+    "question_id": "BH_HIPPA_Document",
+    "response": "v1/documents/?document_type=pdf&fetch=signature_doc&uid=4fb6b610-14db-45cf-ab90-12308ce75dcd",
+    "question_text": ""
+  },
+  {
+    "question_id": "BH_Hippa_Review_Label",
+    "response": "",
+    "answer": "",
+    "question_text": "In order to consider your application for insurance, your review and acceptance of this form is required.This form was designed to comply with the requirements of the Health Insurance Portability and Accountability Act (HIPAA)</div>"
+  },
+  {
+    "question_id": "BH_Hippa_Authorization_group",
+    "response": "",
+    "answer": "",
+    "question_text": ""
+  },
+  {
+    "question_id": "BH_Hippa_Authorization",
+    "response": "",
+    "answer": "",
+    "question_text": "HIPAA Authorization"
+  },
+  {
+    "question_id": "BH_User_Consent_Sign",
+    "response": [
+      {
+        "id": "BH_User_Consent_Sign_Text",
+        "label": "By clicking the “I AGREE” button, you confirm to Brighthouse Financial that:You can access and read this Consent and that you agree to its terms and conditions;</li>You consent to do business with Brighthouse Financial electronically;</li>You confirm such consent to do business with Brighthouse Financial electronically;</li>You acknowledge that documents delivered electronically may contain information regarding your personal financial matters and consent to the electronic delivery of such information;</li>You can print this Consent or save/access it for future reference; and</li>This Consent remains valid until you withdraw it.</li></ul> </div>"
+      }
+    ],
+    "answer": [
+      {
+        "id": "BH_User_Consent_Sign_Text",
+        "label": "By clicking the “I AGREE” button, you confirm to Brighthouse Financial that:You can access and read this Consent and that you agree to its terms and conditions;</li>You consent to do business with Brighthouse Financial electronically;</li>You confirm such consent to do business with Brighthouse Financial electronically;</li>You acknowledge that documents delivered electronically may contain information regarding your personal financial matters and consent to the electronic delivery of such information;</li>You can print this Consent or save/access it for future reference; and</li>This Consent remains valid until you withdraw it.</li></ul> </div>"
+      }
+    ],
+    "question_text": ""
+  },
+  {
+    "question_id": "BH_User_Consent_Text",
+    "response": "",
+    "answer": "",
+    "question_text": "User Consent to do Business with Brighthouse Financial and to Receive Documents Electronically (“Consent”)</u></b>"
+  },
+  {
+    "question_id": "BH_EConsent_Review_Label",
+    "response": "",
+    "answer": "",
+    "question_text": "In order to consider your application for insurance, your review and acceptance of this statement is required.</div>"
+  },
+  {
+    "question_id": "BH_EConsent_Authorization_group",
+    "response": "",
+    "answer": "",
+    "question_text": ""
+  },
+  {
+    "question_id": "BH_EConsent_Authorization",
+    "response": "",
+    "answer": "",
+    "question_text": "eConsent Authorization"
+  },
+  {
+    "question_id": "BH_SmokerStatus",
+    "response": {
+      "id": "BH_SmokerStatusNo",
+      "label": "No"
+    },
+    "answer": "No",
+    "question_text": "Have you used any tobacco or nicotine products in the last 12 months?"
+  },
+  {
+    "question_id": "BH_TobaccoUseBreadcrumbGroup",
+    "response": "",
+    "answer": "",
+    "question_text": "Tobacco Use"
+  },
+  {
+    "question_id": "BH_MedicalHistoryBreadcrumb",
+    "response": "",
+    "answer": "",
+    "question_text": "Tobacco Use"
+  },
+  {
+    "question_id": "BH_PersonalPhysician",
+    "response": {
+      "id": "BH_PersonalPhysicianNo",
+      "label": "No"
+    },
+    "answer": "No",
+    "question_text": "Do you have a personal physician? (Your primary physician.)"
+  },
+  {
+    "question_id": "BH_PhysicianDetailsBreadcrumbGroup",
+    "response": "",
+    "answer": "",
+    "question_text": "Physician Details"
+  },
+  {
+    "question_id": "BH_PrimaryPhysicianBreadcrumb",
+    "response": "",
+    "answer": "",
+    "question_text": "Primary Physician"
+  },
+  {
+    "question_id": "BH_Sold",
+    "response": {
+      "id": "BH_SoldNo",
+      "label": "No"
+    },
+    "answer": "No",
+    "question_text": "Have you ever sold or transferred a life insurance policy to a life settlement company, othersecondary market provider, or any other person?"
+  },
+  {
+    "question_id": "BH_Transfer",
+    "response": {
+      "id": "BH_TransferNo",
+      "label": "No"
+    },
+    "answer": "No",
+    "question_text": "Have you been solicited to sell or transfer the proposed life insurance policy or do you intend to sellor transfer the proposed life insurance policy?"
+  },
+  {
+    "question_id": "BH_Incentive",
+    "response": {
+      "id": "BH_IncentiveNo",
+      "label": "No"
+    },
+    "answer": "No",
+    "question_text": "Have you been offered any fee, payment, or incentive in connection with the purchase of thisinsurance policy?"
+  },
+  {
+    "question_id": "BH_ExistingInsuranceLabel",
+    "response": "",
+    "answer": "",
+    "question_text": "Your Financial Professional provided information regarding your existing insurance policies. Please review this information and contact your Financial Professional with any discrepancies. This information is able to be updated after you complete your application and you are able to continue to the next section."
+  },
+  {
+    "question_id": "BH_ExistingInsuranceBreadcrumbGroup",
+    "response": "",
+    "answer": "",
+    "question_text": "Existing or Applied for Insurance"
+  },
+  {
+    "question_id": "BH_ExistingInsuranceBreadcrumb",
+    "response": "",
+    "answer": "",
+    "question_text": "Existing or Applied for Insurance"
+  },
+  {
+    "question_id": "BH_FutureChildren",
+    "response": {
+      "id": "BH_FutureChildrenNo",
+      "label": "No"
+    },
+    "answer": "No",
+    "question_text": "Should you have children after the date of this application, do you want them to be added as contingent beneficiary(ies) to the policy?"
+  },
+  {
+    "question_id": "BH_FutureChildrenBreadcrumbGroup",
+    "response": "",
+    "answer": "",
+    "question_text": "Future Children"
+  },
+  {
+    "question_id": "BH_AddContingentBeneficiary",
+    "response": {
+      "id": "BH_AddContingentBeneficiaryNo",
+      "label": "No"
+    },
+    "answer": "No",
+    "question_text": "Would you like to add a contingent beneficiary?"
+  },
+  {
+    "question_id": "BH_ContingentBeneficiaryFirstLabel",
+    "response": "",
+    "answer": "",
+    "question_text": "Should the primary beneficiary (or beneficiaries) die before you the secondary beneficiary will receive the life insurance benefit."
+  },
+  {
+    "question_id": "BH_ContingentBeneficiaryBreadcrumbGroup",
+    "response": "",
+    "answer": "",
+    "question_text": "Contingent Beneficiary"
+  },
+  {
+    "question_id": "BH_BeneficiaryPhoneNumberEntity",
+    "response": "(444) 343-4344",
+    "answer": "(444) 343-4344",
+    "question_text": "Phone Number"
+  },
+  {
+    "question_id": "BH_BeneficiaryZipEntity",
+    "response": "91822",
+    "answer": "91822",
+    "question_text": "Zip"
+  },
+  {
+    "question_id": "BH_BeneficiaryStateEntity",
+    "response": {
+      "id": "StateAL",
+      "label": "Alabama"
+    },
+    "answer": "Alabama",
+    "question_text": "State"
+  },
+  {
+    "question_id": "BH_BeneficiaryCityEntity",
+    "response": "SAN JOSE",
+    "answer": "SAN JOSE",
+    "question_text": "City"
+  },
+  {
+    "question_id": "BH_BeneficiaryAddressEntity",
+    "response": "SAN JOSE",
+    "answer": "SAN JOSE",
+    "question_text": "Address"
+  },
+  {
+    "question_id": "BH_BeneficiarySocialSecurityNumberEntity",
+    "response": "111-11-1111",
+    "answer": "111-11-1111",
+    "question_text": "Social Security Number or Tax Identification Number"
+  },
+  {
+    "question_id": "BH_RelationshipEntity",
+    "response": {
+      "id": "BH_RelationshipCustodian",
+      "label": "Custodian"
+    },
+    "answer": "Custodian",
+    "question_text": "Relationship"
+  },
+  {
+    "question_id": "BH_EntityPercentageofProceeds",
+    "response": "100",
+    "answer": "100",
+    "question_text": "Percentage of Proceeds"
+  },
+  {
+    "question_id": "BH_EntityName",
+    "response": "DAVID JOHN JOSMORE",
+    "answer": "DAVID JOHN JOSMORE",
+    "question_text": "Name"
+  },
+  {
+    "question_id": "BH_BeneficiaryPhoneNumberEntity_2",
+    "response": "(444) 343-4344",
+    "answer": "(444) 343-4344",
+    "question_text": "Phone Number"
+  },
+  {
+    "question_id": "BH_BeneficiaryZipEntity_2",
+    "response": "91822",
+    "answer": "91822",
+    "question_text": "Zip"
+  },
+  {
+    "question_id": "BH_BeneficiaryStateEntity_2",
+    "response": {
+      "id": "StateAL",
+      "label": "Alabama"
+    },
+    "answer": "Alabama",
+    "question_text": "State"
+  },
+  {
+    "question_id": "BH_BeneficiaryCityEntity_2",
+    "response": "SAN JOSE",
+    "answer": "SAN JOSE",
+    "question_text": "City"
+  },
+  {
+    "question_id": "BH_BeneficiaryAddressEntity_2",
+    "response": "SAN JOSE",
+    "answer": "SAN JOSE",
+    "question_text": "Address"
+  },
+  {
+    "question_id": "BH_BeneficiarySocialSecurityNumberEntity_2",
+    "response": "111-11-1111",
+    "answer": "111-11-1111",
+    "question_text": "Social Security Number or Tax Identification Number"
+  },
+  {
+    "question_id": "BH_RelationshipEntity_2",
+    "response": {
+      "id": "BH_RelationshipCustodian",
+      "label": "Custodian"
+    },
+    "answer": "Custodian",
+    "question_text": "Relationship"
+  },
+  {
+    "question_id": "BH_EntityPercentageofProceeds_2",
+    "response": "50",
+    "answer": "50",
+    "question_text": "Percentage of Proceeds"
+  },
+  {
+    "question_id": "BH_EntityName_2",
+    "response": "DAVID JOHN JOSMORE",
+    "answer": "DAVID JOHN JOSMORE",
+    "question_text": "Name"
+  },
+  {
+    "question_id": "BH_BeneficiaryPhoneNumberEntity_1",
+    "response": "(444) 343-4344",
+    "answer": "(444) 343-4344",
+    "question_text": "Phone Number"
+  },
+  {
+    "question_id": "BH_BeneficiaryZipEntity_1",
+    "response": "91822",
+    "answer": "91822",
+    "question_text": "Zip"
+  },
+  {
+    "question_id": "BH_BeneficiaryStateEntity_1",
+    "response": {
+      "id": "StateAL",
+      "label": "Alabama"
+    },
+    "answer": "Alabama",
+    "question_text": "State"
+  },
+  {
+    "question_id": "BH_BeneficiaryCityEntity_1",
+    "response": "SAN JOSE",
+    "answer": "SAN JOSE",
+    "question_text": "City"
+  },
+  {
+    "question_id": "BH_BeneficiaryAddressEntity_1",
+    "response": "SAN JOSE",
+    "answer": "SAN JOSE",
+    "question_text": "Address"
+  },
+  {
+    "question_id": "BH_BeneficiarySocialSecurityNumberEntity_1",
+    "response": "111-11-1111",
+    "answer": "111-11-1111",
+    "question_text": "Social Security Number or Tax Identification Number"
+  },
+  {
+    "question_id": "BH_RelationshipEntity_1",
+    "response": {
+      "id": "BH_RelationshipCustodian",
+      "label": "Custodian"
+    },
+    "answer": "Custodian",
+    "question_text": "Relationship"
+  },
+  {
+    "question_id": "BH_EntityPercentageofProceeds_1",
+    "response": "50",
+    "answer": "50",
+    "question_text": "Percentage of Proceeds"
+  },
+  {
+    "question_id": "BH_EntityName_1",
+    "response": "DAVID JOHN JOSMORE",
+    "answer": "DAVID JOHN JOSMORE",
+    "question_text": "Name"
+  },
+  {
+    "question_id": "BH_PrimaryBeneficiary",
+    "response": {
+      "id": "BH_PrimaryBeneficiaryEntity",
+      "label": "Entity"
+    },
+    "answer": "Entity",
+    "question_text": "Is the beneficiary a person or an entity (such as a trust)?"
+  },
+  {
+    "question_id": "BH_PrimaryBeneficiaryLabel",
+    "response": "",
+    "answer": "",
+    "question_text": "A beneficiary is who will receive the life insurance benefit."
+  },
+  {
+    "question_id": "BH_PrimaryBeneficiaryBreadcrumbGroup",
+    "response": "",
+    "answer": "",
+    "question_text": "Primary Beneficiary"
+  },
+  {
+    "question_id": "BH_BeneficiaryInformationBreadcrumb",
+    "response": "",
+    "answer": "",
+    "question_text": "Beneficiary Information"
+  },
+  {
+    "question_id": "BH_NoticeLapseOrTermination",
+    "response": {
+      "id": "BH_NoticeLapseOrTerminationNo",
+      "label": "I elect not to designate someone else to receive these notices"
+    },
+    "answer": "I elect not to designate someone else to receive these notices",
+    "question_text": "If you would like someone else to also receive any future notices regarding lapse or termination of the Policy you can do so now. Would you like to designate another person to receive these notices?"
+  },
+  {
+    "question_id": "BH_NoticeLapseOrTerminationGroup",
+    "response": "",
+    "answer": "",
+    "question_text": "Notice of Lapse or Termination"
+  },
+  {
+    "question_id": "BH_AboutTheInsuredBreadcrumb",
+    "response": "",
+    "answer": "",
+    "question_text": "About the Insured"
+  },
+  {
+    "question_id": "BH_MedicAid",
+    "response": {
+      "id": "BH_MedicAidNo",
+      "label": "No"
+    },
+    "answer": "No",
+    "question_text": "Are you covered under Medicaid?"
+  },
+  {
+    "question_id": "BH_USDrivingLicence",
+    "response": {
+      "id": "BH_USDrivingLicenceNo",
+      "label": "No"
+    },
+    "answer": "No",
+    "question_text": "Do you have a U.S. Driver's License?"
+  },
+  {
+    "question_id": "BH_TaxReturn",
+    "response": {
+      "id": "BH_TaxReturnNo",
+      "label": "No"
+    },
+    "answer": "No",
+    "question_text": "Has the IRS notified you that you are currently subject to backup withholding because you failed to report all interest or dividend income on your tax return?"
+  },
+  {
+    "question_id": "BH_Networth",
+    "response": "323,434",
+    "answer": "323,434",
+    "question_text": "What is your net worth?"
+  },
+  {
+    "question_id": "BH_AnnualIncome",
+    "response": "354,345",
+    "answer": "354,345",
+    "question_text": "What was your annual income in the last calendar year?"
+  },
+  {
+    "question_id": "BH_Citizenship",
+    "response": {
+      "id": "OLI_NATION_USA",
+      "label": "United States of America"
+    },
+    "answer": "United States of America",
+    "question_text": "Country of Citizenship"
+  },
+  {
+    "question_id": "BH_Married",
+    "response": {
+      "id": "BH_MarriedYes",
+      "label": "Yes"
+    },
+    "answer": "Yes",
+    "question_text": "Are you married or in a legally recognized civil union or domestic partnership?"
+  },
+  {
+    "question_id": "BH_AdditionalInformationBreadcrumbGroup",
+    "response": "",
+    "answer": "",
+    "question_text": "Additional Information"
+  },
+  {
+    "question_id": "BH_BirthState",
+    "response": {
+      "id": "OLI_USA_AL",
+      "label": "Alabama"
+    },
+    "answer": "Alabama",
+    "question_text": "State/Province of Birth"
+  },
+  {
+    "question_id": "BH_BirthCountry",
+    "response": {
+      "id": "OLI_NATION_USA",
+      "label": "United States of America"
+    },
+    "answer": "United States of America",
+    "question_text": "Country of Birth"
+  },
+  {
+    "question_id": "BH_SocialSecurityNumber",
+    "response": "111-11-1111",
+    "answer": "111-11-1111",
+    "question_text": "Social Security Number or Tax ID Number"
+  },
+  {
+    "question_id": "BH_Gender",
+    "response": {
+      "id": "GenderMale",
+      "label": "Male"
+    },
+    "answer": "Male",
+    "question_text": "Gender"
+  },
+  {
+    "question_id": "BH_CountryofResidency",
+    "response": {
+      "id": "OLI_NATION_USA",
+      "label": "United States of America"
+    },
+    "answer": "United States of America",
+    "question_text": "Country of Residency"
+  },
+  {
+    "question_id": "BH_DOB",
+    "response": "02/03/1983",
+    "answer": "02/03/1983",
+    "question_text": "Date of Birth (MM/DD/YYYY)"
+  },
+  {
+    "question_id": "BH_Phonenumber",
+    "response": "(444) 343-4344",
+    "answer": "(444) 343-4344",
+    "question_text": "Phone Number"
+  },
+  {
+    "question_id": "BH_EmailAddress",
+    "response": "saikaushik.chivukula@sureify.com",
+    "answer": "saikaushik.chivukula@sureify.com",
+    "question_text": "Email Address"
+  },
+  {
+    "question_id": "BH_Zip",
+    "response": "91822",
+    "answer": "91822",
+    "question_text": "Zip"
+  },
+  {
+    "question_id": "BH_State",
+    "response": {
+      "id": "StateAL",
+      "label": "Alabama"
+    },
+    "answer": "Alabama",
+    "question_text": "State"
+  },
+  {
+    "question_id": "BH_City",
+    "response": "SAN JOSE",
+    "answer": "SAN JOSE",
+    "question_text": "City"
+  },
+  {
+    "question_id": "BH_Address_4",
+    "response": "SAN JOSE",
+    "answer": "SAN JOSE",
+    "question_text": "Address Line 4"
+  },
+  {
+    "question_id": "BH_Address_3",
+    "response": "",
+    "answer": "",
+    "question_text": "Address Line 3"
+  },
+  {
+    "question_id": "BH_Address_2",
+    "response": "",
+    "answer": "",
+    "question_text": "Address Line 2"
+  },
+  {
+    "question_id": "BH_PrimaryPhysicalAddress",
+    "response": "SAN JOSE",
+    "answer": "SAN JOSE",
+    "question_text": "Primary Physical Address"
+  },
+  {
+    "question_id": "BH_LastName",
+    "response": "JOSMORE",
+    "answer": "JOSMORE",
+    "question_text": "Last Name"
+  },
+  {
+    "question_id": "BH_MiddleName",
+    "response": "JOHN",
+    "answer": "JOHN",
+    "question_text": "Middle Name"
+  },
+  {
+    "question_id": "BH_FirstName",
+    "response": "DAVID",
+    "answer": "DAVID",
+    "question_text": "First Name"
+  },
+  {
+    "question_id": "BH_BasicInformationBreadcrumbGroup",
+    "response": "",
+    "answer": "",
+    "question_text": "Basic Information"
+  },
+  {
+    "question_id": "BH_PolicyInformationBreadcrumb",
+    "response": "",
+    "answer": "",
+    "question_text": "Policy Information"
+  },
+  {
+    "question_id": "BH_UsMilitaryMember",
+    "response": {
+      "id": "BH_UsMilitaryMemberYes",
+      "label": "Yes"
+    },
+    "answer": "Yes",
+    "question_text": "Are you a member of the U.S. military or a dependent of a member of the U.S. military?"
+  },
+  {
+    "question_id": "BH_CompletingInUS",
+    "response": {
+      "id": "BH_CompletingInUSYes",
+      "label": "Yes"
+    },
+    "answer": "Yes",
+    "question_text": "Are you completing this application in the United States?"
+  },
+  {
+    "question_id": "BH_GettingStartedGroup",
+    "response": "",
+    "answer": "",
+    "question_text": "Getting Started"
+  },
+  {
+    "question_id": "BH_OwnerResidenceState",
+    "response": {
+      "id": "StateAL",
+      "label": "Alabama"
+    },
+    "answer": "Alabama",
+    "question_text": "Owner Residence State"
+  },
+  {
+    "question_id": "BH_SignUploadForm",
+    "response": [],
+    "answer": [],
+    "question_text": ""
+  },
+  {
+    "question_id": "BH_UploadFileIllustrationButton",
+    "response": "Illustration.pdf",
+    "question_text": "Upload"
+  },
+  {
+    "question_id": "BH_SalesMaterial",
+    "response": {
+      "id": "BH_SalesMaterialYes",
+      "label": "Yes"
+    },
+    "answer": "Yes",
+    "question_text": "Did you use only sales material approved for use by the appropriate Company?"
+  },
+  {
+    "question_id": "BH_InsuredSolicitation",
+    "response": {
+      "id": "BH_InsuredSolicitationYes",
+      "label": "Yes"
+    },
+    "answer": "Yes",
+    "question_text": "Did you see the Proposed Insured during the solicitation process?"
+  },
+  {
+    "question_id": "BH_ProposedInsuredSold",
+    "response": "",
+    "answer": "",
+    "question_text": "Proposed Insured:"
+  },
+  {
+    "question_id": "BH_OwnerSold",
+    "response": "",
+    "answer": "",
+    "question_text": "Owner:"
+  },
+  {
+    "question_id": "BH_ProposedInsured",
+    "response": "",
+    "answer": "",
+    "question_text": "Proposed Insured:"
+  },
+  {
+    "question_id": "BH_Owner",
+    "response": "",
+    "answer": "",
+    "question_text": "Owner:"
+  },
+  {
+    "question_id": "BH_RequestedFaceAmount",
+    "response": "123,456",
+    "answer": "123,456",
+    "question_text": "Requested Face Amount"
+  },
+  {
+    "question_id": "BH_AffordRider",
+    "response": {
+      "id": "BH_AffordRiderYes",
+      "label": "Yes"
+    },
+    "answer": "Yes",
+    "question_text": "Could you afford to keep this Rider if your spouse or partner dies first? (check one)"
+  },
+  {
+    "question_id": "BH_CitizenshipAgent_HO",
+    "response": {
+      "id": "OLI_NATION_USA",
+      "label": "United States of America"
+    },
+    "answer": "United States of America",
+    "question_text": "Country of Birth"
+  },
+  {
+    "question_id": "BH_PersonInsured",
+    "response": {
+      "id": "BH_PersonInsuredYes",
+      "label": "YES"
+    },
+    "answer": "YES",
+    "question_text": "Will the person being insured be the policyowner?"
+  },
+  {
+    "question_id": "BH_PaperApplication",
+    "response": [],
+    "answer": [],
+    "question_text": "Click here if this application was received on paper"
+  },
+  {
+    "question_id": "BH_PermanentAddressAgent_Four",
+    "response": "SAN JOSE",
+    "answer": "SAN JOSE",
+    "question_text": "Address Line 4"
+  },
+  {
+    "question_id": "BH_PermanentAddressAgent_Three",
+    "response": "",
+    "answer": "",
+    "question_text": "Address Line 3"
+  },
+  {
+    "question_id": "BH_PermanentAddressAgent_Two",
+    "response": "",
+    "answer": "",
+    "question_text": "Address Line 2"
+  },
+  {
+    "question_id": "BH_PercentageSplit",
+    "response": "100",
+    "answer": "100",
+    "question_text": "Percentage split"
+  },
+  {
+    "question_id": "BH_FirmBrokerage",
+    "response": "",
+    "answer": "",
+    "question_text": "Firm brokerage account number, if applicable"
+  },
+  {
+    "question_id": "BH_CompensationPlan",
+    "response": {
+      "id": "BH_CompensationPlanPremium",
+      "label": "Premium Based"
+    },
+    "answer": "Premium Based",
+    "question_text": "Please select the compensation plan that is approved by your firm for this application."
+  },
+  {
+    "question_id": "BH_StateLicenceNumber",
+    "response": "AL",
+    "answer": "AL",
+    "question_text": "State license number"
+  },
+  {
+    "question_id": "BH_SituationCode",
+    "response": "001",
+    "answer": "001",
+    "question_text": "Profile Code"
+  },
+  {
+    "question_id": "BH_FirmCode",
+    "response": "LPG - LTCPG",
+    "answer": "LPG - LTCPG",
+    "question_text": "Which firm code is applicable to this application?"
+  },
+  {
+    "question_id": "BH_AgentZip",
+    "response": "01060-3130",
+    "answer": "01060-3130",
+    "question_text": "Zip"
+  },
+  {
+    "question_id": "BH_AgentState",
+    "response": {
+      "id": "StateMA",
+      "label": "Massachusetts"
+    },
+    "answer": "Massachusetts",
+    "question_text": "State"
+  },
+  {
+    "question_id": "BH_AgentCity",
+    "response": "NORTHAMPTON",
+    "answer": "NORTHAMPTON",
+    "question_text": "City"
+  },
+  {
+    "question_id": "BH_AgentAddressNB_Four",
+    "response": "",
+    "answer": "",
+    "question_text": "Address Line 4"
+  },
+  {
+    "question_id": "BH_AgentAddressNB_Three",
+    "response": "",
+    "answer": "",
+    "question_text": "Address Line 3"
+  },
+  {
+    "question_id": "BH_AgentAddressNB_Two",
+    "response": "",
+    "answer": "",
+    "question_text": "Address Line 2"
+  },
+  {
+    "question_id": "BH_AgentAddress",
+    "response": "25 MAIN ST STE 331",
+    "answer": "25 MAIN ST STE 331",
+    "question_text": "Address"
+  },
+  {
+    "question_id": "BH_AgentPhoneNumber",
+    "response": "(999) 888-8777",
+    "answer": "(999) 888-8777",
+    "question_text": "Phone Number"
+  },
+  {
+    "question_id": "BH_AgentEmail",
+    "response": "saikaushik.chivukula@sureify.com",
+    "answer": "saikaushik.chivukula@sureify.com",
+    "question_text": "Email"
+  },
+  {
+    "question_id": "BH_AdvisorNIPR",
+    "response": "",
+    "answer": "",
+    "question_text": "Advisor NIPR"
+  },
+  {
+    "question_id": "BH_GetAgentDataButton",
+    "response": "",
+    "answer": "",
+    "question_text": "Get Agent Data"
+  },
+  {
+    "question_id": "BH_NIPR",
+    "response": "2315187",
+    "answer": "2315187",
+    "question_text": "NIPR Number of Advisor"
+  },
+  {
+    "question_id": "BH_FirmName",
+    "response": {
+      "id": "BH_FirmName1",
+      "label": "LTCPG"
+    },
+    "answer": "LTCPG",
+    "question_text": "Firm name"
+  },
+  {
+    "question_id": "BH_AgentLastNameNB",
+    "response": "JOSMORE",
+    "answer": "JOSMORE",
+    "question_text": "Advisor Last Name"
+  },
+  {
+    "question_id": "BH_AgentName",
+    "response": "DAVID",
+    "answer": "DAVID",
+    "question_text": "Advisor First Name"
+  },
+  {
+    "question_id": "BH_AddAnotherFinancial",
+    "response": "",
+    "answer": "",
+    "question_text": ""
+  },
+  {
+    "question_id": "BH_AutomaticCashvalue",
+    "response": null,
+    "answer": "",
+    "question_text": "Automatic Cash Value Rebalancing (Occurs on every policy anniversary; balancing is based on premium allocation percentages previously selected)"
+  },
+  {
+    "question_id": "BH_SandPIndex",
+    "response": "100",
+    "answer": "100",
+    "question_text": "S&P 500® Index"
+  },
+  {
+    "question_id": "BH_RusselIndex",
+    "response": "",
+    "answer": "",
+    "question_text": "Russell 2000® Index"
+  },
+  {
+    "question_id": "BH_MSCIEAFEIndex",
+    "response": "",
+    "answer": "",
+    "question_text": "MSCI EAFE Index"
+  },
+  {
+    "question_id": "BH_FixedAccount",
+    "response": "",
+    "answer": "",
+    "question_text": "Fixed Account"
+  },
+  {
+    "question_id": "BH_PremiumPaymentMade",
+    "response": [
+      {
+        "id": "BH_Wire",
+        "label": "Wire",
+        "onlyOption": true
+      }
+    ],
+    "answer": [
+      {
+        "id": "BH_Wire",
+        "label": "Wire",
+        "onlyOption": true
+      }
+    ],
+    "question_text": "How will premium payments be made?"
+  },
+  {
+    "question_id": "BH_BirthPlaceAgent",
+    "response": {
+      "id": "OLI_USA_AL",
+      "label": "Alabama"
+    },
+    "answer": "Alabama",
+    "question_text": "State/Province of Birth"
+  },
+  {
+    "question_id": "BH_CountryofResidencyAgent",
+    "response": {
+      "id": "OLI_NATION_USA",
+      "label": "United States of America"
+    },
+    "answer": "United States of America",
+    "question_text": "Country of Residency"
+  },
+  {
+    "question_id": "BH_SocialSecurityNumberAgent",
+    "response": "111-11-1111",
+    "answer": "111-11-1111",
+    "question_text": "Social Security Number or Tax ID Number"
+  },
+  {
+    "question_id": "BH_GenderAgent",
+    "response": {
+      "id": "GenderMale",
+      "label": "Male"
+    },
+    "answer": "Male",
+    "question_text": "Gender"
+  },
+  {
+    "question_id": "BH_DOBAgent",
+    "response": "02/03/1983",
+    "answer": "02/03/1983",
+    "question_text": "Date of Birth (MM/DD/YYYY)"
+  },
+  {
+    "question_id": "BH_PhonenumberAgent",
+    "response": "(444) 343-4344",
+    "answer": "(444) 343-4344",
+    "question_text": "Phone Number"
+  },
+  {
+    "question_id": "BH_EmailAgent",
+    "response": "saikaushik.chivukula@sureify.com",
+    "answer": "saikaushik.chivukula@sureify.com",
+    "question_text": "Email Address"
+  },
+  {
+    "question_id": "BH_ZipAgent",
+    "response": "91822",
+    "answer": "91822",
+    "question_text": "Zip"
+  },
+  {
+    "question_id": "BH_StateAgent",
+    "response": {
+      "id": "StateAL",
+      "label": "Alabama"
+    },
+    "answer": "Alabama",
+    "question_text": "State"
+  },
+  {
+    "question_id": "BH_CityAgent",
+    "response": "SAN JOSE",
+    "answer": "SAN JOSE",
+    "question_text": "City"
+  },
+  {
+    "question_id": "BH_PermanentAddressAgent",
+    "response": "SAN JOSE",
+    "answer": "SAN JOSE",
+    "question_text": "Primary Physical Address"
+  },
+  {
+    "question_id": "BH_LastNameAgent",
+    "response": "JOSMORE",
+    "answer": "JOSMORE",
+    "question_text": "Last Name"
+  },
+  {
+    "question_id": "BH_MiddleNameAgent",
+    "response": "JOHN",
+    "answer": "JOHN",
+    "question_text": "Middle Name"
+  },
+  {
+    "question_id": "BH_AssestsChange",
+    "response": {
+      "id": "BH_AssestsChangeYesI",
+      "label": "Yes, expect increase"
+    },
+    "answer": "Yes, expect increase",
+    "question_text": "Do you expect the value of your assests to change over the next 10 years?"
+  },
+  {
+    "question_id": "BH_AssestsPrice",
+    "response": {
+      "id": "BH_GT250k",
+      "label": "More than $250,000"
+    },
+    "answer": "More than $250,000",
+    "question_text": "Not counting your home, about how much are all of your assets (your savings and investments) worth?"
+  },
+  {
+    "question_id": "BH_Elimination",
+    "response": [
+      {
+        "id": "BH_Income",
+        "label": "From my income"
+      }
+    ],
+    "answer": [
+      {
+        "id": "BH_Income",
+        "label": "From my income"
+      }
+    ],
+    "question_text": "How do you plan to pay for your care during the elimination period?"
+  },
+  {
+    "question_id": "BH_ReplaceLongTerm",
+    "response": {
+      "id": "BH_ReplaceLongTermNo",
+      "label": "No"
+    },
+    "answer": "No",
+    "question_text": "Does either the Owner or the Proposed Insured intend to replace any long-term care, medical or health insurance coverages on the Proposed Insured with the rider(s)?"
+  },
+  {
+    "question_id": "BH_InsurancePurpose",
+    "response": [
+      {
+        "id": "BH_EstatePlanning",
+        "label": "Estate Planning"
+      }
+    ],
+    "answer": [
+      {
+        "id": "BH_EstatePlanning",
+        "label": "Estate Planning"
+      }
+    ],
+    "question_text": "What is the purpose of this insurance? (Check all that apply)"
+  },
+  {
+    "question_id": "BH_LongTermPoliciesInForce",
+    "response": {
+      "id": "BH_LongTermPoliciesInForceNo",
+      "label": "No"
+    },
+    "answer": "No",
+    "question_text": "During the last 12 months, were there other long-term care insurance policies, certificates or riders in force on the proposed insured?"
+  },
+  {
+    "question_id": "BH_LongTermPolicies",
+    "response": {
+      "id": "BH_LongTermPoliciesNo",
+      "label": "No"
+    },
+    "answer": "No",
+    "question_text": "Are there any other long-term care insurance policies, certificates or riders in force (including health care service contracts and/or health maintenance organization contracts) on the Proposed Insured?"
+  },
+  {
+    "question_id": "BH_InflationProtection",
+    "response": {
+      "id": "BH_InflationProtectionYes",
+      "label": "YES"
+    },
+    "answer": "YES",
+    "question_text": "Will you buy inflation protection?"
+  },
+  {
+    "question_id": "BH_PremiumForIncome",
+    "response": {
+      "id": "BH_PremiumForIncomeYes",
+      "label": "Yes"
+    },
+    "answer": "Yes",
+    "question_text": "If you plan to pay premiums from your income, have you thought about how a change in your income would affect your ability to continue to pay the premium?"
+  },
+  {
+    "question_id": "BH_IncomeChange",
+    "response": {
+      "id": "BH_IncomeChangeYesI",
+      "label": "Yes, expect increase"
+    },
+    "answer": "Yes, expect increase",
+    "question_text": "Do you expect your income to change over the next 10 years?"
+  },
+  {
+    "question_id": "BH_HouseholdIncome",
+    "response": {
+      "id": "BH_GT250k",
+      "label": "More than $250,000"
+    },
+    "answer": "More than $250,000",
+    "question_text": "What is your household annual income from all sources?"
+  },
+  {
+    "question_id": "BH_Resources",
+    "response": [
+      {
+        "id": "BH_CurrentIncome",
+        "label": "Current income from employment"
+      }
+    ],
+    "answer": [
+      {
+        "id": "BH_CurrentIncome",
+        "label": "Current income from employment"
+      }
+    ],
+    "question_text": "What resources will you use to pay your premium?"
+  },
+  {
+    "question_id": "BH_FirstNameAgent",
+    "response": "DAVID",
+    "answer": "DAVID",
+    "question_text": "First Name"
+  },
+  {
+    "question_id": "BH_LTCCoveragePeriod",
+    "response": {
+      "id": "BH_Four",
+      "label": "24 months (2 years)"
+    },
+    "answer": "24 months (2 years)",
+    "question_text": "Choose an LTC Benefit Period Each policy consists of an Extension of Benefits Rider (EOBR) that determine the duration of coverage once a claim begins."
+  },
+  {
+    "question_id": "BH_LTCCoverageOption",
+    "response": {
+      "id": "BH_IndexLTC",
+      "label": "Indexed LTC"
+    },
+    "answer": "Indexed LTC",
+    "question_text": "Extension of Benefits for LTC The guaranteed LTC benefit and initial death benefit amounts are determined when your client applies for a policy, subject to approval by the issuing company. These amounts can grow based on the coverage option your client elects. Choose an Extension of Benefits for LTC Coverage Option"
+  },
+  {
+    "question_id": "BH_PremiumPayment",
+    "response": {
+      "id": "BH_SinglePremium",
+      "label": "Single Premium"
+    },
+    "answer": "Single Premium",
+    "question_text": "Choose a Premium Payment Schedule"
+  },
+  {
+    "question_id": "BH_Initial_Premium",
+    "response": "2,341,344",
+    "answer": "2,341,344",
+    "question_text": "Initial Premium"
+  },
+  {
+    "question_id": "BH_SmartCare",
+    "response": {
+      "id": "BH_BrighthouseSmartCare",
+      "label": "Brighthouse SmartCare"
+    },
+    "answer": "Brighthouse SmartCare",
+    "question_text": "Brighthouse SmartCare:A hybrid product featuring life insurance and long-term care benefits that can grow, a Brighthouse SmartCare policy helps clients worry less about the unexpected."
+  },
+  {
+    "question_id": "BH_ExistingInsurance",
+    "response": {
+      "id": "BH_ExistingInsuranceNo",
+      "label": "NO"
+    },
+    "answer": "NO",
+    "question_text": "Does the proposed insured have any existing or applied-for life insurance, long-term care insurance, or annuities with this or any other company?"
+  },
+  {
+    "question_id": "BH_Replacement",
+    "response": {
+      "id": "BH_ReplacementNo",
+      "label": "No"
+    },
+    "answer": "No",
+    "question_text": "In connection with this application, has there been, or will there be with this or any other company any: replacement; surrender transaction; loan; withdrawal; lapse; reduction or redirection of premium/consideration; or change transaction (except conversions) involving an annuity or other life insurance?"
+  },
+  {
+    "question_id": "WelcomeDropDown5",
+    "response": "Please contact your personal Brighthouse Client Consultant, or access other technical support information using the “Tech Support” menu at the top right of your application screen.",
+    "answer": "Please contact your personal Brighthouse Client Consultant, or access other technical support information using the “Tech Support” menu at the top right of your application screen.",
+    "question_text": "What if I have technical issues completing SmartCare® application?"
+  },
+  {
+    "question_id": "WelcomeDropDown3",
+    "response": "When your signature is required, you will see copies of the required forms for your application with the answers you provided viewable on the image. After you review the form, look for the “Click Here to Sign” flag on the image. Clicking this flag will generate a signature on the form images.",
+    "answer": "When your signature is required, you will see copies of the required forms for your application with the answers you provided viewable on the image. After you review the form, look for the “Click Here to Sign” flag on the image. Clicking this flag will generate a signature on the form images.",
+    "question_text": "What is an electronic signature?"
+  },
+  {
+    "question_id": "WelcomeDropDown2",
+    "response": "Completing your SmartCare® application may take up to an hour. You don’t need to complete your application all at once. You can re-access your application using the link provided via email. Note, you will need to complete the identity verification and log-in process each time you access your application.",
+    "answer": "Completing your SmartCare® application may take up to an hour. You don’t need to complete your application all at once. You can re-access your application using the link provided via email. Note, you will need to complete the identity verification and log-in process each time you access your application.",
+    "question_text": "How long will it take to complete my SmartCare® application?"
+  },
+  {
+    "question_id": "WelcomeDropDown1",
+    "response": "Your financial professional provided some basic information about you, such as your address, social security number and similar details. You will need to review and confirm these details, and review several required disclosures.Your SmartCare® application involves reviewing and electronically signing forms which include; “User Consent to do Business with Brighthouse Financial and to Receive Documents Electronically,” and an “Authorization” form which describes how information about you is used and disclosed and complies with the requirements of the Health Insurance Portability and Accountability Act (HIPAA).</p>The last section of your SmartCare® application contains questions about your medical history. Once you complete this section, you will not have access to view or change the answers you provided. Finally, you’ll review and electronically sign forms which make up the application submitted to Brighthouse for review. After you sign these forms you will be able to download or print them for your records.",
+    "answer": "Your financial professional provided some basic information about you, such as your address, social security number and similar details. You will need to review and confirm these details, and review several required disclosures.Your SmartCare® application involves reviewing and electronically signing forms which include; “User Consent to do Business with Brighthouse Financial and to Receive Documents Electronically,” and an “Authorization” form which describes how information about you is used and disclosed and complies with the requirements of the Health Insurance Portability and Accountability Act (HIPAA).</p>The last section of your SmartCare® application contains questions about your medical history. Once you complete this section, you will not have access to view or change the answers you provided. Finally, you’ll review and electronically sign forms which make up the application submitted to Brighthouse for review. After you sign these forms you will be able to download or print them for your records.",
+    "question_text": "What will I need to do during this process?"
+  },
+  {
+    "question_id": "WelcomeDropDownParent",
+    "response": "",
+    "answer": "",
+    "question_text": "Learn more about how we safeguard your information and our application process</span></a></h4></div>"
+  },
+  {
+    "question_id": "WelcomeLabel",
+    "response": "",
+    "answer": "",
+    "question_text": "Information You Need to Complete Your Application</h2>Owner</h4>For each beneficiary (both primary and contingent): Name, date of birth, Social Security number/Tax ID, and address</li>Name and address of additional designated person to receive lapse notice (if selected)</li>Name, Social Security number/Tax ID, and state of residence</li>List of any life and/or long-term care insurance policies in force and/or applied for</li>Financial information: Household annual income and value of assets</li>Green card/visa information and immigration status, if applicable</li></ul>Proposed Insured</h4>List of physicians or medical facilities that have treated you in the last 10 years, including addresses and phone numbers</li>Names, dosages, length of use, and details about the reason for prescriptions, over-the-counter medicines, or at-home remedies</li>Medical history, including any history of alcohol or drug use</li>Current and past use of tobacco products</li>Driving history</li>Name, Social Security number/Tax ID, and state of residence</li>List of any life and/or long-term care insurance policies in force and/or applied for</li>Financial information: Annual income and net worth</li>Green card/visa information and immigration status, if applicable</li></ul></div>"
+  },
+  {
+    "question_id": "WelcomeBreadcrumbGroup",
+    "answer": "",
+    "question_text": "Brighthouse Financial, Inc. is on a mission to help people achieve financial security. We specialize in products designed to help people protect what they’ve earned and ensure it lasts. Thank you for considering Brighthouse Financial for your insurance needs.</h4></div>"
+  },
+  {
+    "question_id": "WelcomeBreadcrumb",
+    "answer": "",
+    "question_text": "Welcome to Your Brighthouse SmartCare® Electronic Application</h1>"
+  }
+]

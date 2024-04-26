@@ -1,0 +1,17 @@
+[
+  ["value", "key", "tc"],
+  ["Affiliated Agency", "OLI_DISTCHNNL_AFF", "11"],
+  ["Bank Market", "OLI_DISTRIBUTIONCHANNEL_BANK", "8"],
+  ["Broker/Dealer", "OLI_DISTCHNNL_BD", "6"],
+  ["Brokerage/Independent Market", "OLI_DISTRIBUTIONCHANNEL_BROKERAGE", "9"],
+  ["Captive Market", "OLI_DISTRIBUTIONCHANNEL_CAPTIVE", "10"],
+  ["Direct Marketing", "OLI_DISTRIBUTIONCHANNEL_DIRECT", "7"],
+  ["Financial Institution", "OLI_DISTCHNNL_FI", "5"],
+  ["Financial Planning Firm", "OLI_DISTCHNNL_FPF", "4"],
+  ["Independent Agency", "OLI_DISTCHNNL_IA", "3"],
+  ["Institutional Market", "OLI_DISTCHNNL_INST", "12"],
+  ["Other", "OLI_OTHER", "2147483647"],
+  ["Registered Investment Advisor", "OLI_DISTCHNNL_RIA", "2"],
+  ["Unknown", "OLI_UNKNOWN", "0"],
+  ["Wirehouse", "OLI_DISTCHNNL_WH", "1"]
+]

@@ -1,0 +1,130 @@
+{
+  "UserAuthRequest": {
+    "UserLoginName": {
+      "#": "shainlafazan"
+    },
+    "UserPswd": {
+      "CryptType": {
+        "#": "sha256"
+      },
+      "Pswd": {
+        "#": "supersecret#1234"
+      }
+    },
+    "VendorApp": {
+      "VendorName": {
+        "@VendorCode": 101,
+        "#": "Sureify"
+      },
+      "AppName": {
+        "#": "LifetimeACQUIRE"
+      }
+    }
+  },
+  "TransRefGUID": {
+    "#": "0a1dd588-17e7-4594-b82a-f1e0a764e56b"
+  },
+  "TransType": {
+    "@tc": "103",
+    "#": "New Business Submission"
+  },
+  "TransMode": {
+    "@tc": "2",
+    "#": "Original"
+  },
+  "OLifE": {
+    "@Version": "2.31.00"
+  },
+  "HouseholdKey": "121212",
+  "SourceInfoName": "LifetimeACQUIRE",
+  "LifeParticipants": [
+    {
+      "@PartyID": "InsuredParty_1",
+      "@id": "PrimaryInsured_Life_Participant",
+      "ParticipantName": {
+        "#": "DAVIDPI N JOSMOREPI Jr."
+      },
+      "LifeParticipantRoleCode": {
+        "LifeParticipantRoleCode": {
+          "@tc": "1",
+          "#": "Primary Insured"
+        }
+      },
+      "PermTableRating": {
+        "PermTableRating": {
+          "@tc": "7",
+          "#": "D"
+        }
+      },
+      "UnderwritingClass": {
+        "UnderwritingClass": {
+          "@tc": "2",
+          "#": "Preferred"
+        }
+      }
+    },
+    {
+      "@PartyID": "InsuredParty_1",
+      "@id": "Owner_Life_Participant",
+      "ParticipantName": {
+        "#": "DAVIDPI N JOSMOREPI Jr."
+      },
+      "LifeParticipantRoleCode": {
+        "LifeParticipantRoleCode": {
+          "@tc": "18",
+          "#": "Owner"
+        }
+      }
+    },
+    {
+      "@PartyID": "Party_Beneficiary_1",
+      "@id": "PrimBene_Life_Participant_1",
+      "LifeParticipantRoleCode": {
+        "@tc": "7",
+        "#": "Beneficiary - Primary"
+      },
+      "BeneficiaryPercentDistribution": {
+        "#": "100"
+      },
+      "DistributionOption": {
+        "@tc": "2",
+        "#": "Percent"
+      },
+      "BeneficiaryDesignation": {
+        "@tc": "3",
+        "#": "Parent"
+      }
+    }
+  ],
+  "OLifEExtension": {
+    "@VendorCode": "220",
+    "AgeAndAmount": {
+      "#": "100000"
+    },
+    "OrderType": {
+      "#": ""
+    },
+    "PensionersMonthly": {
+      "AutomaticPremiumPayment": {
+        "@tc": "2",
+        "#": "No"
+      }
+    },
+    "AutomaticPremiumPayment": {
+      "#": ""
+    },
+    "NameID": {
+      "#": "Amica Sureify"
+    },
+    "EmployeeInd": {
+      "#": ""
+    },
+    "AdditionalInfo_ConcurrentApplicationYesNo": {
+      "#": ""
+    },
+    "PIMED_VERIFY_ChangedYesNo": {
+      "#": ""
+    },
+    "StartedInDTC": {}
+  }
+}

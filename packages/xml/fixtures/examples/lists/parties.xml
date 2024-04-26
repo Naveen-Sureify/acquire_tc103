@@ -1,0 +1,105 @@
+<Party id="Party_PINS">
+  <PartyTypeCode tc="1">Person</PartyTypeCode>
+  <GovtID>111111111</GovtID>
+  <GovtIDTC tc="1">Social Security Number US</GovtIDTC>
+  <EstNetWorth>323434</EstNetWorth>
+  <Person>
+    <FirstName>DAVID</FirstName>
+    <MiddleName>JOHN</MiddleName>
+    <LastName>JOSMORE</LastName>
+    <MarStat tc="1">Married</MarStat>
+    <Gender tc="1">Male</Gender>
+    <BirthDate>1983-02-03</BirthDate>
+    <Age>40</Age>
+    <Citizenship tc="1">United States of America</Citizenship>
+    <EstSalary>354345</EstSalary>
+    <BirthCountry tc="1">United States of America</BirthCountry>
+    <BirthJurisdictionTC tc="1">Alabama</BirthJurisdictionTC>
+    <OLifEExtension ExtensionCode="Person 2.8.90" VendorCode="05">
+      <PersonExtension>
+        <RateClassAppliedFor>1</RateClassAppliedFor>
+        <PermCountry tc="1">United States of America</PermCountry>
+        <ValidDLInd tc="0">FALSE</ValidDLInd>
+      </PersonExtension>
+    </OLifEExtension>
+  </Person>
+  <Address id="Address_PINS">
+    <AddressTypeCode tc="1">Home</AddressTypeCode>
+    <Line1>SAN JOSE</Line1>
+    <Line2>SAN JOSE</Line2>
+    <City>SAN JOSE</City>
+    <AddressStateTC tc="1">Alabama</AddressStateTC>
+    <Zip>91822</Zip>
+    <OLifEExtension ExtensionCode="Address 2.8.90" VendorCode="05">
+      <AddressExtension>
+        <ZipCodeTC tc="1">United State Postal Code</ZipCodeTC>
+      </AddressExtension>
+    </OLifEExtension>
+  </Address>
+  <Phone id="Phone1_PINS">
+    <PhoneTypeCode tc="1">Home</PhoneTypeCode>
+    <AreaCode>444</AreaCode>
+    <DialNumber>3434344</DialNumber>
+  </Phone>
+  <EMailAddress id="EMailAddress1_PINS">
+    <EMailType tc="2">Personal</EMailType>
+    <AddrLine>saikaushik.chivukula@sureify.com</AddrLine>
+  </EMailAddress>
+  <EMailAddress id="EMailAddress2_PINS">
+    <EMailType tc="1000500001">eDelivery Contract Print</EMailType>
+    <AddrLine>saikaushik.chivukula@sureify.com</AddrLine>
+  </EMailAddress>
+  <Risk>
+    <ExistingInsuranceInd tc="0">FALSE</ExistingInsuranceInd>
+    <TobaccoInd tc="0">FALSE</TobaccoInd>
+  </Risk>
+</Party>
+<Party id="Party_AGT1">
+  <PartyTypeCode tc="1">Person</PartyTypeCode>
+  <Person>
+    <FirstName>DAVID</FirstName>
+    <LastName>JOSMORE</LastName>
+  </Person>
+  <Address>
+    <Line1>25 MAIN ST STE 331</Line1>
+    <City>NORTHAMPTON</City>
+    <AddressStateTC tc="26">Massachusetts</AddressStateTC>
+    <Zip>01060-3130</Zip>
+  </Address>
+  <Producer>
+    <CarrierAppointment>
+      <CompanyProducerID>2315187</CompanyProducerID>
+    </CarrierAppointment>
+  </Producer>
+  <EMailAddress id="EMailAddress1_AGT">
+    <EMailType tc="1">Business</EMailType>
+    <AddrLine>saikaushik.chivukula@sureify.com</AddrLine>
+  </EMailAddress>
+</Party>
+<Party id="Party_BEN1">
+  <PartyTypeCode tc="2">Entity</PartyTypeCode>
+  <FullName>DAVID JOHN JOSMORE</FullName>
+  <GovtID>111111111</GovtID>
+  <GovtIDTC tc="2">Taxpayer Identification Number</GovtIDTC>
+  <Organization>
+    <OrgForm tc="23">Corporation</OrgForm>
+    <DBA>DAVID JOHN JOSMORE</DBA>
+  </Organization>
+  <Address id="Address_BEN1">
+    <AddressTypeCode tc="1">Home</AddressTypeCode>
+    <Line1>SAN JOSE</Line1>
+    <City>SAN JOSE</City>
+    <AddressStateTC tc="1">AL</AddressStateTC>
+    <Zip>91822</Zip>
+    <OLifEExtension ExtensionCode="Address 2.8.90" VendorCode="05">
+      <AddressExtension>
+        <ZipCodeTC tc="1">United State Postal Code</ZipCodeTC>
+      </AddressExtension>
+    </OLifEExtension>
+  </Address>
+  <Phone id="Phone1_BEN1">
+    <PhoneTypeCode tc="1">Home</PhoneTypeCode>
+    <AreaCode>444</AreaCode>
+    <DialNumber>3434344</DialNumber>
+  </Phone>
+</Party>

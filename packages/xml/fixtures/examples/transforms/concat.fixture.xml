@@ -1,0 +1,6 @@
+<Person>
+  <FirstName>John</FirstName>
+  <LastName>Doe</LastName>
+  <FullNameInline>John Doe</FullNameInline>
+  <FullNameWithTransform>John Doe</FullNameWithTransform>
+</Person>

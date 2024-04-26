@@ -1,0 +1,7 @@
+<Investment>
+    <SubAccount id="SubAccount_3000">
+    <ProductCode>3000</ProductCode>
+    <ProductFullName>S&P 500® Index</ProductFullName>
+    <AllocPercent>100</AllocPercent>
+  </SubAccount>
+</Investment>

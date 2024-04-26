@@ -1,0 +1,12 @@
+[
+  ["value", "key", "tc"],
+  ["Brokerage", "OLI_BANKACCT_BA", 5],
+  ["CD - Certificate of Deposit", "OLI_BANKACCT_CD", 7],
+  ["Checking", "OLI_BANKACCT_CHECKING", 2],
+  ["Credit Card", "OLI_BANKACCT_CREDITCARD", 3],
+  ["Debit Card", "OLI_BANKACCT_DEBITCARD", 4],
+  ["Digital Payment", "OLI_BANKACCT_DIGITALPAY", 8],
+  ["Other", "OLI_OTHER", 2147483647],
+  ["Savings", "OLI_BANKACCT_SAVINGS", 1],
+  ["Unknown", "OLI_UNKNOWN", 0]
+]

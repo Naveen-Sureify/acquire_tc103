@@ -1,0 +1,37 @@
+<LifeParticipant PartyID="<%= LifeParticipant['@PartyID'] _%>" id="<%= LifeParticipant['@id'] _%>">
+  <%_ if (LifeParticipant.ParticipantName) { _%>
+  <ParticipantName>
+    <%= LifeParticipant.ParticipantName['#'] _%>
+  </ParticipantName>
+  <%_ } _%>
+  <%_ if (LifeParticipant.LifeParticipantRoleCode) { _%>
+  <LifeParticipantRoleCode tc="<%= LifeParticipant.LifeParticipantRoleCode['@tc'] _%>">
+    <%= LifeParticipant.LifeParticipantRoleCode['#'] _%>
+  </LifeParticipantRoleCode>
+  <%_ } _%>
+  <%_ if (LifeParticipant.PermTableRating) { _%>
+  <PermTableRating tc="<%= LifeParticipant.PermTableRating['@tc'] _%>">
+    <%= LifeParticipant.PermTableRating['#'] _%>
+  </PermTableRating>
+  <%_ } _%>
+  <%_ if (LifeParticipant.UnderwritingClass) { _%>
+  <UnderwritingClass tc="<%= LifeParticipant.UnderwritingClass['@tc'] _%>">
+    <%= LifeParticipant.UnderwritingClass['#'] _%>
+  </UnderwritingClass>
+  <%_ } _%>
+  <%_ if (LifeParticipant.BeneficiaryPercentDistribution) { _%>
+  <BeneficiaryPercentDistribution>
+    <%= LifeParticipant.BeneficiaryPercentDistribution['#'] _%>
+  </BeneficiaryPercentDistribution>
+  <%_ } _%>
+  <%_ if (LifeParticipant.DistributionOption) { _%>
+  <DistributionOption tc="<%= LifeParticipant.DistributionOption['@tc'] _%>">
+    <%= LifeParticipant.DistributionOption['#'] _%>
+  </DistributionOption>
+  <%_ } _%>
+  <%_ if (LifeParticipant.BeneficiaryDesignation) { _%>
+  <BeneficiaryDesignation tc="<%= LifeParticipant.BeneficiaryDesignation['@tc'] _%>">
+    <%= LifeParticipant.BeneficiaryDesignation['#'] _%>
+  </BeneficiaryDesignation>
+  <%_ } _%>
+</LifeParticipant>

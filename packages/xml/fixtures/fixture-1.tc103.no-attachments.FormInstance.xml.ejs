@@ -1,0 +1,22 @@
+<% for (const form of acord.FormInstance) { %>
+<%- 
+await new forms.FormInstance({
+    ...form
+  }).serialize('FormInstance')
+
+%>
+<% } %>
+</OLifE>
+</TXLifeRequest>
+</TXLife>
+</txLife>
+<% for (const image of acord.FormInstance) { %>
+    <%-
+    await new forms.ImageInfo({
+        imageGUID: image.FileName,
+        filePath: image.filePath,
+    }).serialize()
+    %>
+<% } %>
+</input>
+</request>

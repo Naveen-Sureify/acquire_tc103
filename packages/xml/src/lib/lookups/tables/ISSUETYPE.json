@@ -1,0 +1,86 @@
+[
+  [
+    "value",
+    "key",
+    "tc",
+    "definition"
+  ],
+  [
+    "Aviation",
+    "OLI_COVISSU_AVIATION",
+    "10",
+    ""
+  ],
+  [
+    "Blended (Policy has Underwritten and Guaranteed Issue coverages.) Only applies at Policy Level",
+    "OLI_COVISSU_PERCOVERAGE",
+    "8",
+    ""
+  ],
+  [
+    "Conversion - Non-contractual",
+    "OLI_COVISSU_NONCNTRCTCONVERT",
+    "11",
+    ""
+  ],
+  [
+    "Conversion - No underwriting done",
+    "OLI_COVISSU_CONVERTED",
+    "9",
+    ""
+  ],
+  [
+    "Field Issue",
+    "OLI_COVISSU_FIELDISSUE",
+    "4",
+    ""
+  ],
+  [
+    "Financial Underwriting",
+    "OLI_COVISSU_FINANCIALUNDERWRITTEN",
+    "5",
+    ""
+  ],
+  [
+    "Full Underwriting",
+    "OLI_COVISSU_FULL",
+    "1",
+    ""
+  ],
+  [
+    "Guaranteed Issue",
+    "OLI_COVISSU_GUAR",
+    "3",
+    ""
+  ],
+  [
+    "Mass Underwriting",
+    "OLI_COVISSU_MASSUNDERWRITING",
+    "6",
+    ""
+  ],
+  [
+    "Other",
+    "OLI_OTHER",
+    "2147483647",
+    ""
+  ],
+  [
+    "Reduced Underwriting",
+    "OLI_COVISSU_REDUCEDUNDERWRITING",
+    "7",
+    ""
+  ],
+  [
+    "Simplified Underwriting",
+    "OLI_COVISSU_SIMP",
+    "2",
+    ""
+  ],
+  [
+    "Unknown",
+    "OLI_UNKNOWN",
+    "0",
+    ""
+  ]
+]

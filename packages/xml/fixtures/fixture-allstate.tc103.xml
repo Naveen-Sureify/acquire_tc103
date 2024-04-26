@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TXLife xmlns="http://ACORD.org/Standards/Life/2" xmlns:xsi="http://www.w3.org/2001/XMLSchemainstance" Version="2.20.02" xsi:schemaLocation="http://ACORD.org/Standards/Life/2TXLife2.20.02.xsd">
+  <UserAuthRequest>
+    <UserLoginName>Sureify</UserLoginName>
+    <UserPswd>
+      <CryptType>NONE</CryptType>
+    </UserPswd>
+    <VendorApp>
+      <VendorName VendorCode="564">Sureify</VendorName>
+      <AppName>Lifetime</AppName>
+    </VendorApp>
+  </UserAuthRequest>
+  <TXLifeRequest PrimaryObjectID="Application_Holding">
+    <TransRefGUID>ec4d4fe9-67d3-4917-9d46-a0e16fbee41b</TransRefGUID>
+    <TransType tc="103">New Business Submission</TransType>
+    <TransExeDate>2023-08-30</TransExeDate>
+    <TransExeTime>05:28:05</TransExeTime>
+    <OLifE>
+      <SourceInfo>
+        <CreationDate>2023-08-30</CreationDate>
+        <CreationTime>05:28:05</CreationTime>
+        <SourceInfoName>Sureify</SourceInfoName>
+        <SourceInfoDescription>Lifetime</SourceInfoDescription>
+        <OLifEExtension VendorCode="564">
+          <FullOrEasyApp>FULLAPP</FullOrEasyApp>
+        </OLifEExtension>
+      </SourceInfo>
+      <Holding id="Application_Holding">
+        <HoldingTypeCode tc="2">Policy</HoldingTypeCode>
+        <Policy>
+          <CarrierCode>DGLIC</CarrierCode>
+          <PolNumber>U110006697</PolNumber>
+          <LineOfBusiness tc="1">Life</LineOfBusiness>
+          <ProductType tc="2">Term Life</ProductType>
+          <PlanName>ALLSTATE_DG_TL</PlanName>
+          <ProductCode>ALLSTATE_DG_TL</ProductCode>
+          <Jurisdiction tc="17">IL</Jurisdiction>
+          <EffDate>2023-08-30</EffDate>
+          <PaymentMode tc="4">Month Or Monthly</PaymentMode>
+          <PaymentMethod tc="7">EFT</PaymentMethod>
+          <ApplicationInfo>
+            <CWAAmt>0</CWAAmt>
+            <UnderwritingType>for</UnderwritingType>
+            <SignatureState tc="17">IL</SignatureState>
+            <ReplacementInd>False</ReplacementInd>
+          </ApplicationInfo>
+          <ApplicationInfo>
+            <SignatureInfo>
+              <SignatureRoleCode tc="1">Primary Insured</SignatureRoleCode>
+              <SignatureDate>2023-08-30</SignatureDate>
+              <SignatureState tc="17">IL</SignatureState>
+              <SignatureText>eSigned by Hello Hi</SignatureText>
+            </SignatureInfo>
+          </ApplicationInfo>
+          <Life>
+            <FaceAmt>200000</FaceAmt>
+            <Coverage id="Base_Coverage">
+              <IndicatorCode tc="1">Base</IndicatorCode>
+              <EquivalentAge>24</EquivalentAge>
+              <ModalPremAmt>26.13</ModalPremAmt>
+              <DurationDesign>10</DurationDesign>
+              <UnderwritingReviewKey>DECLINE</UnderwritingReviewKey>
+              <EffDate>2023-08-30</EffDate>
+              <LifeParticipant PartyID="InsuredParty_1" id="PrimaryInsured_Life_Participant">
+                <LifeParticipantRoleCode tc="1">Primary Insured</LifeParticipantRoleCode>
+                <TobaccoPremiumBasis tc="2">Smoker</TobaccoPremiumBasis>
+                <UnderwritingClass tc="PT">Preferred Smoker</UnderwritingClass>
+              </LifeParticipant>
+              <LifeParticipant PartyID="Party_Beneficiary_1">
+                <LifeParticipantRoleCode tc="7">Primary Beneficiary</LifeParticipantRoleCode>
+              </LifeParticipant>
+              <LifeParticipant PartyID="Party_Beneficiary_2">
+                <LifeParticipantRoleCode tc="7">Primary Beneficiary</LifeParticipantRoleCode>
+              </LifeParticipant>
+              <LifeParticipant PartyID="Party_Beneficiary_3">
+                <LifeParticipantRoleCode tc="36">Contingent Beneficiary</LifeParticipantRoleCode>
+              </LifeParticipant>
+            </Coverage>
+            <Coverage id="WOP">
+              <ProductCode>WOP</ProductCode>
+              <LifeCovTypeCode tc="WOP">Waiver of Premium</LifeCovTypeCode>
+              <BenefitCoverage>Base Coverage</BenefitCoverage>
+            </Coverage>
+            <Coverage id="CTLIR">
+              <ProductCode>CTR</ProductCode>
+              <LifeCovOptTypeCode tc="CTR">Children's Term Rider</LifeCovOptTypeCode>
+              <OptionNumberOfUnits>1</OptionNumberOfUnits>
+              <RiderInsured>Child</RiderInsured>
+            </Coverage>
+          </Life>
+          <OLifEExtension VendorCode="564">
+            <UWCaseNumber>60ed16d2-748b-4e1c-8247-cd289dc72067</UWCaseNumber>
+          </OLifEExtension>
+          <CustomerClass tc="SinglePolClass">Single Policy Class</CustomerClass>
+        </Policy>
+        <Banking>
+          <BankAcctType tc="1">Savings</BankAcctType>
+          <CreditCardExpDate>/</CreditCardExpDate>
+          <AccountNumber>8954</AccountNumber>
+          <AcctHolderName>Rtytg</AcctHolderName>
+          <BankName>JPMORGAN CHASE</BankName>
+          <AccountToken>b7a363b8-f8fc-4a02-ae90-644c352a5106</AccountToken>
+        </Banking>
+      </Holding>
+      <Party id="Party_PrimaryInsured">
+        <PartyTypeCode tc="1">Person</PartyTypeCode>
+        <PartyKey>050613691500300</PartyKey>
+        <OLifEExtension VendorCode="564">
+          <ExistingCustomer>False</ExistingCustomer>
+          <AllstateRateClassEligibleInd tc="0">False</AllstateRateClassEligibleInd>
+        </OLifEExtension>
+        <GovtID>546667778</GovtID>
+        <GovtIDTC tc="1">Social Security Number US</GovtIDTC>
+        <Person>
+          <FirstName>Hello</FirstName>
+          <LastName>Hi</LastName>
+          <Gender tc="1">Male</Gender>
+          <BirthDate>1998-12-12</BirthDate>
+          <BirthJurisdictionTC tc="17">IL</BirthJurisdictionTC>
+          <Age>24</Age>
+          <Citizenship tc="1">U.S.A</Citizenship>
+          <BirthCountry tc="1">USA</BirthCountry>
+          <Height2>
+            <MeasureUnits tc="3">US Measure</MeasureUnits>
+            <MeasureValue>65</MeasureValue>
+          </Height2>
+          <Weight2>
+            <MeasureUnits tc="3">US Measure</MeasureUnits>
+            <MeasureValue>123</MeasureValue>
+          </Weight2>
+          <MarStat tc="1">Married</MarStat>
+        </Person>
+        <Address id="HO">
+          <AddressTypeCode tc="1">Permanent Home</AddressTypeCode>
+          <Line1>1234 ANYWHERE ST</Line1>
+          <City>ANY CITY</City>
+          <AddressStateTC tc="17">IL</AddressStateTC>
+          <Zip>33445</Zip>
+          <AddressCountryTC tc="1">USA</AddressCountryTC>
+        </Address>
+        <Address id="MA">
+          <AddressTypeCode tc="17">Mailing</AddressTypeCode>
+          <Line1>DIFFERENT MAILING ADDRESS</Line1>
+          <City>DIFFERENT MAILING CITY</City>
+          <AddressStateTC tc="17">IL</AddressStateTC>
+          <Zip>32232</Zip>
+          <AddressCountryTC tc="1">USA</AddressCountryTC>
+          <PrefAddr tc="1">True</PrefAddr>
+        </Address>
+        <Phone>
+          <PhoneTypeCode tc="12">Mobile Phone</PhoneTypeCode>
+          <DialNumber>767-889-8433</DialNumber>
+        </Phone>
+        <EMailAddress>
+          <AddrLine>dfgfgf@gmail.com</AddrLine>
+        </EMailAddress>
+      </Party>
+      <Party id="Party_Beneficiary_1">
+        <PartyTypeCode tc="1">Person</PartyTypeCode>
+        <FullName>Beneficiary One</FullName>
+        <GovtID>111111111</GovtID>
+        <GovtIDTC tc="1">Social Security Number US</GovtIDTC>
+        <Person>
+          <FirstName>Beneficiary</FirstName>
+          <LastName>One</LastName>
+          <BirthDate>1998-12-12</BirthDate>
+          <EffDate>2023-08-30</EffDate>
+        </Person>
+        <Address>
+          <AddressTypeCode tc="1">Residence</AddressTypeCode>
+          <Line1>DIFFERENT MAILING ADDRESS</Line1>
+          <City>DIFFERENT MAILING CITY</City>
+          <AddressStateTC tc="17">IL</AddressStateTC>
+          <Zip>32232</Zip>
+          <AddressCountryTC tc="1">USA</AddressCountryTC>
+        </Address>
+        <Phone>
+          <PhoneTypeCode tc="12">Mobile Phone</PhoneTypeCode>
+          <DialNumber>455-667-7788</DialNumber>
+        </Phone>
+        <EMailAddress>
+          <AddrLine>fdd@gmail.com</AddrLine>
+        </EMailAddress>
+      </Party>
+      <Party id="Party_Beneficiary_2">
+        <PartyTypeCode tc="1">Person</PartyTypeCode>
+        <FullName>Beneficiary Two</FullName>
+        <GovtID>111111111</GovtID>
+        <GovtIDTC tc="1">Social Security Number US</GovtIDTC>
+        <Person>
+          <FirstName>Beneficiary</FirstName>
+          <LastName>Two</LastName>
+          <BirthDate>1998-12-12</BirthDate>
+          <EffDate>2023-08-30</EffDate>
+        </Person>
+        <Address>
+          <AddressTypeCode tc="1">Residence</AddressTypeCode>
+          <Line1>Beneficiary two different mailing address</Line1>
+          <City>Beneficiary two different mailing city</City>
+          <AddressStateTC tc="17">IL</AddressStateTC>
+          <Zip>45566</Zip>
+          <AddressCountryTC tc="1">USA</AddressCountryTC>
+        </Address>
+        <Phone>
+          <PhoneTypeCode tc="12">Mobile Phone</PhoneTypeCode>
+          <DialNumber>234-567-8900</DialNumber>
+        </Phone>
+        <EMailAddress>
+          <AddrLine>dgf@gmail.com</AddrLine>
+        </EMailAddress>
+      </Party>
+      <Party id="Party_Beneficiary_3">
+        <PartyTypeCode tc="1">Person</PartyTypeCode>
+        <FullName>Contingent One</FullName>
+        <GovtID>111111111</GovtID>
+        <GovtIDTC tc="1">Social Security Number US</GovtIDTC>
+        <Person>
+          <FirstName>Contingent</FirstName>
+          <LastName>One</LastName>
+          <BirthDate>1998-12-12</BirthDate>
+          <EffDate>2023-08-30</EffDate>
+        </Person>
+        <Address>
+          <AddressTypeCode tc="1">Residence</AddressTypeCode>
+          <Line1>DIFFERENT MAILING ADDRESS</Line1>
+          <City>DIFFERENT MAILING CITY</City>
+          <AddressStateTC tc="17">IL</AddressStateTC>
+          <Zip>32232</Zip>
+          <AddressCountryTC tc="1">USA</AddressCountryTC>
+          <PrefAddr tc="1">True</PrefAddr>
+        </Address>
+        <Phone>
+          <PhoneTypeCode tc="12">Mobile Phone</PhoneTypeCode>
+          <DialNumber>676-765-4443</DialNumber>
+          <Sequence>1</Sequence>
+        </Phone>
+        <EMailAddress>
+          <AddrLine>fgfg@gmail.com</AddrLine>
+        </EMailAddress>
+      </Party>
+      <Party id="Party_ChildInsured_1">
+        <PartyTypeCode tc="1">Person</PartyTypeCode>
+        <GovtID>333333333</GovtID>
+        <TobaccoPremiumBasis tc="1">Non Smoker</TobaccoPremiumBasis>
+        <Person>
+          <FirstName>Child</FirstName>
+          <LastName>Rider</LastName>
+          <Gender tc="1">Male</Gender>
+          <BirthDate>2020-12-12</BirthDate>
+          <Age>2</Age>
+        </Person>
+      </Party>
+      <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="Party_PrimaryInsured" id="Relation_InsuredParty">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="32">Insured</RelationRoleCode>
+      </Relation>
+      <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="Party_PrimaryInsured" id="Relation_Owner">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="8">Owner</RelationRoleCode>
+      </Relation>
+      <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="Party_PrimaryInsured" id="Relation_Payor">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="31">Payor</RelationRoleCode>
+      </Relation>
+      <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="Party_Beneficiary_1" id="Relation_Beneficiary_1">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="34">Primary Beneficiary</RelationRoleCode>
+        <InterestPercent>50</InterestPercent>
+        <BeneficiaryCoverageType>Base Coverage</BeneficiaryCoverageType>
+      </Relation>
+      <Relation OriginatingObjectID="Party_PrimaryInsured" RelatedObjectID="Party_Beneficiary_1" id="Relation_PItoBeneficiary_1">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationDescription tc="7">Brother</RelationDescription>
+      </Relation>
+      <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="Party_ChildInsured_1" id="Relation_ChildInsured_1">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="2">Child</RelationRoleCode>
+        <RelationDescription tc="900">Child</RelationDescription>
+      </Relation>
+      <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="Party_Beneficiary_2" id="Relation_Beneficiary_2">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="34">Primary Beneficiary</RelationRoleCode>
+        <InterestPercent>50</InterestPercent>
+        <BeneficiaryCoverageType>Base Coverage</BeneficiaryCoverageType>
+      </Relation>
+      <Relation OriginatingObjectID="Party_PrimaryInsured" RelatedObjectID="Party_Beneficiary_2" id="Relation_PItoBeneficiary_2">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationDescription tc="6">Daughter</RelationDescription>
+      </Relation>
+      <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="Party_Beneficiary_3" id="Relation_Beneficiary_3">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="36">Contingent Beneficiary</RelationRoleCode>
+        <InterestPercent>100</InterestPercent>
+        <BeneficiaryCoverageType>Base Coverage</BeneficiaryCoverageType>
+      </Relation>
+      <Relation OriginatingObjectID="Party_PrimaryInsured" RelatedObjectID="Party_Beneficiary_3" id="Relation_PItoBeneficiary_3">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationDescription tc="7">Brother</RelationDescription>
+      </Relation>
+      <FormInstance id="1">
+        <FormName>APPLICATION FOR INDIVIDUAL LIFE INSURANCE(Part 1 and Part 2)</FormName>
+        <ProviderFormNumber>ICC21DGAPP10</ProviderFormNumber>
+        <Attachment>
+          <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+          <Description>SIGNAPPDOCSC</Description>
+          <MimeTypeTC tc="17">Image/PDF</MimeTypeTC>
+        </Attachment>
+      </FormInstance>
+      <FormInstance id="2">
+        <FormName>Consent to Use Electronic Signatures</FormName>
+        <ProviderFormNumber>FIC743DG</ProviderFormNumber>
+        <Attachment>
+          <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+          <Description>ESIGNCONSENT</Description>
+          <MimeTypeTC tc="17">Image/PDF</MimeTypeTC>
+        </Attachment>
+      </FormInstance>
+      <FormInstance id="4">
+        <FormName>HIPAA Compliant Authorization</FormName>
+        <ProviderFormNumber>FIC755HPADG</ProviderFormNumber>
+        <Attachment>
+          <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+          <Description>HIPPACOMPAUTH</Description>
+          <MimeTypeTC tc="17">Image/PDF</MimeTypeTC>
+        </Attachment>
+      </FormInstance>
+      <FormInstance id="6">
+        <FormName>Illinois Religious Freedom Protection and Civil Union Act Notice</FormName>
+        <ProviderFormNumber>FIC456DGIL</ProviderFormNumber>
+        <Attachment>
+          <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+          <Description>CIVILUNIONNOTICE</Description>
+          <MimeTypeTC tc="17">Image/PDF</MimeTypeTC>
+        </Attachment>
+      </FormInstance>
+      <FormInstance id="8">
+        <FormName>TIA</FormName>
+        <ProviderFormNumber>ICC21DGTIA10</ProviderFormNumber>
+        <Attachment>
+          <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+          <Description>TIA</Description>
+          <MimeTypeTC tc="17">Image/PDF</MimeTypeTC>
+        </Attachment>
+      </FormInstance>
+      <FormInstance id="50">
+        <FormName>Application Packet</FormName>
+        <ProviderFormNumber>APPPKT</ProviderFormNumber>
+        <Attachment>
+          <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+          <Description>APPPKT</Description>
+          <MimeTypeTC tc="17">Image/PDF</MimeTypeTC>
+        </Attachment>
+      </FormInstance>
+    </OLifE>
+  </TXLifeRequest>
+</TXLife>

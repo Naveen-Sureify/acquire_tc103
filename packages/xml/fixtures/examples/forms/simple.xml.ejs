@@ -1,0 +1,26 @@
+<FormInstance id="Form_ICC18-NB-133-NB" RelatedObjectID="Party_PINS">
+  <FormName>LifeApp</FormName>
+  <ProviderFormNumber>ICC18-NB-133</ProviderFormNumber>
+  <Attachment>
+    <AttachmentBasicType tc="<%= await lookups.lookup(types.OLI_LU.BASICATTACHMENTTYPE, { tc: "2" }).tc %>">
+      <%= await lookups.lookup(types.OLI_LU.BASICATTACHMENTTYPE, { tc: "2" }).value %>
+    </AttachmentBasicType>
+    <AttachmentType tc="<%= await lookups.lookup(types.OLI_LU.ATTACHMENTTYPE, { tc: "5" }).tc %>">
+      <%= await lookups.lookup(types.OLI_LU.ATTACHMENTTYPE, { tc: "5" }).value %>
+    </AttachmentType>
+    <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+      <AttachmentExtension>
+        <FileName>ICC18-NB-133-NB.pdf</FileName>
+        <ReqCode tc="<%= await lookups.lookup(types.OLI_LU.REQCODE, { tc: "165" }).tc %>">
+          <%= await lookups.lookup(types.OLI_LU.REQCODE, { tc: "165" }).value %>
+        </ReqCode>
+      </AttachmentExtension>
+    </OLifEExtension>
+  </Attachment>
+</FormInstance>
+<imageInfo>
+  <imageGUID>ICC18-NB-133-NB.pdf</imageGUID>
+  <image>
+    <%= await files.inject('./packages/xml/fixtures/examples/forms/simple.png', 'base64') %>
+  </image>
+</imageInfo>

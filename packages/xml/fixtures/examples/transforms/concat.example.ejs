@@ -1,0 +1,14 @@
+<Person>
+    <FirstName>
+        <%= FirstName %>
+    </FirstName>
+    <LastName>
+        <%= LastName %>
+    </LastName>
+    <FullNameInline>
+        <%= FirstName + ' ' + LastName %>
+    </FullNameInline>
+    <FullNameWithTransform>
+        <%= transforms.concat(' ', FirstName, LastName) %>
+    </FullNameWithTransform>
+</Person>

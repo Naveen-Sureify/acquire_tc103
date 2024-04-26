@@ -1,0 +1,827 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+  targetNamespace="http://ACORD.org/Standards/Life/2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TXLife">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="UserAuthRequest">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="UserLoginName" />
+              <xs:element name="UserPswd">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="CryptType" />
+                    <xs:element type="xs:string" name="Pswd" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="VendorApp">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="VendorName">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:short" name="VendorCode" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="AppName" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TXLifeRequest">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="TransRefGUID" />
+              <xs:element name="TransType">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:byte" name="tc" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:date" name="TransExeDate" />
+              <xs:element type="xs:time" name="TransExeTime" />
+              <xs:element name="TransMode">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:byte" name="tc" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="OLifE">
+                <xs:complexType>
+                  <xs:choice maxOccurs="unbounded" minOccurs="0">
+                    <xs:element name="Grouping">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Household">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:int" name="HouseholdKey" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SourceInfo">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:date" name="CreationDate" />
+                          <xs:element type="xs:time" name="CreationTime" />
+                          <xs:element type="xs:string" name="SourceInfoName" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Holding">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="HoldingSysKey" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="SystemCode" use="optional" />
+                                  <xs:attribute type="xs:byte" name="VendorCode" use="optional" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="HoldingTypeCode">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:byte" name="tc" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="HoldingStatus">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:byte" name="tc" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Policy">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:int" name="PolNumber" />
+                                <xs:element name="LineOfBusiness">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="ProductType">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:short" name="ProductCode" />
+                                <xs:element type="xs:string" name="CarrierCode" />
+                                <xs:element type="xs:string" name="PlanName" />
+                                <xs:element name="PolicyStatus">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="IssueNation">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Jurisdiction">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:date" name="EffDate" />
+                                <xs:element name="PaymentMode">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:float" name="PaymentAmt" />
+                                <xs:element name="PaymentMethod">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Life">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:float" name="InitialPremAmt" />
+                                      <xs:element type="xs:int" name="FaceAmt" />
+                                      <xs:element name="Coverage" maxOccurs="unbounded"
+                                        minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="PlanName" />
+                                            <xs:element type="xs:string" name="ProductCode" />
+                                            <xs:element name="IndicatorCode">
+                                              <xs:complexType>
+                                                <xs:simpleContent>
+                                                  <xs:extension base="xs:string">
+                                                    <xs:attribute type="xs:byte" name="tc"
+                                                      use="optional" />
+                                                  </xs:extension>
+                                                </xs:simpleContent>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element type="xs:byte" name="DurationDesign"
+                                              minOccurs="0" />
+                                            <xs:element type="xs:string" name="CurrentAmt" />
+                                            <xs:element type="xs:int" name="InitCovAmt"
+                                              minOccurs="0" />
+                                            <xs:element name="LifeParticipant" maxOccurs="unbounded"
+                                              minOccurs="0">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element type="xs:string"
+                                                    name="ParticipantName" minOccurs="0" />
+                                                  <xs:element name="LifeParticipantRoleCode">
+                                                    <xs:complexType>
+                                                      <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                          <xs:attribute type="xs:byte" name="tc"
+                                                            use="optional" />
+                                                        </xs:extension>
+                                                      </xs:simpleContent>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element name="PermTableRating" minOccurs="0">
+                                                    <xs:complexType>
+                                                      <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                          <xs:attribute type="xs:byte" name="tc" />
+                                                        </xs:extension>
+                                                      </xs:simpleContent>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element name="UnderwritingClass" minOccurs="0">
+                                                    <xs:complexType>
+                                                      <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                          <xs:attribute type="xs:byte" name="tc" />
+                                                        </xs:extension>
+                                                      </xs:simpleContent>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element type="xs:byte"
+                                                    name="BeneficiaryPercentDistribution"
+                                                    minOccurs="0" />
+                                                  <xs:element name="DistributionOption"
+                                                    minOccurs="0">
+                                                    <xs:complexType>
+                                                      <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                          <xs:attribute type="xs:byte" name="tc" />
+                                                        </xs:extension>
+                                                      </xs:simpleContent>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element name="BeneficiaryDesignation"
+                                                    minOccurs="0">
+                                                    <xs:complexType>
+                                                      <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                          <xs:attribute type="xs:byte" name="tc" />
+                                                        </xs:extension>
+                                                      </xs:simpleContent>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute type="xs:string" name="PartyID"
+                                                  use="optional" />
+                                                <xs:attribute type="xs:string" name="id"
+                                                  use="optional" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                          <xs:attribute type="xs:string" name="id" use="optional" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="ApplicationInfo">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="HOAssignedAppNumber" />
+                                      <xs:element type="xs:string" name="TrackingID" />
+                                      <xs:element name="ApplicationType">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:byte" name="tc" />
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="BackDateType">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:byte" name="tc" />
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="ReqPolicyDeliveryMethod">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:byte" name="tc" />
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="SignatureInfo" maxOccurs="unbounded"
+                                        minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="SignatureRoleCode">
+                                              <xs:complexType>
+                                                <xs:simpleContent>
+                                                  <xs:extension base="xs:string">
+                                                    <xs:attribute type="xs:byte" name="tc"
+                                                      use="optional" />
+                                                  </xs:extension>
+                                                </xs:simpleContent>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element type="xs:date" name="SignatureDate"
+                                              minOccurs="0" />
+                                            <xs:element type="xs:string" name="SignatureCity"
+                                              minOccurs="0" />
+                                            <xs:element name="SignatureState" minOccurs="0">
+                                              <xs:complexType>
+                                                <xs:simpleContent>
+                                                  <xs:extension base="xs:string">
+                                                    <xs:attribute type="xs:byte" name="tc" />
+                                                  </xs:extension>
+                                                </xs:simpleContent>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="SubmissionType">
+                                              <xs:complexType>
+                                                <xs:simpleContent>
+                                                  <xs:extension base="xs:string">
+                                                    <xs:attribute type="xs:byte" name="tc"
+                                                      use="optional" />
+                                                  </xs:extension>
+                                                </xs:simpleContent>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element type="xs:string" name="SignatureText"
+                                              minOccurs="0" />
+                                            <xs:element name="ElectronicAuthenticationType"
+                                              minOccurs="0">
+                                              <xs:complexType>
+                                                <xs:simpleContent>
+                                                  <xs:extension base="xs:string">
+                                                    <xs:attribute type="xs:byte" name="tc" />
+                                                  </xs:extension>
+                                                </xs:simpleContent>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                          <xs:attribute type="xs:string" name="SignaturePartyID"
+                                            use="optional" />
+                                          <xs:attribute type="xs:string" name="id" use="optional" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="OLifEExtension">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:int" name="AgeAndAmount" />
+                                            <xs:element name="OrderType">
+                                              <xs:complexType>
+                                                <xs:simpleContent>
+                                                  <xs:extension base="xs:string">
+                                                    <xs:attribute type="xs:byte" name="tc" />
+                                                  </xs:extension>
+                                                </xs:simpleContent>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="PensionersMonthly">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="AutomaticPremiumPayment">
+                                                    <xs:complexType>
+                                                      <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                          <xs:attribute type="xs:byte" name="tc" />
+                                                        </xs:extension>
+                                                      </xs:simpleContent>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="AutomaticPremiumPayment">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="AutomaticPremiumPayment">
+                                                    <xs:complexType>
+                                                      <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                          <xs:attribute type="xs:byte" name="tc" />
+                                                        </xs:extension>
+                                                      </xs:simpleContent>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element type="xs:string" name="NameID" />
+                                            <xs:element name="EmployeeInd">
+                                              <xs:complexType>
+                                                <xs:simpleContent>
+                                                  <xs:extension base="xs:string">
+                                                    <xs:attribute type="xs:byte" name="tc" />
+                                                  </xs:extension>
+                                                </xs:simpleContent>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element type="xs:string"
+                                              name="AdditionalInfo_ConcurrentApplicationYesNo" />
+                                            <xs:element type="xs:string"
+                                              name="PIMED_VERIFY_ChangedYesNo" />
+                                            <xs:element type="xs:string" name="StartedInDTC" />
+                                          </xs:sequence>
+                                          <xs:attribute type="xs:short" name="VendorCode" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Arrangement">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="ProductCode" />
+                                <xs:element name="ArrMode">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="ArrType">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:float" name="ModalAmt" />
+                                <xs:element name="PaymentMethod">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="id" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Party" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="PartyTypeCode">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:byte" name="tc" use="optional" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="PartyKey" minOccurs="0" />
+                          <xs:element type="xs:string" name="FullName" minOccurs="0" />
+                          <xs:element type="xs:int" name="PartySysKey" minOccurs="0" />
+                          <xs:element type="xs:int" name="GovtID" minOccurs="0" />
+                          <xs:element name="GovtIDTC" minOccurs="0">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:byte" name="tc" use="optional" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="ResidenceState" minOccurs="0">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:byte" name="tc" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Person" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="FirstName" />
+                                <xs:element type="xs:string" name="MiddleName" minOccurs="0" />
+                                <xs:element type="xs:string" name="LastName" />
+                                <xs:element type="xs:string" name="Suffix" minOccurs="0" />
+                                <xs:element name="Gender" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:string" name="BirthDate" minOccurs="0" />
+                                <xs:element type="xs:byte" name="Age" minOccurs="0" />
+                                <xs:element name="Citizenship" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Height2" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="MeasureUnits">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:byte" name="tc" />
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element type="xs:byte" name="MeasureValue" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Weight2" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="MeasureUnits">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:byte" name="tc" />
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element type="xs:short" name="MeasureValue" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:string" name="DriversLicenseNum" minOccurs="0" />
+                                <xs:element name="NoDriversLicenseInd" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="DriversLicenseState" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="BirthCountry" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="BirthJurisdictionTC" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="ImmigrationStatus" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Address" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="AddressTypeCode">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" use="optional" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:string" name="Line1" minOccurs="0" />
+                                <xs:element type="xs:string" name="Line2" minOccurs="0" />
+                                <xs:element type="xs:string" name="City" minOccurs="0" />
+                                <xs:element type="xs:string" name="AddressState" minOccurs="0" />
+                                <xs:element name="AddressStateTC" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:int" name="Zip" minOccurs="0" />
+                                <xs:element name="AddressCountryTC" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" use="optional" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Phone" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="PhoneTypeCode">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" use="optional" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:short" name="AreaCode" minOccurs="0" />
+                                <xs:element type="xs:int" name="DialNumber" minOccurs="0" />
+                                <xs:element type="xs:int" name="Ext" minOccurs="0" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Producer" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="CarrierAppointment">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="CompanyProducerID" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="OLifEExtension">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="UserName" />
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:short" name="VendorCode" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="EMailAddress" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="AddrLine" />
+                                <xs:element name="PrefEMailAddr" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Employment" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="OccupClass">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="tc" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="id" use="optional" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Relation" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="OriginatingObjectType">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:byte" name="tc" use="optional" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="RelatedObjectType">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:byte" name="tc" use="optional" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="RelationRoleCode">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:byte" name="tc" use="optional" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="OriginatingObjectID" use="optional" />
+                        <xs:attribute type="xs:string" name="RelatedObjectID" use="optional" />
+                        <xs:attribute type="xs:string" name="id" use="optional" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="FormInstance">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="FormResponse" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="QuestionNumber" />
+                                <xs:element type="xs:string" name="ResponseData" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="OriginatingObjectType" minOccurs="0">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:byte" name="tc" use="optional" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="RelatedObjectType" minOccurs="0">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:byte" name="tc" use="optional" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="RelationRoleCode" minOccurs="0">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:byte" name="tc" use="optional" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:byte" name="InterestPercent" minOccurs="0" />
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="id" use="optional" />
+                        <xs:attribute type="xs:string" name="OriginatingObjectID" use="optional" />
+                        <xs:attribute type="xs:string" name="RelatedObjectID" use="optional" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:choice>
+                  <xs:attribute type="xs:string" name="Version" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="PrimaryObjectID" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="Version" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

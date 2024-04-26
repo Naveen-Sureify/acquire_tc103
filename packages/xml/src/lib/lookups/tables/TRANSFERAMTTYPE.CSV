@@ -1,0 +1,13 @@
+value,key,tc,definition
+All Allocations Acceptable,OLI_TRANSAMTTYPE_ALL,9,
+Amounts,OLI_TRANSAMTTYPE_AMT,2,
+Granular level specification,OLI_TRANSAMTTYPE_GRANULAR,8,
+Other,OLI_OTHER,2147483647,
+Percentage,OLI_TRANSAMTTYPE_PCT,3,
+Pro-rata across ALL funds,OLI_TRANSAMT_PRORATAALL,6,
+Pro-rata based on relative amount of selected fund,OLI_TRANSAMTTYPE_PRORATA,4,
+Prorate across all Variable funds,OLI_TRANSAMT_VARIABLE,5,
+Transfer, No Amount Type Specified,OLI_TRANSAMTTYPE_NOAMOUNT,7,
+Units,OLI_TRANSAMTTYPE_UNITS,1,
+Unknown,OLI_UNKNOWN,0,
+Use standing allocations,OLI_TRANSAMTTYPE_STAND,10,

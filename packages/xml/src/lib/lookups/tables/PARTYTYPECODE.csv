@@ -1,0 +1,4 @@
+value,key,tc,definition     
+,OLI_UNKNOWN,0,
+Organization,OLI_PT_ORG,2,
+Person,OLI_PT_PERSON,1,

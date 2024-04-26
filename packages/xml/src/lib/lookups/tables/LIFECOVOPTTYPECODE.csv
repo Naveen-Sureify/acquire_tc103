@@ -1,0 +1,141 @@
+value,key,tc,definition
+Accelerated Benefit,OLI_OPTTYPE_ABE,1
+Accelerated Benefit for Cognitive Impairment,OLI_OPTTYPE_ABCOGIMP,153
+Accelerated Benefit for Nursing Home Care,OLI_OPTTYPE_ABNURSINGHOME,152
+Accidental Death and Dismemberment,OLI_OPTTYPE_ADD,3
+Accidental Death Benefit,OLI_OPTTYPE_ADB,2
+Accidental Death Benefit - Joint Insured Only,OLI_OPTTYPE_ADBJOINT,43
+Accounting Benefit,OLI_OPTTYPE_ACCOUNTINGBNFT,126
+Additional Coverage Scheduled Option,OLI_OPTTYPE_ADDSCHED,74
+Adjustable Survivorship Life,OLI_OPTTYPE_ADJSURVL,61
+Affiliation Discount,OLI_OPTTYPE_AFFILIATION,55
+AIDS,OLI_OPTTYPE_AIDS,47
+Airbag Benefit,OLI_OPTTYPE_AIRBAG,103
+Alternate Cash Surrender Value,OLI_OPTTYPE_ALTCASHSURRVAL,127
+Alternative Cash Value Rider,OLI_OPTTYPE_ALTCV,137
+Assured Distribution Option,OLI_OPTTYPE_ASSUREDDISTOPTION,138
+Auto Adjust of death benefit for tax exempt status,OLI_OPTTYPE_AUTOADJUST,132
+Automatic Fixed Percentage Premium Increase,OLI_OPTTYPE_AFPPREMINC,52
+Automatic Increase Option,OLI_OPTTYPE_AUTOINC,4
+Automatic Index Linked Premium Increase,OLI_OPTTYPE_AILPREMINC,51
+Aviation Exclusion Rider,OLI_OPTTYPE_AVIATION,70
+Beneficiary Insurance,OLI_OPTTYPE_BENEINSUR,19
+Benefit Distribution Rider,OLI_OPTTYPE_BDR,139
+Benefit Increase Provision,OLI_OPTTYPE_BINCPROV,32
+Benefit Selection Option,OLI_OPTTYPE_BSO,140
+Business Value Increase,OLI_OPTTYPE_BUSVALUEINC,25
+Cash Value Transfer Option,OLI_OPTTYPE_CVTRANSFER,39
+Change of Insured,OLI_OPTTYPE_CHGINS,26
+Charge to Earnings Elimination,OLI_OPTTYPE_CHGEARNELIM,23
+Charitable Giving Benefit,OLI_OPTTYPE_CHARITY,141
+Charitable Giving Benefit - specified amount,OLI_OPTTYPE_CHARITYSPECAMT,157
+Childcare Benefit,OLI_OPTTYPE_CHILDCARE,108
+Childhood Disease,OLI_OPTTYPE_CHILDDISEASE,40
+Children's Conversion Option,OLI_OPTTYPE_EXPCHILD,78
+Children's Term Benefit,OLI_OPTTYPE_CTB,6
+Chronic Illness Rider,OLI_OPTTYPE_CHRONICILL,142
+Convalescent Care Benefits Rider,OLI_OPTTYPE_CONVALESCARE,143
+Cost of Living Increase or inflation guard,OLI_OPTTYPE_COLI,5
+Critical illness premium waiver,OLI_OPTTYPE_WPCRIT,57
+Death, Disability or Critical Illness,OLI_OPTTYPE_DBDISCRITILL,50
+Death Benefit,OLI_OPTTYPE_DB,48
+Death Benefit Guarantee,OLI_OPTTYPE_DEATHBENGUAR,144
+Default Premium Payment Option,OLI_OPTTYPE_DEFPAYMNT,33
+Designate Second Life,OLI_OPTTYPE_DSL,64
+Disability Benefit,OLI_OPTTYPE_DIB,7
+Disability or Critical Illness,OLI_OPTTYPE_DISCRITILL,49
+Disappearance,OLI_OPTTYPE_DISAPP,105
+Double/Triple Indemnity,OLI_OPTTYPE_DBLINDEM,18
+Downside Protection Rider,OLI_OPTTYPE_DOWNSIDEPROTECT,145
+Dread Disease,OLI_OPTTYPE_DRDISEASE,101
+Enhanced Accidental Death Benefit,OLI_OPTTYPE_ADC,35
+Enhanced Cash Value Option,OLI_OPTTYPE_ENHANCEDCV,38
+Enhanced Death Benefit,OLI_OPTTYPE_ENHCDDTHBNFT,128
+Estate Preservation Rider,OLI_OPTTYPE_ESTATEPRESERVE,146
+Estate Protection,OLI_OPTTYPE_ESTATEPROT,22
+Estate Tax Repeal Rider,OLI_OPTTYPE_ESTATETAXREPEAL,147
+Exchange of Insured Option,OLI_OPTTYPE_EXCIO,65
+Exchange Provision,OLI_OPTTYPE_EXCHANGE,8
+Extended Maturity,OLI_OPTTYPE_EXTMATURITY,28
+Extension of Benefit Option,OLI_OPTTYPE_EXTBO,31
+Extension of Conversion Period Option,OLI_OPTTYPE_ECPO,135
+Extra Protection Option,OLI_OPTTYPE_EXPEXTRA,77
+Family Benefit,OLI_OPTTYPE_FAMILY,123
+Female Add-On Benefit,OLI_OPTTYPE_FEMDRDDISEASE,84
+Functional Impairment,OLI_OPTTYPE_FUNCIMP,116
+Funeral Benefit,OLI_OPTTYPE_FUNERAL,100
+Group to Individual Policy Conversion,OLI_OPTTYPE_LIFECONV,109
+Guaranteed Insurance Option,OLI_OPTTYPE_GUARIR,66
+Guaranteed Issue Option at specified Life Events,OLI_OPTTYPE_GRNTEISSUE,136
+Guaranteed Issue Option due to Birth or Adoption,OLI_OPTTYPE_ADDCHILD,76
+Guaranteed Issue Option due to Marriage,OLI_OPTTYPE_ADDMARR,75
+Healthy Engagement Rider,OLI_OPTTYPE_HEALTHY,148
+HIV Accelerated Benefit Option,OLI_OPTTYPE_HIV,37
+Hospice Care,OLI_OPTTYPE_HOSPICECARE,87
+Hospital Benefit,OLI_OPTTYPE_HOSP,82
+Joint Last to Die Payment on First Death,OLI_OPTTYPE_JOINTPAY,131
+Known and Unknown,OLI_OPTTYPE_CATCHALL,114
+Living Needs Benefit,OLI_OPTTYPE_LIVNEEDS,20
+Long Term Care Accelerated Benefit Option,OLI_OPTTYPE_LTCABO,30
+Long Term Care Non-forfeiture,OLI_OPTTYPE_LTCNONFOR,42
+Loyalty Discount,OLI_OPTTYPE_LOYALTY,121
+Marital Discount,OLI_OPTTYPE_MARITAL,119
+Maternity,OLI_OPTTYPE_MATERNITY,41
+Medical aid premium waiver,OLI_OPTTYPE_WPMED,46
+Military Aviation,OLI_OPTTYPE_MILITARYAVIATION,117
+No Lapse Guarantee Option,OLI_OPTTYPE_NOLAPSE,9
+Occupation Specific Disability Benefit,OLI_OPTTYPE_DISSIMOCC,83
+Option to Purchase Add'l Ins Underwriting Req'd,OLI_OPTTYPE_FTO,36
+Option to Purchase Additional Insurance,OLI_OPTTYPE_OPAI,10
+Option to Purchase Paid-Up Additions,OLI_OPTTYPE_OPPUA,34
+Other,OLI_OTHER,2147483647
+Overloan Protection Rider,OLI_OPTTYPE_OPR,122
+Payor Death Benefit,OLI_OPTTYPE_PAYORDB,11
+Payor Disability,OLI_OPTTYPE_PAYORDI,12
+Permanent or Partial Incapacity,OLI_OPTTYPE_PPINC,81
+Persistency Bonus Option,OLI_OPTTYPE_PERSIST,13
+Physical Impairment,OLI_OPTTYPE_PHYSIMP,115
+Policy Split Option,OLI_OPTTYPE_SPLIT,15
+Pool of Money,OLI_OPTTYPE_POOLOFMONEY,125
+Portability of Health Coverage,OLI_OPTTYPE_PORT,110
+Premium Guarantee Option,OLI_OPTTYPE_PGO,14
+Premium Holiday (Waiver),OLI_OPTTYPE_PREMHOLIDAY,151
+Premium Reserve Rider,OLI_OPTTYPE_PREMRESERVE,149
+Premium Waiver - Joint Insured Only,OLI_OPTTYPE_WPJOINT,44
+Pre-Pay Discount,OLI_DISCOUNT_PREPAY,53
+Presumptive Disability for a Specific Loss,OLI_OPTTYPE_PRESUMPTDISABLE,88
+PVT Met Values Plus Option,OLI_OPTTYPE_VALUESPLUS,45
+Qualified Adult Discount,OLI_OPTTYPE_QUALADLT,58
+Relaxation of Minimum Premium,OLI_OPTTYPE_RELAXMINPREM,24
+Repatriation of Remains,OLI_OPTTYPE_REMAINS,107
+Respread option for joint/multi-life on 1st death,OLI_OPTTYPE_RESPREAD,133
+Retrenchment,OLI_OPTTYPE_RETRENCH,134
+Return of Premium - End of Specified Term,OLI_OPTTYPE_ROPT,118
+Return of Premium on Critical Illness,OLI_OPTTYPE_CIROPRIDER,156
+Return of Premium - on Death,OLI_OPTTYPE_COSTREC,21
+Return of Premium - on First Death,OLI_OPTTYPE_COSTREC1ST,154
+Return of Premium - on Second Death,OLI_OPTTYPE_COSTREC2ND,155
+Return of Premium - on Surrender,OLI_OPTTYPE_MBGUAR,29
+Salary Increase,OLI_OPTTYPE_SALINCREASE,27
+Seatbelt Benefit,OLI_OPTTYPE_SEATBELT,102
+Select Health Discount,OLI_OPTTYPE_SELECTHEALTH,54
+Small Business Discount,OLI_OPTTYPE_SMALLBUS,120
+Spousal Discount,OLI_OPTTYPE_SPOUSAL,56
+Suicide,OLI_OPTTYPE_SUICIDE,111
+Suicide Clause,OLI_OPTTYPE_SUICIDECLAUSE,80
+Surrender Charge Adjustment,OLI_OPTTYPE_SURRCHARGEADJ,129
+Surrender Value Enhancement,OLI_OPTTYPE_SURRVALUEENHANCE,130
+Surviving Insured Conversion,OLI_OPTTYPE_SURJTTERM,79
+Survivorship Additional Benefit,OLI_OPTTYPE_SURVAB,67
+Survivorship Insurance Rider,OLI_OPTTYPE_SURVIR,68
+Terminal Illness Rider,OLI_OPTTYPE_TERMINALILL,150
+Terrorism Benefit,OLI_OPTTYPE_TERROR,113
+Travel Assistance Program,OLI_OPTTYPE_TRAVEL,104
+Unknown,OLI_UNKNOWN,0
+Waiver of Monthly Deductions (WMD),OLI_OPTTYPE_WMD,16
+Waiver of Premium,OLI_OPTTYPE_WP,17
+Waiver of Surr Chrgs on Nursing Home Confinement,OLI_OPTTYPE_WSCNH,124
+War Risk,OLI_OPTTYPE_WAR,112
+Worksite modification,OLI_OPTTYPE_WORKSITE,106
+Long-Term Care Acceleration of Death Benefit Rider,OLI_OPTTYPE_LTCADBR,1009900009,
+Extension of Benefits for Long-Term Care with Indexed Coverage Rider,OLI_OPTTYPE_EBLTICR,1009900008,

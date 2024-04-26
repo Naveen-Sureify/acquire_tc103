@@ -1,0 +1,256 @@
+<FormInstance id="Form_ICC18-NB-133-NB" RelatedObjectID="Party_PINS">
+    <FormName>LifeApp</FormName>
+    <ProviderFormNumber>ICC18-NB-133</ProviderFormNumber>
+    <Attachment>
+        <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+        <AttachmentType tc="5">Form</AttachmentType>
+        <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+            <AttachmentExtension>
+                <FileName>ICC18-NB-133-NB.pdf</FileName>
+                <ReqCode tc="165">Signed Application - (applicants signature)</ReqCode>
+            </AttachmentExtension>
+        </OLifEExtension>
+    </Attachment>
+</FormInstance>
+<FormInstance id="Form_ICC18-LTC-132" RelatedObjectID="Party_PINS">
+    <FormName>MiscMail</FormName>
+    <ProviderFormNumber>ICC18-LTC-132</ProviderFormNumber>
+    <Attachment>
+        <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+        <AttachmentType tc="5">Form</AttachmentType>
+        <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+            <AttachmentExtension>
+                <FileName>ICC18-LTC-132.pdf</FileName>
+                <ReqCode tc="1000990019">Individual Long-Term Care Rider Supplement</ReqCode>
+            </AttachmentExtension>
+        </OLifEExtension>
+    </Attachment>
+</FormInstance>
+<FormInstance id="Form_EAUTH-16-ALNE" RelatedObjectID="Party_PINS">
+    <FormName>MiscMail</FormName>
+    <ProviderFormNumber>EAUTH-16-ALNE</ProviderFormNumber>
+    <Attachment>
+        <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+        <AttachmentType tc="5">Form</AttachmentType>
+        <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+            <AttachmentExtension>
+                <FileName>EAUTH-16-ALNE.pdf</FileName>
+                <ReqCode tc="822">HIPAA Authorization</ReqCode>
+            </AttachmentExtension>
+        </OLifEExtension>
+    </Attachment>
+</FormInstance>
+<FormInstance id="Form_EPAUTH-05-ALNE-B" RelatedObjectID="Party_PINS">
+    <FormName>LifeApp</FormName>
+    <ProviderFormNumber>EPAUTH-05-ALNE-B</ProviderFormNumber>
+    <Attachment>
+        <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+        <AttachmentType tc="5">Form</AttachmentType>
+        <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+            <AttachmentExtension>
+                <FileName>EPAUTH-05-ALNE-B.pdf</FileName>
+                <ReqCode tc="1000990015">Authorization To Release Psychotherapy Treatment Records and Notes</ReqCode>
+            </AttachmentExtension>
+        </OLifEExtension>
+    </Attachment>
+</FormInstance>
+<FormInstance id="Form_INSRELTOAGT-ALNE-DXC" RelatedObjectID="Party_PINS">
+    <FormName>LifeApp</FormName>
+    <ProviderFormNumber>INSRELTOAGT-ALNE-DXC</ProviderFormNumber>
+    <Attachment>
+        <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+        <AttachmentType tc="5">Form</AttachmentType>
+        <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+            <AttachmentExtension>
+                <FileName>INSRELTOAGT-ALNE-DXC.pdf</FileName>
+                <ReqCode tc="1000990003">Authorization to Release Health-Related Information to the Producer</ReqCode>
+            </AttachmentExtension>
+        </OLifEExtension>
+    </Attachment>
+</FormInstance>
+<FormInstance id="Form_INDALLOC-DXC" RelatedObjectID="Party_PINS">
+    <FormName>MiscMail</FormName>
+    <ProviderFormNumber>INDALLOC-DXC</ProviderFormNumber>
+    <Attachment>
+        <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+        <AttachmentType tc="5">Form</AttachmentType>
+        <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+            <AttachmentExtension>
+                <FileName>INDALLOC-DXC.pdf</FileName>
+                <ReqCode tc="1000990014">Index Allocation Form</ReqCode>
+            </AttachmentExtension>
+        </OLifEExtension>
+    </Attachment>
+</FormInstance>
+<FormInstance id="Form_ICC21-ACCLTC-PW" RelatedObjectID="Party_PINS">
+    <FormName>MiscMail</FormName>
+    <ProviderFormNumber>ICC21-ACCLTC-PW</ProviderFormNumber>
+    <Attachment>
+        <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+        <AttachmentType tc="5">Form</AttachmentType>
+        <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+            <AttachmentExtension>
+                <FileName>ICC21-ACCLTC-PW.pdf</FileName>
+                <ReqCode tc="1000990020">LTC Personal Worksheet</ReqCode>
+            </AttachmentExtension>
+        </OLifEExtension>
+    </Attachment>
+</FormInstance>
+<FormInstance id="Form_E-DCINFO-B" RelatedObjectID="Party_PINS">
+    <FormName>MiscMail</FormName>
+    <ProviderFormNumber>E-DCINFO-B</ProviderFormNumber>
+    <Attachment>
+        <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+        <AttachmentType tc="5">Form</AttachmentType>
+        <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+            <AttachmentExtension>
+                <FileName>E-DCINFO-B.pdf</FileName>
+                <ReqCode tc="1000990004">Beneficiary Locator</ReqCode>
+            </AttachmentExtension>
+        </OLifEExtension>
+    </Attachment>
+</FormInstance>
+<FormInstance id="Form_LTC-APPVERIF" RelatedObjectID="Party_PINS">
+    <FormName>MiscMail</FormName>
+    <ProviderFormNumber>LTC-APPVERIF</ProviderFormNumber>
+    <Attachment>
+        <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+        <AttachmentType tc="5">Form</AttachmentType>
+        <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+            <AttachmentExtension>
+                <FileName>LTC-APPVERIF.pdf</FileName>
+                <ReqCode tc="1000990059">Appropriateness Verification - Long-Term Care Coverage</ReqCode>
+            </AttachmentExtension>
+        </OLifEExtension>
+    </Attachment>
+</FormInstance>
+<FormInstance id="Form_EPID-138-18" RelatedObjectID="Party_PINS">
+    <FormName>MiscMail</FormName>
+    <ProviderFormNumber>EPID-138-18</ProviderFormNumber>
+    <Attachment>
+        <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+        <AttachmentType tc="5">Form</AttachmentType>
+        <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+            <AttachmentExtension>
+                <FileName>EPID-138-18.pdf</FileName>
+                <ReqCode tc="1000990017">Financial Representative Identification and Certification</ReqCode>
+            </AttachmentExtension>
+        </OLifEExtension>
+    </Attachment>
+</FormInstance>
+<FormInstance id="Form_Illustration" RelatedObjectID="Party_PINS">
+    <FormName>MiscMail</FormName>
+    <ProviderFormNumber>Illustration</ProviderFormNumber>
+    <Attachment>
+        <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+        <AttachmentType tc="5">Form</AttachmentType>
+        <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+            <AttachmentExtension>
+                <FileName>Illustration.pdf</FileName>
+                <ReqCode tc="133">Signed Illustration</ReqCode>
+            </AttachmentExtension>
+        </OLifEExtension>
+    </Attachment>
+</FormInstance>
+<FormInstance id="Form_ECON-123-20" RelatedObjectID="Party_PINS">
+    <FormName>LifeApp</FormName>
+    <ProviderFormNumber>ECON-123-20</ProviderFormNumber>
+    <Attachment>
+        <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+        <AttachmentType tc="5">Form</AttachmentType>
+        <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+            <AttachmentExtension>
+                <FileName>ECON-123-20.pdf</FileName>
+            </AttachmentExtension>
+        </OLifEExtension>
+    </Attachment>
+</FormInstance>
+<FormInstance id="Form_Hipaa_SignAuditInfo" RelatedObjectID="Party_PINS">
+    <FormName>MiscMail</FormName>
+    <ProviderFormNumber>Hipaa_SignAuditInfo</ProviderFormNumber>
+    <Attachment>
+        <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+        <AttachmentType tc="5">Form</AttachmentType>
+        <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+            <AttachmentExtension>
+                <FileName>Hipaa_SignAuditInfo.pdf</FileName>
+                <ReqCode tc="1000990237">Audit Report</ReqCode>
+            </AttachmentExtension>
+        </OLifEExtension>
+    </Attachment>
+</FormInstance>
+<FormInstance id="Form_SignAuditInfo" RelatedObjectID="Party_PINS">
+    <FormName>MiscMail</FormName>
+    <ProviderFormNumber>SignAuditInfo</ProviderFormNumber>
+    <Attachment>
+        <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+        <AttachmentType tc="5">Form</AttachmentType>
+        <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+            <AttachmentExtension>
+                <FileName>SignAuditInfo.pdf</FileName>
+                <ReqCode tc="1000990237">Audit Report</ReqCode>
+            </AttachmentExtension>
+        </OLifEExtension>
+    </Attachment>
+</FormInstance>
+</OLifE>
+      </TXLifeRequest>
+    </TXLife>
+  </txLife>
+  <imageInfo>
+    <imageGUID>ICC18-NB-133-NB.pdf</imageGUID>
+    <image>iVBORw0KGgoAAAANSUhEUgAAAAgAAAACCAYAAABllJ3tAAAABHNCSVQICAgIfAhkiAAAABl0RVh0U29mdHdhcmUAZ25vbWUtc2NyZWVuc2hvdO8Dvz4AAAAtdEVYdENyZWF0aW9uIFRpbWUAVHVlc2RheSAwMiBNYXkgMjAyMyAwODo0Mzo0OSBBTRSVUWYAAAAXSURBVAiZY5STk/vPgAcw4ZNkYGBgAABVCAFdCP5OqQAAAABJRU5ErkJggg==</image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>ICC18-LTC-132.pdf</imageGUID>
+    <image>iVBORw0KGgoAAAANSUhEUgAAAAgAAAACCAYAAABllJ3tAAAABHNCSVQICAgIfAhkiAAAABl0RVh0U29mdHdhcmUAZ25vbWUtc2NyZWVuc2hvdO8Dvz4AAAAtdEVYdENyZWF0aW9uIFRpbWUAVHVlc2RheSAwMiBNYXkgMjAyMyAwODo0Mzo0OSBBTRSVUWYAAAAXSURBVAiZY5STk/vPgAcw4ZNkYGBgAABVCAFdCP5OqQAAAABJRU5ErkJggg==</image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>EAUTH-16-ALNE.pdf</imageGUID>
+    <image>iVBORw0KGgoAAAANSUhEUgAAAAgAAAACCAYAAABllJ3tAAAABHNCSVQICAgIfAhkiAAAABl0RVh0U29mdHdhcmUAZ25vbWUtc2NyZWVuc2hvdO8Dvz4AAAAtdEVYdENyZWF0aW9uIFRpbWUAVHVlc2RheSAwMiBNYXkgMjAyMyAwODo0Mzo0OSBBTRSVUWYAAAAXSURBVAiZY5STk/vPgAcw4ZNkYGBgAABVCAFdCP5OqQAAAABJRU5ErkJggg==</image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>EPAUTH-05-ALNE-B.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>INSRELTOAGT-ALNE-DXC.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>INDALLOC-DXC.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>ICC21-ACCLTC-PW.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>E-DCINFO-B.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>LTC-APPVERIF.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>EPID-138-18.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>Illustration.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>ECON-123-20.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>Hipaa_SignAuditInfo.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>SignAuditInfo.pdf</imageGUID>
+    <image></image>
+  </imageInfo></input>
+</request>

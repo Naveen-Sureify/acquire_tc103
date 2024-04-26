@@ -1,0 +1,1214 @@
+{
+  "TXLife": {
+    "-xmlns": "http://ACORD.org/Standards/Life/2",
+    "-xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "-Version": "2.35.00",
+    "-xsi:schemaLocation": "http://ACORD.org/Standards/Life/2 file://Users/shainlafazan/repositories/sureifylabs/acquire/packages/xml/TXLife2.35.00.xsd",
+    "UserAuthRequest": {
+      "UserLoginName": "Life Co",
+      "UserPswd": {
+        "CryptType": "NONE",
+        "Pswd": "fe539c2zhCH3Mzka"
+      },
+      "VendorApp": {
+        "VendorName": {
+          "-VendorCode": "220",
+          "#text": "iPipeline"
+        },
+        "AppName": "iGo Forms"
+      }
+    },
+    "TXLifeRequest": {
+      "-PrimaryObjectID": "Application_Holding_1",
+      "TransRefGUID": "0a1dd588-17e7-4594-b82a-f1e0a764e56b",
+      "TransType": {
+        "-tc": "103",
+        "#text": "New Business Submission"
+      },
+      "TransExeDate": "2022-04-19",
+      "TransExeTime": "07:31:33",
+      "TransMode": {
+        "-tc": "2",
+        "#text": "Original"
+      },
+      "OLifE": {
+        "-Version": "2.31.00",
+        "Grouping": {
+          "Household": {
+            "HouseholdKey": "121212"
+          }
+        },
+        "SourceInfo": {
+          "CreationDate": "2022-04-19",
+          "CreationTime": "07:31:33",
+          "SourceInfoName": "iPipeline"
+        },
+        "Holding": {
+          "-id": "Application_Holding_1",
+          "HoldingSysKey": [
+            {
+              "-SystemCode": "SalesforceOrgID",
+              "-VendorCode": "003",
+              "#text": "00D3D0000004cmrUAA"
+            },
+            {
+              "-SystemCode": "SalesforceOpportunityID",
+              "-VendorCode": "003",
+              "#text": "006K000000InM6VIAV"
+            }
+          ],
+          "HoldingTypeCode": {
+            "-tc": "2",
+            "#text": "Policy"
+          },
+          "HoldingStatus": {
+            "-tc": "3",
+            "#text": "Proposed"
+          },
+          "Policy": {
+            "PolNumber": "1000018141",
+            "LineOfBusiness": {
+              "-tc": "1",
+              "#text": "Life"
+            },
+            "ProductType": {
+              "-tc": "2",
+              "#text": "Term Life"
+            },
+            "ProductCode": "316",
+            "CarrierCode": "AMI",
+            "PlanName": "Level Term 2020",
+            "PolicyStatus": {
+              "-tc": "8",
+              "#text": "Pending Issue (application accepted to process)"
+            },
+            "IssueNation": {
+              "-tc": "1",
+              "#text": "United States of America"
+            },
+            "Jurisdiction": {
+              "-tc": "2",
+              "#text": "Alaska"
+            },
+            "EffDate": "2022-04-19",
+            "PaymentMode": {
+              "-tc": "4",
+              "#text": "Monthly (electronic billing only)"
+            },
+            "PaymentAmt": "17.40",
+            "PaymentMethod": {
+              "-tc": "9",
+              "#text": "Credit Card"
+            },
+            "Life": {
+              "InitialPremAmt": "17.40",
+              "FaceAmt": "100000",
+              "Coverage": [
+                {
+                  "-id": "Base_Coverage",
+                  "PlanName": "Level Term 2020",
+                  "ProductCode": "316",
+                  "IndicatorCode": {
+                    "-tc": "1",
+                    "#text": "Base"
+                  },
+                  "DurationDesign": "15",
+                  "CurrentAmt": "100000",
+                  "InitCovAmt": "100000",
+                  "LifeParticipant": [
+                    {
+                      "-PartyID": "InsuredParty_1",
+                      "-id": "PrimaryInsured_Life_Participant",
+                      "ParticipantName": "DAVIDPI N JOSMOREPI Jr.",
+                      "LifeParticipantRoleCode": {
+                        "-tc": "1",
+                        "#text": "Primary Insured"
+                      },
+                      "PermTableRating": {
+                        "-tc": "7",
+                        "#text": "D"
+                      },
+                      "UnderwritingClass": {
+                        "-tc": "2",
+                        "#text": "Preferred"
+                      }
+                    },
+                    {
+                      "-PartyID": "InsuredParty_1",
+                      "-id": "Owner_Life_Participant",
+                      "ParticipantName": "DAVIDPI N JOSMOREPI Jr.",
+                      "LifeParticipantRoleCode": {
+                        "-tc": "18",
+                        "#text": "Owner"
+                      }
+                    },
+                    {
+                      "-PartyID": "Party_Beneficiary_1",
+                      "-id": "PrimBene_Life_Participant_1",
+                      "LifeParticipantRoleCode": {
+                        "-tc": "7",
+                        "#text": "Beneficiary - Primary"
+                      },
+                      "BeneficiaryPercentDistribution": "100",
+                      "DistributionOption": {
+                        "-tc": "2",
+                        "#text": "Percent"
+                      },
+                      "BeneficiaryDesignation": {
+                        "-tc": "3",
+                        "#text": "Parent"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "-id": "Terminal Illness Rider",
+                  "PlanName": "Terminal Illness Rider",
+                  "ProductCode": "TermIll",
+                  "IndicatorCode": {
+                    "-tc": "2",
+                    "#text": "Rider"
+                  },
+                  "CurrentAmt": {}
+                }
+              ]
+            },
+            "ApplicationInfo": {
+              "HOAssignedAppNumber": "0a1dd588-17e7-4594-b82a-f1e0a764e56b",
+              "TrackingID": "980659bb417a001dac11000713c7f409",
+              "ApplicationType": {
+                "-tc": "1",
+                "#text": "New Application"
+              },
+              "BackDateType": {
+                "-tc": "2",
+                "#text": "No backdating"
+              },
+              "ReqPolicyDeliveryMethod": {
+                "-tc": "3",
+                "#text": "Via E-Mail"
+              },
+              "SignatureInfo": [
+                {
+                  "-SignaturePartyID": "InsuredParty_1",
+                  "-id": "PI_Signature",
+                  "SignatureRoleCode": {
+                    "-tc": "1",
+                    "#text": "Primary Insured"
+                  },
+                  "SignatureDate": "2022-04-19",
+                  "SignatureCity": "alabama",
+                  "SignatureState": {
+                    "-tc": "1",
+                    "#text": "Alabama"
+                  },
+                  "SubmissionType": {
+                    "-tc": "2",
+                    "#text": "Electronic"
+                  }
+                },
+                {
+                  "-SignaturePartyID": "Party_Agent_1",
+                  "-id": "Agent_Signature",
+                  "SignatureRoleCode": {
+                    "-tc": "15",
+                    "#text": "Primary Agent"
+                  },
+                  "SubmissionType": {
+                    "-tc": "2",
+                    "#text": "Electronic"
+                  },
+                  "SignatureText": "SIG_X_AGENT",
+                  "ElectronicAuthenticationType": {
+                    "-tc": "1",
+                    "#text": "ClickWrap"
+                  }
+                }
+              ],
+              "OLifEExtension": {
+                "-VendorCode": "220",
+                "AgeAndAmount": "100000",
+                "OrderType": {
+                  "-tc": "1",
+                  "#text": "Regular Order"
+                },
+                "PensionersMonthly": {
+                  "AutomaticPremiumPayment": {
+                    "-tc": "2",
+                    "#text": "No"
+                  }
+                },
+                "AutomaticPremiumPayment": {
+                  "AutomaticPremiumPayment": {
+                    "-tc": "2",
+                    "#text": "No"
+                  }
+                },
+                "NameID": "Amica Sureify",
+                "EmployeeInd": {
+                  "-tc": "2",
+                  "#text": "NO"
+                },
+                "AdditionalInfo_ConcurrentApplicationYesNo": "No",
+                "PIMED_VERIFY_ChangedYesNo": "No",
+                "StartedInDTC": "No"
+              }
+            }
+          },
+          "Arrangement": {
+            "ProductCode": "Recurring Premiums",
+            "ArrMode": {
+              "-tc": "4",
+              "#text": "OLI_PAYMODE_MNTHLY"
+            },
+            "ArrType": {
+              "-tc": "39",
+              "#text": "OLI_ARRTYPE_SUBSQNTPREMS"
+            },
+            "ModalAmt": "17.40",
+            "PaymentMethod": {
+              "-tc": "9",
+              "#text": "OLI_PAYMETH_CREDCARD"
+            }
+          }
+        },
+        "Party": [
+          {
+            "-id": "Party_Carrier",
+            "PartyTypeCode": {
+              "-tc": "2",
+              "#text": "Organization"
+            },
+            "FullName": "Amica Life Insurance Company"
+          },
+          {
+            "-id": "InsuredParty_1",
+            "PartyTypeCode": {
+              "-tc": "1",
+              "#text": "Person"
+            },
+            "PartySysKey": "31197078",
+            "GovtID": "773909206",
+            "GovtIDTC": {
+              "-tc": "1",
+              "#text": "SSN"
+            },
+            "Person": {
+              "FirstName": "DAVIDPI",
+              "MiddleName": "N",
+              "LastName": "JOSMOREPI",
+              "Suffix": "Jr.",
+              "Gender": {
+                "-tc": "1",
+                "#text": "Male"
+              },
+              "BirthDate": "2001-01-01",
+              "Age": "21",
+              "Citizenship": {
+                "-tc": "1",
+                "#text": "USA"
+              },
+              "Height2": {
+                "MeasureUnits": {
+                  "-tc": "2",
+                  "#text": "US System Standard"
+                },
+                "MeasureValue": "65"
+              },
+              "Weight2": {
+                "MeasureUnits": {
+                  "-tc": "2",
+                  "#text": "US System Standard"
+                },
+                "MeasureValue": "250"
+              },
+              "DriversLicenseNum": "PAL76512344",
+              "NoDriversLicenseInd": {
+                "-tc": "0",
+                "#text": "False"
+              },
+              "DriversLicenseState": {
+                "-tc": "1",
+                "#text": "Alabama"
+              },
+              "BirthCountry": {
+                "-tc": "1",
+                "#text": "United States of America"
+              },
+              "BirthJurisdictionTC": {
+                "-tc": "1",
+                "#text": "Alabama"
+              },
+              "ImmigrationStatus": {
+                "-tc": "8",
+                "#text": "Citizen"
+              }
+            },
+            "Address": {
+              "AddressTypeCode": {
+                "-tc": "1",
+                "#text": "Residence"
+              },
+              "Line1": "1100 Lincoln Avenue",
+              "Line2": "Santa maria",
+              "City": "San Jose",
+              "AddressState": "Alaska",
+              "Zip": "59981"
+            },
+            "Phone": {
+              "PhoneTypeCode": {
+                "-tc": "26",
+                "#text": "Primary Phone"
+              },
+              "AreaCode": "734",
+              "DialNumber": "7110030"
+            },
+            "EMailAddress": {
+              "AddrLine": "mohanarao.sanapala@sureify.com"
+            },
+            "Employment": {
+              "OccupClass": {
+                "-tc": "1",
+                "#text": "Employed"
+              }
+            }
+          },
+          {
+            "-id": "EmployerParty_1",
+            "PartyTypeCode": {
+              "-tc": "2",
+              "#text": "Employer"
+            },
+            "FullName": "abc"
+          },
+          {
+            "-id": "Party_Beneficiary_1",
+            "PartyTypeCode": {
+              "-tc": "1",
+              "#text": "Individual"
+            },
+            "GovtIDTC": {
+              "-tc": "1",
+              "#text": "SSN"
+            },
+            "Person": {
+              "FirstName": "m",
+              "LastName": "m",
+              "BirthDate": {}
+            },
+            "Address": {
+              "AddressTypeCode": {
+                "-tc": "1",
+                "#text": "Residence"
+              },
+              "AddressCountryTC": {
+                "-tc": "1",
+                "#text": "US"
+              }
+            },
+            "Phone": {
+              "PhoneTypeCode": {
+                "-tc": "1",
+                "#text": "Home"
+              }
+            }
+          },
+          {
+            "-id": "Party_Agent_1",
+            "PartyTypeCode": {
+              "-tc": "1",
+              "#text": "Person"
+            },
+            "PartyKey": "A035732",
+            "FullName": "DAVID Agent",
+            "ResidenceState": {
+              "-tc": "5",
+              "#text": "AR"
+            },
+            "Person": {
+              "FirstName": "DAVID",
+              "LastName": "Agent"
+            },
+            "Address": {
+              "AddressTypeCode": {
+                "-tc": "2",
+                "#text": "Business"
+              },
+              "Line1": "123 Main St",
+              "City": "Tampa",
+              "AddressState": "AR",
+              "AddressStateTC": {
+                "-tc": "5",
+                "#text": "AR"
+              },
+              "Zip": "95125",
+              "AddressCountryTC": {
+                "-tc": "1",
+                "#text": "US"
+              }
+            },
+            "Phone": {
+              "PhoneTypeCode": {
+                "-tc": "2",
+                "#text": "Business"
+              },
+              "AreaCode": "999",
+              "DialNumber": "9999999",
+              "Ext": "916234"
+            },
+            "Producer": {
+              "CarrierAppointment": {
+                "CompanyProducerID": "A035732"
+              },
+              "OLifEExtension": {
+                "-VendorCode": "220",
+                "UserName": "A035732AMI7424"
+              }
+            },
+            "EMailAddress": {
+              "AddrLine": "mohanarao.sanapala@sureify.com",
+              "PrefEMailAddr": {
+                "-tc": "1",
+                "#text": "True"
+              }
+            }
+          }
+        ],
+        "Relation": [
+          {
+            "-OriginatingObjectID": "Application_Holding_1",
+            "-RelatedObjectID": "InsuredParty_1",
+            "-id": "Relation_InsuredParty",
+            "OriginatingObjectType": {
+              "-tc": "4",
+              "#text": "Holding"
+            },
+            "RelatedObjectType": {
+              "-tc": "6",
+              "#text": "Party"
+            },
+            "RelationRoleCode": {
+              "-tc": "32",
+              "#text": "Primary Insured"
+            }
+          },
+          {
+            "-OriginatingObjectID": "Application_Holding_1",
+            "-RelatedObjectID": "Party_Agent_1",
+            "-id": "Holding_Agent_Relation",
+            "OriginatingObjectType": {
+              "-tc": "4",
+              "#text": "Holding"
+            },
+            "RelatedObjectType": {
+              "-tc": "6",
+              "#text": "Party"
+            },
+            "RelationRoleCode": {
+              "-tc": "11",
+              "#text": "Agent"
+            }
+          },
+          {
+            "-OriginatingObjectID": "InsuredParty_1",
+            "-RelatedObjectID": "EmployerParty_1",
+            "-id": "Relation_PartyEmployerInsured_1",
+            "OriginatingObjectType": {
+              "-tc": "6",
+              "#text": "Party"
+            },
+            "RelatedObjectType": {
+              "-tc": "6",
+              "#text": "Party"
+            },
+            "RelationRoleCode": {
+              "-tc": "7",
+              "#text": "Employer"
+            }
+          },
+          {
+            "-OriginatingObjectID": "Application_Holding_1",
+            "-RelatedObjectID": "InsuredParty_1",
+            "-id": "Holding_Owner_Relation_1",
+            "OriginatingObjectType": {
+              "-tc": "4",
+              "#text": "Holding"
+            },
+            "RelatedObjectType": {
+              "-tc": "6",
+              "#text": "Party"
+            },
+            "RelationRoleCode": {
+              "-tc": "8",
+              "#text": "Owner"
+            }
+          },
+          {
+            "#item": {
+              "FormInstance": {
+                "-id": "FormInstance_InsuredParty_1",
+                "FormResponse": [
+                  {
+                    "QuestionNumber": "PIPFI_EstIncomeAmt",
+                    "ResponseData": "C"
+                  },
+                  {
+                    "QuestionNumber": "PIEMP_EmployerName",
+                    "ResponseData": "abc"
+                  },
+                  {
+                    "QuestionNumber": "PIEMP_Industry",
+                    "ResponseData": "A"
+                  },
+                  {
+                    "QuestionNumber": "PIOcc_BC_None_Checked",
+                    "ResponseData": "Yes"
+                  },
+                  {
+                    "QuestionNumber": "PIFT_YesNo",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "AvocationQuestion",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "PIVIO_DUI_YesNo",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "PIVIO_MOVING_YesNo",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "PICRI_ParoleIncarcerated",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "PICRI_FelonyMisdemeanor",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "BankruptcyQuestion",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "PreviousAdverseDecision",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "PITobaccoInd",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "PINONMED_Q1_NUANY_TreatmentInd",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "PINONMED_Q1_NUMARIJUANA_YesNo",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "PINONMED_HeightIn",
+                    "ResponseData": "65"
+                  },
+                  {
+                    "QuestionNumber": "PINONMED_Weight",
+                    "ResponseData": "250"
+                  },
+                  {
+                    "QuestionNumber": "PINONMED_WeightChange",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "PIFH_DiedPriorAge60CAD",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "PIFH_Disease",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "PIOTHINS_IsApplying",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "PIOTHINS_HasExisting",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "PIOTHINS_HasReplaced",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "PIOTHINS_InforceIndAgent",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "PIOTHINS_ReplaceIndAgent",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "PIOTHINS_PayWithExiPolFundAgent",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "languageLineRequired",
+                    "ResponseData": "False"
+                  },
+                  {
+                    "QuestionNumber": "HasPrimaryPhysician",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "OnTreatment",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "ImpairmentHeart",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "ImpairmentLipids",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "ImpairmentEndocrine",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "ImpairmentRespiratory",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "ImpairmentBloodImmune",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "ImpairmentGI",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "ImpairmentMental",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "ImpairmentNeurological",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "ImpairmentCancer",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "ImpairmentUrological",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "ImpairmentGynecologicalBreast",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "ImpairmentMusculoskeletal",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "ImpairmentENT",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "HIVAIDS",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "DrugUse",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "AddictionTreatment",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "AdvisedByDoctor",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "OtherTreatment",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "PIAVIA_Selected",
+                    "ResponseData": "No"
+                  },
+                  {
+                    "QuestionNumber": "CurrentlyPregnant",
+                    "ResponseData": "No"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "-OriginatingObjectID": "Application_Holding_1",
+            "-RelatedObjectID": "Party_Beneficiary_1",
+            "-id": "Relation_Beneficiary_1",
+            "OriginatingObjectType": {
+              "-tc": "4",
+              "#text": "Holding"
+            },
+            "RelatedObjectType": {
+              "-tc": "6",
+              "#text": "Party"
+            },
+            "RelationRoleCode": {
+              "-tc": "34",
+              "#text": "Primary Beneficiary"
+            },
+            "InterestPercent": "100"
+          },
+          {
+            "-OriginatingObjectID": "InsuredParty_1",
+            "-RelatedObjectID": "Party_Beneficiary_1",
+            "-id": "Relation_InsuredBeneficiary_1",
+            "OriginatingObjectType": {
+              "-tc": "6",
+              "#text": "Party"
+            },
+            "RelatedObjectType": {
+              "-tc": "6",
+              "#text": "Party"
+            },
+            "RelationRoleCode": {
+              "-tc": "3",
+              "#text": "Parent"
+            },
+            "RelationDescription": {
+              "-tc": "0",
+              "#text": "Parent"
+            }
+          },
+          {
+            "#item": {
+              "FormInstance": {
+                "-id": "Form_ApplicationsMainApp-AK",
+                "OriginalInputMode": {
+                  "-tc": "1",
+                  "#text": "Input Electronically"
+                },
+                "FormInstanceCategory": "Applications",
+                "Attachment": {
+                  "-id": "Form_MainApp-AK",
+                  "AttachmentBasicType": {
+                    "-tc": "2",
+                    "#text": "Image"
+                  },
+                  "Description": "APPSIGNEDA",
+                  "AttachmentData": "\n                        hello world\n                    ",
+                  "AttachmentType": {
+                    "-tc": "1",
+                    "#text": "Application Documents"
+                  },
+                  "MimeTypeTC": {
+                    "-tc": "17",
+                    "#text": "application/pdf"
+                  },
+                  "TransferEncodingTypeTC": {
+                    "-tc": "4",
+                    "#text": "Base64"
+                  },
+                  "AttachmentLocation": {
+                    "-tc": "1",
+                    "#text": "Inline Data"
+                  },
+                  "SignatureInfo": {
+                    "SignatureOK": {
+                      "-tc": "1",
+                      "#text": "eSign"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "-OriginatingObjectID": "InsuredParty_1",
+            "-RelatedObjectID": "Form_AppDocsPrivacyNotice",
+            "-id": "Relation_Form_AppDocsPrivacyNotice_InsuredParty_1",
+            "OriginatingObjectType": {
+              "-tc": "6",
+              "#text": "Party"
+            },
+            "RelatedObjectType": {
+              "-tc": "389",
+              "#text": "Form Instance"
+            },
+            "RelationRoleCode": {
+              "-tc": "107",
+              "#text": "Form For"
+            }
+          },
+          {
+            "#item": {
+              "FormInstance": {
+                "-id": "Form_ConsentHIPAA",
+                "OriginalInputMode": {
+                  "-tc": "1",
+                  "#text": "Input Electronically"
+                },
+                "FormInstanceCategory": "Consent",
+                "Attachment": {
+                  "-id": "Form_HIPAA",
+                  "AttachmentBasicType": {
+                    "-tc": "2",
+                    "#text": "Image"
+                  },
+                  "Description": "HIPAA",
+                  "AttachmentData": "\n                        hello world\n                    ",
+                  "AttachmentType": {
+                    "-tc": "239",
+                    "#text": "HIPAA"
+                  },
+                  "MimeTypeTC": {
+                    "-tc": "17",
+                    "#text": "application/pdf"
+                  },
+                  "TransferEncodingTypeTC": {
+                    "-tc": "4",
+                    "#text": "Base64"
+                  },
+                  "AttachmentLocation": {
+                    "-tc": "1",
+                    "#text": "Inline Data"
+                  },
+                  "SignatureInfo": {
+                    "SignatureOK": {
+                      "-tc": "1",
+                      "#text": "eSign"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "-OriginatingObjectID": "InsuredParty_1",
+            "-RelatedObjectID": "Form_ConsentHIPAA",
+            "-id": "Relation_Form_ConsentHIPAA_InsuredParty_1",
+            "OriginatingObjectType": {
+              "-tc": "6",
+              "#text": "Party"
+            },
+            "RelatedObjectType": {
+              "-tc": "389",
+              "#text": "Form Instance"
+            },
+            "RelationRoleCode": {
+              "-tc": "107",
+              "#text": "Form For"
+            }
+          },
+          {
+            "#item": {
+              "FormInstance": {
+                "-id": "Form_AppDocsHowAppProcessed",
+                "OriginalInputMode": {
+                  "-tc": "1",
+                  "#text": "Input Electronically"
+                },
+                "FormInstanceCategory": "App Docs",
+                "Attachment": {
+                  "-id": "Form_HowAppProcessed",
+                  "AttachmentBasicType": {
+                    "-tc": "2",
+                    "#text": "Image"
+                  },
+                  "Description": "RIGHTS",
+                  "AttachmentData": "\n                        hello world\n                    ",
+                  "AttachmentType": {
+                    "-tc": "1",
+                    "#text": "Application Documents"
+                  },
+                  "MimeTypeTC": {
+                    "-tc": "17",
+                    "#text": "application/pdf"
+                  },
+                  "TransferEncodingTypeTC": {
+                    "-tc": "4",
+                    "#text": "Base64"
+                  },
+                  "AttachmentLocation": {
+                    "-tc": "1",
+                    "#text": "Inline Data"
+                  },
+                  "SignatureInfo": {
+                    "SignatureOK": {
+                      "-tc": "1",
+                      "#text": "eSign"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "-OriginatingObjectID": "InsuredParty_1",
+            "-RelatedObjectID": "Form_AppDocsHowAppProcessed",
+            "-id": "Relation_Form_AppDocsHowAppProcessed_InsuredParty_1",
+            "OriginatingObjectType": {
+              "-tc": "6",
+              "#text": "Party"
+            },
+            "RelatedObjectType": {
+              "-tc": "389",
+              "#text": "Form Instance"
+            },
+            "RelationRoleCode": {
+              "-tc": "107",
+              "#text": "Form For"
+            }
+          },
+          {
+            "#item": {
+              "FormInstance": {
+                "-id": "Form_AppDocsTerminalABR",
+                "OriginalInputMode": {
+                  "-tc": "1",
+                  "#text": "Input Electronically"
+                },
+                "FormInstanceCategory": "App Docs",
+                "Attachment": {
+                  "-id": "Form_TerminalABR",
+                  "AttachmentBasicType": {
+                    "-tc": "2",
+                    "#text": "Image"
+                  },
+                  "Description": "TERMIL",
+                  "AttachmentData": "\n                        hello world\n                    ",
+                  "AttachmentType": {
+                    "-tc": "1",
+                    "#text": "Application Documents"
+                  },
+                  "MimeTypeTC": {
+                    "-tc": "17",
+                    "#text": "application/pdf"
+                  },
+                  "TransferEncodingTypeTC": {
+                    "-tc": "4",
+                    "#text": "Base64"
+                  },
+                  "AttachmentLocation": {
+                    "-tc": "1",
+                    "#text": "Inline Data"
+                  },
+                  "SignatureInfo": {
+                    "SignatureOK": {
+                      "-tc": "1",
+                      "#text": "eSign"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "-OriginatingObjectID": "InsuredParty_1",
+            "-RelatedObjectID": "Form_AppDocsTerminalABR",
+            "-id": "Relation_Form_AppDocsTerminalABR_InsuredParty_1",
+            "OriginatingObjectType": {
+              "-tc": "6",
+              "#text": "Party"
+            },
+            "RelatedObjectType": {
+              "-tc": "389",
+              "#text": "Form Instance"
+            },
+            "RelationRoleCode": {
+              "-tc": "107",
+              "#text": "Form For"
+            }
+          },
+          {
+            "#item": {
+              "FormInstance": {
+                "-id": "Form_AppDocsReplacement-NAICDR",
+                "OriginalInputMode": {
+                  "-tc": "1",
+                  "#text": "Input Electronically"
+                },
+                "FormInstanceCategory": "App docs",
+                "Attachment": {
+                  "-id": "Form_Replacement-NAICDR",
+                  "AttachmentBasicType": {
+                    "-tc": "2",
+                    "#text": "Image"
+                  },
+                  "Description": "REPL",
+                  "AttachmentData": "\n                        hello world\n                    ",
+                  "AttachmentType": {
+                    "-tc": "10",
+                    "#text": "Application"
+                  },
+                  "MimeTypeTC": {
+                    "-tc": "17",
+                    "#text": "application/pdf"
+                  },
+                  "TransferEncodingTypeTC": {
+                    "-tc": "4",
+                    "#text": "Base64"
+                  },
+                  "AttachmentLocation": {
+                    "-tc": "1",
+                    "#text": "Inline Data"
+                  },
+                  "SignatureInfo": {
+                    "SignatureOK": {
+                      "-tc": "1",
+                      "#text": "eSign"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "-OriginatingObjectID": "InsuredParty_1",
+            "-RelatedObjectID": "Form_AppDocsReplacement-NAICDR",
+            "-id": "Relation_Form_AppDocsReplacement-NAICDR_InsuredParty_1",
+            "OriginatingObjectType": {
+              "-tc": "6",
+              "#text": "Party"
+            },
+            "RelatedObjectType": {
+              "-tc": "389",
+              "#text": "Form Instance"
+            },
+            "RelationRoleCode": {
+              "-tc": "107",
+              "#text": "Form For"
+            }
+          },
+          {
+            "#item": {
+              "FormInstance": {
+                "-id": "Form_AppDocsSecAddr-AK",
+                "OriginalInputMode": {
+                  "-tc": "1",
+                  "#text": "Input Electronically"
+                },
+                "FormInstanceCategory": "App docs",
+                "Attachment": {
+                  "-id": "Form_SecAddr-AK",
+                  "AttachmentBasicType": {
+                    "-tc": "2",
+                    "#text": "Image"
+                  },
+                  "Description": "SECDADD",
+                  "AttachmentData": "\n                        hello world\n                    ",
+                  "AttachmentType": {
+                    "-tc": "10",
+                    "#text": "Application"
+                  },
+                  "MimeTypeTC": {
+                    "-tc": "17",
+                    "#text": "application/pdf"
+                  },
+                  "TransferEncodingTypeTC": {
+                    "-tc": "4",
+                    "#text": "Base64"
+                  },
+                  "AttachmentLocation": {
+                    "-tc": "1",
+                    "#text": "Inline Data"
+                  },
+                  "SignatureInfo": {
+                    "SignatureOK": {
+                      "-tc": "1",
+                      "#text": "eSign"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "-OriginatingObjectID": "InsuredParty_1",
+            "-RelatedObjectID": "Form_AppDocsSecAddr-AK",
+            "-id": "Relation_Form_AppDocsSecAddr-AK_InsuredParty_1",
+            "OriginatingObjectType": {
+              "-tc": "6",
+              "#text": "Party"
+            },
+            "RelatedObjectType": {
+              "-tc": "389",
+              "#text": "Form Instance"
+            },
+            "RelationRoleCode": {
+              "-tc": "107",
+              "#text": "Form For"
+            }
+          },
+          {
+            "#item": {
+              "FormInstance": {
+                "-id": "Form_ApplicationsMainAppB-AK",
+                "OriginalInputMode": {
+                  "-tc": "1",
+                  "#text": "Input Electronically"
+                },
+                "FormInstanceCategory": "App docs",
+                "Attachment": {
+                  "-id": "Form_MainAppB-AK",
+                  "AttachmentBasicType": {
+                    "-tc": "2",
+                    "#text": "Image"
+                  },
+                  "Description": "APPSIGNEDB",
+                  "AttachmentData": "\n                        hello world\n                    ",
+                  "AttachmentType": {
+                    "-tc": "10",
+                    "#text": "Application"
+                  },
+                  "MimeTypeTC": {
+                    "-tc": "17",
+                    "#text": "application/pdf"
+                  },
+                  "TransferEncodingTypeTC": {
+                    "-tc": "4",
+                    "#text": "Base64"
+                  },
+                  "AttachmentLocation": {
+                    "-tc": "1",
+                    "#text": "Inline Data"
+                  },
+                  "SignatureInfo": {
+                    "SignatureOK": {
+                      "-tc": "1",
+                      "#text": "Voice Signature"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "-OriginatingObjectID": "InsuredParty_1",
+            "-RelatedObjectID": "Form_ApplicationsMainAppB-AK",
+            "-id": "Relation_Form_ApplicationsMainAppB-AK_InsuredParty_1",
+            "OriginatingObjectType": {
+              "-tc": "6",
+              "#text": "Party"
+            },
+            "RelatedObjectType": {
+              "-tc": "389",
+              "#text": "Form Instance"
+            },
+            "RelationRoleCode": {
+              "-tc": "107",
+              "#text": "Form For"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

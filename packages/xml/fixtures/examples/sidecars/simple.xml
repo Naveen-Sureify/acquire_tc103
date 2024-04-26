@@ -1,0 +1,7 @@
+<Simple>
+  <!-- Simple Example -->
+  <Name tc="101">
+    <SpecificNode id="SpecificNodeId">SpecificNodeValue</SpecificNode>
+    Tyrion Lannister
+  </Name>
+</Simple>

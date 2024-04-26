@@ -1,0 +1,41 @@
+[
+  ["value", "key", "tc", "definition"],
+  [
+    "Both internal and intra-statutory",
+    "OLI_REPTY_BOTH",
+    "11",
+    "In the case of multiple policies involved in an exchange or replacment  the previous policies were from both the same statutory company as the new policy and a different statutory company from the new policy"
+  ],
+  ["External Replacement", "OLI_REPTY_EXTERNAL", "3", ""],
+  ["Finance Purchase", "OLI_REPTY_FINPURCH", "5", ""],
+  [
+    "Group Conversion",
+    "OLI_REPLACE_GROUPCONV",
+    "8",
+    "The replacement came from a group conversion."
+  ],
+  ["Guaranteed Purchase option", "OLI_REPLACE_GPO", "7", ""],
+  [
+    "Internal",
+    "OLI_REPTY_SAMECO",
+    "9",
+    "The previous policy was issued by the same statutory company"
+  ],
+  ["Internal replacement", "OLI_REPTY_INTERNAL", "2", ""],
+  [
+    "Intra-statutory",
+    "OLI_REPTY_DIFFCO",
+    "10",
+    "The previous policy was issued between statutory companies"
+  ],
+  ["None", "OLI_REPTY_NONE", "1", ""],
+  ["Other", "OLI_OTHER", "2147483647", ""],
+  [
+    "Replacing both an internal and an external policy",
+    "OLI_REPTY_BOTHINTEXT",
+    "4",
+    ""
+  ],
+  ["Term Conversion", "OLI_REPTY_TERMCONV", "6", ""],
+  ["Unknown", "OLI_UNKNOWN", "0", ""]
+]

@@ -1,0 +1,27 @@
+[
+  ["value", "key", "tc"],
+  [
+    "Cancel request already made. Delete the transaction before processing it",
+    "OLI_TRANS_MODE_CANCEL",
+    "6"
+  ],
+  [
+    "Full replacement to request already made. Process This transaction rather than the one originally sent.",
+    "OLI_TRANS_MODE_REPLACE",
+    "4"
+  ],
+  ["Original", "OLI_TRANS_MODE_ORIGINAL", "2"],
+  ["Reversal", "OLI_TRANS_MODE_REVERSAL", "8"],
+  [
+    "should be marked as duplicate. Used if sender thought the transaction was lost.",
+    "OLI_TRANS_MODE_DUPLICATE",
+    "7"
+  ],
+  ["Subsequent Response", "OLI_TRANS_MODE_SUBRESPONSE", "10"],
+  [
+    "Trial request (e.g. Trial application) Results are not saved by receiver",
+    "OLI_TRANS_MODE_TRIAL",
+    "1"
+  ],
+  ["Update to request already made", "OLI_TRANS_MODE_UPDATE", "5"]
+]

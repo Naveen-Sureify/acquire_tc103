@@ -1,0 +1,9 @@
+value,key,tc,definition
+Base,OLI_COVIND_BASE,1,
+Base Increase,OLI_COVIND_BASEINCR,3,
+Integrated Rider,OLI_COVIND_INTEGRATED,4,
+Other,OLI_OTHER,2147483647,
+Rider,OLI_COVIND_RIDER,2,
+Rider Increase,OLI_COVIND_RIDERINCR,5,
+Temporary Coverage,OLI_COVIND_TEMPORARY,6,
+Unknown,OLI_UNKNOWN,0,

@@ -1,0 +1,13 @@
+<Investment>
+    <SubAccount id="SubAccount_<%= ras.extract('BH_ProductCode4') %>">
+    <ProductCode>
+      <%= ras.extract('BH_ProductCode4') %>
+    </ProductCode>
+    <ProductFullName>
+      <%- ras.extractAnswerByKey('BH_SandPIndex','question_text') %>
+    </ProductFullName>
+    <AllocPercent>
+      <%= ras.extract('BH_SandPIndex') %>
+    </AllocPercent>
+  </SubAccount>
+</Investment>

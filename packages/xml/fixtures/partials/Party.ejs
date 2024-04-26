@@ -1,0 +1,60 @@
+<Party id="Party_PINS">
+  <%= await lookups.lookup('PARTY', { value: Party.PartyTypeCode }).value %>
+  <%_ if (Party.GovtID) { _%>
+  <GovtID>
+    <%= Party.GovtID?.replace(/-/g, '') _%>
+  </GovtID>
+  <%_ } _%>
+  <GovtIDTC tc="1">Social Security Number US</GovtIDTC>
+  <EstNetWorth><%= Party.EstNetWorth?.replace(/,/g, '') %></EstNetWorth>
+  <Person>
+    <FirstName>DAVID</FirstName>
+    <MiddleName>JOHN</MiddleName>
+    <LastName>JOSMORE</LastName>
+    <MarStat tc="1">Married</MarStat>
+    <Gender tc="1">Male</Gender>
+    <BirthDate>1983-02-03</BirthDate>
+    <Age>40</Age>
+    <Citizenship tc="1">United States of America</Citizenship>
+    <EstSalary>354345</EstSalary>
+    <BirthCountry tc="1">United States of America</BirthCountry>
+    <BirthJurisdictionTC tc="1">Alabama</BirthJurisdictionTC>
+    <OLifEExtension ExtensionCode="Person 2.8.90" VendorCode="05">
+      <PersonExtension>
+        <RateClassAppliedFor>1</RateClassAppliedFor>
+        <PermCountry tc="1">United States of America</PermCountry>
+        <ValidDLInd tc="0">FALSE</ValidDLInd>
+      </PersonExtension>
+    </OLifEExtension>
+  </Person>
+  <Address id="Address_PINS">
+    <AddressTypeCode tc="1">Home</AddressTypeCode>
+    <Line1>SAN JOSE</Line1>
+    <Line2>SAN JOSE</Line2>
+    <City>SAN JOSE</City>
+    <AddressStateTC tc="1">Alabama</AddressStateTC>
+    <Zip>91822</Zip>
+    <OLifEExtension ExtensionCode="Address 2.8.90" VendorCode="05">
+      <AddressExtension>
+        <ZipCodeTC tc="1">United State Postal Code</ZipCodeTC>
+      </AddressExtension>
+    </OLifEExtension>
+  </Address>
+  <Phone id="Phone1_PINS">
+    <PhoneTypeCode tc="1">Home</PhoneTypeCode>
+    <AreaCode>444</AreaCode>
+    <DialNumber>3434344</DialNumber>
+  </Phone>
+  <EMailAddress id="EMailAddress1_PINS">
+    <EMailType tc="2">Personal</EMailType>
+    <AddrLine>saikaushik.chivukula@sureify.com</AddrLine>
+  </EMailAddress>
+  <EMailAddress id="EMailAddress2_PINS">
+    <EMailType tc="1000500001">eDelivery Contract Print</EMailType>
+    <AddrLine>saikaushik.chivukula@sureify.com</AddrLine>
+  </EMailAddress>
+  <Risk>
+    <ExistingInsuranceInd tc="0">FALSE</ExistingInsuranceInd>
+    <TobaccoInd tc="0">FALSE</TobaccoInd>
+  </Risk>
+</Party>

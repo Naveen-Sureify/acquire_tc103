@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<request>
+  <input>
+  <txLife>
+    <TXLife xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="2.20.00" xsi:noNamespaceSchemaLocation="nbA2.8.90.xsd">
+      <UserAuthRequest>
+        <UserLoginName>TXADMIN</UserLoginName>
+        <UserPswd>
+          <CryptType>NONE</CryptType>
+          <Pswd>SYSADMIN</Pswd>
+        </UserPswd>
+      </UserAuthRequest>
+      <TXLifeRequest PrimaryObjectID="Holding_1">
+        <TransRefGUID>ARGAVNLX-5LL0-UCMO-A3OK-9EPRS3Z7YWPR</TransRefGUID>
+        <TransType tc="103">New Business Submission</TransType>
+        <TransExeDate>2023-02-03</TransExeDate>
+        <TransExeTime>07:50:42</TransExeTime>
+        <TransMode tc="2">Original</TransMode>
+        <OLifE Version="2.8.90">
+          <SourceInfo>
+            <CreationDate>2023-02-03</CreationDate>
+            <SourceInfoName>Sureify</SourceInfoName>
+          </SourceInfo>
+          <Holding id="Holding_1">
+            <HoldingTypeCode tc="2">Policy</HoldingTypeCode>
+            <Policy>
+              <PolNumber>22305224BI</PolNumber>
+              <LineOfBusiness tc="1">Life</LineOfBusiness>
+              <ProductType tc="5">Indexed Universal Life</ProductType>
+              <ProductCode>IUL001</ProductCode>
+              <CarrierCode>BHF</CarrierCode>
+              <ReplacementType tc="1">Not Replacement</ReplacementType>
+              <PaymentMode tc="9">Single Premium</PaymentMode>
+              <PaymentAmt>2341344</PaymentAmt>
+              <PaymentMethod tc="1">No Bill-Single Premium</PaymentMethod>
+              <Life>
+                <QualPlanType tc="1">NonQualified</QualPlanType>
+                <InitialPremAmt>2341344</InitialPremAmt>
+                <Coverage id="Coverage_1">
+                  <ProductCode>IUL001</ProductCode>
+                  <ProductVersionCode>SC21</ProductVersionCode>
+                  <LifeCovStatus tc="1">Active</LifeCovStatus>
+                  <TobaccoPremiumBasis tc="1">Non Smoker</TobaccoPremiumBasis>
+                  <IndicatorCode tc="1">Base</IndicatorCode>
+                  <LivesType tc="1">Single Life</LivesType>
+                  <DeathBenefitOptType tc="1">Level</DeathBenefitOptType>
+                  <CurrentAmt>123456</CurrentAmt>
+                  <CovOption id="CovOption_1">
+                    <ProductCode>LTC211</ProductCode>
+                    <LifeCovOptTypeCode tc="1009900009">Long-Term Care Acceleration of Death Benefit Rider</LifeCovOptTypeCode>
+                    <OLifEExtension VendorCode="05" ExtensionCode="CovOption 2.8.90">
+                      <CovOptionExtension>
+                        <Duration>24</Duration>
+                      </CovOptionExtension>
+                    </OLifEExtension>
+                  </CovOption>
+                  <CovOption id="CovOption_2">
+                    <ProductCode>EOB213</ProductCode>
+                    <LifeCovOptTypeCode tc="1009900008">Extension of Benefits for Long-Term Care with Indexed Coverage Rider</LifeCovOptTypeCode>
+                    <OLifEExtension VendorCode="05" ExtensionCode="CovOption 2.8.90">
+                      <CovOptionExtension>
+                        <Duration>24</Duration>
+                      </CovOptionExtension>
+                    </OLifEExtension>
+                  </CovOption>
+                  <LifeParticipant id="LifeParticipant_1" PartyID="Party_PINS">
+                    <LifeParticipantRoleCode tc="1">Primary Insured</LifeParticipantRoleCode>
+                    <OLifEExtension VendorCode="05" ExtensionCode="LifeParticipant 2.8.90">
+                      <LifeParticipantExtension>
+                        <ProposedTobaccoPremiumBasis tc="1">Non Smoker</ProposedTobaccoPremiumBasis>
+                      </LifeParticipantExtension>
+                    </OLifEExtension>
+                  </LifeParticipant>
+                </Coverage>
+                <LifeUSA>
+                  <DefLifeInsMethod tc="5">DEFRA Cash Value Accumlation Test</DefLifeInsMethod>
+                  <Internal1035 tc="0">False</Internal1035>
+                </LifeUSA>
+              </Life>
+              <ApplicationInfo>
+                <ApplicationType tc="1">New Application</ApplicationType>
+                <ApplicationJurisdiction tc="1">Alabama</ApplicationJurisdiction>
+                <FormalAppInd tc="1">True</FormalAppInd>
+                <SignedDate>2023-02-03</SignedDate>
+                <SubmissionDate>2023-02-03</SubmissionDate>
+                <SubmissionTime>07:50:42</SubmissionTime>
+                <SubmissionType tc="2">Electronic</SubmissionType>
+                <AppProposedInsuredSignatureOK tc="1">TRUE</AppProposedInsuredSignatureOK>
+                <AppOwnerSignatureOK tc="1">TRUE</AppOwnerSignatureOK>
+                <AppWritingAgentSignatureOK tc="1">TRUE</AppWritingAgentSignatureOK>
+                <ReplacementInd tc="0"> False </ReplacementInd>
+                <SignatureInfo id="SignatureInfo_1">
+                  <SignatureRoleCode tc="18">Owner</SignatureRoleCode>
+                  <SignatureDate>2023-02-03</SignatureDate>
+                  <SignatureCity>SAN JOSE</SignatureCity>
+                  <SignatureState tc="1">Alabama</SignatureState>
+                </SignatureInfo>
+                <OLifEExtension ExtensionCode="ApplicationInfo 2.8.90" VendorCode="05">
+                  <ApplicationInfoExtension>
+                    <ProducerOtherInsDisclosureInd tc="0">FALSE</ProducerOtherInsDisclosureInd>
+                    <AppCompUSInd tc="1">True</AppCompUSInd>
+                    <CoveredByMedicaidInd tc="0">False</CoveredByMedicaidInd>
+                    <InitPremWireInd tc="1">True</InitPremWireInd>
+                    <IRSNoticeInd tc="0">FALSE</IRSNoticeInd>
+                    <LTCInforceInd tc="0">FALSE</LTCInforceInd>
+                    <LTCInforce12MonthsInd tc="0">FALSE</LTCInforce12MonthsInd>
+                    <LTCReplaceInd tc="0">FALSE</LTCReplaceInd>
+                    <NIGOInd tc="0">FALSE</NIGOInd>
+                    <OffPaymtForPolicyInd tc="0">FALSE</OffPaymtForPolicyInd>
+                    <OwnOffPaymtForPolicyInd tc="0">FALSE</OwnOffPaymtForPolicyInd>
+                    <OwnPendingInsInd tc="0">False</OwnPendingInsInd>
+                    <OwnSameAsInsuredInd tc="1">TRUE</OwnSameAsInsuredInd>
+                    <OwnSoldTransLifePolicyInd tc="0">FALSE</OwnSoldTransLifePolicyInd>
+                    <OwnSolicitedToSellInd tc="0">FALSE</OwnSolicitedToSellInd>
+                    <ProducerAppropSaleMatInd tc="1">TRUE</ProducerAppropSaleMatInd>
+                    <ProducerSeeAllPersonsInd tc="1">TRUE</ProducerSeeAllPersonsInd>
+                    <ProducerTIAReceipt tc="1">Yes</ProducerTIAReceipt>
+                    <SmokingInd tc="0">FALSE</SmokingInd>
+                    <SoldTransLifePolicyInd tc="0">FALSE</SoldTransLifePolicyInd>
+                    <SolicitedToSellInd tc="0">FALSE</SolicitedToSellInd>
+                    <ChooseNotToCompleteInd tc="0">False</ChooseNotToCompleteInd>
+                    <FinRepAdvisementInd tc="1">True</FinRepAdvisementInd>
+                    <DistChan tc="10">LTCPG</DistChan>
+                    <UnderwritingDecisionMRAS tc="1009900001">Refer to UW</UnderwritingDecisionMRAS>
+                  </ApplicationInfoExtension>
+                </OLifEExtension>
+              </ApplicationInfo>
+              <OLifEExtension ExtensionCode="Policy 2.8.90" VendorCode="05">
+                <PolicyExtension>
+                  <StatutoryCompanyCode>105</StatutoryCompanyCode>
+                  <QuotedPremiumBasisAmt>2341344</QuotedPremiumBasisAmt>
+                  <NLGPeriod tc="1009900001">One year</NLGPeriod>
+                  <OneTimeInitialDraftInd tc="0">FALSE</OneTimeInitialDraftInd>
+                  <PlannedFirstYrLump>2341344</PlannedFirstYrLump>
+                  <PlannedYearlyPrem>2341344</PlannedYearlyPrem>
+                </PolicyExtension>
+              </OLifEExtension>
+            </Policy>
+            <Investment>
+              <SubAccount id="SubAccount_3000">
+                <ProductCode>3000</ProductCode>
+                <ProductFullName>SP 500 Annual Point-to-Point with a Cap Rate</ProductFullName>
+                <AllocPercent>100</AllocPercent>
+              </SubAccount>
+            </Investment>
+            <Arrangement id="Arrangement_1">
+              <ArrType tc="37" />
+              <ArrDestination id="ArrDestination_3000" SubAcctID="SubAccount_3000">
+                <TransferAmtType tc="3">Percent</TransferAmtType>
+                <TransferPct>100</TransferPct>
+              </ArrDestination>
+            </Arrangement>
+          </Holding>
+          <Party id="Party_PINS">
+            <PartyTypeCode tc="1">Person</PartyTypeCode>
+            <GovtID>111111111</GovtID>
+            <GovtIDTC tc="1">Social Security Number US</GovtIDTC>
+            <EstNetWorth>323434</EstNetWorth>
+            <Person>
+              <FirstName>DAVID</FirstName>
+              <MiddleName>JOHN</MiddleName>
+              <LastName>JOSMORE</LastName>
+              <MarStat tc="1">Married</MarStat>
+              <Gender tc="1">Male</Gender>
+              <BirthDate>1983-02-03</BirthDate>
+              <Age>40</Age>
+              <Citizenship tc="1">United States of America</Citizenship>
+              <EstSalary>354345</EstSalary>
+              <BirthCountry tc="1">United States of America</BirthCountry>
+              <BirthJurisdictionTC tc="1">Alabama</BirthJurisdictionTC>
+              <OLifEExtension ExtensionCode="Person 2.8.90" VendorCode="05">
+                <PersonExtension>
+                  <RateClassAppliedFor>1</RateClassAppliedFor>
+                  <PermCountry tc="1">United States of America</PermCountry>
+                  <ValidDLInd tc="0">FALSE</ValidDLInd>
+                </PersonExtension>
+              </OLifEExtension>
+            </Person>
+            <Address id="Address_PINS">
+              <AddressTypeCode tc="1">Home</AddressTypeCode>
+              <Line1>SAN JOSE</Line1>
+              <Line2>SAN JOSE</Line2>
+              <City>SAN JOSE</City>
+              <AddressStateTC tc="1">Alabama</AddressStateTC>
+              <Zip>91822</Zip>
+              <OLifEExtension ExtensionCode="Address 2.8.90" VendorCode="05">
+                <AddressExtension>
+                  <ZipCodeTC tc="1">United State Postal Code</ZipCodeTC>
+                </AddressExtension>
+              </OLifEExtension>
+            </Address>
+            <Phone id="Phone1_PINS">
+              <PhoneTypeCode tc="1">Home</PhoneTypeCode>
+              <AreaCode>444</AreaCode>
+              <DialNumber>3434344</DialNumber>
+            </Phone>
+            <EMailAddress id="EMailAddress1_PINS">
+              <EMailType tc="2">Personal</EMailType>
+              <AddrLine>saikaushik.chivukula@sureify.com</AddrLine>
+            </EMailAddress>
+            <EMailAddress id="EMailAddress2_PINS">
+              <EMailType tc="1000500001">eDelivery Contract Print</EMailType>
+              <AddrLine>saikaushik.chivukula@sureify.com</AddrLine>
+            </EMailAddress>
+            <Risk>
+              <ExistingInsuranceInd tc="0">FALSE</ExistingInsuranceInd>
+              <TobaccoInd tc="0">FALSE</TobaccoInd>
+            </Risk>
+          </Party>
+          <Relation id="Relation_PINS" OriginatingObjectID="Holding_1" RelatedObjectID="Party_PINS">
+            <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+            <RelatedObjectType tc="6">Party</RelatedObjectType>
+            <RelationRoleCode tc="32">Insured</RelationRoleCode>
+            <RelationDescription tc="91">Self</RelationDescription>
+          </Relation>
+          <Relation id="Relation_OWN1" OriginatingObjectID="Holding_1" RelatedObjectID="Party_PINS">
+            <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+            <RelatedObjectType tc="6">Party</RelatedObjectType>
+            <RelationRoleCode tc="8">Owner</RelationRoleCode>
+            <RelationDescription tc="91">Self</RelationDescription>
+          </Relation>
+          <Party id="Party_AGT1">
+            <PartyTypeCode tc="1">Person</PartyTypeCode>
+            <Person>
+              <FirstName>DAVID</FirstName>
+              <LastName>JOSMORE</LastName>
+            </Person>
+            <Address>
+              <Line1>25 MAIN ST STE 331</Line1>
+              <City>NORTHAMPTON</City>
+              <AddressStateTC tc="26">Massachusetts</AddressStateTC>
+              <Zip>01060-3130</Zip>
+            </Address>
+            <Producer>
+              <CarrierAppointment>
+                <CompanyProducerID>2315187</CompanyProducerID>
+              </CarrierAppointment>
+            </Producer>
+            <EMailAddress id="EMailAddress1_AGT">
+              <EMailType tc="1">Business</EMailType>
+              <AddrLine>saikaushik.chivukula@sureify.com</AddrLine>
+            </EMailAddress>
+          </Party>
+          <Relation id="Relation_AGT_1" OriginatingObjectID="Holding_1" RelatedObjectID="Party_AGT1">
+            <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+            <RelatedObjectType tc="6">Party</RelatedObjectType>
+            <RelationRoleCode tc="37">Primary Writing Agent</RelationRoleCode>
+            <InterestPercent>100</InterestPercent>
+            <OLifEExtension ExtensionCode="Policy 2.8.90" VendorCode="05">
+              <RelationProducerExtension>
+                <SituationCode>001</SituationCode>
+                <CommissionOptCode tc="1009900001">Premium Based</CommissionOptCode>
+              </RelationProducerExtension>
+            </OLifEExtension>
+          </Relation>
+          <Party id="Party_BEN1">
+            <PartyTypeCode tc="2">Entity</PartyTypeCode>
+            <FullName>DAVID JOHN JOSMORE</FullName>
+            <GovtID>111111111</GovtID>
+            <GovtIDTC tc="2">Taxpayer Identification Number</GovtIDTC>
+            <Organization>
+              <OrgForm tc="23">Corporation</OrgForm>
+              <DBA>DAVID JOHN JOSMORE</DBA>
+            </Organization>
+            <Address id="Address_BEN1">
+              <AddressTypeCode tc="1">Home</AddressTypeCode>
+              <Line1>SAN JOSE</Line1>
+              <City>SAN JOSE</City>
+              <AddressStateTC tc="1">AL</AddressStateTC>
+              <Zip>91822</Zip>
+              <OLifEExtension ExtensionCode="Address 2.8.90" VendorCode="05">
+                <AddressExtension>
+                  <ZipCodeTC tc="1">United State Postal Code</ZipCodeTC>
+                </AddressExtension>
+              </OLifEExtension>
+            </Address>
+            <Phone id="Phone1_BEN1">
+              <PhoneTypeCode tc="1">Home</PhoneTypeCode>
+              <AreaCode>444</AreaCode>
+              <DialNumber>3434344</DialNumber>
+            </Phone>
+          </Party>
+          <Relation id="Relation_BEN1" OriginatingObjectID="Coverage_1" RelatedObjectID="Party_BEN1">
+            <OriginatingObjectType tc="20">Coverage</OriginatingObjectType>
+            <RelatedObjectType tc="6">Party</RelatedObjectType>
+            <RelationRoleCode tc="34">Primary Beneficiary</RelationRoleCode>
+            <RelationDescription tc="92">Custodian</RelationDescription>
+            <InterestPercent>100</InterestPercent>
+            <BeneficiaryDesignation tc="1009900009">Custodial</BeneficiaryDesignation>
+            <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+              <RelationExtension>
+                <BeneficiaryDistributionOption tc="2">Percentage</BeneficiaryDistributionOption>
+              </RelationExtension>
+            </OLifEExtension>
+          </Relation>
+          <FormInstance id="Form_ICC18-NB-133-NB" RelatedObjectID="Party_PINS">
+            <FormName>LifeApp</FormName>
+            <ProviderFormNumber>ICC18-NB-133</ProviderFormNumber>
+            <Attachment>
+              <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+              <AttachmentType tc="5">Form</AttachmentType>
+              <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+                <AttachmentExtension>
+                  <FileName>ICC18-NB-133-NB.pdf</FileName>
+                  <ReqCode tc="165">Application for Individual Life Insurance</ReqCode>
+                </AttachmentExtension>
+              </OLifEExtension>
+            </Attachment>
+          </FormInstance>
+          <FormInstance id="Form_ICC18-LTC-132" RelatedObjectID="Party_PINS">
+            <FormName>MiscMail</FormName>
+            <ProviderFormNumber>ICC18-LTC-132</ProviderFormNumber>
+            <Attachment>
+              <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+              <AttachmentType tc="5">Form</AttachmentType>
+              <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+                <AttachmentExtension>
+                  <FileName>ICC18-LTC-132.pdf</FileName>
+                  <ReqCode tc="1000990019">Individual Long-Term Care Rider Supplement</ReqCode>
+                </AttachmentExtension>
+              </OLifEExtension>
+            </Attachment>
+          </FormInstance>
+          <FormInstance id="Form_EAUTH-16-ALNE" RelatedObjectID="Party_PINS">
+            <FormName>MiscMail</FormName>
+            <ProviderFormNumber>EAUTH-16-ALNE</ProviderFormNumber>
+            <Attachment>
+              <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+              <AttachmentType tc="5">Form</AttachmentType>
+              <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+                <AttachmentExtension>
+                  <FileName>EAUTH-16-ALNE.pdf</FileName>
+                  <ReqCode tc="822">HIPAA Authorization</ReqCode>
+                </AttachmentExtension>
+              </OLifEExtension>
+            </Attachment>
+          </FormInstance>
+          <FormInstance id="Form_EPAUTH-05-ALNE-B" RelatedObjectID="Party_PINS">
+            <FormName>LifeApp</FormName>
+            <ProviderFormNumber>EPAUTH-05-ALNE-B</ProviderFormNumber>
+            <Attachment>
+              <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+              <AttachmentType tc="5">Form</AttachmentType>
+              <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+                <AttachmentExtension>
+                  <FileName>EPAUTH-05-ALNE-B.pdf</FileName>
+                  <ReqCode tc="1000990015">Authorization To Release Psychotherapy Treatment Records and Notes</ReqCode>
+                </AttachmentExtension>
+              </OLifEExtension>
+            </Attachment>
+          </FormInstance>
+          <FormInstance id="Form_INSRELTOAGT-ALNE-DXC" RelatedObjectID="Party_PINS">
+            <FormName>LifeApp</FormName>
+            <ProviderFormNumber>INSRELTOAGT-ALNE-DXC</ProviderFormNumber>
+            <Attachment>
+              <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+              <AttachmentType tc="5">Form</AttachmentType>
+              <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+                <AttachmentExtension>
+                  <FileName>INSRELTOAGT-ALNE-DXC.pdf</FileName>
+                  <ReqCode tc="1000990003">Authorization to Release Health-Related Information to the Producer</ReqCode>
+                </AttachmentExtension>
+              </OLifEExtension>
+            </Attachment>
+          </FormInstance>
+          <FormInstance id="Form_INDALLOC-DXC" RelatedObjectID="Party_PINS">
+            <FormName>MiscMail</FormName>
+            <ProviderFormNumber>INDALLOC-DXC</ProviderFormNumber>
+            <Attachment>
+              <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+              <AttachmentType tc="5">Form</AttachmentType>
+              <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+                <AttachmentExtension>
+                  <FileName>INDALLOC-DXC.pdf</FileName>
+                  <ReqCode tc="1000990014">Index Allocation Form</ReqCode>
+                </AttachmentExtension>
+              </OLifEExtension>
+            </Attachment>
+          </FormInstance>
+          <FormInstance id="Form_ICC21-ACCLTC-PW" RelatedObjectID="Party_PINS">
+            <FormName>MiscMail</FormName>
+            <ProviderFormNumber>ICC21-ACCLTC-PW</ProviderFormNumber>
+            <Attachment>
+              <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+              <AttachmentType tc="5">Form</AttachmentType>
+              <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+                <AttachmentExtension>
+                  <FileName>ICC21-ACCLTC-PW.pdf</FileName>
+                  <ReqCode tc="1000990020">LTC Personal Worksheet</ReqCode>
+                </AttachmentExtension>
+              </OLifEExtension>
+            </Attachment>
+          </FormInstance>
+          <FormInstance id="Form_E-DCINFO-B" RelatedObjectID="Party_PINS">
+            <FormName>MiscMail</FormName>
+            <ProviderFormNumber>E-DCINFO-B</ProviderFormNumber>
+            <Attachment>
+              <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+              <AttachmentType tc="5">Form</AttachmentType>
+              <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+                <AttachmentExtension>
+                  <FileName>E-DCINFO-B.pdf</FileName>
+                  <ReqCode tc="1000990004">Beneficiary Locator</ReqCode>
+                </AttachmentExtension>
+              </OLifEExtension>
+            </Attachment>
+          </FormInstance>
+          <FormInstance id="Form_LTC-APPVERIF" RelatedObjectID="Party_PINS">
+            <FormName>MiscMail</FormName>
+            <ProviderFormNumber>LTC-APPVERIF</ProviderFormNumber>
+            <Attachment>
+              <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+              <AttachmentType tc="5">Form</AttachmentType>
+              <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+                <AttachmentExtension>
+                  <FileName>LTC-APPVERIF.pdf</FileName>
+                  <ReqCode tc="1000990059">Appropriateness Verification - Long-Term Care Coverage</ReqCode>
+                </AttachmentExtension>
+              </OLifEExtension>
+            </Attachment>
+          </FormInstance>
+          <FormInstance id="Form_EPID-138-18" RelatedObjectID="Party_PINS">
+            <FormName>MiscMail</FormName>
+            <ProviderFormNumber>EPID-138-18</ProviderFormNumber>
+            <Attachment>
+              <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+              <AttachmentType tc="5">Form</AttachmentType>
+              <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+                <AttachmentExtension>
+                  <FileName>EPID-138-18.pdf</FileName>
+                  <ReqCode tc="1000990017">Financial Representative Identification and Certification</ReqCode>
+                </AttachmentExtension>
+              </OLifEExtension>
+            </Attachment>
+          </FormInstance>
+          <FormInstance id="Form_Illustration" RelatedObjectID="Party_PINS">
+            <FormName>MiscMail</FormName>
+            <ProviderFormNumber>Illustration</ProviderFormNumber>
+            <Attachment>
+              <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+              <AttachmentType tc="5">Form</AttachmentType>
+              <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+                <AttachmentExtension>
+                  <FileName>Illustration.pdf</FileName>
+                  <ReqCode tc="133">Illustration</ReqCode>
+                </AttachmentExtension>
+              </OLifEExtension>
+            </Attachment>
+          </FormInstance>
+          <FormInstance id="Form_ECON-123-20" RelatedObjectID="Party_PINS">
+            <FormName>LifeApp</FormName>
+            <ProviderFormNumber>ECON-123-20</ProviderFormNumber>
+            <Attachment>
+              <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+              <AttachmentType tc="5">Form</AttachmentType>
+              <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+                <AttachmentExtension>
+                  <FileName>ECON-123-20.pdf</FileName>
+                </AttachmentExtension>
+              </OLifEExtension>
+            </Attachment>
+          </FormInstance>
+          <FormInstance id="Form_Hipaa_SignAuditInfo" RelatedObjectID="Party_PINS">
+            <FormName>MiscMail</FormName>
+            <ProviderFormNumber>Hipaa_SignAuditInfo</ProviderFormNumber>
+            <Attachment>
+              <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+              <AttachmentType tc="5">Form</AttachmentType>
+              <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+                <AttachmentExtension>
+                  <FileName>Hipaa_SignAuditInfo.pdf</FileName>
+                  <ReqCode tc="1000990237">Audit Report</ReqCode>
+                </AttachmentExtension>
+              </OLifEExtension>
+            </Attachment>
+          </FormInstance>
+          <FormInstance id="Form_SignAuditInfo" RelatedObjectID="Party_PINS">
+            <FormName>MiscMail</FormName>
+            <ProviderFormNumber>SignAuditInfo</ProviderFormNumber>
+            <Attachment>
+              <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+              <AttachmentType tc="5">Form</AttachmentType>
+              <OLifEExtension ExtensionCode="Relation 2.8.90" VendorCode="05">
+                <AttachmentExtension>
+                  <FileName>SignAuditInfo.pdf</FileName>
+                  <ReqCode tc="1000990237">Audit Report</ReqCode>
+                </AttachmentExtension>
+              </OLifEExtension>
+            </Attachment>
+          </FormInstance>
+        </OLifE>
+      </TXLifeRequest>
+    </TXLife>
+  </txLife>
+  <imageInfo>
+    <imageGUID>ICC18-NB-133-NB.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>ICC18-LTC-132.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>EAUTH-16-ALNE.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>EPAUTH-05-ALNE-B.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>INSRELTOAGT-ALNE-DXC.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>INDALLOC-DXC.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>ICC21-ACCLTC-PW.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>E-DCINFO-B.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>EPID-138-18.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>Illustration.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>ECON-123-20.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>Hipaa_SignAuditInfo.pdf</imageGUID>
+    <image></image>
+  </imageInfo>
+  <imageInfo>
+    <imageGUID>SignAuditInfo.pdf</imageGUID>
+    <image></image>
+  </imageInfo></input>
+</request>

@@ -1,0 +1,18 @@
+[
+  ["value", "key", "tc", "definition"],
+  ["Civil Union", "OLI_MARITAL_CIVILUNION", "11", ""],
+  ["Common Law (De facto)", "OLI_MARITAL_COMMONLAW", "6", ""],
+  ["Divorced", "OLI_MARITAL_DIVORCED", "3", ""],
+  ["Domestic Partner", "OLI_MARITAL_DOMESTICPARTNER", "10", ""],
+  ["Estranged", "OLI_MARITAL_ESTRANGED", "7", ""],
+  ["Head of Household", "OLI_MARITAL_HEADOFHOUSEHOLD", "8", ""],
+  ["Legally Separated", "OLI_MARITAL_SEPARATED", "5", ""],
+  ["Married", "OLI_MARITAL_MARRIED", "1", ""],
+  ["Married, withholding single.", "OLI_MARITAL_MARRIEDSINGLEWTHHLD", "9", ""],
+  ["Other", "OLI_OTHER", "2147483647", ""],
+  ["Single", "OLI_MARITAL_SINGLE", "2", ""],
+  ["Unknown", "OLI_UNKNOWN", "0", ""],
+  ["Widowed", "OLI_MARITAL_WIDOWED", "4", ""],
+  ["Partner", "OLI_MARITAL_PARTNER", "1", ""],
+  ["Separated", "OLI_MARITAL_PARTNER", "5", ""]
+]

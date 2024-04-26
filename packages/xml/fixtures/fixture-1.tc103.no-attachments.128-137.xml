@@ -1,0 +1,10 @@
+<OLifEExtension ExtensionCode="Policy 2.8.90" VendorCode="05">
+  <PolicyExtension>
+    <StatutoryCompanyCode>105</StatutoryCompanyCode>
+    <QuotedPremiumBasisAmt>2341344</QuotedPremiumBasisAmt>
+    <NLGPeriod tc="1009900001">One year</NLGPeriod>
+    <OneTimeInitialDraftInd tc="0">FALSE</OneTimeInitialDraftInd>
+    <PlannedFirstYrLump>2341344</PlannedFirstYrLump>
+    <PlannedYearlyPrem>2341344</PlannedYearlyPrem>
+  </PolicyExtension>
+</OLifEExtension>

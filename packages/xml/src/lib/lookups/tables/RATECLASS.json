@@ -1,0 +1,23 @@
+[
+  ["key", "value", "tc", "definition"],
+  ["NT", "Standard No-Tobacco", "", ""],
+  ["PN", "Preferred", "", ""],
+  ["PE", "Preferred Elite", "", ""],
+  ["TB", "Standard Smoker", "", ""],
+  ["PT", "Preferred Smoker", "", ""],
+  ["SS", "Standard Select", "", ""],
+  ["SPN", "Simple Preferred No-Tobacco", "", ""],
+  ["SPT", "Simple Preferred Tobacco", "", ""],
+  ["SSN", "Simple Standard No-Tobacco", "", ""],
+  ["SST", "Simple Standard Tobacco", "", ""],
+  ["PEA", "Allstate Preferred Elite", "", ""],
+  ["PNA", "Allstate Preferred", "", ""],
+  ["SSA", "Allstate Standard Select", "", ""],
+  ["SPTA", "Allstate Rated Simple Preferred Tobacco", "", ""],
+  ["SSTA", "Allstate Rated Simple Standard Tobacco", "", ""],
+  ["SPNA", "Allstate Rated Simple Preferred No-Tobacco", "", ""],
+  ["NTA", "Allstate Standard No-Tobacco", "", ""],
+  ["PTA", "Allstate Preferred Smoker", "", ""],
+  ["TBA", "Allstate Standard Smoker", "", ""],
+  ["SSNA", "Allstate Rated Simple Standard No-Tobacco", "", ""]
+]

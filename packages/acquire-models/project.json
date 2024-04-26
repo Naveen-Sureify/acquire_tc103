@@ -1,0 +1,97 @@
+{
+  "name": "acquire-models",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/acquire-models/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/acquire-models",
+        "main": "packages/acquire-models/src/index.ts",
+        "tsConfig": "packages/acquire-models/tsconfig.lib.json",
+        "assets": ["packages/acquire-models/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/acquire-models/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/packages/acquire-models"],
+      "options": {
+        "jestConfig": "packages/acquire-models/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "typeorm-cli": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "dotenv -e .env -- ts-node -r tsconfig-paths/register --project tsconfig.app.json ../../node_modules/.bin/typeorm -d ./src/data-source.ts",
+        "cwd": "packages/acquire-models"
+      }
+    },
+    "generate-migration": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "ts-node -r tsconfig-paths/register --project tsconfig.app.json ../../node_modules/.bin/typeorm migration:generate  --pretty -d  ./src/data-source.ts",
+        "cwd": "packages/acquire-models"
+      }
+    },
+    "create-migration": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "ts-node --project tsconfig.app.json -r tsconfig-paths/register ../../node_modules/.bin/typeorm migration:create",
+        "cwd": "packages/acquire-models"
+      }
+    },
+    "run-migrations": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "ts-node --project tsconfig.app.json -r tsconfig-paths/register ../../node_modules/.bin/typeorm migration:run -d ./src/data-source.ts",
+        "cwd": "packages/acquire-models"
+      }
+    },
+    "revert-migrations": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "ts-node --project tsconfig.app.json -r tsconfig-paths/register ../../node_modules/.bin/typeorm migration:revert -d ./src/data-source.ts",
+        "cwd": "packages/acquire-models"
+      }
+    },
+    "create-seed": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "ts-node --project tsconfig.app.json -r tsconfig-paths/register ../../node_modules/.bin/typeorm migration:create",
+        "cwd": "packages/acquire-models"
+      }
+    },
+    "run-seeds": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "ts-node --project tsconfig.app.json -r tsconfig-paths/register ../../node_modules/.bin/typeorm migration:run -d src/seed-source.ts",
+        "cwd": "packages/acquire-models"
+      }
+    },
+    "revert-seeds": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "ts-node --project tsconfig.app.json -r tsconfig-paths/register ../../node_modules/.bin/typeorm migration:revert -d src/seed-source.ts",
+        "cwd": "packages/acquire-models"
+      }
+    }
+  },
+  "tags": []
+}

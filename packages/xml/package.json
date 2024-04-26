@@ -1,0 +1,6 @@
+{
+  "name": "xml",
+  "dependencies": {
+    "jsx-template-engine": "^1.0.0"
+  }
+}

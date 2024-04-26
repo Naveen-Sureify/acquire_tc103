@@ -1,0 +1,20 @@
+[
+  ["value", "key", "tc"],
+  [
+    "A policy that contains or is supported by investments i.e. Variable Life",
+    "OLI_HOLDTYPE_POLICYINVESTMENT",
+    "5"
+  ],
+  ["Asset/Liability", "OLI_HOLDTYPE_ASSETLIAB", "1"],
+  ["Banking", "OLI_HOLDTYPE_BANKING", "7"],
+  ["Business Loan", "OLI_HOLDTYPE_BUSLOAN", "10"],
+  ["Group Master Contract", "OLI_HOLDTYPE_GROUPMASTER", "6"],
+  ["Investment", "OLI_HOLDTYPE_INVESTMENT", "3"],
+  ["Line of Credit", "OLI_HOLDTYPE_LOC", "11"],
+  ["Mortgage", "OLI_HOLDTYPE_MORTGAGE", "8"],
+  ["Other", "OLI_OTHER", "2147483647"],
+  ["Package", "OLI_HOLDTYPE_PACKAGE", "4"],
+  ["Policy", "OLI_HOLDTYPE_POLICY", "2"],
+  ["Sponsored Benefit Plan Master", "OLI_HOLDTYPE_BENEMASTER", "9"],
+  ["Unknown", "OLI_UNKNOWN", "0"]
+]

@@ -1,0 +1,37 @@
+FROM node:18-alpine as builder
+
+ENV PYTHONUNBUFFERED=1
+
+COPY . /app
+
+WORKDIR /app
+
+RUN apk -v --update add \
+	git \
+	unzip \
+	bash \
+	build-base \
+	pkgconfig \
+	perl \
+	curl && rm -rf /var/cache/apk/*
+
+RUN yarn install
+RUN /app/node_modules/.bin/nx run-many --target=build --all
+
+COPY . .
+
+FROM node:18-alpine
+
+WORKDIR /app
+
+COPY --from=builder /app/dist /app
+COPY --from=builder /app/scripts/acquire-applications-api.entrypoint.sh /app/entrypoint.sh
+COPY --from=builder /app/node_modules /app/node_modules
+COPY --from=builder /app/nx.json /app/nx.json
+COPY --from=builder /app/package.json /app/package.json
+
+RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
+RUN apk add --update --no-cache py3-pip py3-setuptools
+RUN apk add --no-cache aws-cli
+
+ENTRYPOINT ["./entrypoint.sh"]

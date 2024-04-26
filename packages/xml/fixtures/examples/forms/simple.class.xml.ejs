@@ -1,0 +1,21 @@
+<%-
+  await new forms.FormInstance({
+    id: 'Form_ICC18-NB-133-NB',
+    RelatedObjectID: 'Party_PINS',
+    ProviderFormNumber: 'ICC18-NB-133',
+    FormName: 'LifeApp',
+    FileName: 'ICC18-NB-133-NB.pdf',
+    VendorCode: '05',
+    ExtensionCode: 'Relation 2.8.90',
+    AttachmentBasicType: "2",
+    AttachmentType: "5",
+    ReqCode: "165",
+  }).serialize('FormInstance')
+%>
+
+<%-
+  await new forms.ImageInfo({
+    imageGUID: 'ICC18-NB-133-NB.pdf',
+    filePath: './packages/xml/fixtures/examples/forms/simple.png',
+  }).serialize()
+%>

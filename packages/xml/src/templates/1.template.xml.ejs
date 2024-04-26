@@ -1,0 +1,613 @@
+<?xml version="1.0"?>
+<TXLife xmlns="http://ACORD.org/Standards/Life/2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="2.35.00" xsi:schemaLocation="http://ACORD.org/Standards/Life/2 file://Users/shainlafazan/repositories/sureifylabs/acquire/packages/xml/TXLife2.35.00.xsd">
+  <%- await include('UserAuthRequest', { ...cx }) %>
+  <TXLifeRequest PrimaryObjectID="Application_Holding_1">
+    <TransRefGUID>
+      <%= cx.missing.TransRefGUID['#'] %>
+    </TransRefGUID>
+    <TransType tc="<%= cx.missing.TransType['@tc'] %>">
+      <%= cx.missing.TransType['#'] %>
+    </TransType>
+    <TransExeDate>
+      <%= cx.utils.dayjs().format('YYYY-MM-DD') %>
+    </TransExeDate>
+    <TransExeTime>
+      <%= cx.utils.dayjs().format('HH:mm:ss') %>
+    </TransExeTime>
+    <TransMode tc="<%= cx.missing.TransMode['@tc'] %>">
+      <%= cx.missing.TransMode['#'] %>
+    </TransMode>
+    <OLifE Version="<%= cx.missing.OLifE['@Version'] %>">
+      <Grouping>
+        <Household>
+          <HouseholdKey>
+            <%= cx.missing.HouseholdKey %>
+          </HouseholdKey>
+        </Household>
+      </Grouping>
+      <SourceInfo>
+        <CreationDate>
+          <%= cx.utils.dayjs().format('YYYY-MM-DD') %>
+        </CreationDate>
+        <CreationTime>
+          <%= cx.utils.dayjs().format('HH:mm:ss') %>
+        </CreationTime>
+        <SourceInfoName>
+          <%= cx.missing.SourceInfoName %>
+        </SourceInfoName>
+      </SourceInfo>
+      <Holding id="Application_Holding_1">
+        <HoldingSysKey SystemCode="SalesforceOrgID" VendorCode="003">00D3D0000004cmrUAA</HoldingSysKey>
+        <HoldingSysKey SystemCode="SalesforceOpportunityID" VendorCode="003">006K000000InM6VIAV</HoldingSysKey>
+        <HoldingTypeCode tc="2">Policy</HoldingTypeCode>
+        <HoldingStatus tc="3">Proposed</HoldingStatus>
+        <Policy>
+          <PolNumber>1000018141</PolNumber>
+          <LineOfBusiness tc="1">Life</LineOfBusiness>
+          <ProductType tc="2">Term Life</ProductType>
+          <ProductCode>316</ProductCode>
+          <CarrierCode>AMI</CarrierCode>
+          <PlanName>Level Term 2020</PlanName>
+          <PolicyStatus tc="8">Pending Issue (application accepted to process)</PolicyStatus>
+          <IssueNation tc="1">United States of America</IssueNation>
+          <Jurisdiction tc="2">Alaska</Jurisdiction>
+          <EffDate>2022-04-19</EffDate>
+          <PaymentMode tc="4">Monthly (electronic billing only)</PaymentMode>
+          <PaymentAmt>17.40</PaymentAmt>
+          <PaymentMethod tc="9">Credit Card</PaymentMethod>
+          <Life>
+            <InitialPremAmt>17.40</InitialPremAmt>
+            <FaceAmt>100000</FaceAmt>
+            <Coverage id="Base_Coverage">
+              <PlanName>Level Term 2020</PlanName>
+              <ProductCode>316</ProductCode>
+              <IndicatorCode tc="1">Base</IndicatorCode>
+              <DurationDesign>15</DurationDesign>
+              <CurrentAmt>100000</CurrentAmt>
+              <InitCovAmt>100000</InitCovAmt>
+              <% for (const LifeParticipant of cx.missing.LifeParticipants) { %>
+              <%- await include('LifeParticipant', { LifeParticipant }) %>
+              <% } %>
+            </Coverage>
+            <Coverage id="Terminal Illness Rider">
+              <PlanName>Terminal Illness Rider</PlanName>
+              <ProductCode>TermIll</ProductCode>
+              <IndicatorCode tc="2">Rider</IndicatorCode>
+              <CurrentAmt></CurrentAmt>
+            </Coverage>
+          </Life>
+          <ApplicationInfo>
+            <HOAssignedAppNumber>0a1dd588-17e7-4594-b82a-f1e0a764e56b</HOAssignedAppNumber>
+            <TrackingID>980659bb417a001dac11000713c7f409</TrackingID>
+            <ApplicationType tc="1">New Application</ApplicationType>
+            <BackDateType tc="2">No backdating</BackDateType>
+            <ReqPolicyDeliveryMethod tc="3">Via E-Mail</ReqPolicyDeliveryMethod>
+            <SignatureInfo SignaturePartyID="InsuredParty_1" id="PI_Signature">
+              <SignatureRoleCode tc="1">Primary Insured</SignatureRoleCode>
+              <SignatureDate>2022-04-19</SignatureDate>
+              <SignatureCity>alabama</SignatureCity>
+              <SignatureState tc="1">Alabama</SignatureState>
+              <SubmissionType tc="2">Electronic</SubmissionType>
+            </SignatureInfo>
+            <SignatureInfo SignaturePartyID="Party_Agent_1" id="Agent_Signature">
+              <SignatureRoleCode tc="15">Primary Agent</SignatureRoleCode>
+              <SubmissionType tc="2">Electronic</SubmissionType>
+              <SignatureText>SIG_X_AGENT</SignatureText>
+              <ElectronicAuthenticationType tc="1">ClickWrap</ElectronicAuthenticationType>
+            </SignatureInfo>
+            <%- await include('OLifEExtension', { ...cx, cx }) %>
+          </ApplicationInfo>
+        </Policy>
+        <Arrangement>
+          <ProductCode>Recurring Premiums</ProductCode>
+          <ArrMode tc="4">OLI_PAYMODE_MNTHLY</ArrMode>
+          <ArrType tc="39">OLI_ARRTYPE_SUBSQNTPREMS</ArrType>
+          <ModalAmt>17.40</ModalAmt>
+          <PaymentMethod tc="9">OLI_PAYMETH_CREDCARD</PaymentMethod>
+        </Arrangement>
+      </Holding>
+      <Party id="Party_Carrier">
+        <PartyTypeCode tc="2">Organization</PartyTypeCode>
+        <FullName>Amica Life Insurance Company</FullName>
+      </Party>
+      <Party id="InsuredParty_1">
+        <PartyTypeCode tc="1">Person</PartyTypeCode>
+        <PartySysKey>31197078</PartySysKey>
+        <GovtID>773909206</GovtID>
+        <GovtIDTC tc="1">SSN</GovtIDTC>
+        <Person>
+          <FirstName>DAVIDPI</FirstName>
+          <MiddleName>N</MiddleName>
+          <LastName>JOSMOREPI</LastName>
+          <Suffix>Jr.</Suffix>
+          <%- await include(`Gender`, { ...cx }) %>
+          <BirthDate>2001-01-01</BirthDate>
+          <Age>21</Age>
+          <Citizenship tc="1">USA</Citizenship>
+          <Height2>
+            <MeasureUnits tc="2">US System Standard</MeasureUnits>
+            <MeasureValue>65</MeasureValue>
+          </Height2>
+          <Weight2>
+            <MeasureUnits tc="2">US System Standard</MeasureUnits>
+            <MeasureValue>250</MeasureValue>
+          </Weight2>
+          <DriversLicenseNum>PAL76512344</DriversLicenseNum>
+          <NoDriversLicenseInd tc="0">False</NoDriversLicenseInd>
+          <DriversLicenseState tc="1">Alabama</DriversLicenseState>
+          <BirthCountry tc="1">United States of America</BirthCountry>
+          <BirthJurisdictionTC tc="1">Alabama</BirthJurisdictionTC>
+          <ImmigrationStatus tc="8">Citizen</ImmigrationStatus>
+        </Person>
+        <Address>
+          <AddressTypeCode tc="1">Residence</AddressTypeCode>
+          <Line1>1100 Lincoln Avenue</Line1>
+          <Line2>Santa maria</Line2>
+          <City>San Jose</City>
+          <AddressState>Alaska</AddressState>
+          <Zip>59981</Zip>
+        </Address>
+        <Phone>
+          <PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+          <AreaCode>734</AreaCode>
+          <DialNumber>7110030</DialNumber>
+        </Phone>
+        <EMailAddress>
+          <AddrLine>mohanarao.sanapala@sureify.com</AddrLine>
+        </EMailAddress>
+        <Employment>
+          <OccupClass tc="1">Employed</OccupClass>
+        </Employment>
+      </Party>
+      <Party id="EmployerParty_1">
+        <PartyTypeCode tc="2">Employer</PartyTypeCode>
+        <FullName>abc</FullName>
+      </Party>
+      <Party id="Party_Beneficiary_1">
+        <PartyTypeCode tc="1">Individual</PartyTypeCode>
+        <GovtIDTC tc="1">SSN</GovtIDTC>
+        <Person>
+          <FirstName>m</FirstName>
+          <LastName>m</LastName>
+          <BirthDate></BirthDate>
+        </Person>
+        <Address>
+          <AddressTypeCode tc="1">Residence</AddressTypeCode>
+          <AddressCountryTC tc="1">US</AddressCountryTC>
+        </Address>
+        <Phone>
+          <PhoneTypeCode tc="1">Home</PhoneTypeCode>
+        </Phone>
+      </Party>
+      <Party id="Party_Agent_1">
+        <PartyTypeCode tc="1">Person</PartyTypeCode>
+        <PartyKey>A035732</PartyKey>
+        <FullName>DAVID Agent</FullName>
+        <ResidenceState tc="5">AR</ResidenceState>
+        <Person>
+          <FirstName>DAVID</FirstName>
+          <LastName>Agent</LastName>
+        </Person>
+        <Address>
+          <AddressTypeCode tc="2">Business</AddressTypeCode>
+          <Line1>123 Main St</Line1>
+          <City>Tampa</City>
+          <AddressState>AR</AddressState>
+          <AddressStateTC tc="5">AR</AddressStateTC>
+          <Zip>95125</Zip>
+          <AddressCountryTC tc="1">US</AddressCountryTC>
+        </Address>
+        <Phone>
+          <PhoneTypeCode tc="2">Business</PhoneTypeCode>
+          <AreaCode>999</AreaCode>
+          <DialNumber>9999999</DialNumber>
+          <Ext>916234</Ext>
+        </Phone>
+        <Producer>
+          <CarrierAppointment>
+            <CompanyProducerID>A035732</CompanyProducerID>
+          </CarrierAppointment>
+          <OLifEExtension VendorCode="220">
+            <UserName>A035732AMI7424</UserName>
+          </OLifEExtension>
+        </Producer>
+        <EMailAddress>
+          <AddrLine>mohanarao.sanapala@sureify.com</AddrLine>
+          <PrefEMailAddr tc="1">True</PrefEMailAddr>
+        </EMailAddress>
+      </Party>
+      <Relation OriginatingObjectID="Application_Holding_1" RelatedObjectID="InsuredParty_1" id="Relation_InsuredParty">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="32">Primary Insured</RelationRoleCode>
+      </Relation>
+      <Relation OriginatingObjectID="Application_Holding_1" RelatedObjectID="Party_Agent_1" id="Holding_Agent_Relation">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="11">Agent</RelationRoleCode>
+      </Relation>
+      <Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="EmployerParty_1" id="Relation_PartyEmployerInsured_1">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="7">Employer</RelationRoleCode>
+      </Relation>
+      <Relation OriginatingObjectID="Application_Holding_1" RelatedObjectID="InsuredParty_1" id="Holding_Owner_Relation_1">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="8">Owner</RelationRoleCode>
+      </Relation>
+      <FormInstance id="FormInstance_InsuredParty_1">
+        <FormResponse>
+          <QuestionNumber>PIPFI_EstIncomeAmt</QuestionNumber>
+          <ResponseData>C</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PIEMP_EmployerName</QuestionNumber>
+          <ResponseData>abc</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PIEMP_Industry</QuestionNumber>
+          <ResponseData>A</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PIOcc_BC_None_Checked</QuestionNumber>
+          <ResponseData>Yes</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PIFT_YesNo</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>AvocationQuestion</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PIVIO_DUI_YesNo</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PIVIO_MOVING_YesNo</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PICRI_ParoleIncarcerated</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PICRI_FelonyMisdemeanor</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>BankruptcyQuestion</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PreviousAdverseDecision</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PITobaccoInd</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PINONMED_Q1_NUANY_TreatmentInd</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PINONMED_Q1_NUMARIJUANA_YesNo</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PINONMED_HeightIn</QuestionNumber>
+          <ResponseData>65</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PINONMED_Weight</QuestionNumber>
+          <ResponseData>250</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PINONMED_WeightChange</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PIFH_DiedPriorAge60CAD</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PIFH_Disease</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PIOTHINS_IsApplying</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PIOTHINS_HasExisting</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PIOTHINS_HasReplaced</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PIOTHINS_InforceIndAgent</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PIOTHINS_ReplaceIndAgent</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PIOTHINS_PayWithExiPolFundAgent</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>languageLineRequired</QuestionNumber>
+          <ResponseData>False</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>HasPrimaryPhysician</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>OnTreatment</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>ImpairmentHeart</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>ImpairmentLipids</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>ImpairmentEndocrine</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>ImpairmentRespiratory</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>ImpairmentBloodImmune</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>ImpairmentGI</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>ImpairmentMental</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>ImpairmentNeurological</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>ImpairmentCancer</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>ImpairmentUrological</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>ImpairmentGynecologicalBreast</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>ImpairmentMusculoskeletal</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>ImpairmentENT</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>HIVAIDS</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>DrugUse</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>AddictionTreatment</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>AdvisedByDoctor</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>OtherTreatment</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>PIAVIA_Selected</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+        <FormResponse>
+          <QuestionNumber>CurrentlyPregnant</QuestionNumber>
+          <ResponseData>No</ResponseData>
+        </FormResponse>
+      </FormInstance>
+
+      <Relation OriginatingObjectID="Application_Holding_1" RelatedObjectID="Party_Beneficiary_1" id="Relation_Beneficiary_1">
+        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="34">Primary Beneficiary</RelationRoleCode>
+        <InterestPercent>100</InterestPercent>
+      </Relation>
+      <Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="Party_Beneficiary_1" id="Relation_InsuredBeneficiary_1">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="6">Party</RelatedObjectType>
+        <RelationRoleCode tc="3">Parent</RelationRoleCode>
+        <RelationDescription tc="0">Parent</RelationDescription>
+      </Relation>
+      <FormInstance id="Form_ApplicationsMainApp-AK">
+        <OriginalInputMode tc="1">Input Electronically</OriginalInputMode>
+        <FormInstanceCategory>Applications</FormInstanceCategory>
+        <Attachment id="Form_MainApp-AK">
+          <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+          <Description>APPSIGNEDA</Description>
+          <AttachmentData>
+            hello world
+          </AttachmentData>
+          <AttachmentType tc="1">Application Documents</AttachmentType>
+          <MimeTypeTC tc="17">application/pdf</MimeTypeTC>
+          <TransferEncodingTypeTC tc="4">Base64</TransferEncodingTypeTC>
+          <AttachmentLocation tc="1">Inline Data</AttachmentLocation>
+          <SignatureInfo>
+            <SignatureOK tc="1">eSign</SignatureOK>
+          </SignatureInfo>
+        </Attachment>
+      </FormInstance>
+      <Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="Form_AppDocsPrivacyNotice" id="Relation_Form_AppDocsPrivacyNotice_InsuredParty_1">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="389">Form Instance</RelatedObjectType>
+        <RelationRoleCode tc="107">Form For</RelationRoleCode>
+      </Relation>
+      <FormInstance id="Form_ConsentHIPAA">
+        <OriginalInputMode tc="1">Input Electronically</OriginalInputMode>
+        <FormInstanceCategory>Consent</FormInstanceCategory>
+        <Attachment id="Form_HIPAA">
+          <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+          <Description>HIPAA</Description>
+          <AttachmentData>
+            hello world
+          </AttachmentData>
+          <AttachmentType tc="239">HIPAA</AttachmentType>
+          <MimeTypeTC tc="17">application/pdf</MimeTypeTC>
+          <TransferEncodingTypeTC tc="4">Base64</TransferEncodingTypeTC>
+          <AttachmentLocation tc="1">Inline Data</AttachmentLocation>
+          <SignatureInfo>
+            <SignatureOK tc="1">eSign</SignatureOK>
+          </SignatureInfo>
+        </Attachment>
+      </FormInstance>
+      <Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="Form_ConsentHIPAA" id="Relation_Form_ConsentHIPAA_InsuredParty_1">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="389">Form Instance</RelatedObjectType>
+        <RelationRoleCode tc="107">Form For</RelationRoleCode>
+      </Relation>
+      <FormInstance id="Form_AppDocsHowAppProcessed">
+        <OriginalInputMode tc="1">Input Electronically</OriginalInputMode>
+        <FormInstanceCategory>App Docs</FormInstanceCategory>
+        <Attachment id="Form_HowAppProcessed">
+          <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+          <Description>RIGHTS</Description>
+          <AttachmentData>
+            hello world
+          </AttachmentData>
+          <AttachmentType tc="1">Application Documents</AttachmentType>
+          <MimeTypeTC tc="17">application/pdf</MimeTypeTC>
+          <TransferEncodingTypeTC tc="4">Base64</TransferEncodingTypeTC>
+          <AttachmentLocation tc="1">Inline Data</AttachmentLocation>
+          <SignatureInfo>
+            <SignatureOK tc="1">eSign</SignatureOK>
+          </SignatureInfo>
+        </Attachment>
+      </FormInstance>
+      <Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="Form_AppDocsHowAppProcessed" id="Relation_Form_AppDocsHowAppProcessed_InsuredParty_1">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="389">Form Instance</RelatedObjectType>
+        <RelationRoleCode tc="107">Form For</RelationRoleCode>
+      </Relation>
+      <FormInstance id="Form_AppDocsTerminalABR">
+        <OriginalInputMode tc="1">Input Electronically</OriginalInputMode>
+        <FormInstanceCategory>App Docs</FormInstanceCategory>
+        <Attachment id="Form_TerminalABR">
+          <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+          <Description>TERMIL</Description>
+          <AttachmentData>
+            hello world
+          </AttachmentData>
+          <AttachmentType tc="1">Application Documents</AttachmentType>
+          <MimeTypeTC tc="17">application/pdf</MimeTypeTC>
+          <TransferEncodingTypeTC tc="4">Base64</TransferEncodingTypeTC>
+          <AttachmentLocation tc="1">Inline Data</AttachmentLocation>
+          <SignatureInfo>
+            <SignatureOK tc="1">eSign</SignatureOK>
+          </SignatureInfo>
+        </Attachment>
+      </FormInstance>
+      <Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="Form_AppDocsTerminalABR" id="Relation_Form_AppDocsTerminalABR_InsuredParty_1">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="389">Form Instance</RelatedObjectType>
+        <RelationRoleCode tc="107">Form For</RelationRoleCode>
+      </Relation>
+      <FormInstance id="Form_AppDocsReplacement-NAICDR">
+        <OriginalInputMode tc="1">Input Electronically</OriginalInputMode>
+        <FormInstanceCategory>App docs</FormInstanceCategory>
+        <Attachment id="Form_Replacement-NAICDR">
+          <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+          <Description>REPL</Description>
+          <AttachmentData>
+            hello world
+          </AttachmentData>
+          <AttachmentType tc="10">Application</AttachmentType>
+          <MimeTypeTC tc="17">application/pdf</MimeTypeTC>
+          <TransferEncodingTypeTC tc="4">Base64</TransferEncodingTypeTC>
+          <AttachmentLocation tc="1">Inline Data</AttachmentLocation>
+          <SignatureInfo>
+            <SignatureOK tc="1">eSign</SignatureOK>
+          </SignatureInfo>
+        </Attachment>
+      </FormInstance>
+      <Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="Form_AppDocsReplacement-NAICDR" id="Relation_Form_AppDocsReplacement-NAICDR_InsuredParty_1">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="389">Form Instance</RelatedObjectType>
+        <RelationRoleCode tc="107">Form For</RelationRoleCode>
+      </Relation>
+      <FormInstance id="Form_AppDocsSecAddr-AK">
+        <OriginalInputMode tc="1">Input Electronically</OriginalInputMode>
+        <FormInstanceCategory>App docs</FormInstanceCategory>
+        <Attachment id="Form_SecAddr-AK">
+          <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+          <Description>SECDADD</Description>
+          <AttachmentData>
+            hello world
+          </AttachmentData>
+          <AttachmentType tc="10">Application</AttachmentType>
+          <MimeTypeTC tc="17">application/pdf</MimeTypeTC>
+          <TransferEncodingTypeTC tc="4">Base64</TransferEncodingTypeTC>
+          <AttachmentLocation tc="1">Inline Data</AttachmentLocation>
+          <SignatureInfo>
+            <SignatureOK tc="1">eSign</SignatureOK>
+          </SignatureInfo>
+        </Attachment>
+      </FormInstance>
+      <Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="Form_AppDocsSecAddr-AK" id="Relation_Form_AppDocsSecAddr-AK_InsuredParty_1">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="389">Form Instance</RelatedObjectType>
+        <RelationRoleCode tc="107">Form For</RelationRoleCode>
+      </Relation>
+      <FormInstance id="Form_ApplicationsMainAppB-AK">
+        <OriginalInputMode tc="1">Input Electronically</OriginalInputMode>
+        <FormInstanceCategory>App docs</FormInstanceCategory>
+        <Attachment id="Form_MainAppB-AK">
+          <AttachmentBasicType tc="2">Image</AttachmentBasicType>
+          <Description>APPSIGNEDB</Description>
+          <AttachmentData>
+            hello world
+          </AttachmentData>
+          <AttachmentType tc="10">Application</AttachmentType>
+          <MimeTypeTC tc="17">application/pdf</MimeTypeTC>
+          <TransferEncodingTypeTC tc="4">Base64</TransferEncodingTypeTC>
+          <AttachmentLocation tc="1">Inline Data</AttachmentLocation>
+          <SignatureInfo>
+            <SignatureOK tc="1">Voice Signature</SignatureOK>
+          </SignatureInfo>
+        </Attachment>
+      </FormInstance>
+      <Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="Form_ApplicationsMainAppB-AK" id="Relation_Form_ApplicationsMainAppB-AK_InsuredParty_1">
+        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
+        <RelatedObjectType tc="389">Form Instance</RelatedObjectType>
+        <RelationRoleCode tc="107">Form For</RelationRoleCode>
+      </Relation>
+    </OLifE>
+  </TXLifeRequest>
+</TXLife>

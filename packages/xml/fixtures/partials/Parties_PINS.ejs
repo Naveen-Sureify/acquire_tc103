@@ -1,0 +1,136 @@
+<Party id="Party_<%= party.PartyTypeCode?.id %>">
+  <PartyTypeCode tc="<%= await lookups.lookup(types.OLI_LU.PARTYTYPECODE, { value : party.PartyTypeCode?._response }).tc %>">
+    <%= party.PartyTypeCode?._response _%>
+  </PartyTypeCode>
+  <GovtID>
+    <%= party.GovtID?.replaceAll("-","") _%>
+  </GovtID>
+  <GovtIDTC tc="<%= await lookups.lookup(types.OLI_LU.GOVTIDTC, { value : party.GovtIDTC }).tc %>">
+    <%= party.GovtIDTC _%>
+  </GovtIDTC>
+  <EstNetWorth>
+    <%= party.EstNetWorth?.replaceAll(",","") _%>
+  </EstNetWorth>
+  <Person>
+    <FirstName>
+      <%= party.Person?.FirstName _%>
+    </FirstName>
+    <MiddleName>
+      <%= party.Person?.MiddleName _%>
+    </MiddleName>
+    <LastName>
+      <%= party.Person?.LastName _%>
+    </LastName>
+    <MarStat tc="<%= await lookups.lookup(types.OLI_LU.MARSTAT,{ value : party.Person.MarStat }).tc %>">
+      <%= party.Person.MarStat _%>
+    </MarStat>
+    <Gender tc="<%= await lookups.lookup(types.OLI_LU.GENDER,{ value : party.Person?.Gender }).tc %>">
+      <%= party.Person?.Gender _%>
+    </Gender>
+    <BirthDate>
+      <%= utils.dayjs(party.Person?.BirthDate).format('YYYY-MM-DD') %>
+    </BirthDate>
+    <Age>
+      <%= transforms.dobToAge(party.Person?.BirthDate) %>
+    </Age>
+    <Citizenship tc="<%= await lookups.lookup(types.OLI_LU.CITIZENSHIP,{ value : party.Person.Citizenship }).tc %>">
+      <%= party.Person?.Citizenship _%>
+    </Citizenship>
+    <EstSalary>
+      <%= party.Person?.EstSalary?.replaceAll(",","") _%>
+    </EstSalary>
+    <BirthCountry tc="<%= await lookups.lookup(types.OLI_LU.CITIZENSHIP,{ value : party.Person?.BirthCountry }).tc %>">
+      <%= party.Person.BirthCountry _%>
+    </BirthCountry>
+    <BirthJurisdictionTC tc="<%= await lookups.lookup(types.OLI_LU.BIRTHJURISDICTIONTC,{ value : party.Person?.BirthJurisdictionTC }).tc %>">
+      <%= party.Person.BirthJurisdictionTC _%>
+    </BirthJurisdictionTC>
+    <OLifEExtension ExtensionCode="<%= party.PartyTypeCode?._response %> <%= party.PartyTypeCode?.ExtensionCode _%>" VendorCode="<%= party.PartyTypeCode?.VendorCode _%>">
+      <PersonExtension>
+        <RateClassAppliedFor>1</RateClassAppliedFor>
+        <PermCountry tc="<%= await lookups.lookup(types.OLI_LU.CITIZENSHIP,{ value : party.Person.OLifEExtension?.PersonExtension?.PermCountry }).tc %>">
+          <%= party.Person.OLifEExtension?.PersonExtension?.PermCountry %>
+        </PermCountry>
+        <% if(party.Person.OLifEExtension?.PersonExtension?.ValidDLInd === 'No') { %>
+        <ValidDLInd tc="0">FALSE</ValidDLInd>
+        <% } else { %>
+        <ValidDLInd tc="1">TRUE</ValidDLInd>
+        <% } %>
+      </PersonExtension>
+    </OLifEExtension>
+  </Person>
+  <Address id="Address_<%= party.PartyTypeCode?.id _%>">
+    <AddressTypeCode tc="1">Home</AddressTypeCode>
+    <Line1>
+      <%= party.Address?.Line1 _%>
+    </Line1>
+    <Line2>
+      <%= party.Address?.Line2 _%>
+    </Line2>
+    <City>
+      <%= party.Address?.City _%>
+    </City>
+    <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.ADDRESSSTATETC, { value : party.Address?.AddressStateTC }).tc %>">
+      <%= party.Address?.AddressStateTC _%>
+    </AddressStateTC>
+    <Zip>
+      <%= party.Address?.Zip _%>
+    </Zip>
+    <OLifEExtension ExtensionCode="Address <%= party.PartyTypeCode?.ExtensionCode _%>" VendorCode="<%= party.PartyTypeCode?.VendorCode _%>">
+      <AddressExtension>
+        <ZipCodeTC tc="1">United State Postal Code</ZipCodeTC>
+      </AddressExtension>
+    </OLifEExtension>
+  </Address>
+  <Phone id="Phone1_<%= party.PartyTypeCode?.id _%>">
+    <PhoneTypeCode tc="1">Home</PhoneTypeCode>
+    <AreaCode>
+      <%= party.Phone?.substr(1,3) _%>
+    </AreaCode>
+    <DialNumber>
+      <%= party.Phone?.substr(5,)?.replace(/\s|-/g,"") _%>
+    </DialNumber>
+  </Phone>
+  <EMailAddress id="EMailAddress1_<%= party.PartyTypeCode?.id _%>">
+    <EMailType tc="2">Personal</EMailType>
+    <AddrLine>
+      <%= party.EMailAddress?.AddrLine _%>
+    </AddrLine>
+  </EMailAddress>
+  <EMailAddress id="EMailAddress2_<%= party.PartyTypeCode?.id _%>">
+    <EMailType tc="1000500001">eDelivery Contract Print</EMailType>
+    <AddrLine>
+      <%= party.EMailAddress?.AddrLine _%>
+    </AddrLine>
+  </EMailAddress>
+  <Risk>
+    <% if(ras.extract('BH_ExistingInsurance') === 'NO') { %>
+    <ExistingInsuranceInd tc="0">FALSE</ExistingInsuranceInd>
+    <% } else { %>
+    <ExistingInsuranceInd tc="1">TRUE</ExistingInsuranceInd>
+    <% } %>
+    <% if(ras.extract('BH_SmokerStatus') === 'No') { %>
+    <TobaccoInd tc="0">FALSE</TobaccoInd>
+    <% } else { %>
+    <TobaccoInd tc="1">TRUE</TobaccoInd>
+    <% } %>
+  </Risk>
+</Party>
+<% if(party.Relations?.length>0) { %>
+<% for (const [index,relations] of party.Relations.entries()) { %>
+<Relation id="Relation_<%= relations.id _%>" OriginatingObjectID="<%= relations.OriginatingObjectID _%>" RelatedObjectID="<%= relations.RelatedObjectID _%>">
+  <OriginatingObjectType tc="<%= await lookups.lookup(types.OLI_LU.ORIGINATINGOBJECTTYPE, { value : relations.OriginatingObjectType }).tc %>">
+    <%= relations.OriginatingObjectType _%>
+  </OriginatingObjectType>
+  <RelatedObjectType tc="<%= await lookups.lookup(types.OLI_LU.RELATEDOBJECTTYPE, { value : relations.RelatedObjectType }).tc %>">
+    <%= relations.RelatedObjectType _%>
+  </RelatedObjectType>
+  <RelationRoleCode tc="<%= await lookups.lookup(types.OLI_LU.RELATIONROLECODE, { value : relations.RelationRoleCode }).tc %>">
+    <%= relations.RelationRoleCode _%>
+  </RelationRoleCode>
+  <RelationDescription tc="<%= await lookups.lookup(types.OLI_LU.RELATIONDESCRIPTION, { value : relations.RelationDescription }).tc %>">
+    <%= relations.RelationDescription _%>
+  </RelationDescription>
+</Relation>
+<% } %>
+<% } %>

@@ -1,0 +1,44 @@
+{
+  "name": "xml",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/xml/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/xml",
+        "main": "packages/xml/src/index.ts",
+        "tsConfig": "packages/xml/tsconfig.lib.json",
+        "assets": [
+          "packages/xml/*.md",
+          "packages/xml/**/*.csv",
+          "packages/xml/src/**/*.xml",
+          "packages/xml/src/**/*.ejs"
+        ]
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:node",
+      "options": {
+        "buildTarget": "xml:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/xml/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/packages/xml"],
+      "options": {
+        "jestConfig": "packages/xml/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

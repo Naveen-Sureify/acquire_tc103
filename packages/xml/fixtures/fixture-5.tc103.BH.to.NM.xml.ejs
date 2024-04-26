@@ -1,0 +1,449 @@
+<TXLife xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ACORD.org/Standards/Life/2" Version="2.35.00" xsi:schemaLocation="http://ACORD.org/Standards/Life/2 TXLife2.35.00.xsd">
+  <UserAuthRequest>
+    <UserLoginName>
+      <%= ras.extract('UserLoginName')%>
+    </UserLoginName>
+    <UserPswd>
+      <CryptType>
+        <%= ras.extract('CryptType')%>
+      </CryptType>
+      <Pswd>
+        <%= ras.extract('Pswd')%>
+      </Pswd>
+    </UserPswd>
+    <VendorApp>
+      <VendorName VendorCode="220">
+        <%= ras.extract('VendorName') %>
+      </VendorName>
+      <AppName>
+        <%= ras.extract('AppName') %>
+      </AppName>
+    </VendorApp>
+  </UserAuthRequest>
+  <TXLifeRequest PrimaryObjectID="Application_Holding_1">
+    <TransRefGUID>
+      <%= ras.extract('TransRefGUID')%>
+    </TransRefGUID>
+    <TransType tc="<%= await lookups.lookup(types.OLI_LU.TRANSTYPE, { value: ras.extract('TransType') }).tc%>">
+      <%= ras.extract('TransType')%>
+    </TransType>
+    <TransExeDate>
+      <%= utils.dayjs(ras.extract('TransExeDateTime')).format('YYYY-MM-DD')%>
+    </TransExeDate>
+    <TransExeTime>
+      <%= utils.dayjs(ras.extract('TransExeDateTime')).format('HH:mm:ss') %>
+    </TransExeTime>
+    <TransMode tc="<%=await lookups.lookup(types.OLI_LU.TRANSMODE, { value: ras.extract('TransMode') }).tc%>">
+      <%= ras.extract('TransMode') %>
+    </TransMode>
+    <OLifE Version="2.31.00">
+      <SourceInfo>
+        <CreationDate>
+          <%= utils.dayjs(ras.extract('SourceCreationDate')).format('YYYY-MM-DD')%>
+        </CreationDate>
+        <CreationTime>
+          <%= utils.dayjs(ras.extract('SourceCreationDate')).format('HH:mm:ss') %>
+        </CreationTime>
+        <SourceInfoName>
+          <%= ras.extract('SourceInfoName')%>
+        </SourceInfoName>
+      </SourceInfo>
+      <Holding id="Application_Holding_1">
+        <HoldingTypeCode tc="<%= await lookups.lookup(types.OLI_LU.HOLDINGTYPE, { value: ras.extract('HoldingTypeCode') }).tc%>">
+          <%= ras.extract('HoldingTypeCode') %>
+        </HoldingTypeCode>
+        <HoldingStatus tc="<%= await lookups.lookup(types.OLI_LU.HOLDINGSTATUS, { value: ras.extract('HoldingStatus') }).tc%>">
+          <%= ras.extract('HoldingStatus') %>
+        </HoldingStatus>
+        <Policy>
+          <PolNumber>
+            <%= ras.extract('PolNumber') %>
+          </PolNumber>
+          <LineOfBusiness tc="<%=await lookups.lookup( types.OLI_LU.LINEOFBUSINESS, { value: ras.extract('LineOfBusiness') }).tc%>">
+            <%= ras.extract('LineOfBusiness') %>
+          </LineOfBusiness>
+          <ProductType tc="<%=await lookups.lookup(types.OLI_LU.PRODUCTTYPE, { value: ras.extract('ProductType') }).tc%>">
+            <%= ras.extract('ProductType') %>
+          </ProductType>
+          <ProductCode>
+            <%= ras.extract('ProductCode') %>
+          </ProductCode>
+          <CarrierCode>
+            <%= ras.extract('CarrierCode') %>
+          </CarrierCode>
+          <PolicyStatus tc="<%=await lookups.lookup(types.OLI_LU.LIFECOVSTATUS, { value: ras.extract('PolicyStatus') }).tc%>">
+            <%= ras.extract('PolicyStatus') %>
+          </PolicyStatus>
+          <IssueNation tc="<%=await lookups.lookup(types.OLI_LU.ADDRESSCOUNTRYTC, { value: ras.extract('IssueNation') }).tc%>">
+            <%= ras.extract('IssueNation') %>
+          </IssueNation>
+          <Jurisdiction tc="<%=await lookups.lookup(types.OLI_LU.ADDRESSSTATETC, { value: ras.extract('Quote.State') }).tc%>">
+            <%= ras.extract('Jurisdiction') %>
+          </Jurisdiction>
+          <ReplacementType tc="<%=await lookups.lookup(types.OLI_LU.REPLACETYPE, { value: ras.extract('Replacement') }).tc%>">
+            <%= ras.extract('Replacement') %>
+          </ReplacementType>
+          <PaymentMode tc="<%=await lookups.lookup(types.OLI_LU.PAYMENTMODE, { value: ras.extract('PremiumPayment') }).tc%>">
+            <%= ras.extract('PremiumPayment')%>
+          </PaymentMode>
+          <PaymentAmt>
+            <%=ras.extract('Initial_Premium')?.replace(/,/g,'')%>
+          </PaymentAmt>
+          <% if(typeof ras.extract('PremiumPaymentMade') === "object") { %>
+          <PaymentMethod tc="<%=await lookups.lookup(types.OLI_LU.PAYMENTMETHOD, { value: ras.extract('PremiumPaymentMade')[0]?.label }).tc %>">
+            <%= ras.extract('PremiumPaymentMade')[0]?.label %>
+          </PaymentMethod>
+          <% } else { %>
+          <PaymentMethod tc="<%=await lookups.lookup(types.OLI_LU.PAYMENTMETHOD, { value: ras.extract('PremiumPaymentMade') }).tc %>">
+            <%= ras.extract('PremiumPaymentMade') %>
+          </PaymentMethod>
+          <% } %>
+          <Life>
+            <LifeUSA>
+              <MECInd tc="<%= await lookups.lookup(types.OLI_LU.MECIND, { key: ras.extract('MECInd') }).tc %>">
+                <%= ras.extract('MECInd') %>
+              </MECInd>
+              <DefLifeInsMethod tc="<%= await lookups.lookup(types.OLI_LU.DEFLIFEINSMETHOD, { value: ras.extract('DefLifeInsMethod') }).tc %>">
+                <%= ras.extract('DefLifeInsMethod') %>
+              </DefLifeInsMethod>
+              <Internal1035 tc="<%= await lookups.lookup(types.OLI_LU.INTERNAL1035, { value: ras.extract('Internal1035')?.toLowerCase() }).tc %>">
+                <%= ras.extract('Internal1035') %>
+              </Internal1035>
+            </LifeUSA>
+            <QualPlanType tc="<%= await lookups.lookup(types.OLI_LU.QUALPLANTYPE, { value: ras.extract('QualPlanType') }).tc %>">
+              <%= ras.extract('QualPlanType') %>
+            </QualPlanType>
+            <InitialPremAmt>
+              <%= ras.extract('Initial_Premium')?.replaceAll(",",'') %>
+            </InitialPremAmt>
+            <Coverage id="Base_Coverage">
+              <ProductCode>
+                <%= ras.extract('ProductCode1') %>
+              </ProductCode>
+              <ProductVersionCode>
+                <%= ras.extract('ProductVersionCode') %>
+              </ProductVersionCode>
+              <LifeCovStatus tc="<%= await lookups.lookup(types.OLI_LU.LIFECOVSTATUS, { value: ras.extract('LifeCovStatus') }).tc %>">
+                <%= ras.extract('LifeCovStatus') %>
+              </LifeCovStatus>
+              <TobaccoPremiumBasis tc="<%= await lookups.lookup(types.OLI_LU.TOBACCOPREMIMUMBASIS, { value: acord.SmokerStatus }).tc %>">
+                <%= acord.SmokerStatus %>
+              </TobaccoPremiumBasis>
+              <IndicatorCode tc="<%= await lookups.lookup(types.OLI_LU.INDICATORCODE, { value: ras.extract('IndicatorCode') }).tc %>">
+                <%= ras.extract('IndicatorCode') %>
+              </IndicatorCode>
+              <LivesType tc="<%= await lookups.lookup(types.OLI_LU.LIVESTYPE, { value: ras.extract('LivesType') }).tc %>">
+                <%= ras.extract('LivesType') %>
+              </LivesType>
+              <DeathBenefitOptType tc="<%= await lookups.lookup(types.OLI_LU.DEATHBENEFITOPTTYPE, { value: ras.extract('DeathBenefitOptType') }).tc %>">
+                <%= ras.extract('DeathBenefitOptType') %>
+              </DeathBenefitOptType>
+              <CurrentAmt>
+                <%= ras.extract('AgentQuoteResultsFaceamount')?.replaceAll(",",'') %>
+              </CurrentAmt>
+              <% if(acord.Holdings?.Policy?.Life?.Coverage?.CovOptions?.length>0) { %>
+              <% for (const [index,CovOption] of acord.Holdings?.Policy?.Life?.Coverage?.CovOptions?.entries()) { %>
+              <CovOption id="CovOption_<%= index+1 %>">
+                <ProductCode>
+                  <%= CovOption.ProductCode %>
+                </ProductCode>
+                <LifeCovOptTypeCode tc="<%= await lookups.lookup(types.OLI_LU.LIFECOVOPTTYPECODE, { value: CovOption.LifeCovOptTypeCode }).tc %>">
+                  <%= CovOption.LifeCovOptTypeCode %>
+                </LifeCovOptTypeCode>
+                <OLifEExtension VendorCode="05" ExtensionCode="CovOption 2.8.90">
+                  <CovOptionExtension>
+                    <Duration>
+                      <%= ras.extract('LTCCoveragePeriod')?.split(" ",1) %>
+                    </Duration>
+                  </CovOptionExtension>
+                </OLifEExtension>
+              </CovOption>
+              <% } %>
+              <% } %>
+              <LifeParticipant id="PrimaryInsured_Life_Participant" PartyID="InsuredParty_1">
+                <ParticipantName><%= ras.extract('PartAInsuredFirstName') %><%= ras.extract('PartAInsuredMiddleInitial') %> <%= ras.extract('PartAInsuredLastName') %></ParticipantName>
+                <LifeParticipantRoleCode tc="<%= await lookups.lookup(types.OLI_LU.LIFEPARTICIPANTROLECODE, { value: ras.extract('LifeParticipantRoleCode') }).tc %>">
+                  <%= ras.extract('LifeParticipantRoleCode') %>
+                </LifeParticipantRoleCode>
+                <TobaccoPremiumBasis tc="<%= await lookups.lookup(types.OLI_LU.TOBACCOPREMIMUMBASIS, { value: acord.TobaccoOrNicotineLastUsage }).tc %>">
+                  <%= acord.TobaccoOrNicotineLastUsage %>
+                </TobaccoPremiumBasis>
+                <PermTableRating><%= ras.extract('AgentBaseTableRating')==="" ? "None" : "" %></PermTableRating>
+                <OLifEExtension VendorCode="" ExtensionCode="">
+                  <LifeParticipantExtension>
+                    <ProposedTobaccoPremiumBasis tc="<%= await lookups.lookup(types.OLI_LU.TOBACCOPREMIMUMBASIS, { value: acord.TobaccoOrNicotineLastUsage }).tc %>">
+                      <%= acord.TobaccoOrNicotineLastUsage %>
+                    </ProposedTobaccoPremiumBasis>
+                  </LifeParticipantExtension>
+                </OLifEExtension>
+              </LifeParticipant>
+            </Coverage>
+          </Life>
+          <ApplicationInfo>
+            <% if(ras.extract('fe7fb1a6-d03d-44a4-94f0-9a622b53871d')?.toUpperCase() === "NO") { %>
+            <ApplicationType tc="1">New Application</ApplicationType>
+            <% } %>
+            <DistributionChannel tc="<%= await lookups.lookup(types.OLI_LU.DISTRIBUTIONCHANNEL, { value: ras.extract('DistributionChannel') }).tc %>"><%= ras.extract('DistributionChannel') %></DistributionChannel>
+            <ApplicationJurisdiction tc="<%= lookups.lookup(types.OLI_LU.APPLICATIONJURISDICTION, { value: ras.extract('OwnerResidenceState') }).tc %>"><%=ras.extract('OwnerResidenceState')%></ApplicationJurisdiction>
+            <FormalAppInd tc="<%= lookups.lookup(types.OLI_LU.FORMALAPPIND, { value: ras.extract('FormalAppInd') }).tc %>"><%= ras.extract('FormalAppInd') %></FormalAppInd>
+            <% if(ras.extract('SignedDate')) { %>
+            <SignedDate><%= utils.dayjs(ras.extract('SignedDate')).format('YYYY-MM-DD') %></SignedDate>
+            <% } %>
+            <% if(ras.extract('SubmissionDateTime')) { %>
+            <SubmissionDate><%= utils.dayjs(ras.extract('SubmissionDateTime')).format('YYYY-MM-DD') %></SubmissionDate>
+            <% } %>
+            <% if(ras.extract('SubmissionDateTime')) { %>
+            <SubmissionTime><%= utils.dayjs(ras.extract('SubmissionDateTime')).format('HH:mm:ss') %></SubmissionTime>
+            <% } %>
+            <% if(ras.extract('PPIMoreInformationSignatureMethod')==='WetSignature') { %>
+            <SubmissionType tc="1">Mail</SubmissionType>
+            <% } else { %>
+            <SubmissionType tc="12">Internet</SubmissionType>
+            <% } %>
+            <BackDateType tc="<%= await lookups.lookup(types.OLI_LU.BACKDATETYPE, { value: ras.extract('BackDateType') }).tc %>"><%= ras.extract('BackDateType') %></BackDateType>
+
+            <% if(ras.extract('ElectronicSignatureConsentAgent')) { %>
+            <AppProposedInsuredSignatureOK tc="<%= ras.extract('ElectronicSignatureConsentAgent')[0]?.id==='WetSignature'? '0': '1' %>"><%= ras.extract('ElectronicSignatureConsentAgent')[0]?.id==='WetSignature'? 'FALSE': 'TRUE' %></AppProposedInsuredSignatureOK>
+            <% } %>
+            <% if(ras.extract('ElectronicSignatureConsentAgent')) { %>
+            <AppOwnerSignatureOK tc="<%= ras.extract('ElectronicSignatureConsentAgent')[0].id==='WetSignature'? '0': '1' %>"><%= ras.extract('ElectronicSignatureConsentAgent')[0].id==='WetSignature'? 'FALSE': 'TRUE' %></AppOwnerSignatureOK>
+            <% } %>
+            <% if(ras.extract('ElectronicSignatureConsentAgent')) { %>
+            <AppWritingAgentSignatureOK tc="<%= ras.extract('ElectronicSignatureConsentAgent')[0].id==='WetSignature'? '0': '1' %>"><%= ras.extract('ElectronicSignatureConsentAgent')[0].id==='WetSignature'? 'FALSE': 'TRUE' %></AppWritingAgentSignatureOK>
+            <% } %>
+
+            <% if(ras.extract('ExistingInsurance')?.toUpperCase() ==="NO") { %>
+            <ReplacementInd tc="0"> False </ReplacementInd>
+            <% } else if(ras.extract('ExistingInsurance')?.toUpperCase() === "YES") { %>
+            <ReplacementInd tc="1"> True </ReplacementInd>
+            <% } %>
+            <SignatureInfo id="PI_Signature" SignaturePartyID="InsuredParty_1">
+              <SignatureRoleCode tc="<%=ras.extract('SignatureRoleCode')%>"><%= lookups.lookup(types.OLI_LU.SIGNATUREROLECODE, { tc: ras.extract('SignatureRoleCode')}).value %></SignatureRoleCode>
+              <SignatureCity><%=ras.extract('Signature.cityInsured') %></SignatureCity>
+              <% if(ras.extract('SignedDate')) { %>
+              <SignatureDate><%= utils.dayjs(ras.extract('SignedDate')).format('YYYY-MM-DD') %></SignatureDate>
+              <% } %>
+              <SignatureState><%=ras.extract('Signature.stateInsured')%></SignatureState>
+            </SignatureInfo>
+            <OLifEExtension VendorCode="220">
+              <StartedInDTC><%= ras.extract('StartedInDTC') %></StartedInDTC>
+              <ApplicationInfoExtension>
+                <% if(ras.extract('ExistingInsurance')?.toUpperCase() ==="NO") { %>
+                <ProducerOtherInsDisclosureInd tc="0">FALSE</ProducerOtherInsDisclosureInd>
+                <% } else if(ras.extract('ExistingInsurance')?.toUpperCase() ==="YES") { %>
+                <ProducerOtherInsDisclosureInd tc="1">TRUE</ProducerOtherInsDisclosureInd>
+                <% } %>
+                <%if(ras.extract('AppCompUSInd')?.toUpperCase() === "TRUE") { %>
+                <AppCompUSInd tc="1">True</AppCompUSInd>
+                <% } else if(ras.extract('AppCompUSInd')?.toUpperCase() === "FALSE") { %>
+                <AppCompUSInd tc="0">False</AppCompUSInd>
+                <% } %>
+                <% if(ras.extract('ReplaceLongTerm')?.toUpperCase() === "NO") { %>
+                <CoveredByMedicaidInd tc="0"><%= ras.extract('ReplaceLongTerm') %></CoveredByMedicaidInd>
+                <% } else if(ras.extract('ReplaceLongTerm')?.toUpperCase() === "YES") { %>
+                <CoveredByMedicaidInd tc="1"><%= ras.extract('ReplaceLongTerm') %></CoveredByMedicaidInd>
+                <% } %>
+                <% if(ras.extract('PremiumPaymentMade')?.toUpperCase() === "NO BILLING") { %>
+                <InitPremWireInd tc="1">True</InitPremWireInd>
+                <% } else if(ras.extract('PremiumPaymentMade')) { %>
+                <InitPremWireInd tc="0">False</InitPremWireInd>
+                <% } %>
+                <% if(ras.extract('TaxReturn')?.toUpperCase() === "NO") { %>
+                <IRSNoticeInd tc="0">FALSE</IRSNoticeInd>
+                <% } else if(ras.extract('TaxReturn')?.toUpperCase() === "YES") { %>
+                <IRSNoticeInd tc="1">TRUE</IRSNoticeInd>
+                <% } %>
+                <% if(ras.extract('LongTermPolicies')?.toUpperCase() === "NO") { %>
+                <LTCInforceInd tc="0">FALSE</LTCInforceInd>
+                <% } else if(ras.extract('LongTermPolicies')?.toUpperCase() === "YES") { %>
+                <LTCInforceInd tc="1">TRUE</LTCInforceInd>
+                <% } %>
+                <% if(ras.extract('LongTermPoliciesInForce')?.toUpperCase() === "No") { %>
+                <LTCInforce12MonthsInd tc="0">FALSE</LTCInforce12MonthsInd>
+                <% } else if(ras.extract('LongTermPoliciesInForce')?.toUpperCase() === "YES") { %>
+                <LTCInforce12MonthsInd tc="1">TRUE</LTCInforce12MonthsInd>
+                <% } %>
+                <% if(ras.extract('ReplaceLongTerm')?.toUpperCase() === "No") { %>
+                <LTCReplaceInd tc="0">FALSE</LTCReplaceInd>
+                <% } else if(ras.extract('ReplaceLongTerm')?.toUpperCase() === "YES") { %>
+                <LTCReplaceInd tc="1">TRUE</LTCReplaceInd>
+                <% } %>
+                <% if(ras.extract('ElectronicSignatureConsentAgent')) { %>
+                <% if(ras.extract('ElectronicSignatureConsentAgent')==='WetSignature') { %>
+                <NIGOInd tc="1">TRUE</NIGOInd>
+                <% } else { %>
+                <NIGOInd tc="0">FALSE</NIGOInd>
+                <% } %>
+                <% } %>
+                <% if(ras.extract('Incentive')?.toUpperCase() === "NO") { %>
+                <OffPaymtForPolicyInd tc="0">FALSE</OffPaymtForPolicyInd>
+                <% } else if(ras.extract('Incentive')?.toUpperCase() === "YES"){ %>
+                <OffPaymtForPolicyInd tc="1">TRUE</OffPaymtForPolicyInd>
+                <% } %>
+                <% if(ras.extract('Incentive')?.toUpperCase() === "NO") { %>
+                <OwnOffPaymtForPolicyInd tc="0">FALSE</OwnOffPaymtForPolicyInd>
+                <% } else if(ras.extract('Incentive')?.toUpperCase() === "YES"){ %>
+                <OwnOffPaymtForPolicyInd tc="1">TRUE</OwnOffPaymtForPolicyInd>
+                <% } %>
+                <% if(ras.extract('ExistingInsurance')==="NO") { %>
+                <OwnPendingInsInd tc="0">False</OwnPendingInsInd>
+                <% } else if(ras.extract('Incentive')?.toUpperCase() === "YES") { %>
+                <OwnPendingInsInd tc="1">True</OwnPendingInsInd>
+                <% } %>
+                <% if(ras.extract('PersonInsured')?.toUpperCase() === "NO") { %>
+                <OwnSameAsInsuredInd tc="0">FALSE</OwnSameAsInsuredInd>
+                <% } else if(ras.extract('PersonInsured')?.toUpperCase() === "YES") { %>
+                <OwnSameAsInsuredInd tc="1">TRUE</OwnSameAsInsuredInd>
+                <% } %>
+                <% if(ras.extract('Sold')?.toUpperCase() === "NO") { %>
+                <OwnSoldTransLifePolicyInd tc="0">FALSE</OwnSoldTransLifePolicyInd>
+                <% } else if(ras.extract('Sold')?.toUpperCase() === "YES") { %>
+                <OwnSoldTransLifePolicyInd tc="1">TRUE</OwnSoldTransLifePolicyInd>
+                <% } %>
+                <% if(ras.extract('Transfer')?.toUpperCase() === "NO") { %>
+                <OwnSolicitedToSellInd tc="0">FALSE</OwnSolicitedToSellInd>
+                <% } else if(ras.extract('Transfer')?.toUpperCase() === "YES") { %>
+                <OwnSolicitedToSellInd tc="1">TRUE</OwnSolicitedToSellInd>
+                <% } %>
+                <% if(ras.extract('SalesMaterial')?.toUpperCase() === "NO") { %>
+                <ProducerAppropSaleMatInd tc="0">FALSE</ProducerAppropSaleMatInd>
+                <% } else if(ras.extract('SalesMaterial')?.toUpperCase() === "YES") { %>
+                <ProducerAppropSaleMatInd tc="1">TRUE</ProducerAppropSaleMatInd>
+                <% } %>
+                <% if(ras.extract('InsuredSolicitation')?.toUpperCase() === "NO") { %>
+                <ProducerSeeAllPersonsInd tc="0">FALSE</ProducerSeeAllPersonsInd>
+                <% } else if(ras.extract('InsuredSolicitation')?.toUpperCase() ==="YES") { %>
+                <ProducerSeeAllPersonsInd tc="1">TRUE</ProducerSeeAllPersonsInd>
+                <% } %>
+                <% if(ras.extract('ProducerTIAReceipt')?.toUpperCase() === "YES") { %>
+                <ProducerTIAReceipt tc="1">Yes</ProducerTIAReceipt>
+                <% } else if(ras.extract('ProducerTIAReceipt')?.toUpperCase() === "NO") { %>
+                <ProducerTIAReceipt tc="0">No</ProducerTIAReceipt>
+                <% } %>
+                <% if(ras.extract('SmokerStatus')?.toUpperCase() === "NO") { %>
+                <SmokingInd tc="0">FALSE</SmokingInd>
+                <% } else if(ras.extract('SmokerStatus')?.toUpperCase() === "YES") { %>
+                <SmokingInd tc="1">TRUE</SmokingInd>
+                <% } %>
+                <% if(ras.extract('Sold')?.toUpperCase() === "NO") { %>
+                <SoldTransLifePolicyInd tc="0">FALSE</SoldTransLifePolicyInd>
+                <% } else if(ras.extract('Sold')?.toUpperCase() === "YES") { %>
+                <SoldTransLifePolicyInd tc="1">TRUE</SoldTransLifePolicyInd>
+                <% } %>
+                <% if(ras.extract('Transfer')?.toUpperCase() === "NO") { %>
+                <SolicitedToSellInd tc="0">FALSE</SolicitedToSellInd>
+                <% } else if(ras.extract('Transfer')?.toUpperCase() === "YES") { %>
+                <SolicitedToSellInd tc="1">TRUE</SolicitedToSellInd>
+                <% } %>
+                <% if(ras.extract('ChooseNotToCompleteInd')?.toUpperCase() === "FALSE") { %>
+                <ChooseNotToCompleteInd tc="0">False</ChooseNotToCompleteInd>
+                <% } else if(ras.extract('ChooseNotToCompleteInd')?.toUpperCase() === "TRUE") { %>
+                <ChooseNotToCompleteInd tc="1">True</ChooseNotToCompleteInd>
+                <% } %>
+                <% if(ras.extract('FinRepAdvisementInd')?.toUpperCase() === "TRUE") { %>
+                <FinRepAdvisementInd tc="1">True</FinRepAdvisementInd>
+                <% } else if(ras.extract('FinRepAdvisementInd')?.toUpperCase() === "FALSE") { %>
+                <FinRepAdvisementInd tc="0">False</FinRepAdvisementInd>
+                <% } %>
+                <DistChan tc="<%= lookups.lookup(types.OLI_LU.DISTCHAN, { value: ras.extract('FirmName') }).tc %>"><%= ras.extract('FirmName') %></DistChan>
+                <UnderwritingDecisionMRAS tc="<%= lookups.lookup(types.OLI_LU.UNDERWRITINGDECISIONMRAS, { value: ras.extract('UnderwritingDecisionMRAS') }).tc %>"><%= ras.extract('UnderwritingDecisionMRAS') %></UnderwritingDecisionMRAS>
+              </ApplicationInfoExtension>
+            </OLifEExtension>
+          </ApplicationInfo>
+          <OLifEExtension ExtensionCode="" VendorCode="">
+            <PolicyExtension>
+              <StatutoryCompanyCode>
+                <%= ras.extract('StatutoryCompanyCode') %>
+              </StatutoryCompanyCode>
+              <QuotedPremiumBasisAmt>
+                <%= ras.extract('Initial_Premium')?.replaceAll(",","") %>
+              </QuotedPremiumBasisAmt>
+              <NLGPeriod tc="<%= await lookups.lookup(types.OLI_LU.NLGPERIOD, { value: ras.extract('NLGPeriod') }).tc %>">
+                <%= ras.extract('NLGPeriod') %>
+              </NLGPeriod>
+              <% if(ras.extract('PremiumPaymentMade')?.toUpperCase() === "ACH") { %>
+              <OneTimeInitialDraftInd tc="1">TRUE</OneTimeInitialDraftInd>
+              <% } else if(ras.extract('PremiumPaymentMade')){ %>
+              <OneTimeInitialDraftInd tc="0">FALSE</OneTimeInitialDraftInd>
+              <% } %>
+              <PlannedFirstYrLump>
+                <%= ras.extract('Initial_Premium')?.replaceAll(",","") %>
+              </PlannedFirstYrLump>
+              <PlannedYearlyPrem>
+                <%= ras.extract('Initial_Premium')?.replaceAll(",","") %>
+              </PlannedYearlyPrem>
+            </PolicyExtension>
+          </OLifEExtension>
+        </Policy>
+        <Investment>
+          <SubAccount id="<%= ras.extract('ProductCode4') %>">
+            <ProductCode>
+              <%= ras.extract('ProductCode4') %>
+            </ProductCode>
+            <ProductFullName>
+              <%- ras.extractAnswerByKey('SandPIndex','question_text') %>
+            </ProductFullName>
+            <AllocPercent>
+              <%= ras.extract('SandPIndex') %>
+            </AllocPercent>
+          </SubAccount>
+        </Investment>
+        <Arrangement>
+          <ArrMode tc="<%= await lookups.lookup(types.OLI_LU.ARRMODE, { value : ras.extract('b30c71db-6f31-42b2-9abd-e7944c2ee285') }).tc %>">
+            <%= await lookups.lookup(types.OLI_LU.ARRMODE, { value : ras.extract('b30c71db-6f31-42b2-9abd-e7944c2ee285') }).key %> </ArrMode>
+          <ArrType tc="<%= await lookups.lookup(types.OLI_LU.ARRTYPE, { key : ras.extract('ArrType') }).tc %>">
+            <%= ras.extract('ArrType') %>
+          </ArrType>
+          <ModalAmt><%= ras.extract('32fee9e0-fcf7-437b-9ec9-ed5224eaba0a') %></ModalAmt>
+          <PaymentMethod tc="<%= await lookups.lookup(types.OLI_LU.PAYMENTMETHOD, { value : ras.extract('8cfec12d-275d-4b89-9304-01b161b8a790') }).tc %>">
+            <%= await lookups.lookup(types.OLI_LU.PAYMENTMETHOD, { value : ras.extract('8cfec12d-275d-4b89-9304-01b161b8a790') }).key %>
+          </PaymentMethod>
+          <ArrDestination id="<%= ras.extract('ProductCode4') %>" SubAcctID="<%= ras.extract('ProductCode4') %>">
+            <TransferAmtType tc="<%= await lookups.lookup(types.OLI_LU.TRANSFERAMTTYPE, { value : ras.extract('TransferAmtType') }).tc %>">
+              <%= ras.extract('TransferAmtType') %>
+            </TransferAmtType>
+            <TransferPct>
+              <%= ras.extract('PercentageSplit') %>
+            </TransferPct>
+          </ArrDestination>
+        </Arrangement>
+      </Holding>
+
+      <% if(acord.Parties?.length > 0 ) { %>
+      <% for (const [index,party] of acord.Parties?.entries()) { %>
+      <% if(party.PartyID === "PartyOwner_1") {%>
+      <%- await include('PartyAll',{party:{...party,AddressTypeCode:acord.Parties[0].AddressTypeCode,Line1:acord.Parties[0].Line1,City:acord.Parties[0].City,AddressStateTC:acord.Parties[0].AddressStateTC,Zip:acord.Parties[0].Zip,AddressCountryTC:acord.Parties[0].AddressCountryTC,Phone:acord.Parties[0].Phone,AddrLine:acord.Parties[0].AddrLine},i:index}) %>
+      <% } else { %>
+      <%- await include('PartyAll',{party,i:index}) %>
+
+      <% } %>
+      <% } %>
+      <% } %>
+
+      <%- await include('RelationsAll',{acord}) %>
+
+      <FormInstance id="FormInstance_InsuredParty_1">
+        <% if(acord.FormInstance?.length>0) { %>
+        <% for (const form of acord.FormInstance) { %>
+        <%- 
+                  await new forms.FormInstance({
+                  ...form
+                  }).serialize('FormResponse')
+                %>
+        <% } %>
+        <% } %>
+      </FormInstance>
+
+    </OLifE>
+  </TXLifeRequest>
+</TXLife>
+<% if(acord.FormInstance?.length>0) { %>
+<% for (const image of acord.FormInstance) { %>
+<%-
+       image.filePath && await new forms.ImageInfo({
+          imageGUID: image.FileName,
+          filePath: image.filePath,
+      }).serialize()
+      %>
+<% } %>
+<% } %>

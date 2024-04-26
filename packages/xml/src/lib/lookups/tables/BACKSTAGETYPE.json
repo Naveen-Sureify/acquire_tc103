@@ -1,0 +1,7 @@
+[
+  ["value", "key", "tc"],
+  ["Back Date to Save Age", "OLI_BACKDATE_SAVEAGE", "1"],
+  ["No backdating", "OLI_BACKDATE_NONE", "2"],
+  ["Other", "OLI_OTHER", "2147483647"],
+  ["Unknown", "OLI_UNKNOWN", "0"]
+]

@@ -1,0 +1,10 @@
+[
+  ["value", "key", "tc", "definition"],
+  ["Blended", "OLI_TOBPREMBASIS_BLENDED", "5", ""],
+  ["Nicotine Non-Tobacco", "OLI_TOBPREMBASIS_NONTOBACCO", "3", ""],
+  ["Non Smoker", "OLI_TOBPREMBASIS_NONSMOKER", "1", ""],
+  ["Other", "OLI_OTHER", "2147483647", ""],
+  ["Smoker", "OLI_TOBPREMBASIS_SMOKER", "2", ""],
+  ["Tobacco Lower Risk", "OLI_TOBPREMBASIS_TOBACCO", "4", ""],
+  ["Unknown", "OLI_UNKNOWN", "0", ""]
+]

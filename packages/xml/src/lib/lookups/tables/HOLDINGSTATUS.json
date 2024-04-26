@@ -1,0 +1,8 @@
+[
+  ["value", "key", "tc"],
+  ["Dormant - Suspended", "OLI_HOLDSTAT_DORMANT", "4"],
+  ["Inactive Terminated,  Lapsed or expired", "OLI_HOLDSTAT_INACTIVE", "2"],
+  ["Other", "OLI_OTHER", "2147483647"],
+  ["Proposed - Pending - Not yet inforce", "OLI_HOLDSTAT_PROPOSED", "3"],
+  ["Unknown", "OLI_UNKNOWN", "0"]
+]

@@ -1,0 +1,24 @@
+[
+  ["value", "key", "tc"],
+  [
+    "All methods permitted by the Company",
+    "OLI_APPSUBMITTYPE_ALLPERMITTED",
+    "13"
+  ],
+  ["Attached", "OLI_APPSUBMITTYPE_ATTACHED", "8"],
+  ["Data present", "OLI_APPSUBMITTYPE_DATAPRESENT", "5"],
+  ["Electronic", "OLI_APPSUBMITTYPE_ELECTRONIC", "2"],
+  ["External Attachment", "OLI_APPSUBMITTYPE_EXTERNALATTACH", "7"],
+  ["Fax", "OLI_APPSUBMITTYPE_FAX", "3"],
+  ["Handwritten", "OLI_APPSUBMITTYPE_HANDWRITTEN", "14"],
+  ["Internet", "OLI_APPSUBMITTYPE_INTERNET", "12"],
+  ["Mail", "OLI_APPSUBMITTYPE_MAIL", "1"],
+  ["On file", "OLI_APPSUBMITTYPE_ONFILE", "6"],
+  ["Other", "OLI_OTHER", "2147483647"],
+  ["Paper App Later", "OLI_APPSUBMIT_APPLATER", "11"],
+  ["Phone", "OLI_APPSUBMITTYPE_PHONE", "4"],
+  ["Unknown", "OLI_UNKNOWN", "0"],
+  ["Video", "OLI_APPSUBMITTYPE_VIDEO", "16"],
+  ["Voice", "OLI_APPSUBMITTYPE_VOICE", "15"],
+  ["Voice Response Unit", "OLI_APPSUBMITTYPE_VRU", "10"]
+]

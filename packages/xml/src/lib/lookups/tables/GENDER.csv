@@ -1,0 +1,10 @@
+value,key,tc,definition
+Female,OLI_GENDER_FEMALE,2,"A person with a specific set of physical anatomy (e.g. XX phenotype, vagina, ovaries, uterus, breasts, higher levels of estrogen, fine body hair) pursuant to this label."
+Female to Male Transgender,OLI_GENDER_FTMTRANS,6,"A person who has undergone medical treatments to change their biological sex from Female To Male, often times to align it with their gender identity.Also referred to as FTM. After he has completed his transition, he may identify simply as male."
+Intersex,OLI_GENDER_INTERSEX,5,A person with a set of sexual anatomy that doesn't fit within the definition of female or male.
+Issued on a combined rate blended from male and female,OLI_GENDER_COMBINED,4,
+Male,OLI_GENDER_MALE,1,"A person with a specific set of anatomy (e.g. XY phenotype, penis, testis, higher levels of testosterone, coarse body hair, facial hair) pursuant to this label."
+Male to Female Transgender,OLI_GENDER_MTFTRANS,7,"A person who has undergone medical treatments to change their biological sex from Male To Female, often times to align it with their gender identity.Also referred to as MTF. After she has completed her transition, she may identify simply as female."
+Other,OLI_OTHER,2147483647,
+Unisex,OLI_GENDER_UNISEX,3,
+Unknown,OLI_UNKNOWN,0,
