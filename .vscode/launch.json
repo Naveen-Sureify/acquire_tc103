@@ -1,0 +1,32 @@
+{
+  "configurations": [
+  {
+    "name": "nx test xml",
+    "request": "launch",
+    "runtimeArgs": [
+      "test",
+      "xml"
+    ],
+    "runtimeExecutable": "nx",
+    "skipFiles": [
+      "<node_internals>/**"
+    ],
+    "type": "node"
+  },
+  {
+    "name": "Attach by Process ID",
+    "processId": "${command:PickProcess}",
+    "request": "attach",
+    "skipFiles": [
+      "<node_internals>/**"
+    ],
+    "type": "node"
+  },
+    {
+      "type": "chrome",
+      "name": "http://localhost:9229",
+      "request": "launch",
+      "url": "http://localhost:9229"
+    }
+  ]
+}

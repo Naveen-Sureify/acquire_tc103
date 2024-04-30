@@ -1,0 +1,35 @@
+{
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[ejs]": {
+    "editor.defaultFormatter": "j69.ejs-beautify"
+  },
+  "eslint.probe": ["javascriptreact"],
+  "files.associations": {
+    "*.js": "javascriptreact",
+    "*.ts": "typescript"
+  },
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "go.toolsManagement.autoUpdate": true,
+  "explorer.confirmDragAndDrop": false,
+  "editor.detectIndentation": false,
+  "json.schemas": [],
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "editor.codeActionsOnSave": {},
+  "[html]": {
+    "editor.defaultFormatter": "j69.ejs-beautify"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "plugins": ["@nrwl/nx"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nrwl/nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "*",
+                "onlyDependOnLibsWithTags": ["*"]
+              }
+            ]
+          }
+        ],
+        "@typescript-eslint/no-empty-function": "warn",
+        "@typescript-eslint/ban-types": "warn",
+        "no-prototype-builtins": "warn",
+        "indent": [
+          "error",
+          2,
+          {
+            "ignoredNodes": [
+              "PropertyDefinition",
+              "ConditionalExpression",
+              "TemplateLiteral *",
+              "SwitchCase",
+              "FunctionExpression > .params[decorators.length > 0]"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@nrwl/nx/typescript"],
+      "rules": {
+        "@typescript-eslint/no-empty-function": "warn",
+        "@typescript-eslint/ban-types": "warn",
+        "no-prototype-builtins": "warn",
+        "indent": [
+          "error",
+          2,
+          {
+            "ignoredNodes": [
+              "PropertyDefinition",
+              "ConditionalExpression",
+              "TemplateLiteral *",
+              "SwitchCase",
+              "FunctionExpression > .params[decorators.length > 0]"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": ["plugin:@nrwl/nx/javascript"],
+      "rules": {
+        "@typescript-eslint/no-empty-function": "warn",
+        "@typescript-eslint/ban-types": "warn",
+        "no-prototype-builtins": "warn",
+        "indent": [
+          "error",
+          2,
+          {
+            "ignoredNodes": [
+              "PropertyDefinition",
+              "ConditionalExpression",
+              "TemplateLiteral *",
+              "SwitchCase",
+              "FunctionExpression > .params[decorators.length > 0]"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

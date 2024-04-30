@@ -17,7 +17,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@sureifylabs/acquire-core": ["packages/acquire-core/src/index.ts"],
       "@sureifylabs/acquire-models": ["packages/acquire-models/src/models","packages/acquire-models/src/index.ts"],
       "@sureifylabs/xml": ["packages/xml/src/index.ts"],
       "@sureifylabs/data-source": ["packages/acquire-models/src/data-source"]

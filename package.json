@@ -17,7 +17,7 @@
     "migrations:down": "nx revert-migrations acquire-models",
     "build": "nx build",
     "format": "nx format:write",
-    "lint": "nx run-many -t lint --fix --projects acquire-api,acquire-application-api,acquire-core,acquire-models,acquire-quote-api,mock-fast-api,xml",
+    "lint": "nx run-many -t lint --fix --projects acquire-application-api,acquire-models,xml",
     "test:unit": "nx run-many -t test",
     "test": "yarn test:unit"
   },

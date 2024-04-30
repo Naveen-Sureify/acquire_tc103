@@ -1,0 +1,153 @@
+{
+  "branches": [
+      {
+          "name": "main"
+      },
+      {
+          "name": "hotfix",
+          "range": "1.x"
+      },
+      {
+          "name": "develop",
+          "prerelease": true
+      }
+  ],
+  "plugins": [
+      [
+          "@semantic-release/commit-analyzer",
+          {
+              "preset": "angular",
+              "releaseRules": [
+                  {
+                      "type": "breaking",
+                      "release": "major"
+                  },
+                  {
+                      "type": "feat",
+                      "release": "minor"
+                  },
+                  {
+                      "type": "chore",
+                      "release": "patch"
+                  },
+                  {
+                      "type": "refactor",
+                      "release": "patch"
+                  },
+                  {
+                      "type": "fix",
+                      "release": "patch"
+                  },
+                  {
+                      "type": "revert",
+                      "release": "patch"
+                  },
+                  {
+                      "type": "perf",
+                      "release": "patch"
+                  },
+                  {
+                      "type": "test",
+                      "release": false
+                  },
+                  {
+                      "type": "docs",
+                      "release": false
+                  },
+                  {
+                      "type": "build",
+                      "release": false
+                  },
+                  {
+                      "type": "ci",
+                      "release": false
+                  },
+                  {
+                      "scope": "no-release",
+                      "release": false
+                  }
+              ],
+              "parserOpts": {
+                  "noteKeywords": [
+                      "BREAKING CHANGE"
+                  ]
+              }
+          }
+      ],
+      [
+          "@semantic-release/release-notes-generator",
+          {
+              "preset": "conventionalcommits",
+              "presetConfig": {
+                  "types": [
+                      {
+                          "type": "fix",
+                          "section": "Bug Fixes"
+                      },
+                      {
+                          "type": "breaking",
+                          "section": "Breaking Change"
+                      },
+                      {
+                          "type": "feat",
+                          "section": "Features"
+                      },
+                      {
+                          "type": "refactor",
+                          "section": "Code Refactoring"
+                      },
+                      {
+                          "type": "perf",
+                          "section": "Performance Improvements"
+                      },
+                      {
+                          "type": "revert",
+                          "section": "Reverts"
+                      },
+                      {
+                          "type": "chore",
+                          "section": "Miscellaneous Chores"
+                      },
+                      {
+                          "type": "test",
+                          "section": "Tests",
+                          "hidden": true
+                      },
+                      {
+                          "type": "docs",
+                          "section": "Documentation",
+                          "hidden": true
+                      },
+                      {
+                          "type": "build",
+                          "section": "Build System",
+                          "hidden": true
+                      },
+                      {
+                          "type": "ci",
+                          "section": "Continuous Integration",
+                          "hidden": true
+                      }
+                  ]
+              }
+          }
+      ],
+      [
+          "@semantic-release/github",
+          {
+              "assets": [
+                  {
+                      "path": "build.tar.gz",
+                      "label": "build-${nextRelease.gitTag}.tar.gz"
+                  }
+              ]
+          }
+      ],
+      [
+          "@semantic-release/git",
+          {
+              "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+          }
+      ]
+  ]
+}

@@ -1,7 +1,3 @@
-import {
-  ProductCore,
-  ProductCoreConstructorParams,
-} from '@sureifylabs/acquire-core';
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
 import * as uuid from 'uuid';
 import { Carrier } from '../../Carrier';
@@ -10,16 +6,12 @@ import { CreateProductDto } from '../dto/create-product.dto';
 import { UpdateProductDto } from '../dto/update-product.dto';
 
 @Entity({ name: 'quote_products' })
-export class Product extends ProductCore {
-  constructor(params: CreateProductDto | UpdateProductDto) {
-    super(params as ProductCoreConstructorParams);
-  }
-
+export class Product {
   @PrimaryGeneratedColumn()
-  override id!: number;
+  id!: number;
 
   @Column({ default: null })
-  override name!: string;
+  name!: string;
 
   @Column({ default: uuid.v4() })
   uuid!: string;
@@ -69,7 +61,7 @@ export class Product extends ProductCore {
   carrier!: Carrier;
 
   @Column({ default: 1, name: 'row_status' }) // Todo FK in my db
-  override rowStatus!: 0 | 1;
+  rowStatus!: 0 | 1;
 
   @Column({ default: 0, name: 'is_active' })
   isActive?: 0 | 1;

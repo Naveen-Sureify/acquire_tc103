@@ -6,4 +6,4 @@ WORKDIR /app
 
 RUN npm install -g nx
 RUN yarn install --no-lockfile
-RUN nx run-many --target=build --projects=xml,acquire-models,acquire-core,acquire-applications-api,acquire-quote-agent-api
+RUN nx run-many --target=build --projects=xml,acquire-models,acquire-applications-api

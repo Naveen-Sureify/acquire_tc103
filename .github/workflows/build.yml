@@ -1,0 +1,30 @@
+name: Lint, Build, Test
+
+on:
+  push:
+    branches: ['main, ci-*']
+  pull_request:
+    branches: ['*']
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    strategy:
+      matrix:
+        node-version: [18.16.1]
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'yarn'
+      - run: npm install -g nx
+      - run: yarn install --no-lockfile
+      # - run: |
+      #     nx run-many --target=lint --projects=xml,acquire-models,acquire-applications-api
+      - run: |
+          nx run-many --target=build --projects=xml,acquire-models,acquire-applications-api
+      # - run: |
+      #     nx run-many --target=test --projects=xml,acquire-models,acquire-applications-api
