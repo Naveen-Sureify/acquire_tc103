@@ -22,9 +22,9 @@ jobs:
           cache: 'yarn'
       - run: npm install -g nx
       - run: yarn install --no-lockfile
-      # - run: |
-      #     nx run-many --target=lint --projects=xml,acquire-models,acquire-applications-api
+      - run: |
+          nx run-many --target=lint --projects=xml,acquire-models,acquire-applications-api
       - run: |
           nx run-many --target=build --projects=xml,acquire-models,acquire-applications-api
-      # - run: |
-      #     nx run-many --target=test --projects=xml,acquire-models,acquire-applications-api
+      - run: |
+          nx run-many --target=test --projects=xml,acquire-models,acquire-applications-api

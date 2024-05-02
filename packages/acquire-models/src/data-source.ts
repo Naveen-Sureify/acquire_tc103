@@ -23,6 +23,7 @@ const dataSourceOptions: DataSourceOptions = {
   migrationsTableName: 'acquire_project_x_migrations',
   migrationsRun: process.env['DB_MIGRATIONS_RUN'] === 'true' && isDevelopment,
   dropSchema: process.env['DB_DROP_SCHEMA'] === 'true' && isDevelopment,
+  synchronize: false,
   namingStrategy: new SnakeNamingStrategy(),
 };
 

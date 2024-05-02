@@ -50,9 +50,8 @@ export async function compile(
   input: ApplicationRasInputJson,
   options: ejs.Options,
   template = '',
-  id = 1,
-  party_id = '',
-): Promise<string[]> {
+  id = 1
+): Promise<string> {
   const opts = {
     ...defaultCompileOpts,
     ...(options || {}),
@@ -69,17 +68,17 @@ export async function compile(
   const pairsWithAcordIds = addAcordIds(pairs);
   const extract = createExtractorFromRas(input);
 
-  // const modelsData = await databaseCalls(id);
-  // modelsData.quoteData.json_data = JSON.parse(
-  //   modelsData?.quoteData?.json_data || '{}'
-  // );
-  // modelsData.quoteData.application_json_data = JSON.parse(
-  //   modelsData?.quoteData?.application_json_data || '{}'
-  // );
+  const modelsData = await databaseCalls(id);
+  modelsData.quoteData.json_data = JSON.parse(
+    modelsData?.quoteData?.json_data || '{}'
+  );
+  modelsData.quoteData.application_json_data = JSON.parse(
+    modelsData?.quoteData?.application_json_data || '{}'
+  );
 
   const context = {
     acord: model.values,
-    // model: modelsData,
+    model: modelsData,
     transforms,
     lookups,
     sheets,
@@ -111,32 +110,15 @@ export async function compile(
         });
       },
     },
-    party_id: party_id,
   };
 
-  const result: string[] = [];
-  const product = context.ras.extract('b364a7a4-e7e1-47c6-896a-ea4a9b3ed683');
-  if(product && product.length > 0){
-    for (const element of product) {
-      let product_id = 1;
-      if(element.label == 'Whole Life' || element.label == 'Custom Whole Life'){
-        product_id = 1;
-      }
-      else if(element.label == 'Level Term (LT)' || element.label == 'Yearly Renewable Term (YRT)'){
-        product_id = 2;
-      }
-      else{
-        product_id = 3;
-      }
-      const rendered: string = await ejs.render(
-        templateLoaded,
-        { ...context, cx: context, productName: element.label, product_id: product_id },
-        { ...opts }
-      );
-      result.push(rendered);
-    }
-  }
-  return result;
+  const rendered: string = ejs.render(
+    templateLoaded,
+    { ...context, cx: context },
+    { ...opts }
+  ) as string;
+
+  return rendered;
 }
 
 export async function compileSimple(

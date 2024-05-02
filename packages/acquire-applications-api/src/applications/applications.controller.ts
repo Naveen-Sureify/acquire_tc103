@@ -19,12 +19,10 @@ import { ApplicationsService } from './applications.service';
 import { fromXML } from 'from-xml';
 import { ApplicationRas } from '@sureifylabs/acquire-models';
 import { ApiQuery, ApiTags } from '@nestjs/swagger';
-import { QuotesService } from './quotes.service';
-import {  stringsToXmlArray } from './utils';
 
 @Controller('applications')
 export class ApplicationsController {
-  constructor(private readonly applicationsService: ApplicationsService,private readonly quoteService: QuotesService) {}
+  constructor(private readonly applicationsService: ApplicationsService) {}
 
   // GET /api/v1/applications/:id?schema=tc103&format=xml&template=TC103
   @Get(':id')
@@ -60,30 +58,22 @@ export class ApplicationsController {
       throw new NotFoundException(`Application ${id} not found.`);
     }
 
-    const quotesData = await this.quoteService.findOne(+applicationRas.user_id);
-
     const templatePath = `src/templates/${template}.ejs`;
     try {
       const applicationRasInputJson: ApplicationRasInputJson = JSON.parse(
         applicationRas?.raw_input_json
       );
 
-      const rendered: string[] = await compile(
+      const rendered: string = await compile(
         applicationRasInputJson,
         {},
         templatePath,
-        id,
-        quotesData.party_d,
+        id
       );
-      const result = [];
       if (format === ApplicationFormat.JSON) {
-        return fromXML(rendered[0]);
+        return fromXML(rendered);
       } else {
-        for (const str of rendered) {
-          result.push(str);
-        }
-        const xmlResult = stringsToXmlArray(result);
-        return xmlResult;
+        return rendered;
       }
     } catch (error) {
       throw new InternalServerErrorException(error.message, error.name);

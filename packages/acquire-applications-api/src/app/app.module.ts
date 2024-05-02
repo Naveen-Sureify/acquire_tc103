@@ -11,7 +11,6 @@ import { PayloadsController } from '../payloads/payloads.controller';
 import { PayloadsService } from '../payloads/payloads.service';
 import { HealthcheckController } from '../healthcheck/healthcheck.controller';
 import { AcquireDataSource } from '@sureifylabs/data-source';
-import { QuotesService } from '../applications/quotes.service';
 
 @Module({
   imports: [
@@ -27,6 +26,6 @@ import { QuotesService } from '../applications/quotes.service';
     PayloadsController,
     HealthcheckController,
   ],
-  providers: [AppService, ApplicationsService, PayloadsService, QuotesService],
+  providers: [AppService, ApplicationsService, PayloadsService],
 })
 export class AppModule {}
