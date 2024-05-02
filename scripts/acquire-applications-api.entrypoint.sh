@@ -17,7 +17,7 @@ fi
 if [[ -z "$1" ]]; then
 
 	if $IS_LOCAL; then
-    /app/node_modules/.bin/nx run-many --target=serve --projects=acquire-applications-api,xml,acquire-models,acquire-core
+    /app/node_modules/.bin/nx run-many --target=serve --projects=acquire-applications-api,xml,acquire-models
 	else
 		/app/node_modules/.bin/nx run acquire-applications-api:start
 	fi

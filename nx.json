@@ -16,7 +16,7 @@
   "cli": {
     "defaultCollection": "@nrwl/nest"
   },
-  "defaultProject": "acquire-api",
+  "defaultProject": "acquire-applications-api",
   "generators": {
     "@nrwl/react": {
       "application": {

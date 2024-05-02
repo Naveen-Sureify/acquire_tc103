@@ -6,7 +6,7 @@
 properties([
     parameters([
         choice(
-            choices: ['','acquire-applications-api', 'acquire-quote-api', 'mock-fast-api'],
+            choices: ['','acquire-applications-api'],
             description: 'Select the PROJECT',
             name: 'PROJECT'
         ),
@@ -32,12 +32,6 @@ def DEPLOY_ENV          = ''
 switch(PROJECT) {
   case "acquire-applications-api":
     APPLICATION_NAME = 'nova'
-    break
-  case "acquire-quote-api":
-    APPLICATION_NAME = 'io'
-    break
-  case "mock-fast-api":
-    APPLICATION_NAME = 'rhea'
     break
   default:
     APPLICATION_NAME = ''
@@ -90,7 +84,7 @@ pipeline {
                       script {
                           withCredentials([usernamePassword(credentialsId: 'GITHUB_READONLY', passwordVariable: 'GITHUB_ACCESS_TOKEN', usernameVariable: 'GIT_USERNAME'), gitUsernamePassword(credentialsId: 'GITHUB_READONLY') ]) {
                               sh(script: """
-                                  docker run ${APPLICATION_NAME}:Test nx run-many --target=test --projects=xml,acquire-models,acquire-core,${PROJECT} --network host
+                                  docker run ${APPLICATION_NAME}:Test nx run-many --target=test --projects=xml,acquire-models,${PROJECT} --network host
                               """)
                           }
                       }

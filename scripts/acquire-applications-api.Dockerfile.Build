@@ -18,20 +18,22 @@ RUN apk -v --update add \
 RUN yarn install
 RUN /app/node_modules/.bin/nx run-many --target=build --all
 
-COPY . .
+# Need dist , entrypoint.sh , node_modules , nx.json , package.json
+RUN rm -rf /app/docker*
+RUN rm -rf /app/tsconfig*
+RUN rm -rf /app/Dockerfile
+RUN rm -rf /app/babel*
+RUN rm -rf /app/jest*
+RUN rm -rf /app/packages
+RUN cp -r /app/dist/* /app
+RUN rm -rf /app/dist
+RUN rm -rf /app/LICENSE
+RUN rm -rf /app/*.md
+RUN rm -rf /app/tools
 
-FROM node:18-alpine
-
-WORKDIR /app
-
-COPY --from=builder /app/dist /app
-COPY --from=builder /app/scripts/acquire-applications-api.entrypoint.sh /app/entrypoint.sh
-COPY --from=builder /app/node_modules /app/node_modules
-COPY --from=builder /app/nx.json /app/nx.json
-COPY --from=builder /app/package.json /app/package.json
 
 RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
 RUN apk add --update --no-cache py3-pip py3-setuptools
 RUN apk add --no-cache aws-cli
 
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["./scripts/acquire-applications-api.entrypoint.sh"]

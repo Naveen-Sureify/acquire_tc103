@@ -3,11 +3,6 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "setup": "./bin/setup.sh",
-    "acquire-frontend:start": "NODE_ENV=local CARRIER=lc npm --prefix=modules/acquire-frontend run app",
-    "acquire-frontend:server:start": "NODE_ENV=local CARRIER=lc npm --prefix=modules/acquire-frontend run serve",
-    "acquire-frontend:client:start": "REACT_APP_FORMOTIVE_DISABLED=true CARRIER=lc nve 16 npm --prefix=modules/acquire-frontend start",
-    "acquire-api:start": "nx serve acquire-api",
     "typeorm:cli": "dotenv -e .env -- ts-node --project=tsconfig.base.json -r tsconfig-paths/register ./node_modules/typeorm/cli",
     "seeds:create": "nx create-seed acquire-models",
     "seeds:up": "nx run-seeds acquire-models",

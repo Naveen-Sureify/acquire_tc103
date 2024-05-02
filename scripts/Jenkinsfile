@@ -23,26 +23,6 @@ pipeline {
                 }
             }
         }
-        stage('acquire-quote-api') {
-            when {
-                changeset "packages/acquire-quote-api/**"
-            }
-            steps {
-                script {
-                    PROJECTS = PROJECTS + ['acquire-quote-api']
-                }
-            }
-        }
-        stage('mock-fast-api') {
-            when {
-                changeset "packages/mock-fast-api/**"
-            }
-            steps {
-                script {
-                    PROJECTS = PROJECTS + ['mock-fast-api']
-                }
-            }
-        }
         stage('Dynamic'){
             steps{
                 script {
