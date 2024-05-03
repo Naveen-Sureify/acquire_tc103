@@ -2,41 +2,17 @@
  * Jenkins URL: https://jenkins.sureifylifeco.com/job/Product-Acquire/job/acquire-apps-CI/
 **/
 
-
-properties([
-    parameters([
-        choice(
-            choices: ['','acquire-applications-api'],
-            description: 'Select the PROJECT',
-            name: 'PROJECT'
-        ),
-        string (
-            name: 'GIT_REF',
-            defaultValue: '',
-            description: 'Enter Branch Name to build Docker Image'
-        )
-    ])
-])
-
 def buildStatus         = 'FAILED'
 def slackColor          = "warning"
 def Client              = "2020infra"
 def slackSendChannel    = 'C02U5NQ6PNK'
 def Application_Version = 'v1'
-env.APPLICATION_NAME    = ''
+def Project             = 'acquire_tc103'
+env.APPLICATION_NAME    = '' // need to add nove or other
 env.SRV_BUILD           = "${GIT_REF}-${BUILD_NUMBER}"
 env.SRV_TAG             = ''
 env.SKIPBUILD           = "false"
 def DEPLOY_ENV          = ''
-
-switch(PROJECT) {
-  case "acquire-applications-api":
-    APPLICATION_NAME = 'nova'
-    break
-  default:
-    APPLICATION_NAME = ''
-    break
-}
 
 pipeline {
     agent {
@@ -55,7 +31,7 @@ pipeline {
                 script {
                     checkout([ $class: 'GitSCM',
                         branches: [[name: GIT_REF]],
-                        userRemoteConfigs: [[url: 'https://github.com/sureifylabs/acquire.git',  credentialsId: 'GITHUB_READONLY',]]
+                        userRemoteConfigs: [[url: 'https://github.com/sureifylabs/acquire_tc103.git',  credentialsId: 'GITHUB_READONLY',]]
                     ])
                 }
             }
@@ -68,7 +44,7 @@ pipeline {
                 script {
                     withCredentials([usernamePassword(credentialsId: 'GITHUB_READONLY', passwordVariable: 'GITHUB_ACCESS_TOKEN', usernameVariable: 'GIT_USERNAME'), gitUsernamePassword(credentialsId: 'GITHUB_READONLY') ]) {
                         sh(script: """
-                          docker build -f scripts/${PROJECT}.Dockerfile.Test -t ${APPLICATION_NAME}:Test . --network host
+                          docker build -f scripts/acquire-applications-api.Dockerfile.Test -t ${APPLICATION_NAME}:Test . --network host
                         """)
                     }
                 }
@@ -84,7 +60,7 @@ pipeline {
                       script {
                           withCredentials([usernamePassword(credentialsId: 'GITHUB_READONLY', passwordVariable: 'GITHUB_ACCESS_TOKEN', usernameVariable: 'GIT_USERNAME'), gitUsernamePassword(credentialsId: 'GITHUB_READONLY') ]) {
                               sh(script: """
-                                  docker run ${APPLICATION_NAME}:Test nx run-many --target=test --projects=xml,acquire-models,${PROJECT} --network host
+                                  docker run ${APPLICATION_NAME}:Test nx run-many --target=test --projects=xml,acquire-models,acquire-applications-api --network host
                               """)
                           }
                       }
@@ -122,7 +98,7 @@ pipeline {
                 script {
                     withCredentials([usernamePassword(credentialsId: 'GITHUB_READONLY', passwordVariable: 'GITHUB_ACCESS_TOKEN', usernameVariable: 'GIT_USERNAME'), gitUsernamePassword(credentialsId: 'GITHUB_READONLY') ]) {
                         sh(script: """
-                          docker build -f scripts/${PROJECT}.Dockerfile.Build -t ${APPLICATION_NAME}:${SRV_BUILD} . --network host
+                          docker build -f scripts/acquire-applications-api.Dockerfile.Build -t ${APPLICATION_NAME}:${SRV_BUILD} . --network host
                         """)
                     }
                 }
