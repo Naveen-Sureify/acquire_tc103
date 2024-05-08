@@ -1,6 +1,6 @@
-# Acquire
+# Acquire TC103
 
-[![Build](https://github.com/sureifylabs/acquire/actions/workflows/build.yml/badge.svg)](https://github.com/sureifylabs/acquire/actions/workflows/build.yml)
+[![Build](https://github.com/sureifylabs/acquire_tc103/actions/workflows/build.yml/badge.svg)](https://github.com/sureifylabs/acquire_tc103/actions/workflows/build.yml)
 
 ## Requirements
 
