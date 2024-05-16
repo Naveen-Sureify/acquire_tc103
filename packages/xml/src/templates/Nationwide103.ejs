@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TXLife xmlns="http://ACORD.org/Standards/Life/2" xmlns:a="http://www.w3.org/2005/08/addressing"
+   xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="2.20.00">
+   <UserAuthRequest>
+      <UserLoginName>sgSurify</UserLoginName>
+      <UserPswd>
+         <CryptType>NONE</CryptType>
+         <Pswd>XXX</Pswd>
+      </UserPswd>
+      <VendorApp>
+         <VendorName VendorCode="564">Sureify</VendorName>
+         <AppName>ApplyAndBuy</AppName>
+         <AppVer>3.1</AppVer>
+      </VendorApp>
+   </UserAuthRequest>
+   <TXLifeRequest PrimaryObjectID="Application_Holding">
+      <TransRefGUID>AEBB699-2F7D-2F53-052A-ACB0A18649B5</TransRefGUID>
+      <TransType tc="103">New Business Submission</TransType>
+      <TransExeDate><%= cx.utils.dayjs().format('YYYY-MM-DD') %></TransExeDate>
+      <OLifE>
+         <Holding id="Application_Holding">
+            <HoldingTypeCode tc="2">Policy</HoldingTypeCode>
+            <Purpose tc="4">Personal</Purpose>
+            <Policy>
+               <LineOfBusiness tc="1">Life</LineOfBusiness>
+               <ProductType tc="1">Whole Life</ProductType>
+               <ProductCode>1F0N0B0Q5</ProductCode>
+               <CarrierCode>Nationwide</CarrierCode>
+               <PlanName>Nationwide Heritage Single Premium Whole Life</PlanName>
+               <PolNumber>8000100000</PolNumber>
+               <Jurisdiction tc="32">NE</Jurisdiction>  <!--issue state-->
+               <PaymentMode tc="1">Annual</PaymentMode>
+               <PaymentAmt><%= acord.PQPS.PremiumAmount %></PaymentAmt>
+               <Life>
+                  <FaceAmt></FaceAmt>
+                  <Coverage>
+                     <IndicatorCode tc="1">Base</IndicatorCode>
+                     <CurrentAmt>100000</CurrentAmt>
+                     <LifeParticipant PartyID="InsuredParty_1">
+                        <LifeParticipantRoleCode tc="1">Primary Insured</LifeParticipantRoleCode>
+                        <TobaccoPremiumBasis tc="1">Nonsmoker</TobaccoPremiumBasis>
+                        <UnderwritingClass tc="2">Preferred</UnderwritingClass>
+                     </LifeParticipant>
+                  </Coverage>
+               </Life>
+               <FinancialActivity id="FinancialActivity_1">
+                  <FinActivityType tc="1">Premium Payment</FinActivityType>
+                  <FinActivityNetAmt>25000</FinActivityNetAmt>
+                  <Payment id="payment_1">
+                           <PaymentForm tc="2">Check</PaymentForm>
+                  </Payment>
+               </FinancialActivity>
+               <ApplicationInfo>
+                  <ApplicationType tc="1">New</ApplicationType>
+                  <ApplicationJurisdiction tc="32">NE</ApplicationJurisdiction>   <!--Issue State-->
+               </ApplicationInfo>
+            </Policy>
+            <OLifEExtension VendorCode="564">
+               <SplitCommInd tc="0">False</SplitCommInd>
+               <SplitCommDesc>abc</SplitCommDesc>
+            </OLifEExtension>
+         </Holding>
+         <Holding id="Holding_OtherIns_1">
+            <HoldingTypeCode tc="2">Policy</HoldingTypeCode>
+            <Policy CarrierPartyID="Party_Carrier_OtherIns_1">
+               <PolNumber>8000014568</PolNumber>
+               <IssueDate>2015-09-10</IssueDate>
+               <Life>
+                  <FaceAmt>100000</FaceAmt>
+                  <LifeUSA>
+                     <MECInd tc="0">False</MECInd> <!--schema change-->
+                     <Internal1035 tc="1">True</Internal1035>
+                  </LifeUSA>
+               </Life>
+               <ApplicationInfo>
+                  <ReplacementInd tc="1">True</ReplacementInd>
+               </ApplicationInfo>
+            </Policy>
+         </Holding>
+         <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="Holding_OtherIns_1"
+            id="Relation_OtherIns_1">
+            <RelationRoleCode tc="64">Replaced by</RelationRoleCode>
+         </Relation>
+         <Relation OriginatingObjectID="Holding_OtherIns_1" RelatedObjectID="InsuredParty_1"
+            id="Relation_InsuredInforcePolicy_1">
+            <RelationRoleCode tc="32">Insured</RelationRoleCode>
+         </Relation>
+         <Party id="Party_Carrier_OtherIns_1">
+            <PartyTypeCode tc="2">Organization</PartyTypeCode>
+            <FullName>Nationwide</FullName>
+            <Organization />
+         </Party>
+         <Relation OriginatingObjectID="Holding_OtherIns_1"
+            RelatedObjectID="Party_Carrier_OtherIns_1" id="Relation_Carrier_OtherIns_1">
+            <RelationRoleCode tc="80">Health Insurer</RelationRoleCode>
+         </Relation>
+         <Party id="InsuredParty_1">
+            <PartyTypeCode tc="1">Person</PartyTypeCode>
+            <GovtIDTC tc="1">SSN</GovtIDTC>
+            <GovtID><%=acord?.PI.SSN%></GovtID>
+            <Person>
+               <Prefix><%=acord.PI.Prefix%></Prefix>
+               <FirstName><%=acord.PI.FirstName%></FirstName>
+               <MiddleName><%=acord.PI.MiddleInitial%></MiddleName>
+               <LastName><%=acord.PI.LastName%></LastName>
+               <Suffix><%=acord.PI.Suffix%></Suffix>
+               <BirthDate><%=acord.PI.DateofBirth%></BirthDate>
+               <Gender tc="<%= await lookups.lookup('GENDER', { value: acord?.PI.Sex}).tc %>">
+                <%= acord.PI.Sex%>
+              </Gender>
+              <DriversLicenseNum><%=acord?.PI?.DLNumber%></DriversLicenseNum>
+              <DriversLicenseState tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI.DLState}).tc%>">
+                <%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI.DLState}).key%>
+              </DriversLicenseState>
+              <BirthJurisdictionTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI.BirthState}).tc%>">
+                <%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI.BirthState}).key%>
+              </BirthJurisdictionTC>
+              <BirthCountry tc="<%= await lookups.lookup(types.OLI_LU.ADDRESSCOUNTRYTC, {value: acord?.PI.BirthCountry}).tc%>"><%=acord.PI.BirthCountry%></BirthCountry>
+            </Person>
+            <Address>
+              <AddressTypeCode tc="1">Residence</AddressTypeCode>
+               <Line1><%=acord?.PI?.Address%></Line1>
+               <Line2><%=acord?.PI?.Address%></Line2>
+               <City><%=acord?.PI.City%></City>
+               <AddressState><%=acord?.PI.State%></AddressState>
+               <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI.State}).tc%>">
+                <%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI.State}).key%>
+              </AddressStateTC>
+               <Zip><%=acord?.PI.Zip%></Zip>
+            </Address>
+            <EMailAddress>
+              <AddrLine><%=acord?.PI.EmailAddress%></AddrLine>
+           </EMailAddress>
+            <Phone>
+               <PhoneTypeCode tc="<%= await lookups.lookup(types.OLI_LU.PHONETYPE, {value: acord?.PI.PhoneType}).tc%>">
+                <%=acord?.PI.PhoneType%>
+              </PhoneTypeCode>
+               <AreaCode><%=acord?.PI.PhoneNumber.substring(0,5)%></AreaCode>
+               <DialNumber><%=acord?.PI.PhoneNumber.substring(6)%></DialNumber>
+               <PrefPhone tc="1">True</PrefPhone>
+            </Phone>
+            <Risk>
+               <ExistingInsuranceInd tc="0">False</ExistingInsuranceInd>
+            </Risk>
+         </Party>
+         <Party id="SecondaryAddresseeParty_1">
+            <PartyTypeCode tc="1">Person</PartyTypeCode>
+            <Person>
+               <Prefix>Mr</Prefix>
+               <FirstName>John</FirstName>
+               <MiddleName>M</MiddleName>
+               <LastName>Felix</LastName>
+               <Suffix>Sr</Suffix>
+            </Person>
+            <Address>
+               <AddressTypeCode tc="1">Residence</AddressTypeCode>
+               <Line1>1 Main St E</Line1>
+               <Line2>Apartment H</Line2>
+               <City>Abbeville</City>
+               <AddressState>GA</AddressState>
+               <AddressStateTC tc="13">GA</AddressStateTC>
+               <Zip>12313</Zip>
+            </Address>
+            <Phone>
+               <PhoneTypeCode tc="1">Home</PhoneTypeCode>
+               <AreaCode>123</AreaCode>
+               <DialNumber>1233212</DialNumber>
+               <PrefPhone tc="1">True</PrefPhone>
+            </Phone>
+         </Party>
+         <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="InsuredParty_1"
+            id="Relation_InsuredParty">
+            <RelationRoleCode tc="32">Insured</RelationRoleCode>
+         </Relation>
+         <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="InsuredParty_1"
+            id="Relation_InsuredPayer">
+            <RelationRoleCode tc="31">Payer</RelationRoleCode>
+         </Relation>
+         <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="InsuredParty_1"
+            id="Relation_PartyOwner">
+            <RelationRoleCode tc="8">Owner</RelationRoleCode>
+         </Relation>
+         <Relation OriginatingObjectID="Application_Holding"
+            RelatedObjectID="SecondaryAddresseeParty_1" id="Relation_PartySecondaryAddressee">
+            <RelationRoleCode tc="127">Third Party Designee</RelationRoleCode>
+         </Relation>
+         <Party id="Party_PrimaryBeneficiary_1">
+            <PartyTypeCode tc="1">Person</PartyTypeCode>
+            <FullName>Mr Harry C Potter Jr</FullName>
+            <GovtID>123123123</GovtID>
+            <GovtIDTC tc="1">SSN</GovtIDTC>
+            <Person>
+               <Prefix>Mr</Prefix>
+               <FirstName>Harry</FirstName>
+               <MiddleName>C</MiddleName>
+               <LastName>Potter</LastName>
+               <Suffix>Jr</Suffix>
+               <BirthDate>1980-09-16</BirthDate>
+            </Person>
+            <Address>
+               <AddressTypeCode tc="1">Residence</AddressTypeCode>
+               <Line1>1 Main St E</Line1>
+               <Line2>Apartment H</Line2>
+               <City>Abbeville</City>
+               <AddressState>GA</AddressState>
+               <AddressStateTC tc="13">GA</AddressStateTC>
+               <Zip>12313</Zip>
+            </Address>
+            <Phone>
+               <PhoneTypeCode tc="12">Mobile</PhoneTypeCode>
+               <AreaCode>614</AreaCode>
+               <DialNumber>8887675</DialNumber>
+               <PrefPhone tc="1">True</PrefPhone>
+            </Phone>
+            <OLifEExtension VendorCode="564">
+               <SplitPctInd tc="1">True</SplitPctInd>
+            </OLifEExtension>
+         </Party>
+         <Party id="Party_ContingentBeneficiary_2">
+            <PartyTypeCode tc="2">Organization</PartyTypeCode>
+            <FullName>Sample Employer</FullName>
+            <GovtID>675537635</GovtID>
+            <GovtIDTC tc="2">TIN</GovtIDTC>
+            <Organization>
+               <EstabDate>2010-10-10</EstabDate>
+            </Organization>
+            <Address>
+               <AddressTypeCode tc="2">Business</AddressTypeCode>
+               <Line1>1 Business Employer St</Line1>
+               <City>Abbeville</City>
+               <AddressState>GA</AddressState>
+               <AddressStateTC tc="13">GA</AddressStateTC>
+               <Zip>12313</Zip>
+            </Address>
+            <Phone>
+               <PhoneTypeCode tc="12">Mobile</PhoneTypeCode>
+               <AreaCode>614</AreaCode>
+               <DialNumber>8887675</DialNumber>
+               <PrefPhone tc="1">True</PrefPhone>
+            </Phone>
+            <OLifEExtension VendorCode="564">
+               <SplitPctInd tc="1">True</SplitPctInd>
+            </OLifEExtension>
+         </Party>
+         <Party id="Party_ContingentBeneficiary_3">
+            <PartyTypeCode tc="2">Organization</PartyTypeCode>
+            <FullName>Sample Trust</FullName>
+            <GovtID>5764325676</GovtID>
+            <GovtIDTC tc="2">TIN</GovtIDTC>
+            <Organization>
+               <OrgForm tc="16">Trust</OrgForm>
+               <TrustType tc="58">Charity Trust</TrustType>  <!--This is an exmaple tc-->
+               <EstabDate>2011-11-11</EstabDate>
+            </Organization>
+            <Address>
+               <AddressTypeCode tc="2">Business</AddressTypeCode>
+               <Line1>1 Business Trust St</Line1>
+               <City>Abbeville</City>
+               <AddressState>GA</AddressState>
+               <AddressStateTC tc="13">GA</AddressStateTC>
+               <Zip>12313</Zip>
+            </Address>
+            <Phone>
+               <PhoneTypeCode tc="2">Work</PhoneTypeCode>
+               <AreaCode>614</AreaCode>
+               <DialNumber>7777675</DialNumber>
+               <PrefPhone tc="1">True</PrefPhone>
+            </Phone>
+            <OLifEExtension VendorCode="564">
+               <SplitPctInd tc="1">True</SplitPctInd>
+            </OLifEExtension>
+         </Party>
+         <Relation OriginatingObjectID="Application_Holding"
+            RelatedObjectID="Party_PrimaryBeneficiary_1" id="Relation_PrimaryBeneficiary_1">
+            <RelationRoleCode tc="34">Primary Beneficiary</RelationRoleCode>
+            <InterestPercent>50</InterestPercent>
+            <Sequence>1</Sequence>
+         </Relation>
+         <Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="Party_PrimaryBeneficiary_1"
+            id="Relation_InsuredPrimaryBeneficiary_1">
+            <RelationRoleCode tc="4">Sibling</RelationRoleCode>
+            <RelationDescription tc="7">Brother</RelationDescription>
+         </Relation>
+         <Relation OriginatingObjectID="Application_Holding"
+            RelatedObjectID="Party_ContingentBeneficiary_2" id="Relation_ContingentBeneficiary_2">
+            <RelationRoleCode tc="34">Primary Beneficiary</RelationRoleCode>
+            <InterestPercent>30</InterestPercent>
+            <Sequence>1</Sequence>
+         </Relation>
+         <Relation OriginatingObjectID="InsuredParty_1"
+            RelatedObjectID="Party_ContingentBeneficiary_2"
+            id="Relation_InsuredContingentBeneficiary_2">
+            <RelationRoleCode tc="7">Employer</RelationRoleCode>
+            <RelationDescription tc="0">unknown</RelationDescription>
+         </Relation>
+         <Relation OriginatingObjectID="Application_Holding"
+            RelatedObjectID="Party_ContingentBeneficiary_3" id="Relation_ContingentBeneficiary_3">
+            <RelationRoleCode tc="34">Primary Beneficiary</RelationRoleCode>
+            <InterestPercent>20</InterestPercent>
+            <Sequence>1</Sequence>
+         </Relation>
+         <Relation OriginatingObjectID="InsuredParty_1"
+            RelatedObjectID="Party_ContingentBeneficiary_3"
+            id="Relation_InsuredContingentBeneficiary_3">
+            <RelationRoleCode tc="1022000002">Trust</RelationRoleCode>
+            <RelationDescription tc="0">unknown</RelationDescription>
+         </Relation>
+         <Party id="Party_Agent_1">
+            <PartyTypeCode tc="1">Person</PartyTypeCode>
+            <FullName>DONALD L SPENCE</FullName>
+            <GovtID>5674</GovtID>
+            <GovtIDTC tc="1">SSN</GovtIDTC>
+            <Person>
+               <FirstName>DONALD</FirstName>
+               <MiddleName>L</MiddleName>
+               <LastName>SPENCE</LastName>
+            </Person>
+            <Phone>
+               <PhoneTypeCode tc="1">Home</PhoneTypeCode>
+               <AreaCode>637</AreaCode>
+               <DialNumber>7789745</DialNumber>
+               <PrefPhone tc="1">True</PrefPhone>
+            </Phone>
+            <Producer>
+               <NIPRNumber>1234567</NIPRNumber>
+               <CarrierAppointment>
+                  <CompanyProducerID>080Z75100956</CompanyProducerID>
+               </CarrierAppointment>
+               <Registration>
+                  <FirmName>NATIONWIDE FIN GEN AGY INC - ADVANTAGE DIRECT</FirmName>
+                  <FirmRegistrationNum>H01565565</FirmRegistrationNum>
+                  </Registration>
+            </Producer>
+            <EMailAddress>
+               <AddrLine>Producer20240130122514@gmail.com</AddrLine>
+            </EMailAddress>
+         </Party>
+         <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="Party_Agent_1"
+            id="Relation_Application_Agent_1">
+            <RelationRoleCode tc="37">Writing Agent</RelationRoleCode>
+            <InterestPercent>100</InterestPercent>
+         </Relation>
+			<FormInstance RelatedObjectID="InsuredParty_1" id="Form_xxx">
+				<Attachment>
+					<SignatureInfo>
+						<SignatureRoleCode tc="1">Primary Insured</SignatureRoleCode>
+						<SignatureDate>2023-10-18</SignatureDate>
+						<SignatureState tc="35">NJ</SignatureState>
+						<SignatureOK tc="1">True</SignatureOK>
+					</SignatureInfo>
+				</Attachment>
+			</FormInstance>
+      </OLifE>
+   </TXLifeRequest>
+</TXLife>
