@@ -1,0 +1,45 @@
+/*
+ * Jenkins URL: https://jenkins.sureifylifeco.com/job/Product-Acquire/job/acquire-apps/
+**/
+
+
+def PROJECTS = []
+
+pipeline {
+    agent {
+        kubernetes {
+            inheritFrom 'node-18-npm-9'
+        }
+    }
+
+    stages {
+        stage('acquire-applications-api') {
+            when {
+                changeset "packages/**"
+            }
+            steps {
+                script {
+                    PROJECTS = PROJECTS + ['acquire-applications-api']
+                }
+            }
+        }
+        stage('Dynamic'){
+            steps{
+                script {
+                    def executions = PROJECTS.collectEntries { PROJECT ->
+                        ["Execution ${PROJECT}": {
+                            stage(PROJECT) {
+                                build job: '/Product-Acquire/acquire-apps-CI', propagate: true,
+                                    parameters: [
+                                        string(name: 'GIT_REF', value: BRANCH_NAME),
+                                        string(name: 'PROJECT', value: PROJECT)
+                                    ]
+                            }
+                        }]
+                    } 
+                    parallel executions
+                }
+            }
+        }
+    }
+}
