@@ -48,7 +48,7 @@ pipeline {
         }
         stage('Build the Test Dockerfile') {
             when {
-                expression { SKIPBUILD == "false" }
+                expression { SKIPBUILD != "false" }
             }
             steps {
                 script {
@@ -62,7 +62,7 @@ pipeline {
         }
         stage('Test') {
             when {
-                expression { SKIPBUILD == "false" }
+                expression { SKIPBUILD != "false" }
             }
             parallel {
               stage('Test') {
