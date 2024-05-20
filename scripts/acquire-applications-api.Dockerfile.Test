@@ -21,4 +21,4 @@ RUN apk add --no-cache aws-cli
 
 RUN npm install -g nx
 RUN yarn install
-RUN nx run-many --target=build --all
+RUN /app/node_modules/.bin/nx run-many --target=build --all
