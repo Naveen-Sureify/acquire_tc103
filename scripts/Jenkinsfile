@@ -32,7 +32,7 @@ pipeline {
                         node -v
                         npm -v
                         yarn -v
-                        yarn add semantic-release@19.0.5 @semantic-release/changelog @semantic-release/git conventional-changelog-conventionalcommits
+                        yarn add semantic-release@19.0.5 @semantic-release/changelog @semantic-release/git conventional-changelog-conventionalcommits@6.1.0
                     """)
                     withCredentials([usernamePassword(credentialsId: 'GITHUB_READONLY', passwordVariable: 'GH_TOKEN', usernameVariable: 'GIT_AUTHOR_NAME')]) {
                         def SEMVER = sh(script: '''npx semantic-release --dryRun | grep -oP 'Published release \\K.*? ' || echo 'EX-NotFound' ''', returnStdout: true).trim()
