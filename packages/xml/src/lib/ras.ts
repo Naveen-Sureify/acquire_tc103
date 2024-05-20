@@ -10,7 +10,6 @@ import {
   QuestionKeys,
 } from '../types';
 import { DatabaseService } from './database';
-import { AcquireDataSource } from '@sureifylabs/data-source';
 
 import * as utils from './utils';
 import {
@@ -40,9 +39,7 @@ export const extractPair = (
 ): QuestionAnswerPair | undefined => {
   return pairs.find(
     (pair: QuestionAnswerPair) =>
-      pair.acord_id === id ||
-      pair.uuid === id ||
-      pair.question_id === id ||
+      pair.acord_id === id || pair.uuid === id || pair.question_id === id ||
       pair.sureify_id === id
   );
 };
@@ -279,14 +276,11 @@ export const addAcordIds = (
 };
 
 export const databaseCalls = async (id: number) => {
-  if (!AcquireDataSource.isInitialized) {
-    await AcquireDataSource.initialize();
-  }
   const databaseService = new DatabaseService(
-    AcquireDataSource.getRepository(ApplicationRas),
-    AcquireDataSource.getRepository(Quote),
-    AcquireDataSource.getRepository(Product),
-    AcquireDataSource.getRepository(PoliciesV2)
+    getRepository(ApplicationRas),
+    getRepository(Quote),
+    getRepository(Product),
+    getRepository(PoliciesV2)
   );
 
   const userId = await databaseService.applicationRasUserId(id);
