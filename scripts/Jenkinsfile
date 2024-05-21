@@ -1,6 +1,6 @@
 def buildStatus         = 'FAILED'
 def slackColor          = "warning"
-def Client              = "2020infra"
+def Client              = ''
 def slackSendChannel    = 'C02U5NQ6PNK'
 def Application_Version = 'v2'
 def Project             = 'acquire_tc103'
@@ -23,6 +23,7 @@ pipeline {
                 anyOf {
                     branch 'main'
                     branch 'develop'
+                    branch 'nationwide-pipeline'
                 }
             }
             steps {
@@ -97,6 +98,7 @@ pipeline {
                 anyOf {
                     branch 'main'
                     branch 'develop'
+                    branch 'nationwide-pipeline'
                 }
                 expression { SKIPBUILD == "false" }
             }
@@ -118,9 +120,15 @@ pipeline {
                 script {
                     if (BRANCH_NAME == 'develop') {
                         DEPLOY_ENV = 'dev'
+                        Client = "2020infra"
                     }
                     else if (BRANCH_NAME == 'main') {
                         DEPLOY_ENV = 'uat'
+                        Client = "2020infra"
+                    }                   
+                    else if (BRANCH_NAME == 'nationwide-pipeline') {
+                        DEPLOY_ENV = 'dev'
+                        Client = "nationwide"
                     }
                     if (DEPLOY_ENV == '') {
                         echo "Skipping Deployment"
@@ -146,6 +154,7 @@ pipeline {
                 anyOf {
                     branch 'main'
                     branch 'develop'
+                    branch 'nationwide-pipeline'
                 }
                 expression { SKIPBUILD == "false" }
             }
