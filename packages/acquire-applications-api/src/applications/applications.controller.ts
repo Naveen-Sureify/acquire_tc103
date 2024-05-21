@@ -24,7 +24,7 @@ import { ApiQuery, ApiTags } from '@nestjs/swagger';
 export class ApplicationsController {
   constructor(private readonly applicationsService: ApplicationsService) {}
 
-  // GET /api/v1/applications/:id?schema=tc103&format=xml&template=TC103
+  // GET /api/v2/applications/:id?schema=tc103&format=xml&template=TC103
   @Get(':id')
   @ApiTags('acquire')
   @ApiQuery({
@@ -80,13 +80,13 @@ export class ApplicationsController {
     }
   }
 
-  // GET /api/v1/applications/:id/validate
+  // GET /api/v2/applications/:id/validate
   @Get(':id/validate')
   validate(@Param('id') id: string) {
     return this.applicationsService.validate(+id);
   }
 
-  // POST /api/v1/applications/:id/transmit?destination=https://client.com/submissions&format=soap
+  // POST /api/v2/applications/:id/transmit?destination=https://client.com/submissions&format=soap
   @Get(':id/transmit')
   transmit(
     @Param('id') id: string,
