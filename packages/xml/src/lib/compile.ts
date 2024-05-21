@@ -68,17 +68,17 @@ export async function compile(
   const pairsWithAcordIds = addAcordIds(pairs);
   const extract = createExtractorFromRas(input);
 
-  // const modelsData = await databaseCalls(id);
-  // modelsData.quoteData.json_data = JSON.parse(
-  //   modelsData?.quoteData?.json_data || '{}'
-  // );
-  // modelsData.quoteData.application_json_data = JSON.parse(
-  //   modelsData?.quoteData?.application_json_data || '{}'
-  // );
+  const modelsData = await databaseCalls(id);
+  modelsData.quoteData.json_data = JSON.parse(
+    modelsData?.quoteData?.json_data || '{}'
+  );
+  modelsData.quoteData.application_json_data = JSON.parse(
+    modelsData?.quoteData?.application_json_data || '{}'
+  );
 
   const context = {
     acord: model.values,
-    // model: modelsData,
+    model: modelsData,
     transforms,
     lookups,
     sheets,

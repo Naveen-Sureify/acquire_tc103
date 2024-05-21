@@ -1,6 +1,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import * as models from '@sureifylabs/acquire-models';
+import {
+  AcquireDataModels,
+  AcquireDataSource,
+} from '@sureifylabs/acquire-models';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -10,12 +13,11 @@ import { ApplicationsService } from '../applications/applications.service';
 import { PayloadsController } from '../payloads/payloads.controller';
 import { PayloadsService } from '../payloads/payloads.service';
 import { HealthcheckController } from '../healthcheck/healthcheck.controller';
-import { AcquireDataSource } from '@sureifylabs/data-source';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot(AcquireDataSource.options),
-    ...Object.entries(models)
+    ...Object.entries(AcquireDataModels)
       .filter(([k, _]) => !k.match(/Dto/))
       .map(([_, v]) => v)
       .map((model) => TypeOrmModule.forFeature([model])),

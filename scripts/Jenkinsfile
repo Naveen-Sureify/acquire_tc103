@@ -1,3 +1,5 @@
+// Jenkins URL: https://jenkins.sureifylifeco.com/job/Product-Acquire/job/acquire-tc103/
+
 def buildStatus         = 'FAILED'
 def slackColor          = "warning"
 def Client              = ''
