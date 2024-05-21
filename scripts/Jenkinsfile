@@ -87,7 +87,7 @@ pipeline {
                 script {
                     withCredentials([usernamePassword(credentialsId: 'GITHUB_READONLY', passwordVariable: 'GITHUB_ACCESS_TOKEN', usernameVariable: 'GIT_USERNAME'), gitUsernamePassword(credentialsId: 'GITHUB_READONLY') ]) {
                         sh(script: """
-                          docker build -f scripts/acquire-applications-api.Dockerfile.Build -t ${APPLICATION_NAME}:${SRV_BUILD} . --network host
+                          docker build -f scripts/acquire-applications-api.Dockerfile.Build -t ${APPLICATION_NAME}:${SRV_TAG} . --network host
                         """)
                     }
                 }
@@ -98,6 +98,7 @@ pipeline {
                 anyOf {
                     branch 'main'
                     branch 'develop'
+                    branch 'nationwide-pipeline'
                 }
                 expression { SKIPBUILD == "false" }
             }
@@ -113,8 +114,8 @@ pipeline {
                     ''')
                 }
                 sh(script: """
-                    docker tag ${APPLICATION_NAME}:${SRV_BUILD} 126222281210.dkr.ecr.us-east-2.amazonaws.com/${APPLICATION_NAME}:${SRV_BUILD}
-                    docker push 126222281210.dkr.ecr.us-east-2.amazonaws.com/${APPLICATION_NAME}:${SRV_BUILD}
+                    docker tag ${APPLICATION_NAME}:${SRV_TAG} 126222281210.dkr.ecr.us-east-2.amazonaws.com/${APPLICATION_NAME}:${SRV_TAG}
+                    docker push 126222281210.dkr.ecr.us-east-2.amazonaws.com/${APPLICATION_NAME}:${SRV_TAG}
                 """)
                 script {
                     if (BRANCH_NAME == 'develop') {
@@ -124,7 +125,7 @@ pipeline {
                     else if (BRANCH_NAME == 'main') {
                         DEPLOY_ENV = 'uat'
                         Client = "2020infra"
-                    }
+                    }                   
                     else if (BRANCH_NAME == 'nationwide-pipeline') {
                         DEPLOY_ENV = 'dev'
                         Client = "nationwide"
@@ -139,7 +140,7 @@ pipeline {
                                 string(name: 'Client', value: Client),
                                 string(name: 'tfWorkspace', value: DEPLOY_ENV),
                                 string(name: 'Application', value: APPLICATION_NAME),
-                                string(name: 'Tagname', value: SRV_BUILD),
+                                string(name: 'Tagname', value: SRV_TAG),
                                 string(name: 'ServiceVersion', value: Application_Version),
                                 string(name: 'SlackChannelUID', value: slackSendChannel),
                                 string(name: 'DEBUG', value: '')
@@ -153,17 +154,18 @@ pipeline {
                 anyOf {
                     branch 'main'
                     branch 'develop'
+                    branch 'nationwide-pipeline'
                 }
                 expression { SKIPBUILD == "false" }
             }
             steps {
                 script {
                     sh(script: """
-                        docker create -it --name ${APPLICATION_NAME}-${SRV_BUILD} ${APPLICATION_NAME}:${SRV_BUILD}
-                        mkdir ${APPLICATION_NAME}-${SRV_BUILD}
-                        docker cp ${APPLICATION_NAME}-${SRV_BUILD}:/app ${APPLICATION_NAME}-${SRV_BUILD}
-                        docker rm -f ${APPLICATION_NAME}-${SRV_BUILD}
-                        tar czf build.tar.gz -C ${APPLICATION_NAME}-${SRV_BUILD} .
+                        docker create -it --name ${APPLICATION_NAME}-${SRV_TAG} ${APPLICATION_NAME}:${SRV_TAG}
+                        mkdir ${APPLICATION_NAME}-${SRV_TAG}
+                        docker cp ${APPLICATION_NAME}-${SRV_TAG}:/app ${APPLICATION_NAME}-${SRV_TAG}
+                        docker rm -f ${APPLICATION_NAME}-${SRV_TAG}
+                        tar czf build.tar.gz -C ${APPLICATION_NAME}-${SRV_TAG} .
                     """)
                     withCredentials([usernamePassword(credentialsId: 'GITHUB_READONLY', passwordVariable: 'GH_TOKEN', usernameVariable: 'GIT_AUTHOR_NAME')]) {
                         sh(script: """
