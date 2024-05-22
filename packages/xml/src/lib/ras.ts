@@ -10,7 +10,6 @@ import {
   QuestionKeys,
 } from '../types';
 import { DatabaseService } from './database';
-import { AcquireDataSource } from '@sureifylabs/data-source';
 
 import * as utils from './utils';
 import {
@@ -18,6 +17,7 @@ import {
   PoliciesV2,
   Product,
   Quote,
+  AcquireDataSource,
 } from '@sureifylabs/acquire-models';
 
 export const createExtractorFromRas = (
@@ -288,6 +288,7 @@ export const databaseCalls = async (id: number) => {
   if (!AcquireDataSource.isInitialized) {
     await AcquireDataSource.initialize();
   }
+
   const databaseService = new DatabaseService(
     AcquireDataSource.getRepository(ApplicationRas),
     AcquireDataSource.getRepository(Quote),

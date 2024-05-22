@@ -1,44 +1,194 @@
-/*
- * Jenkins URL: https://jenkins.sureifylifeco.com/job/Product-Acquire/job/acquire-apps/
-**/
+// Jenkins URL: https://jenkins.sureifylifeco.com/job/Product-Acquire/job/acquire-tc103/
 
-
-def PROJECTS = []
+def buildStatus         = 'FAILED'
+def slackColor          = "warning"
+def Client              = ''
+def slackSendChannel    = 'C02U5NQ6PNK'
+def Application_Version = 'v2'
+def Project             = 'acquire_tc103'
+env.APPLICATION_NAME    = 'nova'
+env.SRV_BUILD           = "${BRANCH_NAME}-${BUILD_NUMBER}"
+env.SRV_TAG             = ''
+env.SKIPBUILD           = "false"
+def DEPLOY_ENV          = ''
 
 pipeline {
     agent {
         kubernetes {
-            inheritFrom 'node-18-npm-9'
+            inheritFrom 'node-18-npm-9-v5'
         }
     }
 
     stages {
-        stage('acquire-applications-api') {
+        stage('Evaluate Git SemVer') {
             when {
-                changeset "packages/**"
+                anyOf {
+                    branch 'main'
+                    branch 'develop'
+                    branch 'nationwide-pipeline'
+                }
             }
             steps {
                 script {
-                    PROJECTS = PROJECTS + ['acquire-applications-api']
+                    sh(script: """
+                        set +x
+                        node -v
+                        npm -v
+                        yarn -v
+                        yarn add semantic-release@19.0.5 @semantic-release/changelog @semantic-release/git conventional-changelog-conventionalcommits@6.1.0
+                    """)
+                    withCredentials([usernamePassword(credentialsId: 'GITHUB_READONLY', passwordVariable: 'GH_TOKEN', usernameVariable: 'GIT_AUTHOR_NAME')]) {
+                        def SEMVER = sh(script: '''npx semantic-release --dryRun | grep -oP 'Published release \\K.*? ' || echo 'EX-NotFound' ''', returnStdout: true).trim()
+                        if (SEMVER == 'LS-NotFound') {
+                            env.SKIPBUILD = "true"
+                            // error "There are no relevant changes, so no new version can be released!"
+                        }
+                        env.SRV_TAG = "${SEMVER}"
+                    }
+                    echo "GIT TAG/SRV_TAG : ${SRV_TAG}"
                 }
             }
         }
-        stage('Dynamic'){
-            steps{
+        stage('Build the Test Dockerfile') {
+            when {
+                expression { SKIPBUILD == "false" }
+            }
+            steps {
                 script {
-                    def executions = PROJECTS.collectEntries { PROJECT ->
-                        ["Execution ${PROJECT}": {
-                            stage(PROJECT) {
-                                build job: '/Product-Acquire/acquire-apps-CI', propagate: true,
-                                    parameters: [
-                                        string(name: 'GIT_REF', value: BRANCH_NAME),
-                                        string(name: 'PROJECT', value: PROJECT)
-                                    ]
-                            }
-                        }]
-                    } 
-                    parallel executions
+                    withCredentials([usernamePassword(credentialsId: 'GITHUB_READONLY', passwordVariable: 'GITHUB_ACCESS_TOKEN', usernameVariable: 'GIT_USERNAME'), gitUsernamePassword(credentialsId: 'GITHUB_READONLY') ]) {
+                        sh(script: """
+                          docker build -f scripts/acquire-applications-api.Dockerfile.Test -t ${APPLICATION_NAME}:Test . --network host
+                        """)
+                    }
                 }
+            }
+        }
+        stage('Test') {
+            when {
+                expression { SKIPBUILD == "false" }
+            }
+            parallel {
+              stage('Test') {
+                  steps {
+                      script {
+                          withCredentials([usernamePassword(credentialsId: 'GITHUB_READONLY', passwordVariable: 'GITHUB_ACCESS_TOKEN', usernameVariable: 'GIT_USERNAME'), gitUsernamePassword(credentialsId: 'GITHUB_READONLY') ]) {
+                              sh(script: """
+                                  docker run ${APPLICATION_NAME}:Test nx run-many --target=test --projects=xml,acquire-models,acquire-applications-api --network host
+                              """)
+                          }
+                      }
+                  }
+              }
+            }
+        }
+        stage('Build the ECR Dockerfile') {
+            when {
+                expression { SKIPBUILD == "false" }
+            }
+            steps {
+                script {
+                    withCredentials([usernamePassword(credentialsId: 'GITHUB_READONLY', passwordVariable: 'GITHUB_ACCESS_TOKEN', usernameVariable: 'GIT_USERNAME'), gitUsernamePassword(credentialsId: 'GITHUB_READONLY') ]) {
+                        sh(script: """
+                          docker build -f scripts/acquire-applications-api.Dockerfile.Build -t ${APPLICATION_NAME}:${SRV_TAG} . --network host
+                        """)
+                    }
+                }
+            }
+        }
+        stage('Deploy to Env') {
+            when {
+                anyOf {
+                    branch 'main'
+                    branch 'develop'
+                    branch 'nationwide-pipeline'
+                }
+                expression { SKIPBUILD == "false" }
+            }
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'AWS_CREDENTIALS', usernameVariable: 'ACCESS_ID', passwordVariable: 'SECRET_KEY')]) {
+                    sh(script: '''
+                        set +x
+                        aws configure set aws_access_key_id $ACCESS_ID
+                        aws configure set aws_secret_access_key $SECRET_KEY
+                        aws configure set default.region us-east-2
+                        aws configure set output json
+                        aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 126222281210.dkr.ecr.us-east-2.amazonaws.com
+                    ''')
+                }
+                sh(script: """
+                    docker tag ${APPLICATION_NAME}:${SRV_TAG} 126222281210.dkr.ecr.us-east-2.amazonaws.com/${APPLICATION_NAME}:${SRV_TAG}
+                    docker push 126222281210.dkr.ecr.us-east-2.amazonaws.com/${APPLICATION_NAME}:${SRV_TAG}
+                """)
+                script {
+                    if (BRANCH_NAME == 'develop') {
+                        DEPLOY_ENV = 'dev'
+                        Client = "2020infra"
+                    }
+                    else if (BRANCH_NAME == 'main') {
+                        DEPLOY_ENV = 'uat'
+                        Client = "2020infra"
+                    }                   
+                    else if (BRANCH_NAME == 'nationwide-pipeline') {
+                        DEPLOY_ENV = 'dev'
+                        Client = "nationwide"
+                    }
+                    if (DEPLOY_ENV == '') {
+                        echo "Skipping Deployment"
+                    } 
+                    else {
+                        echo "Deploying to ${DEPLOY_ENV}"
+                        build job: '/Deployment-Jobs/One-Click-Deploy-v2', propagate: true,
+                            parameters: [
+                                string(name: 'Client', value: Client),
+                                string(name: 'tfWorkspace', value: DEPLOY_ENV),
+                                string(name: 'Application', value: APPLICATION_NAME),
+                                string(name: 'Tagname', value: SRV_TAG),
+                                string(name: 'ServiceVersion', value: Application_Version),
+                                string(name: 'SlackChannelUID', value: slackSendChannel),
+                                string(name: 'DEBUG', value: '')
+                            ]
+                    }
+                }
+            }
+        }        
+        stage('Git push release') {
+            when {
+                anyOf {
+                    branch 'main'
+                    branch 'develop'
+                    branch 'nationwide-pipeline'
+                }
+                expression { SKIPBUILD == "false" }
+            }
+            steps {
+                script {
+                    sh(script: """
+                        docker create -it --name ${APPLICATION_NAME}-${SRV_TAG} ${APPLICATION_NAME}:${SRV_TAG}
+                        mkdir ${APPLICATION_NAME}-${SRV_TAG}
+                        docker cp ${APPLICATION_NAME}-${SRV_TAG}:/app ${APPLICATION_NAME}-${SRV_TAG}
+                        docker rm -f ${APPLICATION_NAME}-${SRV_TAG}
+                        tar czf build.tar.gz -C ${APPLICATION_NAME}-${SRV_TAG} .
+                    """)
+                    withCredentials([usernamePassword(credentialsId: 'GITHUB_READONLY', passwordVariable: 'GH_TOKEN', usernameVariable: 'GIT_AUTHOR_NAME')]) {
+                        sh(script: """
+                            npx semantic-release@19.0.5
+                        """)
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            script {
+                buildStatus = "SUCCESS"
+                slackColor = "good"
+            }
+        }
+        cleanup {
+            script {
+                slackSend channel: "${slackSendChannel}", color: "${slackColor}", message: "*${buildStatus}*: `${env.JOB_NAME}`\n<${env.BUILD_URL}/console|Console Log>: *${env.BRANCH_NAME} #${env.BUILD_NUMBER}*"
             }
         }
     }

@@ -27,4 +27,5 @@ const dataSourceOptions: DataSourceOptions = {
   namingStrategy: new SnakeNamingStrategy(),
 };
 
+export * as AcquireDataModels from './models';
 export const AcquireDataSource = new DataSource(dataSourceOptions);

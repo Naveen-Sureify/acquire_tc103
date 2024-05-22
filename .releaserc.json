@@ -10,6 +10,10 @@
       {
           "name": "develop",
           "prerelease": true
+      },
+      {
+          "name": "nationwide-pipeline",
+          "prerelease": "nw"
       }
   ],
   "plugins": [
