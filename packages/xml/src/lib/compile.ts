@@ -112,9 +112,6 @@ export async function compile(
     },
   };
 
-  console.log(context);
-
-
   const rendered: string = ejs.render(
     templateLoaded,
     { ...context, cx: context },
