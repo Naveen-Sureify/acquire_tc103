@@ -24,7 +24,7 @@ export enum ApplicationFormat {
 export enum ApplicationTemplate {
   TC103 = 'TC103',
   AllState = 'AllState',
-  NW = 'NW',
+  NW103 = 'NW103',
 }
 
 export enum ApplicationTransmissionFormat {
