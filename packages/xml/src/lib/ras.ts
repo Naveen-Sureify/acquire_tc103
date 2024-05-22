@@ -240,10 +240,8 @@ export const addAcordIds = (
     } else {
       pair.acord_id = pair?.sureify_id;
       if(pair.acord_id){
-
         let temp = pair.acord_id.replace(/\n/g, "");
         pair.acord_id = temp;
-        console.log(pair.acord_id);
       }
       updatedPairs.push(pair);
     }
