@@ -240,7 +240,7 @@ export const addAcordIds = (
     } else {
       pair.acord_id = pair?.sureify_id;
       if(pair.acord_id){
-        let temp = pair.acord_id.replace(/\n/g, "");
+        let temp = pair.acord_id.replace(/\n/g, ""); //to remove nextlines(\n) from sureify_id string
         pair.acord_id = temp;
       }
       updatedPairs.push(pair);

@@ -70,7 +70,6 @@ import ADDRESSTYPECODE from './tables/ADDRESSTYPECODE.json';
 import BACKDATETYPE from './tables/BACKSTAGETYPE.json';
 import BANKACCTYPE from './tables/BANKACCTYPE.json';
 import RATECLASS from './tables/RATECLASS.json';
-import GENDERNW from './nw_tables/GENDERNW.json';
 import DRIVERSLICENSESTATENW from './nw_tables/DRIVERSLICENSESTATENW.json';
 import PHONETYPE from './tables/PHONETYPE.json';
 // fs.writeFileSync(
@@ -151,7 +150,6 @@ const tables: Map<OLI_LU, (string | number)[][]> = new Map([
   [OLI_LU.BACKDATETYPE, BACKDATETYPE],
   [OLI_LU.BANKACCTYPE, BANKACCTYPE],
   [OLI_LU.RATECLASS, RATECLASS],
-  [OLI_LU.GENDERNW, GENDERNW],
   [OLI_LU.DRIVERSLICENSESTATENW, DRIVERSLICENSESTATENW],
   [OLI_LU.PHONETYPE, PHONETYPE]
 
