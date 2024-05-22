@@ -63,7 +63,7 @@ export class ApplicationsController {
       const applicationRasInputJson: ApplicationRasInputJson = JSON.parse(
         applicationRas?.raw_input_json
       );
-      
+
       const rendered: string = await compile(
         applicationRasInputJson,
         {},

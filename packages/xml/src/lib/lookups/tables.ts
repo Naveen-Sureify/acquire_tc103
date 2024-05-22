@@ -71,7 +71,7 @@ import BACKDATETYPE from './tables/BACKSTAGETYPE.json';
 import BANKACCTYPE from './tables/BANKACCTYPE.json';
 import RATECLASS from './tables/RATECLASS.json';
 import DRIVERSLICENSESTATENW from './nw_tables/DRIVERSLICENSESTATENW.json';
-import PHONETYPE from './tables/PHONETYPE.json';
+import PHONETYPE from './nw_tables/PHONETYPE.json';
 // fs.writeFileSync(
 //   path.resolve(`${__dirname}/tables/`, 'ISSUETYPE.json'),
 //   JSON.stringify(
