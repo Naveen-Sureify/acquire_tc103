@@ -42,6 +42,7 @@ const defaultCompileOpts = {
     './packages/xml/fixtures/examples/sidecars',
     './packages/xml/src/templates',
     './packages/xml/src/templates/partials',
+    './packages/xml/src/templates/partials_nw',
   ],
   async: true,
 };
