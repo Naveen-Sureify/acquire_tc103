@@ -1,5 +1,5 @@
-<%_ if(acord.Parties?.length>0) {  let count = 0 _%>
-<%_ for (const [index,relation] of acord.Parties?.entries()) {  _%>
+<%_ if(acord?.Parties?.length>0) {  let count = 0 _%>
+<%_ for (const [index,relation] of acord?.Parties?.entries()) {  _%>
 <%_ if(relation?.PartyType === 'PB'){ count = count + 1 _%>
 <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="Party_PrimaryBeneficiary_<%=index+1%>" id="Relation_PrimaryBeneficiary_<%=index+1%>">
   <RelationRoleCode tc="34">Primary Beneficiary</RelationRoleCode>

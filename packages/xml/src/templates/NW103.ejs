@@ -153,8 +153,8 @@
           <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="InsuredParty_1" id="Relation_PartyOwner">
             <RelationRoleCode tc="8">Owner</RelationRoleCode>
           </Relation><%}%>
-      <%_ if(acord.Parties?.length > 0 ) { let count = 0 _%>
-          <%_ for (const [index,party] of acord.Parties?.entries()) {if(party?.PartyType == 'PB'){count = count + 1;} _%>
+      <%_ if(acord?.Parties?.length > 0 ) { let count = 0 _%>
+          <%_ for (const [index,party] of acord?.Parties?.entries()) {if(party?.PartyType == 'PB'){count = count + 1;} _%>
           <%- await include('Party_NW',{party,i:index, length: acord?.Parties?.length, count: count}) _%>
           <%_ } _%>
           <%_ } _%>
