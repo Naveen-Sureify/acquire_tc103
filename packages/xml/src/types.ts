@@ -24,6 +24,7 @@ export enum ApplicationFormat {
 export enum ApplicationTemplate {
   TC103 = 'TC103',
   AllState = 'AllState',
+  NW103 = 'NW103',
 }
 
 export enum ApplicationTransmissionFormat {
@@ -238,4 +239,6 @@ export enum OLI_LU {
   BACKDATETYPE = 'BACKDATETYPE',
   BANKACCTYPE = 'BANKACCTYPE',
   RATECLASS = 'RATECLASS',
+  DRIVERSLICENSESTATENW = "DRIVERSLICENSESTATENW",
+  PHONETYPE = "PHONETYPE",
 }
