@@ -148,7 +148,7 @@
         <RelationDescription tc="91">Self</RelationDescription><%}else if(acord.PI.IsPIOwner == 'No'){%>
         <Relation OriginatingObjectID="PartyOwner_1" RelatedObjectID="PartyPayor_1" id="Relation_InsuredPartyOwner">
           <RelationRoleCode tc="31">Payor</RelationRoleCode>
-          <RelationDescription tc="<%= await lookups.lookup(types.OLI_LU.RELATIONCODENW, {value: acord?.PO?.RelationshiptoPIwithPIownerno}).tc%>"><%=acord?.PO?.RelationshiptoPIwithPIownerno%></RelationDescription><%}%>
+          <RelationDescription tc="<%= await lookups.lookup(types.OLI_LU.RELATIONCODE_NW, {value: acord?.PO?.RelationshiptoPIwithPIownerno}).tc%>"><%=acord?.PO?.RelationshiptoPIwithPIownerno%></RelationDescription><%}%>
       </Relation><%if(ras.extract('edbf85c1-25d5-4829-9ccb-76506f46e594') == 'Yes'){%>
           <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="InsuredParty_1" id="Relation_PartyOwner">
             <RelationRoleCode tc="8">Owner</RelationRoleCode>

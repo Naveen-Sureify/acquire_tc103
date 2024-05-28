@@ -22,8 +22,8 @@
     <PhoneTypeCode tc="<%= await lookups.lookup(types.OLI_LU.PHONETYPE, {value: acord?.PI?.Payor == 'Insured' ? acord?.Pr?.PhoneTypeforInsured : acord?.Pr?.PhoneTypeforOwner}).tc%>">
       <%=acord?.PI?.Payor == 'Insured' ? acord?.Pr?.PhoneTypeforInsured : acord?.Pr?.PhoneTypeforOwner%>
     </PhoneTypeCode>
-    <AreaCode><%=acord?.PI?.Payor == 'Insured' ? acord?.Pr.PhoneNumberforInsured.substring(0,5) : acord?.Pr?.PhoneNumberforOwner.substring(0,5)%></AreaCode>
-    <DialNumber><%=acord?.PI?.Payor == 'Insured' ? acord?.Pr?.PhoneNumberforInsured.substring(6) : acord?.Pr?.PhoneNumberforOwner.substring(6)%></DialNumber>
+    <AreaCode><%=acord?.PI?.Payor == 'Insured' ? acord?.Pr.PhoneNumberforInsured?.substring(0,5) : acord?.Pr?.PhoneNumberforOwner?.substring(0,5)%></AreaCode>
+    <DialNumber><%=acord?.PI?.Payor == 'Insured' ? acord?.Pr?.PhoneNumberforInsured?.substring(6) : acord?.Pr?.PhoneNumberforOwner?.substring(6)%></DialNumber>
     <PrefPhone tc="1">True</PrefPhone>
   </Phone>
 </Party>

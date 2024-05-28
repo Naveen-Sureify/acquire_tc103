@@ -1,34 +1,34 @@
 <%_ if(acord.Parties?.length>0) {  let count = 0 _%>
 <%_ for (const [index,relation] of acord.Parties?.entries()) {  _%>
-<%_ if(relation.PartyType == 'PB'){ count = count + 1 _%>
+<%_ if(relation?.PartyType === 'PB'){ count = count + 1 _%>
 <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="Party_PrimaryBeneficiary_<%=index+1%>" id="Relation_PrimaryBeneficiary_<%=index+1%>">
   <RelationRoleCode tc="34">Primary Beneficiary</RelationRoleCode>
   <InterestPercent><%=relation?.Slider%></InterestPercent>
 </Relation>
 <Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="Party_PrimaryBeneficiary_<%=index+1%>" id="Relation_InsuredPrimaryBeneficiary_<%=index+1 _%>">
-  <%_ if(lookups.lookup(types.OLI_LU.RELATIONDESCRIPTIONNW, { value : relation?.PBandOwnersame === undefined ? relation?.RelationshiptoPIPIOwnerYes : (relation?.PBandOwnersame == 'No' ? relation?.RelationshiptoPIPBisOwnerNo : relation?.RelationshiptoPIPBisOwnerYes) }).key !== ''){ _%>
-  <RelationRoleCode tc="<%= await lookups.lookup(types.OLI_LU.RELATIONCODENW, { value :  lookups.lookup(types.OLI_LU.RELATIONDESCRIPTIONNW, { value : relation?.PBandOwnersame === undefined ? relation?.RelationshiptoPIPIOwnerYes : (relation?.PBandOwnersame == 'No' ? relation?.RelationshiptoPIPBisOwnerNo : relation?.RelationshiptoPIPBisOwnerYes) }).key}).tc _%>"><%= await lookups.lookup(types.OLI_LU.RELATIONDESCRIPTIONNW, { value : relation?.PBandOwnersame === undefined ? relation?.RelationshiptoPIPIOwnerYes : (relation?.PBandOwnersame == 'No' ? relation?.RelationshiptoPIPBisOwnerNo : relation?.RelationshiptoPIPBisOwnerYes) }).key _%>
+  <%_ if(lookups.lookup(types.OLI_LU.RELATIONDESCRIPTION_NW, { value : !relation?.PBandOwnersame ? relation?.RelationshiptoPIPIOwnerYes : (relation?.PBandOwnersame == 'No' ? relation?.RelationshiptoPIPBisOwnerNo : relation?.RelationshiptoPIPBisOwnerYes) }).key){ _%>
+  <RelationRoleCode tc="<%= await lookups.lookup(types.OLI_LU.RELATIONCODE_NW, { value :  lookups.lookup(types.OLI_LU.RELATIONDESCRIPTION_NW, { value : !relation?.PBandOwnersame ? relation?.RelationshiptoPIPIOwnerYes : (relation?.PBandOwnersame == 'No' ? relation?.RelationshiptoPIPBisOwnerNo : relation?.RelationshiptoPIPBisOwnerYes) }).key}).tc _%>"><%= await lookups.lookup(types.OLI_LU.RELATIONDESCRIPTION_NW, { value : !relation?.PBandOwnersame ? relation?.RelationshiptoPIPIOwnerYes : (relation?.PBandOwnersame == 'No' ? relation?.RelationshiptoPIPBisOwnerNo : relation?.RelationshiptoPIPBisOwnerYes) }).key _%>
     <%_  _%></RelationRoleCode><%_ } else { _%>
-  <RelationRoleCode tc="<%= await lookups.lookup(types.OLI_LU.RELATIONCODENW, { value : relation?.PBandOwnersame === undefined ? relation?.RelationshiptoPIPIOwnerYes : (relation?.PBandOwnersame == 'No' ? relation?.RelationshiptoPIPBisOwnerNo : relation?.RelationshiptoPIPBisOwnerYes) }).tc _%>"><%= relation?.PBandOwnersame === undefined ? relation?.RelationshiptoPIPIOwnerYes : (relation?.PBandOwnersame == 'No' ? relation?.RelationshiptoPIPBisOwnerNo : relation?.RelationshiptoPIPBisOwnerYes)%></RelationRoleCode>
+  <RelationRoleCode tc="<%= await lookups.lookup(types.OLI_LU.RELATIONCODE_NW, { value : !relation?.PBandOwnersame ? relation?.RelationshiptoPIPIOwnerYes : (relation?.PBandOwnersame == 'No' ? relation?.RelationshiptoPIPBisOwnerNo : relation?.RelationshiptoPIPBisOwnerYes) }).tc _%>"><%= !relation?.PBandOwnersame ? relation?.RelationshiptoPIPIOwnerYes : (relation?.PBandOwnersame == 'No' ? relation?.RelationshiptoPIPBisOwnerNo : relation?.RelationshiptoPIPBisOwnerYes)%></RelationRoleCode>
   <%_ } _%>
-  <%_ if(lookups.lookup(types.OLI_LU.RELATIONDESCRIPTIONNW, { value : relation?.PBandOwnersame === undefined ? relation?.RelationshiptoPIPIOwnerYes : (relation?.PBandOwnersame == 'No' ? relation?.RelationshiptoPIPBisOwnerNo : relation?.RelationshiptoPIPBisOwnerYes) }).value !== ''){ _%>
-  <RelationDescription tc="<%= await lookups.lookup(types.OLI_LU.RELATIONDESCRIPTIONNW, { value : relation?.PBandOwnersame === undefined ? relation?.RelationshiptoPIPIOwnerYes : (relation?.PBandOwnersame == 'No' ? relation?.RelationshiptoPIPBisOwnerNo : relation?.RelationshiptoPIPBisOwnerYes) }).tc%>"><%=await lookups.lookup(types.OLI_LU.RELATIONDESCRIPTIONNW, { value : relation?.PBandOwnersame === undefined ? relation?.RelationshiptoPIPIOwnerYes : (relation?.PBandOwnersame == 'No' ? relation?.RelationshiptoPIPBisOwnerNo : relation?.RelationshiptoPIPBisOwnerYes) }).value _%>
+  <%_ if(lookups.lookup(types.OLI_LU.RELATIONDESCRIPTION_NW, { value : !relation?.PBandOwnersame ? relation?.RelationshiptoPIPIOwnerYes : (relation?.PBandOwnersame == 'No' ? relation?.RelationshiptoPIPBisOwnerNo : relation?.RelationshiptoPIPBisOwnerYes) }).value){ _%>
+  <RelationDescription tc="<%= await lookups.lookup(types.OLI_LU.RELATIONDESCRIPTION_NW, { value : !relation?.PBandOwnersame ? relation?.RelationshiptoPIPIOwnerYes : (relation?.PBandOwnersame == 'No' ? relation?.RelationshiptoPIPBisOwnerNo : relation?.RelationshiptoPIPBisOwnerYes) }).tc%>"><%=await lookups.lookup(types.OLI_LU.RELATIONDESCRIPTION_NW, { value : !relation?.PBandOwnersame ? relation?.RelationshiptoPIPIOwnerYes : (relation?.PBandOwnersame == 'No' ? relation?.RelationshiptoPIPBisOwnerNo : relation?.RelationshiptoPIPBisOwnerYes) }).value _%>
     <%_  _%></RelationDescription><%_ } else { _%>
   <RelationDescription tc="0">unknown</RelationDescription><%_ } _%>
 </Relation><%_ } _%>
-<%_ if(relation.PartyType == 'CB'){ _%>
+<%_ if(relation?.PartyType === 'CB'){ _%>
   <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="Party_ContingentBeneficiary_<%=index-count+1%>" id="Relation_ContingentBeneficiary_<%=index-count+1 _%>">
     <RelationRoleCode tc="36">Contingent Beneficiary</RelationRoleCode>
     <InterestPercent><%=relation?.Slider%></InterestPercent>
   </Relation>
   <Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="Party_ContingentBeneficiary_<%=index-count+1%>" id="Relation_InsuredContingentBeneficiary_<%=index-count+1 _%>">
-    <%_ if(lookups.lookup(types.OLI_LU.RELATIONDESCRIPTIONNW, { value : relation?.RelationshiptoPI }).key !== ''){ _%>
-    <RelationRoleCode tc="<%= await lookups.lookup(types.OLI_LU.RELATIONCODENW, { value :  lookups.lookup(types.OLI_LU.RELATIONDESCRIPTIONNW, { value : relation?.RelationshiptoPI }).key}).tc _%>"><%= await lookups.lookup(types.OLI_LU.RELATIONDESCRIPTIONNW, { value : relation?.RelationshiptoPI}).key _%>
+    <%_ if(lookups.lookup(types.OLI_LU.RELATIONDESCRIPTION_NW, { value : relation?.RelationshiptoPI }).key){ _%>
+    <RelationRoleCode tc="<%= await lookups.lookup(types.OLI_LU.RELATIONCODE_NW, { value :  lookups.lookup(types.OLI_LU.RELATIONDESCRIPTION_NW, { value : relation?.RelationshiptoPI }).key}).tc _%>"><%= await lookups.lookup(types.OLI_LU.RELATIONDESCRIPTION_NW, { value : relation?.RelationshiptoPI}).key _%>
       <%_  _%></RelationRoleCode><%_ } else { _%>
-    <RelationRoleCode tc="<%= await lookups.lookup(types.OLI_LU.RELATIONCODENW, { value : relation?.RelationshiptoPI}).tc _%>"><%= relation?.RelationshiptoPI _%></RelationRoleCode>
+    <RelationRoleCode tc="<%= await lookups.lookup(types.OLI_LU.RELATIONCODE_NW, { value : relation?.RelationshiptoPI}).tc _%>"><%= relation?.RelationshiptoPI _%></RelationRoleCode>
     <%_ } _%>
-    <%_ if(lookups.lookup(types.OLI_LU.RELATIONDESCRIPTIONNW, { value : relation?.RelationshiptoPI}).value !== ''){ _%>
-    <RelationDescription tc="<%= await lookups.lookup(types.OLI_LU.RELATIONDESCRIPTIONNW, { value : relation?.RelationshiptoPI }).tc%>"><%=await lookups.lookup(types.OLI_LU.RELATIONDESCRIPTIONNW, { value : relation?.RelationshiptoPI}).value _%>
+    <%_ if(lookups.lookup(types.OLI_LU.RELATIONDESCRIPTION_NW, { value : relation?.RelationshiptoPI}).value){ _%>
+    <RelationDescription tc="<%= await lookups.lookup(types.OLI_LU.RELATIONDESCRIPTION_NW, { value : relation?.RelationshiptoPI }).tc%>"><%=await lookups.lookup(types.OLI_LU.RELATIONDESCRIPTION_NW, { value : relation?.RelationshiptoPI}).value _%>
       <%_  _%></RelationDescription><%_ } else { _%>
     <RelationDescription tc="0">unknown</RelationDescription><%_ } _%>
   </Relation><% } %>
