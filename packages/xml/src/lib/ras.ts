@@ -216,6 +216,8 @@ export const addAcordIds = (
     Physician: {},
     Agent: {},
     Carrier: {},
+    PB: {},
+    CB: {},
   };
 
   const updatedPairs: QuestionAnswerPair[] = [];
@@ -229,7 +231,9 @@ export const addAcordIds = (
         (key == 'Contingent' && index !== '0') ||
         (key == 'Physician' && index !== '0') ||
         (key == 'Beneficiary' && index !== '0') ||
-        (key != 'Contingent' && key != 'Physician' && key != 'Beneficiary')
+        (key == 'PB' && index !== '0') ||
+        (key == 'CB' && index !== '0') ||
+        (key != 'Contingent' && key != 'Physician' && key != 'Beneficiary' && key != 'PB' && key != 'CB')
       ) {
         if (transformedData[key][index]) {
           transformedData[key][index].push(pair);
@@ -270,7 +274,8 @@ export const addAcordIds = (
             `Parties[${i}]`
           );
           if (sureify_id) {
-            pair.acord_id = sureify_id;
+            //to remove nextlines
+            pair.acord_id = sureify_id.replace(/\n/g, "");
           }
           updatedPairs.push(pair);
         });

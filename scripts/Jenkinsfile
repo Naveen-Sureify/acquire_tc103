@@ -3,7 +3,7 @@
 def buildStatus         = 'FAILED'
 def slackColor          = "warning"
 def Client              = ''
-def slackSendChannel    = 'C02U5NQ6PNK'
+def slackSendChannel    = 'C04PVPX9Q75'
 def Application_Version = 'v2'
 def Project             = 'acquire_tc103'
 env.APPLICATION_NAME    = 'nova'
@@ -127,14 +127,14 @@ pipeline {
                     else if (BRANCH_NAME == 'main') {
                         DEPLOY_ENV = 'uat'
                         Client = "2020infra"
-                    }                   
+                    }
                     else if (BRANCH_NAME == 'nationwide-pipeline') {
                         DEPLOY_ENV = 'dev'
                         Client = "nationwide"
                     }
                     if (DEPLOY_ENV == '') {
                         echo "Skipping Deployment"
-                    } 
+                    }
                     else {
                         echo "Deploying to ${DEPLOY_ENV}"
                         build job: '/Deployment-Jobs/One-Click-Deploy-v2', propagate: true,
@@ -150,7 +150,7 @@ pipeline {
                     }
                 }
             }
-        }        
+        }
         stage('Git push release') {
             when {
                 anyOf {

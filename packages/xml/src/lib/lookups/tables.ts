@@ -72,6 +72,9 @@ import BANKACCTYPE from './tables/BANKACCTYPE.json';
 import RATECLASS from './tables/RATECLASS.json';
 import DRIVERSLICENSESTATENW from './nw_tables/DRIVERSLICENSESTATENW.json';
 import PHONETYPE from './nw_tables/PHONETYPE.json';
+import RELATIONCODE_NW from './nw_tables/RELATIONCODE_NW.json';
+import RELATIONDESCRIPTION_NW from './nw_tables/RELATIONDESCRIPTION_NW.json';
+import PARTYTYPECODE_NW from './nw_tables/PARTYTYPECODE_NW.json';
 // fs.writeFileSync(
 //   path.resolve(`${__dirname}/tables/`, 'ISSUETYPE.json'),
 //   JSON.stringify(
@@ -151,8 +154,10 @@ const tables: Map<OLI_LU, (string | number)[][]> = new Map([
   [OLI_LU.BANKACCTYPE, BANKACCTYPE],
   [OLI_LU.RATECLASS, RATECLASS],
   [OLI_LU.DRIVERSLICENSESTATENW, DRIVERSLICENSESTATENW],
-  [OLI_LU.PHONETYPE, PHONETYPE]
-
+  [OLI_LU.PHONETYPE, PHONETYPE],
+  [OLI_LU.RELATIONCODE_NW, RELATIONCODE_NW],
+  [OLI_LU.RELATIONDESCRIPTION_NW, RELATIONDESCRIPTION_NW],
+  [OLI_LU.PARTYTYPECODE_NW, PARTYTYPECODE_NW],
   // [OLI_LU.PROCESSINGINSTRUCTION]: '',
 ]);
 

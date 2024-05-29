@@ -73,6 +73,8 @@ export type PartiesLists = {
   Physician: { [key: string]: QuestionAnswerPair[] };
   Agent: { [key: string]: QuestionAnswerPair[] };
   Carrier: { [key: string]: QuestionAnswerPair[] };
+  PB: { [key: string]: QuestionAnswerPair[] };
+  CB: { [key: string]: QuestionAnswerPair[] };
 };
 
 export type PartyQuestionAnswerPair = QuestionAnswerPair[];

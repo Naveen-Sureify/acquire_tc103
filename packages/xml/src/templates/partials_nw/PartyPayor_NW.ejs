@@ -1,0 +1,29 @@
+<Party id="PartyPayor_1">
+  <PartyTypeCode tc="1">Person</PartyTypeCode>
+  <Person>
+    <FirstName><%=acord?.PI?.Payor == 'Insured' ? acord?.Pr?.FirstNameforInsured : acord?.Pr?.FirstNameforOwner%></FirstName>
+    <MiddleName><%=acord?.PI?.Payor == 'Insured' ? acord?.Pr?.MiddleInitialforInsured : acord?.Pr?.MiddleInitialforOwner%></MiddleName>
+    <LastName><%=acord?.PI?.Payor == 'Insured' ? acord?.Pr?.LastNameforInsured : acord?.Pr?.LastNameforOwner%></LastName>
+  </Person>
+  <Address>
+    <AddressTypeCode tc="1">Residence</AddressTypeCode>
+    <Line1><%=acord?.PI?.Payor == 'Insured' ? acord?.Pr?.AddressforInsured : acord?.Pr?.AddressforOwner%></Line1>
+    <City><%=acord?.PI?.Payor == 'Insured' ? acord?.Pr?.CityforInsured : acord?.Pr?.CityforOwner%></City>
+    <AddressState><%=acord?.PI?.Payor == 'Insured' ? acord?.Pr?.StateforInsured : acord?.Pr?.StateforOwner%></AddressState>
+    <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI.Payor == 'Insured' ? acord?.Pr?.StateforInsured : acord?.Pr?.StateforOwner}).tc%>">
+      <%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI?.Payor == 'Insured' ? acord?.Pr?.StateforInsured : acord?.Pr?.StateforOwner}).key%>
+    </AddressStateTC>
+    <Zip><%=acord?.PI?.Payor == 'Insured' ? acord?.Pr?.ZipforInsured : acord?.Pr?.ZipforOwner%></Zip>
+  </Address>
+  <EMailAddress>
+    <AddrLine><%=acord?.PI?.Payor == 'Insured' ? acord?.Pr?.EmailAddressforInsured : acord?.Pr?.EmailAddressforOwner%></AddrLine>
+  </EMailAddress>
+  <Phone>
+    <PhoneTypeCode tc="<%= await lookups.lookup(types.OLI_LU.PHONETYPE, {value: acord?.PI?.Payor == 'Insured' ? acord?.Pr?.PhoneTypeforInsured : acord?.Pr?.PhoneTypeforOwner}).tc%>">
+      <%=acord?.PI?.Payor == 'Insured' ? acord?.Pr?.PhoneTypeforInsured : acord?.Pr?.PhoneTypeforOwner%>
+    </PhoneTypeCode>
+    <AreaCode><%=acord?.PI?.Payor == 'Insured' ? acord?.Pr.PhoneNumberforInsured?.substring(0,5) : acord?.Pr?.PhoneNumberforOwner?.substring(0,5)%></AreaCode>
+    <DialNumber><%=acord?.PI?.Payor == 'Insured' ? acord?.Pr?.PhoneNumberforInsured?.substring(6) : acord?.Pr?.PhoneNumberforOwner?.substring(6)%></DialNumber>
+    <PrefPhone tc="1">True</PrefPhone>
+  </Phone>
+</Party>
