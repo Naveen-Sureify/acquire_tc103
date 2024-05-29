@@ -21,8 +21,8 @@ const dataSourceOptions: DataSourceOptions = {
     path.join(__dirname, 'migrations/*.js'),
   ],
   migrationsTableName: 'acquire_project_x_migrations',
-  migrationsRun: process.env['DB_MIGRATIONS_RUN'] === 'true' && isDevelopment,
-  dropSchema: process.env['DB_DROP_SCHEMA'] === 'true' && isDevelopment,
+  migrationsRun: false,
+  dropSchema: false,
   synchronize: false,
   namingStrategy: new SnakeNamingStrategy(),
 };

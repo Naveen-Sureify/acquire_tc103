@@ -22,9 +22,10 @@ const seedSourceOptions: DataSourceOptions = {
     path.join(__dirname, 'seeds/*.js'),
   ],
   migrationsTableName: 'acquire_project_x_seeds',
-  migrationsRun: process.env['DB_MIGRATIONS_RUN'] === 'true' && isDevelopment,
-  dropSchema: process.env['DB_DROP_SCHEMA'] === 'true' && isDevelopment,
+  migrationsRun: false,
+  dropSchema: false,
   namingStrategy: new SnakeNamingStrategy(),
+  synchronize: false,
 };
 
 export const AcquireSeedSource = new DataSource(seedSourceOptions);
