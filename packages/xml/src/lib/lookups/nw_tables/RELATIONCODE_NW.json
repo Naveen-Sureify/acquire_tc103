@@ -60,5 +60,9 @@
   ["Form For", "Form For", "107"],
   ["Step Child", "Step Child", "94"],
   ["Authorized Officer", "Authorized Officer", "150"],
-  ["Formal", "Formal", "2147483647"]
+  ["Formal", "Formal", "2147483647"],
+  ["Partner", "Partner", "9"],
+  ["Borrower", "Borrower", "293"],
+  ["Grandparent", "Grandparent", "92"],
+  ["Grandchild", "Grandchild", "93"]
 ]
