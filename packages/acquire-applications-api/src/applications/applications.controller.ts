@@ -19,6 +19,7 @@ import { ApplicationsService } from './applications.service';
 import { fromXML } from 'from-xml';
 import { ApplicationRas } from '@sureifylabs/acquire-models';
 import { ApiQuery, ApiTags } from '@nestjs/swagger';
+
 @Controller('applications')
 export class ApplicationsController {
   constructor(private readonly applicationsService: ApplicationsService) {}
