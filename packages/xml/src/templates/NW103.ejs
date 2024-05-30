@@ -28,7 +28,6 @@
           <PlanName>Nationwide Heritage Single Premium Whole Life</PlanName>
           <PolNumber>8000100000</PolNumber>
           <Jurisdiction tc="32">NE</Jurisdiction>
-          <!--issue state-->
           <PaymentMode tc="1">Annual</PaymentMode>
           <PaymentAmt></PaymentAmt>
           <Life>
@@ -53,7 +52,6 @@
           <ApplicationInfo>
             <ApplicationType tc="1">New</ApplicationType>
             <ApplicationJurisdiction tc="32">NE</ApplicationJurisdiction>
-            <!--Issue State-->
           </ApplicationInfo>
         </Policy>
         <OLifEExtension VendorCode="564">
@@ -70,7 +68,6 @@
             <FaceAmt>100000</FaceAmt>
             <LifeUSA>
               <MECInd tc="0">False</MECInd>
-              <!--schema change-->
               <Internal1035 tc="1">True</Internal1035>
             </LifeUSA>
           </Life>
@@ -96,65 +93,55 @@
       <Party id="InsuredParty_1">
         <PartyTypeCode tc="1">Person</PartyTypeCode>
         <GovtIDTC tc="1">SSN</GovtIDTC>
-        <GovtID><%=acord?.PI.SSN%></GovtID>
+        <GovtID><%=acord?.PI?.SSN%></GovtID>
         <Person>
-          <Prefix><%=acord.PI.Prefix%></Prefix>
-          <FirstName><%=acord.PI.FirstName%></FirstName>
-          <MiddleName><%=acord.PI.MiddleInitial%></MiddleName>
-          <LastName><%=acord.PI.LastName%></LastName>
-          <Suffix><%=acord.PI.Suffix%></Suffix>
-          <BirthDate><%=acord.PI.DateofBirth%></BirthDate>
-          <Gender tc="<%= await lookups.lookup('GENDER', { value: acord?.PI.Sex}).tc %>">
-            <%= acord.PI.Sex%>
-          </Gender>
+          <Prefix><%=acord?.PI?.Prefix%></Prefix>
+          <FirstName><%=acord?.PI?.FirstName%></FirstName>
+          <MiddleName><%=acord?.PI?.MiddleInitial%></MiddleName>
+          <LastName><%=acord?.PI?.LastName%></LastName>
+          <Suffix><%=acord?.PI?.Suffix%></Suffix>
+          <BirthDate><%=acord?.PI?.DateofBirth%></BirthDate>
+          <Gender tc="<%= await lookups.lookup('GENDER', { value: acord?.PI?.Sex}).tc %>"><%= acord?.PI?.Sex%></Gender>
           <DriversLicenseNum><%=acord?.PI?.DLNumber%></DriversLicenseNum>
-          <DriversLicenseState tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI.DLState}).tc%>">
-            <%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI.DLState}).key%>
-          </DriversLicenseState>
-          <BirthJurisdictionTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI.BirthState}).tc%>">
-            <%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI.BirthState}).key%>
-          </BirthJurisdictionTC>
-          <BirthCountry tc="<%= await lookups.lookup(types.OLI_LU.ADDRESSCOUNTRYTC, {value: acord?.PI.BirthCountry}).tc%>"><%=acord.PI.BirthCountry%></BirthCountry>
+          <DriversLicenseState tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI?.DLState}).tc%>"><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI?.DLState}).key%></DriversLicenseState>
+          <BirthJurisdictionTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI?.BirthState}).tc%>"><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI?.BirthState}).key%></BirthJurisdictionTC>
+          <BirthCountry tc="<%= await lookups.lookup(types.OLI_LU.ADDRESSCOUNTRYTC, {value: acord?.PI?.BirthCountry}).tc%>"><%=acord?.PI?.BirthCountry%></BirthCountry>
         </Person>
         <Address>
           <AddressTypeCode tc="1">Residence</AddressTypeCode>
           <Line1><%=acord?.PI?.Address%></Line1>
-          <Line2><%=acord?.PI?.Address%></Line2>
-          <City><%=acord?.PI.City%></City>
-          <AddressState><%=acord?.PI.State%></AddressState>
-          <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI.State}).tc%>">
-            <%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI.State}).key%>
-          </AddressStateTC>
-          <Zip><%=acord?.PI.Zip%></Zip>
+          <Line2><%=acord?.PI?.AptSuite%></Line2>
+          <City><%=acord?.PI?.City%></City>
+          <AddressState><%=acord?.PI?.State%></AddressState>
+          <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI?.State}).tc%>"><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI?.State}).key%></AddressStateTC>
+          <Zip><%=acord?.PI?.Zip%></Zip>
         </Address>
         <EMailAddress>
-          <AddrLine><%=acord?.PI.EmailAddress%></AddrLine>
+          <AddrLine><%=acord?.PI?.EmailAddress%></AddrLine>
         </EMailAddress>
         <Phone>
-          <PhoneTypeCode tc="<%= await lookups.lookup(types.OLI_LU.PHONETYPE, {value: acord?.PI.PhoneType}).tc%>">
-            <%=acord?.PI.PhoneType%>
-          </PhoneTypeCode>
-          <AreaCode><%=acord?.PI.PhoneNumber.substring(0,5)%></AreaCode>
-          <DialNumber><%=acord?.PI.PhoneNumber.substring(6)%></DialNumber>
+          <PhoneTypeCode tc="<%= await lookups.lookup(types.OLI_LU.PHONETYPE, {value: acord?.PI?.PhoneType}).tc _%>"><%=acord?.PI?.PhoneType _%></PhoneTypeCode>
+          <AreaCode><%=acord?.PI?.PhoneNumber?.substring(0,5)%></AreaCode>
+          <DialNumber><%=acord?.PI?.PhoneNumber?.substring(6)%></DialNumber>
           <PrefPhone tc="1">True</PrefPhone>
         </Phone>
       </Party>
       <%- await include('PartyPayor_NW', {acord}) _%>
       <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="InsuredParty_1" id="Relation_InsuredParty">
         <RelationRoleCode tc="32">Insured</RelationRoleCode>
-      </Relation><%_ if(acord?.PI?.Payor == 'Insured' || acord?.PI?.IsPIOwner == 'Yes'){ _%>
+      </Relation><%_ if(acord?.PI?.Payor === 'Insured' || acord?.PI?.IsPIOwner === 'Yes'){ _%>
       <Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="PartyPayor_1" id="Relation_InsuredPartyPayor">
         <RelationRoleCode tc="31">Payor</RelationRoleCode>
-        <RelationDescription tc="91">Self</RelationDescription><%}else if(acord.PI.IsPIOwner == 'No'){%>
+        <RelationDescription tc="91">Self</RelationDescription><%}else if(acord?.PI?.IsPIOwner === 'No'){%>
         <Relation OriginatingObjectID="PartyOwner_1" RelatedObjectID="PartyPayor_1" id="Relation_InsuredPartyOwner">
           <RelationRoleCode tc="31">Payor</RelationRoleCode>
           <RelationDescription tc="<%= await lookups.lookup(types.OLI_LU.RELATIONCODE_NW, {value: acord?.PO?.RelationshiptoPIwithPIownerno}).tc%>"><%=acord?.PO?.RelationshiptoPIwithPIownerno%></RelationDescription><%}%>
-      </Relation><%if(ras.extract('edbf85c1-25d5-4829-9ccb-76506f46e594') == 'Yes'){%>
+      </Relation><%if(ras.extract('edbf85c1-25d5-4829-9ccb-76506f46e594') === 'Yes'){%>
           <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="InsuredParty_1" id="Relation_PartyOwner">
             <RelationRoleCode tc="8">Owner</RelationRoleCode>
           </Relation><%}%>
       <%_ if(acord?.Parties?.length > 0 ) { let count = 0 _%>
-          <%_ for (const [index,party] of acord?.Parties?.entries()) {if(party?.PartyType == 'PB'){count = count + 1;} _%>
+          <%_ for (const [index,party] of acord?.Parties?.entries()) {if(party?.PartyType === 'PB'){count = count + 1;} _%>
           <%- await include('Party_NW',{party,i:index, length: acord?.Parties?.length, count: count}) _%>
           <%_ } _%>
           <%_ } _%>
