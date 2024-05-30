@@ -19,6 +19,7 @@ import { ApplicationsService } from './applications.service';
 import { fromXML } from 'from-xml';
 import { ApplicationRas } from '@sureifylabs/acquire-models';
 import { ApiQuery, ApiTags } from '@nestjs/swagger';
+import { toXML } from 'to-xml';
 
 @Controller('applications')
 export class ApplicationsController {
@@ -73,7 +74,9 @@ export class ApplicationsController {
       if (format === ApplicationFormat.JSON) {
         return fromXML(rendered);
       } else {
-        return rendered;
+        const compiledToJSON = fromXML(rendered);
+        const compiledXML = toXML(compiledToJSON);
+        return compiledXML;
       }
     } catch (error) {
       throw new InternalServerErrorException(error.message, error.name);
