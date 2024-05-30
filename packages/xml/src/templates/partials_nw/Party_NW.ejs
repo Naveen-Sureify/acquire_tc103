@@ -15,7 +15,7 @@
   </Person>
   <Address>
     <Line1><%= !party.PBandOwnersame ? party?.AddressPIOwnerYes : (party?.PBandOwnersame == 'No' ? party?.AddressPBisOwnerNo : party?.AddressPBisOwnerYes) _%></Line1>
-    <Line1><%= !party.PBandOwnersame ? party?.AddressPIOwnerYes : (party?.PBandOwnersame == 'No' ? party?.AddressPBisOwnerNo : party?.AddressPBisOwnerYes) _%></Line1>
+    <Line2><%= !party.PBandOwnersame ? party?.AptSuitePIOwnerYes : (party?.PBandOwnersame == 'No' ? party?.AptSuitePBisOwnerNo : party?.AptSuitePBisOwnerYes) _%></Line2>
     <City><%= !party.PBandOwnersame ? party?.CityPIOwnerYes : (party?.PBandOwnersame == 'No' ? party?.CityPBisOwnerNo : party?.CityPBisOwnerYes) _%></City>
     <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, { value : !party.PBandOwnersame ? party?.StatePIOwnerYes : (party?.PBandOwnersame == 'No' ? party?.StatePBisOwnerNo : party?.StatePBisOwnerYes)}).tc %>"><%= !party.PBandOwnersame ? party?.StatePIOwnerYes : (party?.PBandOwnersame == 'No' ? party?.StatePBisOwnerNo : party?.StatePBisOwnerYes) %></AddressStateTC>
     <Zip><%= !party.PBandOwnersame ? party?.ZipPIOwnerYes : (party?.PBandOwnersame == 'No' ? party?.ZipPBisOwnerNo : party?.ZipPBisOwnerYes)_%></Zip>
@@ -45,7 +45,7 @@
   </Person>
   <Address>
     <Line1><%= party?.Address _%></Line1>
-    <Line1><%= party?.Address _%></Line1>
+    <Line2><%= party?.AptSuite _%></Line2>
     <City><%= party?.City _%></City>
     <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, { value : party?.State}).tc %>"><%= party?.State %></AddressStateTC>
     <Zip><%= party?.Zip _%></Zip>

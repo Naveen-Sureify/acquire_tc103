@@ -110,7 +110,7 @@
         <Address>
           <AddressTypeCode tc="1">Residence</AddressTypeCode>
           <Line1><%=acord?.PI?.Address%></Line1>
-          <Line2><%=acord?.PI?.Address%></Line2>
+          <Line2><%=acord?.PI?.AptSuite%></Line2>
           <City><%=acord?.PI?.City%></City>
           <AddressState><%=acord?.PI?.State%></AddressState>
           <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI?.State}).tc%>"><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI?.State}).key%></AddressStateTC>
