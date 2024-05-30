@@ -74,9 +74,7 @@ export class ApplicationsController {
       if (format === ApplicationFormat.JSON) {
         return fromXML(rendered);
       } else {
-        const compiledToJSON = fromXML(rendered);
-        const compiledXML = toXML(compiledToJSON);
-        return compiledXML;
+        return rendered;
       }
     } catch (error) {
       throw new InternalServerErrorException(error.message, error.name);
