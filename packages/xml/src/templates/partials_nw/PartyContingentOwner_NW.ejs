@@ -1,4 +1,4 @@
-<%_ if(acord?.PO?.contingentowneryesno=="Yes") { _%>
+<%_ if(acord?.PO?.contingentowneryesno==="Yes") { _%>
 <Party id="ContingentOwner_1">
   <PartyTypeCode tc="1">Person</PartyTypeCode>
   <Person>
@@ -28,7 +28,7 @@
   <Phone>
     <AreaCode><%=acord?.CO?.PhoneNumber?.substring(0,5)?.replace(/[()\-]/g, '')%></AreaCode>
     <DialNumber><%=acord?.CO?.PhoneNumber?.substring(6)?.replace(/[()\-]/g, '')%></DialNumber>
-    <PhoneTypeCode tc="<%=acord?.CO?.PhoneType==='Home'?'1':(acord?.CO?.PhoneType==='Cell'?'12':'3')%>"><%=acord?.CO?.PhoneType%></PhoneTypeCode>
+    <PhoneTypeCode tc="<%= await lookups.lookup(types.OLI_LU.PHONETYPE, {value: acord?.CO?.PhoneType}).tc%>"><%=acord?.CO?.PhoneType%></PhoneTypeCode>
   </Phone>
 </Party>
 <%_ } _%>

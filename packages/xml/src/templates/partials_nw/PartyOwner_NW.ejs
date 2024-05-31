@@ -1,5 +1,5 @@
 <Party id="PartyOwner_1">
-  <%_ if(acord?.PI?.IsPIOwner=="No"){ _%>
+  <%_ if(acord?.PI?.IsPIOwner==="No"){ _%>
   <PartyTypeCode tc="1">Person</PartyTypeCode>
   <Person>
     <Prefix><%=acord?.PO?.Prefix%></Prefix>
@@ -28,12 +28,12 @@
   <Phone>
     <AreaCode><%=acord?.PO?.PhoneNumber?.substring(0,5)?.replace(/[()\-]/g, '')%></AreaCode>
     <DialNumber><%=acord?.PO?.PhoneNumber?.substring(6)?.replace(/[()\-]/g, '')%></DialNumber>
-    <PhoneTypeCode tc="<%=acord?.PO?.PhoneType==='Home'?'1':(acord?.PO?.PhoneType==='Cell'?'12':'3')%>"><%=acord?.PO?.PhoneType%></PhoneTypeCode>
+    <PhoneTypeCode tc="<%= await lookups.lookup(types.OLI_LU.PHONETYPE, {value: acord?.PO?.PhoneType}).tc%>"><%=acord?.PO?.PhoneType%></PhoneTypeCode>
   </Phone>
   <%_ } _%>
   <Risk>
-    <OLifEExtension><%_ if(acord.PI.IsPIOwner == "No"){ _%>
-      <BackupInd><%=acord?.PO?.IRSnotified%></BackupInd><%}%><%_ if(acord.PI.IsPIOwner == "Yes"){ _%>
+    <OLifEExtension><%_ if(acord?.PI.IsPIOwner === "No"){ _%>
+      <BackupInd><%=acord?.PO?.IRSnotified%></BackupInd><%}%><%_ if(acord?.PI.IsPIOwner === "Yes"){ _%>
       <BackupInd><%=acord?.PI?.IRSnotified%></BackupInd><%_ } _%>
     </OLifEExtension>
   </Risk>
