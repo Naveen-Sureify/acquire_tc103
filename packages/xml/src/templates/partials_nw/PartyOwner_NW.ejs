@@ -1,0 +1,40 @@
+<Party id="PartyOwner_1">
+  <%_ if(acord?.PI?.IsPIOwner=="No"){ _%>
+  <PartyTypeCode tc="1">Person</PartyTypeCode>
+  <Person>
+    <Prefix><%=acord?.PO?.Prefix%></Prefix>
+    <FirstName><%=acord?.PO?.FirstName%></FirstName>
+    <MiddleName><%=acord?.PO?.MiddleInitial%></MiddleName>
+    <LastName><%=acord?.PO?.LastName%></LastName>
+    <Suffix><%=acord?.PO?.Suffix%></Suffix>
+    <BirthDate><%=acord?.PO?.DateofBirth%></BirthDate>
+  </Person>
+  <GovtIDTC tc="1">SSN</GovtIDTC>
+  <GovtID><%=acord?.PO?.SSN?.replace(/[()\-]/g, '')%></GovtID>
+  <Address>
+    <AddressTypeCode tc="1">Residence</AddressTypeCode>
+    <Line1><%=acord?.PO?.Address%></Line1>
+    <Line2><%=acord?.PO?.Address%></Line2>
+    <City><%=acord?.PO?.City%></City>
+    <AddressState><%=acord?.PO?.State%></AddressState>
+    <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PO.State}).tc%>">
+    <%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PO.State}).key%>
+    </AddressStateTC>
+    <Zip><%=acord?.PO?.Zip?.replace(/[()\-]/g, '')%></Zip>
+  </Address>
+  <EmailAddress>
+    <AddrLine><%=acord?.PO?.EmailAddress%></AddrLine>
+  </EmailAddress>
+  <Phone>
+    <AreaCode><%=acord?.PO?.PhoneNumber?.substring(0,5)?.replace(/[()\-]/g, '')%></AreaCode>
+    <DialNumber><%=acord?.PO?.PhoneNumber?.substring(6)?.replace(/[()\-]/g, '')%></DialNumber>
+    <PhoneTypeCode tc="<%=acord?.PO?.PhoneType==='Home'?'1':(acord?.PO?.PhoneType==='Cell'?'12':'3')%>"><%=acord?.PO?.PhoneType%></PhoneTypeCode>
+  </Phone>
+  <%_ } _%>
+  <Risk>
+    <OLifEExtension><%_ if(acord.PI.IsPIOwner == "No"){ _%>
+      <BackupInd><%=acord?.PO?.IRSnotified%></BackupInd><%}%><%_ if(acord.PI.IsPIOwner == "Yes"){ _%>
+      <BackupInd><%=acord?.PI?.IRSnotified%></BackupInd><%_ } _%>
+    </OLifEExtension>
+  </Risk>
+</Party>

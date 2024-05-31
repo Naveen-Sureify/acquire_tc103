@@ -126,10 +126,26 @@
           <PrefPhone tc="1">True</PrefPhone>
         </Phone>
       </Party>
+      <%- await include('PartySecondaryAddressee_NW', {acord}) _%>
+      <%- await include('PartyOwner_NW', {acord}) _%>
+      <%- await include('PartyContingentOwner_NW', {acord}) _%>
       <%- await include('PartyPayor_NW', {acord}) _%>
       <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="InsuredParty_1" id="Relation_InsuredParty">
         <RelationRoleCode tc="32">Insured</RelationRoleCode>
       </Relation>
+      <%_ if(acord?.PI?.IsPIOwner=="No") { _%>
+        <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="PartyOwner_1"
+        id="Relation_OwnerParty">
+          <RelationRoleCode tc="8">Owner</RelationRoleCode>
+          <RelationDescription tc="<%= await lookups.lookup(types.OLI_LU.RELATIONDESCRIPTION_NW, { value : acord?.PO?.RelationshiptoPIwithPIownerno }).tc%>"><%=acord?.PO?.RelationshiptoPIwithPIownerno%></RelationDescription>
+        </Relation><%_ } _%>
+      <%_ if( acord?.PO?.contingentowneryesno=="Yes" ) { _%>
+        <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="ContingentOwner_1"
+        id="Relation_ContingentOwnerParty">
+          <RelationRoleCode tc="177">Contingent Owner</RelationRoleCode> 
+          <RelationDescription tc="<%= await lookups.lookup(types.OLI_LU.RELATIONDESCRIPTION_NW, { value : acord?.PO?.RelationshiptoPIwithPIownerno }).tc%>"><%=acord?.PO?.RelationshiptoPIwithPIownerno%></RelationDescription>
+        </Relation>
+      <%_ } _%>
       <%_ if(acord?.PI?.Payor === 'Insured'){ _%>
       <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="InsuredParty_1" id="Relation_InsuredPartyPayor">
         <RelationRoleCode tc="31">Payor</RelationRoleCode>
