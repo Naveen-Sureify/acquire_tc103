@@ -93,7 +93,7 @@
       <Party id="InsuredParty_1">
         <PartyTypeCode tc="1">Person</PartyTypeCode>
         <GovtIDTC tc="1">SSN</GovtIDTC>
-        <GovtID><%=acord?.PI?.SSN%></GovtID>
+        <GovtID><%=acord?.PI?.SSN?.replace(/[()\-]/g, '')%></GovtID>
         <Person>
           <Prefix><%=acord?.PI?.Prefix%></Prefix>
           <FirstName><%=acord?.PI?.FirstName%></FirstName>
@@ -114,38 +114,44 @@
           <City><%=acord?.PI?.City%></City>
           <AddressState><%=acord?.PI?.State%></AddressState>
           <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI?.State}).tc%>"><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI?.State}).key%></AddressStateTC>
-          <Zip><%=acord?.PI?.Zip%></Zip>
+          <Zip><%=acord?.PI?.Zip?.replace(/[()\-]/g, '')%></Zip>
         </Address>
         <EMailAddress>
           <AddrLine><%=acord?.PI?.EmailAddress%></AddrLine>
         </EMailAddress>
         <Phone>
           <PhoneTypeCode tc="<%= await lookups.lookup(types.OLI_LU.PHONETYPE, {value: acord?.PI?.PhoneType}).tc _%>"><%=acord?.PI?.PhoneType _%></PhoneTypeCode>
-          <AreaCode><%=acord?.PI?.PhoneNumber?.substring(0,5)%></AreaCode>
-          <DialNumber><%=acord?.PI?.PhoneNumber?.substring(6)%></DialNumber>
+          <AreaCode><%=acord?.PI?.PhoneNumber?.substring(0,5)?.replace(/[()\-]/g, '')%></AreaCode>
+          <DialNumber><%=acord?.PI?.PhoneNumber?.substring(6)?.replace(/[()\-]/g, '')%></DialNumber>
           <PrefPhone tc="1">True</PrefPhone>
         </Phone>
       </Party>
       <%- await include('PartyPayor_NW', {acord}) _%>
       <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="InsuredParty_1" id="Relation_InsuredParty">
         <RelationRoleCode tc="32">Insured</RelationRoleCode>
-      </Relation><%_ if(acord?.PI?.Payor === 'Insured' || acord?.PI?.IsPIOwner === 'Yes'){ _%>
-      <Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="PartyPayor_1" id="Relation_InsuredPartyPayor">
+      </Relation>
+      <%_ if(acord?.PI?.Payor === 'Insured'){ _%>
+      <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="InsuredParty_1" id="Relation_InsuredPartyPayor">
         <RelationRoleCode tc="31">Payor</RelationRoleCode>
-        <RelationDescription tc="91">Self</RelationDescription><%}else if(acord?.PI?.IsPIOwner === 'No'){%>
-        <Relation OriginatingObjectID="PartyOwner_1" RelatedObjectID="PartyPayor_1" id="Relation_InsuredPartyOwner">
-          <RelationRoleCode tc="31">Payor</RelationRoleCode>
-          <RelationDescription tc="<%= await lookups.lookup(types.OLI_LU.RELATIONCODE_NW, {value: acord?.PO?.RelationshiptoPIwithPIownerno}).tc%>"><%=acord?.PO?.RelationshiptoPIwithPIownerno%></RelationDescription><%}%>
-      </Relation><%if(ras.extract('edbf85c1-25d5-4829-9ccb-76506f46e594') === 'Yes'){%>
-          <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="InsuredParty_1" id="Relation_PartyOwner">
-            <RelationRoleCode tc="8">Owner</RelationRoleCode>
-          </Relation><%}%>
+      </Relation> <%_ }  _%>
+      <%_ if(acord?.PI?.Payor === 'Owner'){ _%>
+      <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="PartyOwner_1" id="Relation_PartyOwner">
+        <RelationRoleCode tc="31">Payor</RelationRoleCode>
+      </Relation>
+      <Relation OriginatingObjectID="PartyOwner_1" RelatedObjectID="PartyPayor_1" id="Relation_PartyOwnerPartyPayor">
+        <RelationRoleCode tc="31">Payor</RelationRoleCode>
+        <RelationDescription tc="91">Self</RelationDescription>
+      </Relation><%_ } _%>
+      <%_ if(ras.extract('edbf85c1-25d5-4829-9ccb-76506f46e594') === 'Yes'){ _%>
+      <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="InsuredParty_1" id="Relation_PartyOwner">
+        <RelationRoleCode tc="8">Owner</RelationRoleCode>
+      </Relation><%_ } _%>
       <%_ if(acord?.Parties?.length > 0 ) { let count = 0 _%>
-          <%_ for (const [index,party] of acord?.Parties?.entries()) {if(party?.PartyType === 'PB'){count = count + 1;} _%>
-          <%- await include('Party_NW',{party,i:index, length: acord?.Parties?.length, count: count}) _%>
-          <%_ } _%>
-          <%_ } _%>
-          <%- await include('Relations_NW', {acord}) _%>
+      <%_ for (const [index,party] of acord?.Parties?.entries()) {if(party?.PartyType === 'PB'){count = count + 1;} _%>
+      <%- await include('Party_NW',{party,i:index, length: acord?.Parties?.length, count: count}) _%>
+      <%_ } _%>
+      <%_ } _%>
+      <%- await include('Relations_NW', {acord}) _%>
     </OLifE>
   </TXLifeRequest>
 </TXLife>
