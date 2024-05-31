@@ -1,7 +1,7 @@
-<%_ if(party?.PartyType === "PB") { _%>
+<%_ if(party?.PartyType === "PB" && party?.Slider) { _%>
 <Party id="Party_PrimaryBeneficiary_<%=i+1%>">
   <PartyTypeCode tc="<%= await lookups.lookup(types.OLI_LU.PARTYTYPECODE_NW, {value: !party?.PBandOwnersame ? party?.RelationshiptoPIPIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.RelationshiptoPIPBisOwnerNo : party?.RelationshiptoPIPBisOwnerYes)}).tc _%>"><%= await lookups.lookup(types.OLI_LU.PARTYTYPECODE_NW, {value: !party?.PBandOwnersame ? party?.RelationshiptoPIPIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.RelationshiptoPIPBisOwnerNo : party?.RelationshiptoPIPBisOwnerYes)}).key  _%></PartyTypeCode>
-  <GovtID><%= !party.PBandOwnersame ? party?.SSNorTINPIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.SSNorTINPBisOwnerNo : party?.SSNorTINPBisOwnerYes) _%></GovtID>
+  <GovtID><%= !party.PBandOwnersame ? party?.SSNorTINPIOwnerYes?.replace(/[()\-]/g, '') : (party?.PBandOwnersame === 'No' ? party?.SSNorTINPBisOwnerNo?.replace(/[()\-]/g, '') : party?.SSNorTINPBisOwnerYes?.replace(/[()\-]/g, '')) _%></GovtID>
   <GovtIDTC tc="1">SSN</GovtIDTC>
   <Person>
     <Prefix></Prefix>
@@ -18,22 +18,22 @@
     <Line2><%= !party.PBandOwnersame ? party?.AptSuitePIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.AptSuitePBisOwnerNo : party?.AptSuitePBisOwnerYes) _%></Line2>
     <City><%= !party.PBandOwnersame ? party?.CityPIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.CityPBisOwnerNo : party?.CityPBisOwnerYes) _%></City>
     <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, { value : !party.PBandOwnersame ? party?.StatePIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.StatePBisOwnerNo : party?.StatePBisOwnerYes)}).tc %>"><%= !party.PBandOwnersame ? party?.StatePIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.StatePBisOwnerNo : party?.StatePBisOwnerYes) %></AddressStateTC>
-    <Zip><%= !party.PBandOwnersame ? party?.ZipPIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.ZipPBisOwnerNo : party?.ZipPBisOwnerYes)_%></Zip>
+    <Zip><%= !party.PBandOwnersame ? party?.ZipPIOwnerYes?.replace(/[()\-]/g, '') : (party?.PBandOwnersame === 'No' ? party?.ZipPBisOwnerNo?.replace(/[()\-]/g, '') : party?.ZipPBisOwnerYes?.replace(/[()\-]/g, ''))_%></Zip>
   </Address>
   <Phone>
     <PhoneTypeCode tc="<%= await lookups.lookup(types.OLI_LU.PHONETYPE, {value: !party.PBandOwnersame ? party?.PhoneTypePIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.PhoneTypePBisOwnerNo : party?.PhoneTypePBisOwnerYes)}).tc%>"><%= !party.PBandOwnersame ? party?.PhoneTypePIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.PhoneTypePBisOwnerNo : party?.PhoneTypePBisOwnerYes) %></PhoneTypeCode>
-    <AreaCode><%= !party.PBandOwnersame ? party?.PhoneNumberPIOwnerYes?.substring(0,5) : (party?.PBandOwnersame === 'No' ? party?.PhoneNumberPBisOwnerNo?.substring(0,5) : party?.PhoneNumberPBisOwnerYes?.substring(0,5))%></AreaCode>
-    <DialNumber><%= !party.PBandOwnersame ? party?.PhoneNumberPIOwnerYes?.substring(6) : (party?.PBandOwnersame === 'No' ? party?.PhoneNumberPBisOwnerNo?.substring(6) : party?.PhoneNumberPBisOwnerYes?.substring(6))%></DialNumber>
+    <AreaCode><%= !party.PBandOwnersame ? party?.PhoneNumberPIOwnerYes?.substring(0,5)?.replace(/[()\-]/g, '') : (party?.PBandOwnersame === 'No' ? party?.PhoneNumberPBisOwnerNo?.substring(0,5)?.replace(/[()\-]/g, '') : party?.PhoneNumberPBisOwnerYes?.substring(0,5)?.replace(/[()\-]/g, ''))%></AreaCode>
+    <DialNumber><%= !party.PBandOwnersame ? party?.PhoneNumberPIOwnerYes?.substring(6)?.replace(/[()\-]/g, '') : (party?.PBandOwnersame === 'No' ? party?.PhoneNumberPBisOwnerNo?.substring(6)?.replace(/[()\-]/g, '') : party?.PhoneNumberPBisOwnerYes?.substring(6)?.replace(/[()\-]/g, ''))%></DialNumber>
     <PrefPhone tc="1">True</PrefPhone>
   </Phone>
   <OLifEExtension>
     <SplitPctInd tc="1">True</SplitPctInd>
   </OLifEExtension>
 </Party><%_ } _%>
-<%_ if(party?.PartyType === "CB") { _%>
+<%_ if(party?.PartyType === "CB" && party?.Slider) { _%>
 <Party id="Party_ContingentBeneficiary_<%=i-count+1%>">
   <PartyTypeCode tc="<%= await lookups.lookup(types.OLI_LU.PARTYTYPECODE_NW, {value: party?.RelationshiptoPI}).tc _%>"><%= await lookups.lookup(types.OLI_LU.PARTYTYPECODE_NW, {value: party?.RelationshiptoPI}).key  _%></PartyTypeCode>
-  <GovtID><%= party?.SSNorTIN _%></GovtID>
+  <GovtID><%= party?.SSNorTIN?.replace(/[()\-]/g, '') _%></GovtID>
   <GovtIDTC tc="1">SSN</GovtIDTC>
   <Person>
     <Prefix></Prefix>
@@ -48,12 +48,12 @@
     <Line2><%= party?.AptSuite _%></Line2>
     <City><%= party?.City _%></City>
     <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, { value : party?.State}).tc %>"><%= party?.State %></AddressStateTC>
-    <Zip><%= party?.Zip _%></Zip>
+    <Zip><%= party?.Zip?.replace(/[()\-]/g, '') _%></Zip>
   </Address>
   <Phone>
     <PhoneTypeCode tc="<%= await lookups.lookup(types.OLI_LU.PHONETYPE, {value: party?.PhoneType}).tc _%>"><%= party?.PhoneType _%></PhoneTypeCode>
-    <AreaCode><%= party?.PhoneNumber?.substring(0,5) _%></AreaCode>
-    <DialNumber><%= party?.PhoneNumber?.substring(6) _%></DialNumber>
+    <AreaCode><%= party?.PhoneNumber?.substring(0,5)?.replace(/[()\-]/g, '') _%></AreaCode>
+    <DialNumber><%= party?.PhoneNumber?.substring(6)?.replace(/[()\-]/g, '') _%></DialNumber>
     <PrefPhone tc="1">True</PrefPhone>
   </Phone>
   <OLifEExtension>
