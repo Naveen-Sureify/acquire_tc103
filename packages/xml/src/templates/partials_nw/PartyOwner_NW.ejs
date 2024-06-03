@@ -17,8 +17,8 @@
     <Line2><%=acord?.PO?.Address%></Line2>
     <City><%=acord?.PO?.City%></City>
     <AddressState><%=acord?.PO?.State%></AddressState>
-    <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PO.State}).tc%>">
-    <%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PO.State}).key%>
+    <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PO?.State}).tc%>">
+    <%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PO?.State}).key%>
     </AddressStateTC>
     <Zip><%=acord?.PO?.Zip?.replace(/[()\-]/g, '')%></Zip>
   </Address>
@@ -32,8 +32,8 @@
   </Phone>
   <%_ } _%>
   <Risk>
-    <OLifEExtension><%_ if(acord?.PI.IsPIOwner === "No"){ _%>
-      <BackupInd><%=acord?.PO?.IRSnotified%></BackupInd><%}%><%_ if(acord?.PI.IsPIOwner === "Yes"){ _%>
+    <OLifEExtension><%_ if(acord?.PI?.IsPIOwner === "No"){ _%>
+      <BackupInd><%=acord?.PO?.IRSnotified%></BackupInd><%_ } else if(acord?.PI?.IsPIOwner === "Yes"){ _%>
       <BackupInd><%=acord?.PI?.IRSnotified%></BackupInd><%_ } _%>
     </OLifEExtension>
   </Risk>
