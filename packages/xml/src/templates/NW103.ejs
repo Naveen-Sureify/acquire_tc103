@@ -126,6 +126,9 @@
           <PrefPhone tc="1">True</PrefPhone>
         </Phone>
       </Party>
+      <%- await include('PartySecondaryAddressee_NW', {acord}) _%>
+      <%- await include('PartyOwner_NW', {acord}) _%>
+      <%- await include('PartyContingentOwner_NW', {acord}) _%>
       <%- await include('PartyPayor_NW', {acord}) _%>
       <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="InsuredParty_1" id="Relation_InsuredParty">
         <RelationRoleCode tc="32">Insured</RelationRoleCode>
