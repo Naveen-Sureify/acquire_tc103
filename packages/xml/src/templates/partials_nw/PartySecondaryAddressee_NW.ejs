@@ -1,3 +1,4 @@
+<%_ if( acord?.SB?.latepaymentnotices==="Yes" ) { _%>
 <Party id="SecondaryAddresseeParty_1"> 
   <PartyTypeCode tc="1">Person</PartyTypeCode> 
   <Person>
@@ -19,3 +20,4 @@
     <Zip><%=acord?.SB?.Zip?.replace(/[()\-]/g, '')%></Zip>
   </Address>
 </Party>
+<%_ } _%>

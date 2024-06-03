@@ -38,3 +38,13 @@
     </OLifEExtension>
   </Risk>
 </Party>
+<%_ if(acord?.PI?.IsPIOwner==="No") { _%>
+<Relation OriginatingObjectID="Application_Holding" RelatedObjectID="PartyOwner_1"
+  id="Relation_PartyOwner">
+  <RelationRoleCode tc="8">Owner</RelationRoleCode>
+</Relation>
+<Relation OriginatingObjectID="InsuredParty_1" RelatedObjectID="PartyOwner_1"
+  id="Relation_InsuredPartyOwner">
+  <RelationRoleCode tc="<%= await lookups.lookup(types.OLI_LU.RELATIONCODE_NW, { value : acord?.PO?.RelationshiptoPIwithPIownerno }).tc%>"><%=await lookups.lookup(types.OLI_LU.RELATIONCODE_NW, { value : acord?.PO?.RelationshiptoPIwithPIownerno}).key _%></RelationRoleCode>
+  <RelationDescription tc="<%= await lookups.lookup(types.OLI_LU.RELATIONDESCRIPTION_NW, { value : acord?.PO?.RelationshiptoPIwithPIownerno }).tc%>"><%=await lookups.lookup(types.OLI_LU.RELATIONDESCRIPTION_NW, { value : acord?.PO?.RelationshiptoPIwithPIownerno}).key _%></RelationDescription>
+</Relation><%_ } _%>
