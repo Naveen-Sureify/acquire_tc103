@@ -1,0 +1,11 @@
+<%_ if(acord?.Parties?.length>0) { let count = 0 _%>
+<%_ for (const [index,holding] of acord?.Parties?.entries()) {  _%>
+<%_ if(holding?.PartyType === 'InFIRe'){ count = count + 1 _%>
+<Party id="Party_Carrier_OtherIns_<%= count%>">
+  <PartyTypeCode tc="2">Organization</PartyTypeCode>
+  <Fullname><%= holding?.Company%></Fullname>
+  <Organization />
+</Party>
+<%_ } _%>
+<%_ } _%>
+<%_ } _%>

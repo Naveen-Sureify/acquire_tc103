@@ -1,0 +1,26 @@
+<%_ if(acord?.Parties?.length>0) { let count = 0 _%>
+<%_ for (const [index,holding] of acord?.Parties?.entries()) {  _%>
+<%_ if(holding?.PartyType === 'InFIRe' && acord?.InFI?.replaceinsorannyesno === 'Yes'){ count = count + 1 _%>
+<Relation OriginatingObjectID="Application_Holding" RelatedObjectID="Holding_OtherIns_<%=count%>" id="Relation_OtherIns_<%=count%>">
+  <RelationRoleCode tc="64">Replaced by</RelationRoleCode>
+</Relation>
+<Relation OriginatingObjectID="Holding_OtherIns_<%=count%>" RelatedObjectID="InsuredParty_1" id="Relation_InsuredInforcePolicy_<%=count%>">
+  <RelationRoleCode tc="32">Insured</RelationRoleCode>
+</Relation>
+<Relation OriginatingObjectID="Holding_OtherIns_<%=count%>" RelatedObjectID="Party_Carrier_OtherIns_<%=count%>" id="Relation_Carrier_OtherIns_<%=count%>">
+  <RelationRoleCode tc="80">Health Insurer</RelationRoleCode>
+</Relation>
+<%_ } _%>
+<%_ } _%>
+<%_ } _%>
+<%_ if(acord?.InFI?.PIhasainsorannyesno === 'Yes' && acord?.InFI?.replaceinsorannyesno === 'No') { _%>
+<Relation OriginatingObjectID="Application_Holding" RelatedObjectID="Holding_OtherIns_1" id="Relation_OtherIns_1">
+  <RelationRoleCode tc="64">Replaced by</RelationRoleCode>
+</Relation>
+<Relation OriginatingObjectID="Holding_OtherIns_1" RelatedObjectID="InsuredParty_1" id="Relation_InsuredInforcePolicy_1">
+  <RelationRoleCode tc="32">Insured</RelationRoleCode>
+</Relation>
+<Relation OriginatingObjectID="Holding_OtherIns_1" RelatedObjectID="Party_Carrier_OtherIns_1" id="Relation_Carrier_OtherIns_1">
+  <RelationRoleCode tc="80">Health Insurer</RelationRoleCode>
+</Relation>
+<%_ } _%>
