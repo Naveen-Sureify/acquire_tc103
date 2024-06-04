@@ -1,0 +1,32 @@
+<%_ if(acord?.Parties?.length>0) { let count = 0 _%>
+<%_ for (const [index,holding] of acord?.Parties?.entries()) {  _%>
+<%_ if(holding?.PartyType === 'InFIRe' && acord?.InFI?.replaceinsorannyesno === 'Yes'){ count = count + 1 _%>
+<Holding id="Holding_OtherIns_<%=count%>">
+  <HoldingTypeCode tc="2">Policy</HoldingTypeCode>
+  <Policy CarrierPartyID="Party_Carrier_OtherIns_<%=count%>">
+    <PolNumber><%= holding?.PolicyNumber_%></PolNumber>
+    <IssueDate><%= holding?.YearIssued _%></IssueDate>
+    <Life>
+      <FaceAmt><%= holding?.CoverageAmount?.replace(/[()\,\-]/g, '') _%></FaceAmt>
+      <LifeUSA>
+        <Internal1035 tc="<%= holding?.['1035exchangeyesno'] === "Yes" ? 1 : 0 %>"><%= holding?.['1035exchangeyesno'] === "Yes" ? "True" : "False" _%></Internal1035>
+      </LifeUSA>
+    </Life>
+    <ApplicationInfo>
+      <ReplacementInd tc="1">True</ReplacementInd>
+    </ApplicationInfo>
+  </Policy>
+</Holding>
+<%_ } _%>
+<%_ } _%>
+<%_ } _%>
+<%_ if(acord?.InFI?.PIhasainsorannyesno === 'Yes' && acord?.InFI?.replaceinsorannyesno === 'No') { _%>
+<Holding id="Holding_OtherIns_1">
+  <HoldingTypeCode tc="2">Policy</HoldingTypeCode>
+  <Policy CarrierPartyID="Party_Carrier_OtherIns_1">
+    <ApplicationInfo>
+      <ReplacementInd tc="0">False</ReplacementInd>
+    </ApplicationInfo>
+  </Policy>
+</Holding>
+<%_ } _%>

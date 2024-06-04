@@ -75,6 +75,7 @@ export type PartiesLists = {
   Carrier: { [key: string]: QuestionAnswerPair[] };
   PB: { [key: string]: QuestionAnswerPair[] };
   CB: { [key: string]: QuestionAnswerPair[] };
+  InFIRe: { [key: string]: QuestionAnswerPair[] };
 };
 
 export type PartyQuestionAnswerPair = QuestionAnswerPair[];

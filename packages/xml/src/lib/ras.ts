@@ -218,6 +218,7 @@ export const addAcordIds = (
     Carrier: {},
     PB: {},
     CB: {},
+    InFIRe: {}
   };
 
   const updatedPairs: QuestionAnswerPair[] = [];
@@ -233,7 +234,8 @@ export const addAcordIds = (
         (key == 'Beneficiary' && index !== '0') ||
         (key == 'PB' && index !== '0') ||
         (key == 'CB' && index !== '0') ||
-        (key != 'Contingent' && key != 'Physician' && key != 'Beneficiary' && key != 'PB' && key != 'CB')
+        (key == 'InFIRe' && index !== '0') ||
+        (key != 'Contingent' && key != 'Physician' && key != 'Beneficiary' && key != 'PB' && key != 'CB' && key != 'InFIRe')
       ) {
         if (transformedData[key][index]) {
           transformedData[key][index].push(pair);
