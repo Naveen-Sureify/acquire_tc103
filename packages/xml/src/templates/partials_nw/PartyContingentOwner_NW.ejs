@@ -14,12 +14,10 @@
   <Address>
     <AddressTypeCode tc="1">Residence</AddressTypeCode>
     <Line1><%=acord?.CO?.Address%></Line1>
-    <Line2><%=acord?.CO?.Address%></Line2>
+    <Line2><%=acord?.CO?.AptSuite%></Line2>
     <City><%=acord?.CO?.City%></City>
-    <AddressState><%=acord?.CO?.State%></AddressState>
-    <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.CO.State}).tc%>">
-    <%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.CO?.State}).key%>
-    </AddressStateTC>
+    <AddressState><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.CO.State}).key%></AddressState>
+    <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.CO.State}).tc%>"><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.CO?.State}).key%></AddressStateTC>
     <Zip><%=acord?.CO?.Zip?.replace(/[()\-]/g, '')%></Zip>
   </Address>
   <EmailAddress>

@@ -17,7 +17,8 @@
     <Line1><%= !party.PBandOwnersame ? party?.AddressPIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.AddressPBisOwnerNo : party?.AddressPBisOwnerYes) _%></Line1>
     <Line2><%= !party.PBandOwnersame ? party?.AptSuitePIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.AptSuitePBisOwnerNo : party?.AptSuitePBisOwnerYes) _%></Line2>
     <City><%= !party.PBandOwnersame ? party?.CityPIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.CityPBisOwnerNo : party?.CityPBisOwnerYes) _%></City>
-    <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, { value : !party.PBandOwnersame ? party?.StatePIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.StatePBisOwnerNo : party?.StatePBisOwnerYes)}).tc %>"><%= !party.PBandOwnersame ? party?.StatePIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.StatePBisOwnerNo : party?.StatePBisOwnerYes) %></AddressStateTC>
+    <AddressState><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, { value : !party.PBandOwnersame ? party?.StatePIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.StatePBisOwnerNo : party?.StatePBisOwnerYes)}).key%></AddressState>
+    <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, { value : !party.PBandOwnersame ? party?.StatePIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.StatePBisOwnerNo : party?.StatePBisOwnerYes)}).tc %>"><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, { value : !party.PBandOwnersame ? party?.StatePIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.StatePBisOwnerNo : party?.StatePBisOwnerYes)}).key%></AddressStateTC>
     <Zip><%= !party.PBandOwnersame ? party?.ZipPIOwnerYes?.replace(/[()\-]/g, '') : (party?.PBandOwnersame === 'No' ? party?.ZipPBisOwnerNo?.replace(/[()\-]/g, '') : party?.ZipPBisOwnerYes?.replace(/[()\-]/g, ''))_%></Zip>
   </Address>
   <Phone>
@@ -47,7 +48,8 @@
     <Line1><%= party?.Address _%></Line1>
     <Line2><%= party?.AptSuite _%></Line2>
     <City><%= party?.City _%></City>
-    <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, { value : party?.State}).tc %>"><%= party?.State %></AddressStateTC>
+    <AddressState><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, { value : party?.State}).key %></AddressState>
+    <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, { value : party?.State}).tc %>"><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, { value : party?.State}).key %></AddressStateTC>
     <Zip><%= party?.Zip?.replace(/[()\-]/g, '') _%></Zip>
   </Address>
   <Phone>
