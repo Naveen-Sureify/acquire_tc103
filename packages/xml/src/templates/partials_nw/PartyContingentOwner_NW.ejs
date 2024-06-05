@@ -7,7 +7,7 @@
     <MiddleName><%=acord?.CO?.MiddleInitial%></MiddleName>
     <LastName><%=acord?.CO?.LastName%></LastName>
     <Suffix><%=acord?.CO?.Suffix%></Suffix>
-    <BirthDate><%=utils.dayjs(acord?.CO?.DateofBirth)?.format('YYYY-MM-DD')%></BirthDate>
+    <BirthDate><%=!acord?.CO?.DateofBirth ? utils.dayjs(acord?.CO?.DateofBirth)?.format('YYYY-MM-DD') : ''%></BirthDate>
   </Person>
   <GovtIDTC tc="1">SSN</GovtIDTC>
   <GovtID><%=acord?.CO?.SSN?.replace(/[()\-]/g, '')%></GovtID>
