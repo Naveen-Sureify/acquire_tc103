@@ -5,17 +5,17 @@
   <GovtIDTC tc="1">SSN</GovtIDTC>
   <Person>
     <Prefix></Prefix>
-    <FirstName><%- !party.PBandOwnersame ? party?.FirstNamePIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.FirstNamePBisOwnerNo : party?.FirstNamePBisOwnerYes) _%></FirstName>
-    <MiddleName><%- !party.PBandOwnersame ? party?.MiddleInitialPIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.MiddleInitialPBisOwnerNo : party?.MiddleInitialPBisOwnerYes) _%></MiddleName>
-    <LastName><%- !party.PBandOwnersame ? party?.LastNamePIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.LastNamePBisOwnerNo : party?.LastNamePBisOwnerYes) _%></LastName>
+    <FirstName><%= !party.PBandOwnersame ? party?.FirstNamePIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.FirstNamePBisOwnerNo : party?.FirstNamePBisOwnerYes) _%></FirstName>
+    <MiddleName><%= !party.PBandOwnersame ? party?.MiddleInitialPIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.MiddleInitialPBisOwnerNo : party?.MiddleInitialPBisOwnerYes) _%></MiddleName>
+    <LastName><%= !party.PBandOwnersame ? party?.LastNamePIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.LastNamePBisOwnerNo : party?.LastNamePBisOwnerYes) _%></LastName>
     <Suffix></Suffix>
     <%_ if(!party.PBandOwnersame) { _%>
     <BirthDate><%= party?.DateofBirthPIOwnerYes && (utils.dayjs(party?.DateofBirthPIOwnerYes)?.format('YYYY-MM-DD'))%></BirthDate><%_ } else { _%>
     <BirthDate><%= party?.PBandOwnersame === 'No' ? (party?.DateofBirthPBisOwnerNo && utils.dayjs(party?.DateofBirthPBisOwnerNo)?.format('YYYY-MM-DD')) : (party?.DateofBirthPBisOwnerYes && utils.dayjs(party?.DateofBirthPBisOwnerYes)?.format('YYYY-MM-DD')) _%></BirthDate><%_ } _%></Person>
   <Address>
-    <Line1><%- !party.PBandOwnersame ? party?.AddressPIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.AddressPBisOwnerNo : party?.AddressPBisOwnerYes) _%></Line1>
-    <Line2><%- !party.PBandOwnersame ? party?.AptSuitePIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.AptSuitePBisOwnerNo : party?.AptSuitePBisOwnerYes) _%></Line2>
-    <City><%- !party.PBandOwnersame ? party?.CityPIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.CityPBisOwnerNo : party?.CityPBisOwnerYes) _%></City>
+    <Line1><%= !party.PBandOwnersame ? party?.AddressPIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.AddressPBisOwnerNo : party?.AddressPBisOwnerYes) _%></Line1>
+    <Line2><%= !party.PBandOwnersame ? party?.AptSuitePIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.AptSuitePBisOwnerNo : party?.AptSuitePBisOwnerYes) _%></Line2>
+    <City><%= !party.PBandOwnersame ? party?.CityPIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.CityPBisOwnerNo : party?.CityPBisOwnerYes) _%></City>
     <AddressState><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, { value : !party.PBandOwnersame ? party?.StatePIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.StatePBisOwnerNo : party?.StatePBisOwnerYes)}).key%></AddressState>
     <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, { value : !party.PBandOwnersame ? party?.StatePIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.StatePBisOwnerNo : party?.StatePBisOwnerYes)}).tc %>"><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, { value : !party.PBandOwnersame ? party?.StatePIOwnerYes : (party?.PBandOwnersame === 'No' ? party?.StatePBisOwnerNo : party?.StatePBisOwnerYes)}).key%></AddressStateTC>
     <Zip><%= !party.PBandOwnersame ? party?.ZipPIOwnerYes?.replace(/[()\-]/g, '') : (party?.PBandOwnersame === 'No' ? party?.ZipPBisOwnerNo?.replace(/[()\-]/g, '') : party?.ZipPBisOwnerYes?.replace(/[()\-]/g, ''))_%></Zip>
@@ -37,16 +37,16 @@
   <GovtIDTC tc="1">SSN</GovtIDTC>
   <Person>
     <Prefix></Prefix>
-    <FirstName><%- party?.FirstName _%></FirstName>
-    <MiddleName><%- party?.MiddleInitial _%></MiddleName>
-    <LastName><%- party?.LastName _%></LastName>
+    <FirstName><%= party?.FirstName _%></FirstName>
+    <MiddleName><%= party?.MiddleInitial _%></MiddleName>
+    <LastName><%= party?.LastName _%></LastName>
     <Suffix></Suffix>
     <BirthDate><%= !party?.DateofBirth ? '' : utils.dayjs(party?.DateofBirth)?.format('YYYY-MM-DD') %></BirthDate>
   </Person>
   <Address>
-    <Line1><%- party?.Address _%></Line1>
-    <Line2><%- party?.AptSuite _%></Line2>
-    <City><%- party?.City _%></City>
+    <Line1><%= party?.Address _%></Line1>
+    <Line2><%= party?.AptSuite _%></Line2>
+    <City><%= party?.City _%></City>
     <AddressState><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, { value : party?.State}).key %></AddressState>
     <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, { value : party?.State}).tc %>"><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, { value : party?.State}).key %></AddressStateTC>
     <Zip><%= party?.Zip?.replace(/[()\-]/g, '') _%></Zip>
