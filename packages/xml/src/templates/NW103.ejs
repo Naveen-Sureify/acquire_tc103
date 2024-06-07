@@ -70,28 +70,28 @@
         <GovtID><%=acord?.PI?.SSN?.replace(/[()\-]/g, '')%></GovtID>
         <Person>
           <Prefix><%=acord?.PI?.Prefix%></Prefix>
-          <FirstName><%- acord?.PI?.FirstName%></FirstName>
-          <MiddleName><%- acord?.PI?.MiddleInitial%></MiddleName>
-          <LastName><%- acord?.PI?.LastName%></LastName>
+          <FirstName><%= acord?.PI?.FirstName%></FirstName>
+          <MiddleName><%= acord?.PI?.MiddleInitial%></MiddleName>
+          <LastName><%= acord?.PI?.LastName%></LastName>
           <Suffix><%=acord?.PI?.Suffix%></Suffix>
           <BirthDate><%=acord?.PI?.DateofBirth%></BirthDate>
           <Gender tc="<%= await lookups.lookup('GENDER', { value: acord?.PI?.Sex}).tc %>"><%= acord?.PI?.Sex%></Gender>
-          <DriversLicenseNum><%- acord?.PI?.DLNumber%></DriversLicenseNum>
+          <DriversLicenseNum><%= acord?.PI?.DLNumber%></DriversLicenseNum>
           <DriversLicenseState tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI?.DLState}).tc%>"><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI?.DLState}).key%></DriversLicenseState>
           <BirthJurisdictionTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI?.BirthState}).tc%>"><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI?.BirthState}).key%></BirthJurisdictionTC>
           <BirthCountry tc="<%= await lookups.lookup(types.OLI_LU.ADDRESSCOUNTRYTC, {value: acord?.PI?.BirthCountry}).tc%>"><%=acord?.PI?.BirthCountry%></BirthCountry>
         </Person>
         <Address>
           <AddressTypeCode tc="1">Residence</AddressTypeCode>
-          <Line1><%- acord?.PI?.Address%></Line1>
-          <Line2><%- acord?.PI?.AptSuite%></Line2>
-          <City><%- acord?.PI?.City%></City>
+          <Line1><%= acord?.PI?.Address%></Line1>
+          <Line2><%= acord?.PI?.AptSuite%></Line2>
+          <City><%= acord?.PI?.City%></City>
           <AddressState><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI?.State}).key%></AddressState>
           <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI?.State}).tc%>"><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI?.State}).key%></AddressStateTC>
           <Zip><%=acord?.PI?.Zip?.replace(/[()\-]/g, '')%></Zip>
         </Address>
         <EMailAddress>
-          <AddrLine><%- acord?.PI?.EmailAddress%></AddrLine>
+          <AddrLine><%= acord?.PI?.EmailAddress%></AddrLine>
         </EMailAddress>
         <Phone>
           <PhoneTypeCode tc="<%= await lookups.lookup(types.OLI_LU.PHONETYPE, {value: acord?.PI?.PhoneType}).tc _%>"><%=acord?.PI?.PhoneType _%></PhoneTypeCode>

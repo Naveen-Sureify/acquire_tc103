@@ -15,7 +15,7 @@
   ["Grandfather", "Grandparent", "92"],
   ["Grandmother", "Grandparent", "92"],
   ["Grandson", "Grandchild", "93"],
-  ["Granddaughter", "Grandchild", "20"],
+  ["Granddaughter", "Grandchild", "93"],
   ["Uncle", "Parent Sibling", "198"],
   ["Aunt", "Parent Sibling", "198"],
   ["Fiance", "Fiance", "111"],
