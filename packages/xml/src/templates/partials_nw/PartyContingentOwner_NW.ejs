@@ -3,9 +3,9 @@
   <PartyTypeCode tc="1">Person</PartyTypeCode>
   <Person>
     <Prefix><%=acord?.CO?.Prefix%></Prefix>
-    <FirstName><%=acord?.CO?.FirstName%></FirstName>
-    <MiddleName><%=acord?.CO?.MiddleInitial%></MiddleName>
-    <LastName><%=acord?.CO?.LastName%></LastName>
+    <FirstName><%- acord?.CO?.FirstName%></FirstName>
+    <MiddleName><%- acord?.CO?.MiddleInitial%></MiddleName>
+    <LastName><%- acord?.CO?.LastName%></LastName>
     <Suffix><%=acord?.CO?.Suffix%></Suffix>
     <BirthDate><%=!acord?.CO?.DateofBirth ? utils.dayjs(acord?.CO?.DateofBirth)?.format('YYYY-MM-DD') : ''%></BirthDate>
   </Person>
@@ -13,15 +13,15 @@
   <GovtID><%=acord?.CO?.SSN?.replace(/[()\-]/g, '')%></GovtID>
   <Address>
     <AddressTypeCode tc="1">Residence</AddressTypeCode>
-    <Line1><%=acord?.CO?.Address%></Line1>
-    <Line2><%=acord?.CO?.AptSuite%></Line2>
-    <City><%=acord?.CO?.City%></City>
+    <Line1><%- acord?.CO?.Address%></Line1>
+    <Line2><%- acord?.CO?.AptSuite%></Line2>
+    <City><%- acord?.CO?.City%></City>
     <AddressState><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.CO?.State}).key%></AddressState>
     <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.CO?.State}).tc%>"><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.CO?.State}).key%></AddressStateTC>
     <Zip><%=acord?.CO?.Zip?.replace(/[()\-]/g, '')%></Zip>
   </Address>
   <EmailAddress>
-    <AddrLine><%=acord?.CO?.EmailAddress%></AddrLine>
+    <AddrLine><%- acord?.CO?.EmailAddress%></AddrLine>
   </EmailAddress>
   <Phone>
     <AreaCode><%=acord?.CO?.PhoneNumber?.substring(0,5)?.replace(/[()\-]/g, '')%></AreaCode>
