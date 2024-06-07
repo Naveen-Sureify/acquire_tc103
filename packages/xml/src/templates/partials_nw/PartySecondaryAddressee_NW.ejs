@@ -14,8 +14,7 @@
     <Line2><%- acord?.SB?.AptSuite%></Line2>
     <City><%- acord?.SB?.City%></City>
     <AddressState><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.SB?.State}).key%></AddressState>
-    <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.SB?.State}).tc%>"><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.SB?.State}).key%>
-    </AddressStateTC>
+    <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.SB?.State}).tc%>"><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.SB?.State}).key%></AddressStateTC>
     <Zip><%=acord?.SB?.Zip?.replace(/[()\-]/g, '')%></Zip>
   </Address>
 </Party>
