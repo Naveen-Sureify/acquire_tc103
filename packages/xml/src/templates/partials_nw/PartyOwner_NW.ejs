@@ -20,9 +20,9 @@
     <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PO?.State}).tc%>"><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PO?.State}).key%></AddressStateTC>
     <Zip><%=acord?.PO?.Zip?.replace(/[()\-]/g, '')%></Zip>
   </Address>
-  <EmailAddress>
+  <EMailAddress>
     <AddrLine><%= acord?.PO?.EmailAddress%></AddrLine>
-  </EmailAddress>
+  </EMailAddress>
   <Phone>
     <AreaCode><%=acord?.PO?.PhoneNumber?.substring(0,5)?.replace(/[()\-]/g, '')%></AreaCode>
     <DialNumber><%=acord?.PO?.PhoneNumber?.substring(6)?.replace(/[()\-]/g, '')%></DialNumber>

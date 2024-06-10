@@ -7,7 +7,7 @@
     <MiddleName><%= acord?.CO?.MiddleInitial%></MiddleName>
     <LastName><%= acord?.CO?.LastName%></LastName>
     <Suffix><%=acord?.CO?.Suffix%></Suffix>
-    <BirthDate><%=!acord?.CO?.DateofBirth ? utils.dayjs(acord?.CO?.DateofBirth)?.format('YYYY-MM-DD') : ''%></BirthDate>
+    <BirthDate><%= acord?.CO?.DateofBirth && utils.dayjs(acord?.CO?.DateofBirth)?.format('YYYY-MM-DD')%></BirthDate>
   </Person>
   <GovtIDTC tc="1">SSN</GovtIDTC>
   <GovtID><%=acord?.CO?.SSN?.replace(/[()\-]/g, '')%></GovtID>
@@ -20,9 +20,9 @@
     <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.CO?.State}).tc%>"><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.CO?.State}).key%></AddressStateTC>
     <Zip><%=acord?.CO?.Zip?.replace(/[()\-]/g, '')%></Zip>
   </Address>
-  <EmailAddress>
+  <EMailAddress>
     <AddrLine><%= acord?.CO?.EmailAddress%></AddrLine>
-  </EmailAddress>
+  </EMailAddress>
   <Phone>
     <AreaCode><%=acord?.CO?.PhoneNumber?.substring(0,5)?.replace(/[()\-]/g, '')%></AreaCode>
     <DialNumber><%=acord?.CO?.PhoneNumber?.substring(6)?.replace(/[()\-]/g, '')%></DialNumber>
