@@ -1,26 +1,27 @@
+<%_ let isPayorInsured  = acord?.PI?.IsPIOwner === 'Yes' || acord?.PI?.Payor === 'Insured'_%>
 <Party id="PartyPayor_1">
   <PartyTypeCode tc="1">Person</PartyTypeCode>
   <Person>
-    <FirstName><%= acord?.PI?.Payor === 'Insured' ? acord?.Pr?.FirstNameforInsured : acord?.Pr?.FirstNameforOwner%></FirstName>
-    <MiddleName><%= acord?.PI?.Payor === 'Insured' ? acord?.Pr?.MiddleInitialforInsured : acord?.Pr?.MiddleInitialforOwner%></MiddleName>
-    <LastName><%= acord?.PI?.Payor === 'Insured' ? acord?.Pr?.LastNameforInsured : acord?.Pr?.LastNameforOwner%></LastName>
+    <FirstName><%= isPayorInsured ? acord?.Pr?.FirstNameforInsured : acord?.Pr?.FirstNameforOwner %></FirstName>
+    <MiddleName><%= isPayorInsured ? acord?.Pr?.MiddleInitialforInsured : acord?.Pr?.MiddleInitialforOwner%></MiddleName>
+    <LastName><%= isPayorInsured ? acord?.Pr?.LastNameforInsured : acord?.Pr?.LastNameforOwner%></LastName>
   </Person>
   <Address>
     <AddressTypeCode tc="1">Residence</AddressTypeCode>
-    <Line1><%= acord?.PI?.Payor === 'Insured' ? acord?.Pr?.AddressforInsured : acord?.Pr?.AddressforOwner%></Line1>
-    <Line2><%= acord?.PI?.Payor === 'Insured' ? acord?.Pr?.AptSuiteforInsured : acord?.Pr?.AptSuiteforOwner %></Line2>
-    <City><%= acord?.PI?.Payor === 'Insured' ? acord?.Pr?.CityforInsured : acord?.Pr?.CityforOwner%></City>
-    <AddressState><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI?.Payor === 'Insured' ? acord?.Pr?.StateforInsured : acord?.Pr?.StateforOwner}).key%></AddressState>
-    <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI?.Payor === 'Insured' ? acord?.Pr?.StateforInsured : acord?.Pr?.StateforOwner}).tc%>"><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: acord?.PI?.Payor === 'Insured' ? acord?.Pr?.StateforInsured : acord?.Pr?.StateforOwner}).key%></AddressStateTC>
-    <Zip><%=acord?.PI?.Payor === 'Insured' ? acord?.Pr?.ZipforInsured?.replace(/[()\-]/g, '') : acord?.Pr?.ZipforOwner?.replace(/[()\-]/g, '')%></Zip>
+    <Line1><%= isPayorInsured ? acord?.Pr?.AddressforInsured : acord?.Pr?.AddressforOwner%></Line1>
+    <Line2><%= isPayorInsured ? acord?.Pr?.AptSuiteforInsured : acord?.Pr?.AptSuiteforOwner %></Line2>
+    <City><%= isPayorInsured ? acord?.Pr?.CityforInsured : acord?.Pr?.CityforOwner%></City>
+    <AddressState><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: isPayorInsured ? acord?.Pr?.StateforInsured : acord?.Pr?.StateforOwner}).key%></AddressState>
+    <AddressStateTC tc="<%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: isPayorInsured ? acord?.Pr?.StateforInsured : acord?.Pr?.StateforOwner}).tc%>"><%= await lookups.lookup(types.OLI_LU.DRIVERSLICENSESTATENW, {value: isPayorInsured ? acord?.Pr?.StateforInsured : acord?.Pr?.StateforOwner}).key%></AddressStateTC>
+    <Zip><%= isPayorInsured ? acord?.Pr?.ZipforInsured?.replace(/[()\-]/g, '') : acord?.Pr?.ZipforOwner?.replace(/[()\-]/g, '')%></Zip>
   </Address>
   <EMailAddress>
-    <AddrLine><%= acord?.PI?.Payor === 'Insured' ? acord?.Pr?.EmailAddressforInsured : acord?.Pr?.EmailAddressforOwner%></AddrLine>
+    <AddrLine><%= isPayorInsured ? acord?.Pr?.EmailAddressforInsured : acord?.Pr?.EmailAddressforOwner%></AddrLine>
   </EMailAddress>
   <Phone>
-    <PhoneTypeCode tc="<%= await lookups.lookup(types.OLI_LU.PHONETYPE, {value: acord?.PI?.Payor === 'Insured' ? acord?.Pr?.PhoneTypeforInsured : acord?.Pr?.PhoneTypeforOwner}).tc%>"><%=acord?.PI?.Payor === 'Insured' ? acord?.Pr?.PhoneTypeforInsured : acord?.Pr?.PhoneTypeforOwner%></PhoneTypeCode>
-    <AreaCode><%=acord?.PI?.Payor === 'Insured' ? acord?.Pr?.PhoneNumberforInsured?.substring(0,5)?.replace(/[()\-]/g, '') : acord?.Pr?.PhoneNumberforOwner?.substring(0,5)?.replace(/[()\-]/g, '')%></AreaCode>
-    <DialNumber><%=acord?.PI?.Payor === 'Insured' ? acord?.Pr?.PhoneNumberforInsured?.substring(6)?.replace(/[()\-]/g, '') : acord?.Pr?.PhoneNumberforOwner?.substring(6)?.replace(/[()\-]/g, '')%></DialNumber>
+    <PhoneTypeCode tc="<%= await lookups.lookup(types.OLI_LU.PHONETYPE, {value: isPayorInsured ? acord?.Pr?.PhoneTypeforInsured : acord?.Pr?.PhoneTypeforOwner}).tc%>"><%= isPayorInsured ? acord?.Pr?.PhoneTypeforInsured : acord?.Pr?.PhoneTypeforOwner%></PhoneTypeCode>
+    <AreaCode><%= isPayorInsured ? acord?.Pr?.PhoneNumberforInsured?.substring(0,5)?.replace(/[()\-]/g, '') : acord?.Pr?.PhoneNumberforOwner?.substring(0,5)?.replace(/[()\-]/g, '')%></AreaCode>
+    <DialNumber><%= isPayorInsured ? acord?.Pr?.PhoneNumberforInsured?.substring(6)?.replace(/[()\-]/g, '') : acord?.Pr?.PhoneNumberforOwner?.substring(6)?.replace(/[()\-]/g, '')%></DialNumber>
     <PrefPhone tc="1">True</PrefPhone>
   </Phone>
 </Party>

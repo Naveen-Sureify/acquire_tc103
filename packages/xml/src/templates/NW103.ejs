@@ -112,7 +112,7 @@
       <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="InsuredParty_1" id="Relation_InsuredParty">
         <RelationRoleCode tc="32">Insured</RelationRoleCode>
       </Relation>
-      <%_ if(acord?.PI?.Payor === 'Insured'){ _%>
+      <%_ if(acord?.PI?.IsPIOwner === 'Yes' || acord?.PI?.Payor === 'Insured'){ _%>
       <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="InsuredParty_1" id="Relation_InsuredPartyPayor">
         <RelationRoleCode tc="31">Payor</RelationRoleCode>
       </Relation> <%_ }  _%>
@@ -124,10 +124,10 @@
         <RelationRoleCode tc="31">Payor</RelationRoleCode>
         <RelationDescription tc="91">Self</RelationDescription>
       </Relation><%_ } _%>
-      <%_ if(ras.extract('edbf85c1-25d5-4829-9ccb-76506f46e594') === 'Yes'){ _%>
-      <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="InsuredParty_1" id="Relation_PartyOwner">
-        <RelationRoleCode tc="8">Owner</RelationRoleCode>
-      </Relation><%_ } _%>
+      <%_ if(acord?.PI?.IsPIOwner === 'Yes'){ _%>
+        <Relation OriginatingObjectID="Application_Holding" RelatedObjectID="InsuredParty_1" id="Relation_PartyOwner">
+          <RelationRoleCode tc="8">Owner</RelationRoleCode>
+        </Relation><%_ } _%>
       <%_ if(acord?.Parties?.length > 0 ) { let count = 0 _%>
       <%_ for (const [index,party] of acord?.Parties?.entries()) {if(party?.PartyType === 'PB'){count = count + 1;} _%>
       <%- await include('Party_NW',{party,i:index, length: acord?.Parties?.length, count: count}) _%>
